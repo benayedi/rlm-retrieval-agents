@@ -1,0 +1,578 @@
+{
+ "BCP-9": {
+  "workbook": {
+   "Harness": "Snippet RLM",
+   "Model (Reasoning)": "GPT 5 (high)*",
+   "Retrieval Signal": "Qwen3-Embedding-8B",
+   "Accuracy": 0.794,
+   "Recall": 0.804,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 29.5,
+   "Avg. Iterations Per Query": 5.6,
+   "Time Per Query": "191 s (3.2 min)",
+   "Cached Cost Per Query": "not logged",
+   "Uncached Cost Per Query": "\u2248 0.50",
+   "Input Tokens Per Query": "\u2248 267,564",
+   "Output Tokens Per Query": "\u2248 16,474"
+  },
+  "recomputed": {
+   "n_questions": 830,
+   "n_results": 830,
+   "accuracy": 0.7939759036144578,
+   "recall_over_results": 0.8039955058328552,
+   "recall_over_all": 0.8039955058328552,
+   "searches_over_results": 29.457831325301203,
+   "non_bool_verdicts": {},
+   "note": "830 records"
+  }
+ },
+ "BCP-11": {
+  "workbook": {
+   "Harness": "Snippet RLM",
+   "Model (Reasoning)": "GPT 5 (high)*",
+   "Retrieval Signal": "Reason-ModernColBERT",
+   "Accuracy": 0.8578,
+   "Recall": 0.824,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 22.3,
+   "Avg. Iterations Per Query": 4.7,
+   "Time Per Query": "166 s (2.8 min)",
+   "Cached Cost Per Query": "not logged",
+   "Uncached Cost Per Query": "\u2248 0.36",
+   "Input Tokens Per Query": "\u2248 180,623",
+   "Output Tokens Per Query": "\u2248 13,144"
+  },
+  "recomputed": {
+   "n_questions": 830,
+   "n_results": 830,
+   "accuracy": 0.8578313253012049,
+   "recall_over_results": 0.8239056224899599,
+   "recall_over_all": 0.8239056224899599,
+   "searches_over_results": 22.3289156626506,
+   "non_bool_verdicts": {},
+   "note": "830 records"
+  }
+ },
+ "BCP-13": {
+  "workbook": {
+   "Harness": "Snippet RLM",
+   "Model (Reasoning)": "GPT 5 (high)*",
+   "Retrieval Signal": "BM25 (k1 0.9, b 0.4)",
+   "Accuracy": 0.6747,
+   "Recall": 0.6815,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 60.87,
+   "Avg. Iterations Per Query": 8.3,
+   "Time Per Query": "452 s (7.5 min)",
+   "Cached Cost Per Query": 0.9737,
+   "Uncached Cost Per Query": 1.1999,
+   "Input Tokens Per Query": 638846,
+   "Output Tokens Per Query": 40138
+  },
+  "recomputed": {
+   "n_questions": 830,
+   "n_results": 828,
+   "accuracy": 0.6746987951807228,
+   "recall_over_results": 0.6815457020167165,
+   "recall_over_all": 0.6799034232166762,
+   "searches_over_results": 60.871980676328505,
+   "non_bool_verdicts": {},
+   "note": "828 graded"
+  }
+ },
+ "BCP-15": {
+  "workbook": {
+   "Harness": "Snippet RLM",
+   "Model (Reasoning)": "Qwen3.6",
+   "Retrieval Signal": "Qwen3-Embedding-8B",
+   "Accuracy": "0.380 \u2020 (276/830 done)",
+   "Recall": 0.4979,
+   "NDCG": null,
+   "Avg. Search Calls Per Query": 19.23,
+   "Avg. Iterations Per Query": "14.6 \u2020",
+   "Time Per Query": "874 s (14.6 min) \u2020",
+   "Cached Cost Per Query": "local GPU (no API cost)",
+   "Uncached Cost Per Query": "local GPU (no API cost)",
+   "Input Tokens Per Query": "not logged",
+   "Output Tokens Per Query": "not logged"
+  },
+  "recomputed": {
+   "n_questions": 830,
+   "n_results": 220,
+   "accuracy": 0.12650602409638553,
+   "recall_over_results": 0.4979383116883117,
+   "recall_over_all": 0.13198364888123926,
+   "searches_over_results": 19.23181818181818,
+   "non_bool_verdicts": {},
+   "note": "220 graded"
+  }
+ },
+ "BCP-19": {
+  "workbook": {
+   "Harness": "Snippet RLM",
+   "Model (Reasoning)": "Qwen3.6 (medium)",
+   "Retrieval Signal": "BM25 (k1 0.9, b 0.4)",
+   "Accuracy": 0.2494,
+   "Recall": 0.3571,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 20.15,
+   "Avg. Iterations Per Query": 15.4,
+   "Time Per Query": "1098 s (18.3 min)",
+   "Cached Cost Per Query": "local GPU (no API cost)",
+   "Uncached Cost Per Query": "local GPU (no API cost)",
+   "Input Tokens Per Query": "not logged",
+   "Output Tokens Per Query": "not logged"
+  },
+  "recomputed": {
+   "n_questions": 830,
+   "n_results": 587,
+   "accuracy": 0.2493975903614458,
+   "recall_over_results": 0.3570752548606041,
+   "recall_over_all": 0.25253394530502965,
+   "searches_over_results": 20.146507666098806,
+   "non_bool_verdicts": {},
+   "note": "587 graded"
+  }
+ },
+ "BCP-27": {
+  "workbook": {
+   "Harness": "Full-Doc RLM",
+   "Model (Reasoning)": "Qwen3.6 (medium)",
+   "Retrieval Signal": "Qwen3-Embedding-8B",
+   "Accuracy": 0.4422,
+   "Recall": 0.3973,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 8.66,
+   "Avg. Iterations Per Query": 22.4,
+   "Time Per Query": "2439 s (40.6 min)",
+   "Cached Cost Per Query": "local GPU (no API cost)",
+   "Uncached Cost Per Query": "local GPU (no API cost)",
+   "Input Tokens Per Query": 392252,
+   "Output Tokens Per Query": 36558
+  },
+  "recomputed": {
+   "n_questions": 830,
+   "n_results": 830,
+   "accuracy": 0.44216867469879517,
+   "recall_over_results": 0.39111541403710076,
+   "recall_over_all": 0.39111541403710076,
+   "searches_over_results": 8.528915662650602,
+   "non_bool_verdicts": {},
+   "note": "830 graded",
+   "recall_workbook_definition": 0.3973387927182297,
+   "searches_workbook_definition": 8.664626682986537,
+   "recall_workbook_definition_is": "mean over the 817 records written (killed runs excluded)"
+  }
+ },
+ "FR-7": {
+  "workbook": {
+   "Harness": "Snippet RLM",
+   "Model (Reasoning)": "GPT 5 (high)*",
+   "Retrieval Signal": "BM25 (k1 0.9, b 0.4)",
+   "Accuracy": 0.7633,
+   "Recall": 0.6716,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 6.59,
+   "Avg. Iterations Per Query": 2.6,
+   "Time Per Query": "107 s (1.8 min)",
+   "Cached Cost Per Query": 0.1424,
+   "Uncached Cost Per Query": 0.146,
+   "Input Tokens Per Query": 35135,
+   "Output Tokens Per Query": 10206
+  },
+  "recomputed": {
+   "n_questions": 824,
+   "n_results": 824,
+   "accuracy": 0.7633495145631068,
+   "recall_over_results": 0.6715761448234933,
+   "recall_over_all": 0.6715761448234933,
+   "searches_over_results": 6.593446601941747,
+   "non_bool_verdicts": {},
+   "note": "824 graded"
+  }
+ },
+ "FR-9": {
+  "workbook": {
+   "Harness": "Snippet RLM",
+   "Model (Reasoning)": "Qwen3.6 (medium)",
+   "Retrieval Signal": "BM25 (k1 0.9, b 0.4)",
+   "Accuracy": 0.6201,
+   "Recall": 0.5752,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 12.85,
+   "Avg. Iterations Per Query": 10.9,
+   "Time Per Query": "903 s (15.1 min)",
+   "Cached Cost Per Query": "local GPU (no API cost)",
+   "Uncached Cost Per Query": "local GPU (no API cost)",
+   "Input Tokens Per Query": "not logged",
+   "Output Tokens Per Query": "not logged"
+  },
+  "recomputed": {
+   "n_questions": 824,
+   "n_results": 751,
+   "accuracy": 0.6201456310679612,
+   "recall_over_results": 0.6311068521299273,
+   "recall_over_all": 0.5751956868320091,
+   "searches_over_results": 12.85486018641811,
+   "non_bool_verdicts": {},
+   "note": "751 graded"
+  }
+ },
+ "FR-11": {
+  "workbook": {
+   "Harness": "Full-Doc RLM",
+   "Model (Reasoning)": "GPT 5 (high)",
+   "Retrieval Signal": "BM25 (k1 0.9, b 0.4)",
+   "Accuracy": 0.807,
+   "Recall": 0.7039,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 6.17,
+   "Avg. Iterations Per Query": 10.4,
+   "Time Per Query": "333 s (5.6 min)",
+   "Cached Cost Per Query": 0.3537,
+   "Uncached Cost Per Query": 0.4161,
+   "Input Tokens Per Query": 107126,
+   "Output Tokens Per Query": 28214
+  },
+  "recomputed": {
+   "n_questions": 824,
+   "n_results": 824,
+   "accuracy": 0.8070388349514563,
+   "recall_over_results": 0.7039385788715651,
+   "recall_over_all": 0.7039385788715651,
+   "searches_over_results": 6.169902912621359,
+   "non_bool_verdicts": {},
+   "note": "824 graded"
+  }
+ },
+ "FR-13": {
+  "workbook": {
+   "Harness": "Full-Doc RLM",
+   "Model (Reasoning)": "Qwen3.6 (medium)",
+   "Retrieval Signal": "BM25 (k1 0.9, b 0.4)",
+   "Accuracy": 0.6104,
+   "Recall": 0.5981,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 7.6,
+   "Avg. Iterations Per Query": 20.2,
+   "Time Per Query": "394 s (6.6 min)",
+   "Cached Cost Per Query": "local GPU (no API cost)",
+   "Uncached Cost Per Query": "local GPU (no API cost)",
+   "Input Tokens Per Query": 225873,
+   "Output Tokens Per Query": 19312
+  },
+  "recomputed": {
+   "n_questions": 824,
+   "n_results": 818,
+   "accuracy": 0.6104368932038835,
+   "recall_over_results": 0.6024998188536037,
+   "recall_over_all": 0.5981126842503007,
+   "searches_over_results": 7.616136919315403,
+   "non_bool_verdicts": {},
+   "note": "818 graded"
+  }
+ },
+ "BCP-21": {
+  "workbook": {
+   "Harness": "Full-Doc RLM",
+   "Model (Reasoning)": "GPT 5 (medium)*",
+   "Retrieval Signal": "Qwen3-Embedding-8B",
+   "Accuracy": 0.8313,
+   "Recall": 0.7619,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 7.9,
+   "Avg. Iterations Per Query": 11.2,
+   "Time Per Query": "300.2 s (5.0 min)",
+   "Cached Cost Per Query": "not logged",
+   "Uncached Cost Per Query": 0.4395,
+   "Input Tokens Per Query": 165685,
+   "Output Tokens Per Query": 23236
+  },
+  "recomputed": {
+   "n_questions": 830,
+   "n_results": 830,
+   "accuracy": 0.8313253012048193,
+   "recall_over_results": 0.7619253012048193,
+   "recall_over_all": 0.7619253012048193,
+   "searches_over_results": 7.904819277108434,
+   "non_bool_verdicts": {},
+   "note": "830 questions in trace, 0 duplicated across runs; recall = evidence recall"
+  }
+ },
+ "BCP-23": {
+  "workbook": {
+   "Harness": "Full-Doc RLM",
+   "Model (Reasoning)": "GPT 5 (high)",
+   "Retrieval Signal": "Reason-ModernColBERT",
+   "Accuracy": 0.8747,
+   "Recall": 0.7875,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 8.12,
+   "Avg. Iterations Per Query": 10.8,
+   "Time Per Query": "482.5 s (8.0 min)",
+   "Cached Cost Per Query": "not logged",
+   "Uncached Cost Per Query": 0.5847,
+   "Input Tokens Per Query": 166432,
+   "Output Tokens Per Query": 37666
+  },
+  "recomputed": {
+   "n_questions": 830,
+   "n_results": 830,
+   "accuracy": 0.8746987951807229,
+   "recall_over_results": 0.7874843373493976,
+   "recall_over_all": 0.7874843373493976,
+   "searches_over_results": 8.119277108433735,
+   "non_bool_verdicts": {},
+   "note": "830 questions in trace, 0 duplicated across runs; recall = evidence recall"
+  }
+ },
+ "BCP-25": {
+  "workbook": {
+   "Harness": "Full-Doc RLM",
+   "Model (Reasoning)": "GPT 5 (medium)*",
+   "Retrieval Signal": "BM25 (k1 0.9, b 0.4)",
+   "Accuracy": 0.6,
+   "Recall": 0.4973,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 9.2,
+   "Avg. Iterations Per Query": 18.2,
+   "Time Per Query": "567 s (9.5 min)",
+   "Cached Cost Per Query": "not logged",
+   "Uncached Cost Per Query": 0.9266,
+   "Input Tokens Per Query": 390854,
+   "Output Tokens Per Query": 43804
+  },
+  "recomputed": {
+   "n_questions": 830,
+   "n_results": 826,
+   "accuracy": 0.6,
+   "recall_over_results": 0.4623918891170707,
+   "recall_over_all": 0.46016349447072336,
+   "searches_over_results": 9.186440677966102,
+   "non_bool_verdicts": {},
+   "note": "830 records, 826 completed; recall = evidence recall (gold-doc recall 0.4991)",
+   "recall_workbook_definition": 0.4973250143430867,
+   "recall_workbook_definition_is": "gold-document recall, mean over all 830 records incl. unfinished"
+  }
+ },
+ "BCP-29": {
+  "workbook": {
+   "Harness": "Full-Doc RLM",
+   "Model (Reasoning)": "Qwen3.6 (medium)",
+   "Retrieval Signal": "Reason-ModernColBERT",
+   "Accuracy": 0.5795,
+   "Recall": 0.5123,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 8.6,
+   "Avg. Iterations Per Query": 20.9,
+   "Time Per Query": "1829 s (30.5 min)",
+   "Cached Cost Per Query": "local GPU (no API cost)",
+   "Uncached Cost Per Query": "local GPU (no API cost)",
+   "Input Tokens Per Query": 335994,
+   "Output Tokens Per Query": 30906
+  },
+  "recomputed": {
+   "n_questions": 830,
+   "n_results": 777,
+   "accuracy": 0.5795180722891566,
+   "recall_over_results": 0.5363072255929399,
+   "recall_over_all": 0.5020611015490534,
+   "searches_over_results": 8.574002574002574,
+   "non_bool_verdicts": {},
+   "note": "830 cache entries, 777 completed",
+   "recall_workbook_definition": 0.5122934595524957,
+   "recall_workbook_definition_is": "gold recall, mean over all cache entries incl. errored/killed runs"
+  }
+ },
+ "BCP-31": {
+  "workbook": {
+   "Harness": "Full-Doc RLM",
+   "Model (Reasoning)": "Qwen3.6 (medium)",
+   "Retrieval Signal": "BM25 (k1 0.9, b 0.4)",
+   "Accuracy": 0.2241,
+   "Recall": 0.1806,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 9.7,
+   "Avg. Iterations Per Query": 27.3,
+   "Time Per Query": "1388 s (23.1 min)",
+   "Cached Cost Per Query": "local GPU (no API cost)",
+   "Uncached Cost Per Query": "local GPU (no API cost)",
+   "Input Tokens Per Query": 617614,
+   "Output Tokens Per Query": 58153
+  },
+  "recomputed": {
+   "n_questions": 830,
+   "n_results": 812,
+   "accuracy": 0.22409638554216868,
+   "recall_over_results": 0.18341543513957306,
+   "recall_over_all": 0.17943775100401607,
+   "searches_over_results": 9.706896551724139,
+   "non_bool_verdicts": {},
+   "note": "830 cache entries, 812 completed",
+   "recall_workbook_definition": 0.18064257028112451,
+   "recall_workbook_definition_is": "gold recall, mean over all cache entries incl. errored/killed runs"
+  }
+ },
+ "MAT-9": {
+  "workbook": {
+   "Harness": "Snippet RLM",
+   "Model (Reasoning)": "GPT 5.2 (high)*",
+   "Retrieval Signal": "Gemini-Embedding-2",
+   "Accuracy": "\u2014",
+   "Recall@10 (G)": 0.1409,
+   "NDCG@10 (G / P)": "0.1489 / 0.1954",
+   "NDCG@50 (G / P)": "0.1437 / 0.1834",
+   "Avg. Search Calls Per Query": 28.26,
+   "Avg. Iterations Per Query": 12.1,
+   "Time Per Query": "372 s (6.2 min)",
+   "Cached Cost Per Query": 0.7603,
+   "Uncached Cost Per Query": 0.8733,
+   "Input Tokens Per Query": 238340,
+   "Output Tokens Per Query": 32583
+  },
+  "recomputed": {
+   "n_questions": 151,
+   "n_results": 151,
+   "ndcg10": 0.14890041659338676,
+   "recall10": 0.14090010431070032,
+   "searches_over_results": 28.264900662251655,
+   "ndcg10_as_logged": 0.16059973504001002,
+   "note": "151 records; missing questions score 0"
+  }
+ },
+ "MAT-11": {
+  "workbook": {
+   "Harness": "Full-Doc RLM",
+   "Model (Reasoning)": "GPT 5.2 (high)",
+   "Retrieval Signal": "Gemini-Embedding-2",
+   "Accuracy": "\u2014",
+   "Recall@10 (G)": 0.1361,
+   "NDCG@10 (G / P)": "0.1590 / 0.2024",
+   "NDCG@50 (G / P)": "0.1487 / 0.1879",
+   "Avg. Search Calls Per Query": 10,
+   "Avg. Iterations Per Query": 15.4,
+   "Time Per Query": "494 s (8.2 min)",
+   "Cached Cost Per Query": 0.6188,
+   "Uncached Cost Per Query": 0.7358,
+   "Input Tokens Per Query": 178744,
+   "Output Tokens Per Query": 30214
+  },
+  "recomputed": {
+   "n_questions": 151,
+   "n_results": 151,
+   "ndcg10": 0.15899122322596587,
+   "recall10": 0.1361086306450545,
+   "searches_over_results": 10.0,
+   "ndcg10_as_logged": null,
+   "note": "151 records; missing questions score 0"
+  }
+ },
+ "TWI-9": {
+  "workbook": {
+   "Harness": "Snippet RLM",
+   "Model (Reasoning)": "GPT 5.2 (high)*",
+   "Retrieval Signal": "Gemini-Embedding-2",
+   "Accuracy": "\u2014",
+   "Recall@10 (G)": 0.1058,
+   "NDCG@10 (G / P)": "0.1019 / 0.1607",
+   "NDCG@50 (G / P)": "0.1168 / 0.1765",
+   "Avg. Search Calls Per Query": 34.36,
+   "Avg. Iterations Per Query": 12,
+   "Time Per Query": "225 s (3.7 min)",
+   "Cached Cost Per Query": 0.5161,
+   "Uncached Cost Per Query": 0.6018,
+   "Input Tokens Per Query": 196280,
+   "Output Tokens Per Query": 18451
+  },
+  "recomputed": {
+   "n_questions": 281,
+   "n_results": 281,
+   "ndcg10": 0.1019080469942345,
+   "recall10": 0.10582162197821016,
+   "searches_over_results": 34.362989323843415,
+   "ndcg10_as_logged": 0.11229867139364665,
+   "note": "281 records; missing questions score 0"
+  }
+ },
+ "TWI-11": {
+  "workbook": {
+   "Harness": "Full-Doc RLM",
+   "Model (Reasoning)": "GPT 5.2 (high)",
+   "Retrieval Signal": "Gemini-Embedding-2",
+   "Accuracy": "\u2014",
+   "Recall@10 (G)": 0.0951,
+   "NDCG@10 (G / P)": "0.0950 / 0.1800",
+   "NDCG@50 (G / P)": "0.1028 / 0.1814",
+   "Avg. Search Calls Per Query": 10,
+   "Avg. Iterations Per Query": 8.5,
+   "Time Per Query": "179 s (3.0 min)",
+   "Cached Cost Per Query": 0.2298,
+   "Uncached Cost Per Query": 0.271,
+   "Input Tokens Per Query": 74073,
+   "Output Tokens Per Query": 10096
+  },
+  "recomputed": {
+   "n_questions": 281,
+   "n_results": 281,
+   "ndcg10": 0.0950186140173814,
+   "recall10": 0.0950592277304531,
+   "searches_over_results": 10.0,
+   "ndcg10_as_logged": null,
+   "note": "281 records; missing questions score 0"
+  }
+ },
+ "CON-9": {
+  "workbook": {
+   "Harness": "Snippet RLM",
+   "Model (Reasoning)": "GPT 5.2 (high)*",
+   "Retrieval Signal": "Gemini-Embedding-2",
+   "Accuracy": "\u2014",
+   "Recall@10": 0.2008,
+   "NDCG@10": 0.1876,
+   "NDCG@50": 0.1907,
+   "Avg. Search Calls Per Query": 54.54,
+   "Avg. Iterations Per Query": 12.4,
+   "Time Per Query": "365 s (6.1 min)",
+   "Cached Cost Per Query": 0.7545,
+   "Uncached Cost Per Query": 0.9152,
+   "Input Tokens Per Query": 347908,
+   "Output Tokens Per Query": 21881
+  },
+  "recomputed": {
+   "n_questions": 254,
+   "n_results": 254,
+   "ndcg10": 0.1876387115257754,
+   "recall10": 0.20078740157480315,
+   "searches_over_results": 54.54330708661417,
+   "ndcg10_as_logged": 0.20109802838627408,
+   "note": "254 records; missing questions score 0"
+  }
+ },
+ "CON-11": {
+  "workbook": {
+   "Harness": "Full-Doc RLM",
+   "Model (Reasoning)": "GPT 5.2 (high)",
+   "Retrieval Signal": "Gemini-Embedding-2",
+   "Accuracy": "\u2014",
+   "Recall@10": 0.1496,
+   "NDCG@10": 0.1332,
+   "NDCG@50": 0.1332,
+   "Avg. Search Calls Per Query": 10,
+   "Avg. Iterations Per Query": 12.4,
+   "Time Per Query": "391 s (6.5 min)",
+   "Cached Cost Per Query": 0.5264,
+   "Uncached Cost Per Query": 0.6271,
+   "Input Tokens Per Query": 168368,
+   "Output Tokens Per Query": 23744
+  },
+  "recomputed": {
+   "n_questions": 254,
+   "n_results": 254,
+   "ndcg10": 0.13323997640819282,
+   "recall10": 0.14960629921259844,
+   "searches_over_results": 10.0,
+   "ndcg10_as_logged": null,
+   "note": "254 records; missing questions score 0"
+  }
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "created": "2026-10-30T11:51:25+00:00",
+ "files": [
+  {
+   "copy": "RLM/rag/__init__.py",
+   "source": "RLM:rag/__init__.py",
+   "sha256": "83dae42d2450d53cd4019ad076b090975a62f462e2ca70ab4f9d45f6d96f73a6",
+   "bytes": 384,
+   "mtime": "2026-09-22T13:39:12"
+  },
+  {
+   "copy": "RLM/rag/agent.py",
+   "source": "RLM:rag/agent.py",
+   "sha256": "beec07cc6173a825af4077d61c308cf5d7563d4d2c612642587331a3cf4ce2da",
+   "bytes": 28504,
+   "mtime": "2026-10-21T12:31:46"
+  },
+  {
+   "copy": "RLM/rag/signatures.py",
+   "source": "RLM:rag/signatures.py",
+   "sha256": "eeacedc3353cfa0077248c59de65c3d0e6516b956544fcd62cba0d7e92397ddc",
+   "bytes": 133980,
+   "mtime": "2026-09-22T13:39:57"
+  },
+  {
+   "copy": "RLM/rag/tools.py",
+   "source": "RLM:rag/tools.py",
+   "sha256": "266e63f2c3ee91898963ba934507032c6cc09b89a7ca33e6cfda198ce9ff65c7",
+   "bytes": 2590,
+   "mtime": "2026-09-22T13:39:57"
+  },
+  {
+   "copy": "RLM/examples/browsecomp_eval_dspy_rlm.py",
+   "source": "RLM:examples/browsecomp_eval_dspy_rlm.py",
+   "sha256": "d4ab5ae48c4c3de282a8e226664f9ad72d6001e661328844e79aa30ccd283e9f",
+   "bytes": 20026,
+   "mtime": "2026-09-22T13:39:56"
+  },
+  {
+   "copy": "RLM/examples/obliq_eval_dspy_rlm.py",
+   "source": "RLM:examples/obliq_eval_dspy_rlm.py",
+   "sha256": "74b5677235b9e219654c2a8b94ddb83561cdbe80d43d301100c08f04ac9292d5",
+   "bytes": 41603,
+   "mtime": "2026-10-27T17:07:41"
+  },
+  {
+   "copy": "RLM/scripts/run_obliq_dspy_shard.sh",
+   "source": "RLM:scripts/run_obliq_dspy_shard.sh",
+   "sha256": "dc7cb6a5505ade120678e486533ec447ba6acbbd585d1cdf282dafb23a9c6de3",
+   "bytes": 2070,
+   "mtime": "2026-10-22T16:48:34"
+  },
+  {
+   "copy": "RLM/pyproject.toml",
+   "source": "RLM:pyproject.toml",
+   "sha256": "067574dbf7c7f6764d31eb39bf2619be46f27cb2e1615add1c53b94fc7b74e55",
+   "bytes": 743,
+   "mtime": "2026-09-22T13:39:12"
+  }
+ ],
+ "source_roots": {
+  "RLM": {
+   "git_head": "7685538a2a545aaa257a2d2008766342c12e005c",
+   "note": "working tree, including uncommitted changes"
+  },
+  "FULLDOC": {
+   "git_head": null,
+   "note": "not a git repository; files as on disk"
+  }
+ }
+}

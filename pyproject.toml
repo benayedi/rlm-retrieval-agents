@@ -1,0 +1,10 @@
+[project]
+name = "rlm-retrieval-agents"
+version = "0.1.0"
+description = "Three recursive-language-model retrieval agents (DSPy.RLM, Snippet RLM, Full-Doc RLM) on BrowseComp-Plus, FRAMES and OBLIQ-Bench: code, configurations and results"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["shared"]
+testpaths = ["tests", "algorithms/dspy_rlm/tests", "algorithms/snippet_rlm/tests", "algorithms/full_doc_rlm/tests"]
+addopts = "-q"

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 368" width="400" height="368" font-family="Helvetica, Arial, sans-serif">
+<rect width="400" height="368" fill="#ffffff"/>
+<text x="46" y="24" font-size="15" font-weight="600" fill="#1f2328">FRAMES: accuracy (gpt-4.1 judge, 824 questions, BM25)</text>
+<rect x="46" y="36" width="11" height="11" rx="2" fill="#2a78d6"/><text x="62" y="46" font-size="12" fill="#1f2328">Snippet RLM</text>
+<rect x="176" y="36" width="11" height="11" rx="2" fill="#eb6834"/><text x="192" y="46" font-size="12" fill="#1f2328">Full-Doc RLM</text>
+<text x="46" y="68" font-size="13" font-weight="600" fill="#1f2328">BM25 over Wikipedia</text>
+<line x1="46" x2="376" y1="298.0" y2="298.0" stroke="#d8dee4" stroke-width="1"/>
+<text x="40" y="302.0" font-size="11" fill="#59636e" text-anchor="end">0.00</text>
+<line x1="46" x2="376" y1="243.0" y2="243.0" stroke="#d8dee4" stroke-width="1"/>
+<text x="40" y="247.0" font-size="11" fill="#59636e" text-anchor="end">0.25</text>
+<line x1="46" x2="376" y1="188.0" y2="188.0" stroke="#d8dee4" stroke-width="1"/>
+<text x="40" y="192.0" font-size="11" fill="#59636e" text-anchor="end">0.50</text>
+<line x1="46" x2="376" y1="133.0" y2="133.0" stroke="#d8dee4" stroke-width="1"/>
+<text x="40" y="137.0" font-size="11" fill="#59636e" text-anchor="end">0.75</text>
+<line x1="46" x2="376" y1="78.0" y2="78.0" stroke="#d8dee4" stroke-width="1"/>
+<text x="40" y="82.0" font-size="11" fill="#59636e" text-anchor="end">1.00</text>
+<path d="M93.5,298.0 V134.1 Q93.5,130.1 97.5,130.1 H123.5 Q127.5,130.1 127.5,134.1 V298.0 Z" fill="#2a78d6"><title>Snippet RLM, GPT-5: 0.763</title></path>
+<text x="110.5" y="126.1" font-size="10" fill="#1f2328" text-anchor="middle">0.763</text>
+<path d="M129.5,298.0 V124.5 Q129.5,120.5 133.5,120.5 H159.5 Q163.5,120.5 163.5,124.5 V298.0 Z" fill="#eb6834"><title>Full-Doc RLM, GPT-5: 0.807</title></path>
+<text x="146.5" y="116.5" font-size="10" fill="#1f2328" text-anchor="middle">0.807</text>
+<text x="128.5" y="314.0" font-size="11.5" fill="#1f2328" text-anchor="middle">GPT-5</text>
+<path d="M258.5,298.0 V165.6 Q258.5,161.6 262.5,161.6 H288.5 Q292.5,161.6 292.5,165.6 V298.0 Z" fill="#2a78d6"><title>Snippet RLM, Qwen3.6: 0.620</title></path>
+<text x="275.5" y="157.6" font-size="10" fill="#1f2328" text-anchor="middle">0.620</text>
+<path d="M294.5,298.0 V167.7 Q294.5,163.7 298.5,163.7 H324.5 Q328.5,163.7 328.5,167.7 V298.0 Z" fill="#eb6834"><title>Full-Doc RLM, Qwen3.6: 0.610</title></path>
+<text x="311.5" y="159.7" font-size="10" fill="#1f2328" text-anchor="middle">0.610</text>
+<text x="293.5" y="314.0" font-size="11.5" fill="#1f2328" text-anchor="middle">Qwen3.6</text>
+<line x1="46" x2="376" y1="298" y2="298" stroke="#59636e" stroke-width="1"/>
+</svg>

@@ -1,0 +1,183 @@
+{
+ "created": "2026-10-30T11:51:25+00:00",
+ "files": [
+  {
+   "copy": "RLM/examples/browsecomp_eval_official_rlm.py",
+   "source": "RLM:examples/browsecomp_eval_official_rlm.py",
+   "sha256": "d9553102abcc2345cc1c32bc4b6ed00aaf14c3770eef8c69aaa633936ba776d7",
+   "bytes": 73422,
+   "mtime": "2026-10-03T14:28:52"
+  },
+  {
+   "copy": "RLM/examples/browsecomp_data.py",
+   "source": "RLM:examples/browsecomp_data.py",
+   "sha256": "014053405563d8fc9a96b6aab174805d124aa1b204db01965e3fe6733c806e78",
+   "bytes": 7474,
+   "mtime": "2026-09-22T13:39:56"
+  },
+  {
+   "copy": "RLM/examples/frames_eval_rlm.py",
+   "source": "RLM:examples/frames_eval_rlm.py",
+   "sha256": "56fed76659e32ba5b0ca09ce196885ee02a6d30a6ebc0cbbeeb04dab99803342",
+   "bytes": 10020,
+   "mtime": "2026-10-27T18:32:53"
+  },
+  {
+   "copy": "RLM/examples/obliq_data.py",
+   "source": "RLM:examples/obliq_data.py",
+   "sha256": "c8a2c4e861af6dbe56c85d8fbcf51cad7ec769895717eabe6a5f4cdd672a4af9",
+   "bytes": 3623,
+   "mtime": "2026-09-26T07:11:27"
+  },
+  {
+   "copy": "RLM/scripts/run_bcp_snippet.py",
+   "source": "RLM:scripts/run_bcp_snippet.py",
+   "sha256": "6844ef270faefaca80db679d1a7401f1075fa17bdd9e49dcecf7e2ba1f69bca0",
+   "bytes": 8570,
+   "mtime": "2026-10-28T17:55:55"
+  },
+  {
+   "copy": "RLM/scripts/run_obliq_mine.py",
+   "source": "RLM:scripts/run_obliq_mine.py",
+   "sha256": "b6cc74af3cf0e06241521ca214088910092ea92178f5c3fa004ed77bb2c458af",
+   "bytes": 18969,
+   "mtime": "2026-10-27T16:50:55"
+  },
+  {
+   "copy": "RLM/scripts/official_prompt_modules.py",
+   "source": "RLM:scripts/official_prompt_modules.py",
+   "sha256": "12d19482b11b9fbe55fbbde59b22a21f7935f174d0eedf852891d5943b5b5d8d",
+   "bytes": 3895,
+   "mtime": "2026-09-27T21:05:08"
+  },
+  {
+   "copy": "RLM/scripts/run_obliq_shard.sh",
+   "source": "RLM:scripts/run_obliq_shard.sh",
+   "sha256": "f3eb21f632cc0a9eb08e643ea1a56f2b56fb69e8476661f55ca6dc228f1f2cbe",
+   "bytes": 2261,
+   "mtime": "2026-10-27T17:35:48"
+  },
+  {
+   "copy": "RLM/scripts/hooks/retry429/sitecustomize.py",
+   "source": "RLM:scripts/hooks/retry429/sitecustomize.py",
+   "sha256": "84a742cf0fcf3bcd31c9de99dba634e50f2e0c6a68e170e64fecdc62374d4aa9",
+   "bytes": 1017,
+   "mtime": "2026-10-26T22:49:03"
+  },
+  {
+   "copy": "RLM/scripts/hooks/azure_sampling/sitecustomize.py",
+   "source": "RLM:scripts/hooks/azure_sampling/sitecustomize.py",
+   "sha256": "884aff4535bd400fb9a098911bed510ad2717ceaba9ce0b3ec3fcad73dec49c5",
+   "bytes": 3472,
+   "mtime": "2026-10-27T18:21:38"
+  },
+  {
+   "copy": "RLM/scripts/hooks/run5d/sitecustomize.py",
+   "source": "RLM:scripts/hooks/run5d/sitecustomize.py",
+   "sha256": "0629622eb8c7a655a81e746bf4a6733133d5253bb735e6e1b276901d371f3fa8",
+   "bytes": 1893,
+   "mtime": "2026-10-28T09:32:26"
+  },
+  {
+   "copy": "RLM/scripts/hooks/cap_ranking/sitecustomize.py",
+   "source": "RLM:scripts/hooks/cap_ranking/sitecustomize.py",
+   "sha256": "5a5fac6a5c52ce0a66955717b606714d37191e4a785da46d1ae0511f31c1ca56",
+   "bytes": 1741,
+   "mtime": "2026-10-22T16:48:06"
+  },
+  {
+   "copy": "RLM/scripts/hooks/retry429_cap_ranking/sitecustomize.py",
+   "source": "RLM:scripts/hooks/retry429_cap_ranking/sitecustomize.py",
+   "sha256": "5a4aa13f5ad7102f5ba94133f2d1afae1d2d7b1d596d2ca0f6c6b5b28b1096fd",
+   "bytes": 501,
+   "mtime": "2026-10-27T17:41:14"
+  },
+  {
+   "copy": "RLM/scripts/run5d/bcp_snip.sh",
+   "source": "RLM:scripts/run5d/bcp_snip.sh",
+   "sha256": "ee19e960f947a4bda5165992334d3c2c74c7e50172f8ebcf4556731a00da1cd3",
+   "bytes": 3638,
+   "mtime": "2026-10-27T20:31:16"
+  },
+  {
+   "copy": "RLM/scripts/run5d/bcp_snip2.sh",
+   "source": "RLM:scripts/run5d/bcp_snip2.sh",
+   "sha256": "894297f032fef15813bee7929a6da3058318db395229aec975ca95ccb0b76ce5",
+   "bytes": 4536,
+   "mtime": "2026-10-28T17:55:55"
+  },
+  {
+   "copy": "RLM/scripts/run5d/bcp_snip_gpt5_bm25_finish.sh",
+   "source": "RLM:scripts/run5d/bcp_snip_gpt5_bm25_finish.sh",
+   "sha256": "54fbe133c9dc9c931b1cc9107b1ee72876ce4e3496384f62da0ee4c639957810",
+   "bytes": 759,
+   "mtime": "2026-10-28T09:36:49"
+  },
+  {
+   "copy": "RLM/scripts/run5d/frames_snip.sh",
+   "source": "RLM:scripts/run5d/frames_snip.sh",
+   "sha256": "28d71daeecd6dba1b1f52e1b86163c95d2fa0aeb62964769ed0b1dd9d1be3725",
+   "bytes": 2604,
+   "mtime": "2026-10-27T18:21:55"
+  },
+  {
+   "copy": "RLM/scripts/run5d/obliq_gemini.sh",
+   "source": "RLM:scripts/run5d/obliq_gemini.sh",
+   "sha256": "300501d2df2bc584d23f9528134fb98650d810b95232d7d131f21e0da1efdd69",
+   "bytes": 4759,
+   "mtime": "2026-10-27T18:21:55"
+  },
+  {
+   "copy": "RLM/scripts/run5d/qwen_bcp_snip_queue2.sh",
+   "source": "RLM:scripts/run5d/qwen_bcp_snip_queue2.sh",
+   "sha256": "1b86e317945c4f373482fc1c50e2f66ba5bab58c205579e4b227877b2c087136",
+   "bytes": 800,
+   "mtime": "2026-10-28T10:06:37"
+  },
+  {
+   "copy": "RLM/scripts/run5d/question_watchdog.sh",
+   "source": "RLM:scripts/run5d/question_watchdog.sh",
+   "sha256": "cfd11476cc1693b7be680d540cd1df63622aec9b1b069a3191462a349f483a37",
+   "bytes": 2011,
+   "mtime": "2026-10-27T22:57:57"
+  },
+  {
+   "copy": "RLM/scripts/run5d/budget_guard.sh",
+   "source": "RLM:scripts/run5d/budget_guard.sh",
+   "sha256": "0f16a6b43b4688e0d93c042923f525c9a63d76326df53ac9d27adbb8609c977c",
+   "bytes": 1182,
+   "mtime": "2026-10-27T18:27:04"
+  },
+  {
+   "copy": "RLM/scripts/run5d/night_finisher.sh",
+   "source": "RLM:scripts/run5d/night_finisher.sh",
+   "sha256": "e4327fc021341e87f320232b242d9e212c882297f10f4db21255b8b230ec372b",
+   "bytes": 2340,
+   "mtime": "2026-10-28T17:59:44"
+  },
+  {
+   "copy": "RLM/scripts/run_qwen_full.sh",
+   "source": "RLM:scripts/run_qwen_full.sh",
+   "sha256": "e970b43b05bd921aaab7536036b4953c13c4c360f1527e50dd0c2e6079f74dfa",
+   "bytes": 3657,
+   "mtime": "2026-09-22T13:39:57"
+  },
+  {
+   "copy": "RLM/scripts/run_no_orchestrator.sh",
+   "source": "RLM:scripts/run_no_orchestrator.sh",
+   "sha256": "e60b4483ce2f872eebf7175a2db3ef95cd79970d31bd5445f63b149b11dd8979",
+   "bytes": 2731,
+   "mtime": "2026-09-22T13:39:57"
+  }
+ ],
+ "source_roots": {
+  "RLM": {
+   "git_head": "7685538a2a545aaa257a2d2008766342c12e005c",
+   "note": "working tree, including uncommitted changes"
+  },
+  "FULLDOC": {
+   "git_head": null,
+   "note": "not a git repository; files as on disk"
+  }
+ }
+}

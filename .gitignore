@@ -1,0 +1,22 @@
+# secrets and local settings
+.env
+*.env
+!configs/*.example.env
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+.venv/
+# run outputs, data, indexes (never committed; see benchmarks/README.md)
+/runs/
+/logs/
+/data/
+*.index
+*.faiss
+*.npz
+*.parquet
+*.jsonl.gz
+.pylate_idx/

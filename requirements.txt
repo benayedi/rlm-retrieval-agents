@@ -1,0 +1,46 @@
+# Versions of the environment the experiments ran in (Python 3.12.14, conda env "vllm"), October 2026.
+# Pinned to what ran, not to a tested minimum. Three environments were used; see README.md "Installation".
+
+# --- agent harnesses (Snippet RLM, Full-Doc RLM): the RLM authors' library at the exact commit used
+rlms @ git+https://github.com/alexzhang13/rlm@854e688fbba9d8f8989e3da9989812e4b6dfe270
+
+# --- DSPy.RLM
+dspy==3.3.1
+litellm==1.102.0
+
+# --- model clients, data, grading
+openai==2.54.0
+datasets==5.0.1
+python-dotenv==1.2.3
+requests==2.34.2
+httpx==0.28.1
+tiktoken==0.14.0
+tqdm==4.70.1
+PyYAML==6.0.3
+
+# --- retrieval servers and index builders (BM25, dense)
+bm25s==0.3.11
+PyStemmer==3.1.0
+numpy==2.3.5
+pyarrow==25.0.1
+fastapi==0.136.3
+uvicorn==0.53.0
+starlette==1.6.0
+anyio==4.15.1
+transformers==5.17.0
+torch==2.13.0
+# faiss (CPU or GPU build) for the Qwen3-Embedding-8B servers; the exact build was not recorded
+
+# --- reporting
+openpyxl==3.1.5
+pandas==3.0.6
+
+# --- local model serving (Qwen3.6-35B-A3B-FP8), only needed to run the Qwen3.6 rows
+# vllm==0.30.0
+
+# --- tests
+pytest>=9.0
+
+# Separate environments used for two retrieval servers (install them apart; they pin different torch builds):
+#   Reason-ModernColBERT server:  pylate==1.6.0, torch==2.11.0, transformers==5.3.0, fastapi==0.141.1
+#   Gemini-Embedding-2 server:    google-genai==2.33.0, faiss-cpu==1.15.1, numpy==2.5.4, fastapi==0.162.0

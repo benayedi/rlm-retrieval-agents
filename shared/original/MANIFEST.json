@@ -1,0 +1,239 @@
+{
+ "created": "2026-10-30T11:51:25+00:00",
+ "files": [
+  {
+   "copy": "RLM/examples/obliq_score_advice.py",
+   "source": "RLM:examples/obliq_score_advice.py",
+   "sha256": "4558dd4768dd206b7bd619a15d26b83c40fd29cdc2cca564337239caf17df065",
+   "bytes": 4236,
+   "mtime": "2026-10-27T16:50:27"
+  },
+  {
+   "copy": "RLM/scripts/fusion_proxy.py",
+   "source": "RLM:scripts/fusion_proxy.py",
+   "sha256": "e5db4532155109882c009c81eb5cf4d2af2a3b81c5155b81eb298c9c5d7345a0",
+   "bytes": 16385,
+   "mtime": "2026-09-25T09:41:14"
+  },
+  {
+   "copy": "RLM/scripts/frames_search_server.py",
+   "source": "RLM:scripts/frames_search_server.py",
+   "sha256": "24b3a1f6a29a2dbd1fa23b144067b2f50b0474d1f16a1ed7ad965760fc4f1333",
+   "bytes": 6742,
+   "mtime": "2026-10-27T17:36:28"
+  },
+  {
+   "copy": "RLM/scripts/multi_search_server.py",
+   "source": "RLM:scripts/multi_search_server.py",
+   "sha256": "20192e37226226d3ef889272a5fce1a5857d61818370beaa81fa47856fdf0b13",
+   "bytes": 8354,
+   "mtime": "2026-09-22T13:39:57"
+  },
+  {
+   "copy": "RLM/scripts/search_server.py",
+   "source": "RLM:scripts/search_server.py",
+   "sha256": "7f5dc2d434ae9bd4152e94f5117cf50408892712a08d65480872fde348a3d7f9",
+   "bytes": 7485,
+   "mtime": "2026-09-22T13:39:57"
+  },
+  {
+   "copy": "RLM/scripts/obliq_math_search.py",
+   "source": "RLM:scripts/obliq_math_search.py",
+   "sha256": "c887e405520f674a91c85550564c33f0480f6b21b5eae67856e8192f39a1e9b2",
+   "bytes": 6305,
+   "mtime": "2026-10-22T11:43:13"
+  },
+  {
+   "copy": "RLM/scripts/gemini/search_server.py",
+   "source": "RLM:scripts/gemini/search_server.py",
+   "sha256": "5a1e7eb9847e4dbe3f02cc2a094475302a9eb134ca3617382e2302752a389430",
+   "bytes": 5240,
+   "mtime": "2026-10-27T17:12:54"
+  },
+  {
+   "copy": "RLM/scripts/gemini/vertex.py",
+   "source": "RLM:scripts/gemini/vertex.py",
+   "sha256": "6c50a6a1dd178a7bee9b01b73b1c32aade5cec685a6a0d1b09db8dff546c7b43",
+   "bytes": 1271,
+   "mtime": "2026-10-27T17:34:30"
+  },
+  {
+   "copy": "RLM/scripts/gemini/build_index.py",
+   "source": "RLM:scripts/gemini/build_index.py",
+   "sha256": "34aca733916ea2f7e7185dc0681a0cafad5950e95cfbdea09ceb94c1adb1b9f2",
+   "bytes": 4073,
+   "mtime": "2026-10-27T17:12:54"
+  },
+  {
+   "copy": "RLM/scripts/frames_build_bm25.py",
+   "source": "RLM:scripts/frames_build_bm25.py",
+   "sha256": "dc862adaa23eb84631aad7acdcb870005d5bee8a22c9e27ff64dec11c0ef0ac9",
+   "bytes": 9937,
+   "mtime": "2026-10-13T20:23:52"
+  },
+  {
+   "copy": "RLM/scripts/bcp_build_bm25_default.py",
+   "source": "RLM:scripts/bcp_build_bm25_default.py",
+   "sha256": "56ba37ea2f5652f13ebf0e5c2ac6a6ba5b52e61e2d83ae755fcc43b067267f4a",
+   "bytes": 1459,
+   "mtime": "2026-10-16T17:00:34"
+  },
+  {
+   "copy": "RLM/scripts/build_bm25_index.py",
+   "source": "RLM:scripts/build_bm25_index.py",
+   "sha256": "7063b5d816f9ac335808c7b13b7c02351a8c1537698a31ca0de84bbc890b78e8",
+   "bytes": 1465,
+   "mtime": "2026-09-22T13:39:57"
+  },
+  {
+   "copy": "RLM/scripts/build_obliq_index.py",
+   "source": "RLM:scripts/build_obliq_index.py",
+   "sha256": "4fb69de60c60c0541422575d703769481b4433979649ff72f4c685fa55dd4e17",
+   "bytes": 10787,
+   "mtime": "2026-09-22T13:39:57"
+  },
+  {
+   "copy": "RLM/scripts/build_bc_rmcb_dl8192.sh",
+   "source": "RLM:scripts/build_bc_rmcb_dl8192.sh",
+   "sha256": "0b08738977a4ba106806a9268cffa9627d585c8e13d7ff8ad86d6bab23e51294",
+   "bytes": 3776,
+   "mtime": "2026-09-22T13:39:57"
+  },
+  {
+   "copy": "RLM/scripts/reindex_rmcb_8192.py",
+   "source": "RLM:scripts/reindex_rmcb_8192.py",
+   "sha256": "77948d0c1823d8c08ef515820690b794d1e72a0c5a8f460a8bfc95a5892d0fff",
+   "bytes": 10906,
+   "mtime": "2026-09-22T13:39:57"
+  },
+  {
+   "copy": "RLM/scripts/bcp_judge.py",
+   "source": "RLM:scripts/bcp_judge.py",
+   "sha256": "0fe9de81f96e8c10088f191a63f2cbe24529822d6c634f62bf0bc9c7ab93f5e4",
+   "bytes": 5095,
+   "mtime": "2026-10-27T12:37:18"
+  },
+  {
+   "copy": "RLM/scripts/run5d/bcp_snip_grade.py",
+   "source": "RLM:scripts/run5d/bcp_snip_grade.py",
+   "sha256": "5fb7283835bbb6a98d8e23c5384595e479546f98a7b29f7ccca9dadfb764dcb6",
+   "bytes": 3052,
+   "mtime": "2026-10-28T09:35:31"
+  },
+  {
+   "copy": "RLM/scripts/run5d/bcp_fd_grade.py",
+   "source": "RLM:scripts/run5d/bcp_fd_grade.py",
+   "sha256": "d57e866ecc084323666ebfdb67c32aad1a94272e5e7c9087e150908c8f8097a7",
+   "bytes": 3226,
+   "mtime": "2026-10-28T17:57:21"
+  },
+  {
+   "copy": "RLM/scripts/bcp_rejudge_gpt41.py",
+   "source": "RLM:scripts/bcp_rejudge_gpt41.py",
+   "sha256": "69a913cfd1f7966d31712cbb570182eab6be61655478a79fb3514eae87c7efe2",
+   "bytes": 9235,
+   "mtime": "2026-10-27T12:52:19"
+  },
+  {
+   "copy": "RLM/scripts/frames_judge_gpt41.py",
+   "source": "RLM:scripts/frames_judge_gpt41.py",
+   "sha256": "bf5b56fd78a2d115b63f8656a54491eeb1207b1b7fccd2bd26d2325389ee0d37",
+   "bytes": 4505,
+   "mtime": "2026-10-27T17:42:17"
+  },
+  {
+   "copy": "RLM/scripts/run5d/obliq_report.py",
+   "source": "RLM:scripts/run5d/obliq_report.py",
+   "sha256": "b5b7e330c636acd7303a536162a318380d086047b1f4a9eb4a2b68c9ed7b0d36",
+   "bytes": 3448,
+   "mtime": "2026-10-27T17:56:27"
+  },
+  {
+   "copy": "RLM/scripts/run5d/iteration_counts.py",
+   "source": "RLM:scripts/run5d/iteration_counts.py",
+   "sha256": "505f32a04294112d4e10a4f14e210ec7e5091913ff3d3154a99cbb6e26b0923a",
+   "bytes": 3074,
+   "mtime": "2026-10-29T08:01:02"
+  },
+  {
+   "copy": "RLM/scripts/run5d/token_columns.py",
+   "source": "RLM:scripts/run5d/token_columns.py",
+   "sha256": "d658df7bd52cfb1c1559426d8278df3d2301ddc292fe058f636a74898adc657e",
+   "bytes": 6415,
+   "mtime": "2026-10-28T15:01:40"
+  },
+  {
+   "copy": "RLM/scripts/failure_analysis_extract.py",
+   "source": "RLM:scripts/failure_analysis_extract.py",
+   "sha256": "1bab30912fbdfd900ba1fa8eb1eb7749a5ba0404ba7a0b325854b4499fc8e72d",
+   "bytes": 15774,
+   "mtime": "2026-10-29T23:03:58"
+  },
+  {
+   "copy": "RLM/scripts/failure_analysis_build.py",
+   "source": "RLM:scripts/failure_analysis_build.py",
+   "sha256": "52a28f03022feb58c659d85a3611a535b0905f753636a8cab2a47be98dda6231",
+   "bytes": 29153,
+   "mtime": "2026-10-30T10:23:59"
+  },
+  {
+   "copy": "RLM/scripts/failure_analysis_findings.py",
+   "source": "RLM:scripts/failure_analysis_findings.py",
+   "sha256": "7bdba92b3fabbe5b51f309bccdf503c177d6266c5a1cdaa4d12aafe081b29539",
+   "bytes": 9036,
+   "mtime": "2026-10-30T10:26:44"
+  },
+  {
+   "copy": "RLM/scripts/failure_analysis_extras.py",
+   "source": "RLM:scripts/failure_analysis_extras.py",
+   "sha256": "5249c771e2bc6425b4fb9a194ef6120790ea7ce758045b6328352b9a8ab1783c",
+   "bytes": 12970,
+   "mtime": "2026-10-29T23:03:58"
+  },
+  {
+   "copy": "RLM/scripts/failure_analysis_turns.py",
+   "source": "RLM:scripts/failure_analysis_turns.py",
+   "sha256": "495e01c8543345bbc3de807f0fabae0a8317c157675e6de2ad9260a141c635d8",
+   "bytes": 1839,
+   "mtime": "2026-10-30T10:21:58"
+  },
+  {
+   "copy": "RLM/scripts/failure_analysis_turns_merge.py",
+   "source": "RLM:scripts/failure_analysis_turns_merge.py",
+   "sha256": "603c9c64bf8ef30b701f41bb7555c1c4a84aabe4f2705302afce2ae3d05573f0",
+   "bytes": 3845,
+   "mtime": "2026-10-30T10:23:23"
+  },
+  {
+   "copy": "RLM/scripts/failure_analysis_turns_sheet.py",
+   "source": "RLM:scripts/failure_analysis_turns_sheet.py",
+   "sha256": "1e6618f9d5c3aae9c7f89eca47f421e1889711f7b4f303cf956c349c82ddb376",
+   "bytes": 10060,
+   "mtime": "2026-10-30T10:25:06"
+  },
+  {
+   "copy": "RLM/scripts/failure_analysis_eval.py",
+   "source": "RLM:scripts/failure_analysis_eval.py",
+   "sha256": "e4854ddfc969bd0cf98f339d103c46d8771f396af7c93cfb881afee2f4339b8c",
+   "bytes": 5848,
+   "mtime": "2026-10-29T23:03:58"
+  },
+  {
+   "copy": "RLM/scripts/failure_analysis_inject.py",
+   "source": "RLM:scripts/failure_analysis_inject.py",
+   "sha256": "dd994066e72de4ae2d4a71d3e9bb66116e7160be780d0dc6ce5d19244503b96f",
+   "bytes": 1389,
+   "mtime": "2026-10-29T23:03:58"
+  }
+ ],
+ "source_roots": {
+  "RLM": {
+   "git_head": "7685538a2a545aaa257a2d2008766342c12e005c",
+   "note": "working tree, including uncommitted changes"
+  },
+  "FULLDOC": {
+   "git_head": null,
+   "note": "not a git repository; files as on disk"
+  }
+ }
+}

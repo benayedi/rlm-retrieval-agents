@@ -1,0 +1,26 @@
+row      workbook acc/ndcg  recomputed  wb recall rec/results  rec/all  wb srch    srch  note
+BCP-9                0.794      0.7940      0.804      0.8040   0.8040     29.5   29.46  830 records 
+BCP-11              0.8578      0.8578      0.824      0.8239   0.8239     22.3   22.33  830 records 
+BCP-13              0.6747      0.6747     0.6815      0.6815   0.6799    60.87   60.87  828 graded 
+BCP-15  0.380 † (276/830 d      0.1265     0.4979      0.4979   0.1320    19.23   19.23  220 graded 
+BCP-19              0.2494      0.2494     0.3571      0.3571   0.2525    20.15   20.15  587 graded 
+BCP-27              0.4422      0.4422     0.3973      0.3911   0.3911     8.66    8.53  830 graded 
+                                                       0.3973                      8.66  <- mean over the 817 records written (killed runs excluded)
+FR-7                0.7633      0.7633     0.6716      0.6716   0.6716     6.59    6.59  824 graded 
+FR-9                0.6201      0.6201     0.5752      0.6311   0.5752    12.85   12.85  751 graded 
+FR-11                0.807      0.8070     0.7039      0.7039   0.7039     6.17    6.17  824 graded 
+FR-13               0.6104      0.6104     0.5981      0.6025   0.5981      7.6    7.62  818 graded 
+BCP-21              0.8313      0.8313     0.7619      0.7619   0.7619      7.9    7.90  830 questions in trace, 0 duplicated across runs; recall = evidence recall 
+BCP-23              0.8747      0.8747     0.7875      0.7875   0.7875     8.12    8.12  830 questions in trace, 0 duplicated across runs; recall = evidence recall 
+BCP-25                 0.6      0.6000     0.4973      0.4624   0.4602      9.2    9.19  830 records, 826 completed; recall = evidence recall (gold-doc recall 0.4991) 
+                                                       0.4973                      9.19  <- gold-document recall, mean over all 830 records incl. unfinished
+BCP-29              0.5795      0.5795     0.5123      0.5363   0.5021      8.6    8.57  830 cache entries, 777 completed 
+                                                       0.5123                      8.57  <- gold recall, mean over all cache entries incl. errored/killed runs
+BCP-31              0.2241      0.2241     0.1806      0.1834   0.1794      9.7    9.71  830 cache entries, 812 completed 
+                                                       0.1806                      9.71  <- gold recall, mean over all cache entries incl. errored/killed runs
+MAT-9      0.1489 / 0.1954      0.1489     0.1409      0.1409             28.26   28.26  151 records; missing questions score 0
+MAT-11     0.1590 / 0.2024      0.1590     0.1361      0.1361                10   10.00  151 records; missing questions score 0
+TWI-9      0.1019 / 0.1607      0.1019     0.1058      0.1058             34.36   34.36  281 records; missing questions score 0
+TWI-11     0.0950 / 0.1800      0.0950     0.0951      0.0951                10   10.00  281 records; missing questions score 0
+CON-9               0.1876      0.1876     0.2008      0.2008             54.54   54.54  254 records; missing questions score 0
+CON-11              0.1332      0.1332     0.1496      0.1496                10   10.00  254 records; missing questions score 0

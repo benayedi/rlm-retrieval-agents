@@ -1,0 +1,295 @@
+{
+ "created": "2026-10-30T11:51:25+00:00",
+ "files": [
+  {
+   "copy": "FULLDOC/src/run_one.py",
+   "source": "FULLDOC:src/run_one.py",
+   "sha256": "7fb2df145582ccd0a17892444dbf3369ab5235eecdaca95b7a8de10f596e610b",
+   "bytes": 26672,
+   "mtime": "2026-10-12T06:49:38"
+  },
+  {
+   "copy": "FULLDOC/src/tools.py",
+   "source": "FULLDOC:src/tools.py",
+   "sha256": "7d8dc385fbb188df83610e824365aa748f879bdfd98fd3352e08d0a2056d94cb",
+   "bytes": 23740,
+   "mtime": "2026-09-21T15:11:24"
+  },
+  {
+   "copy": "FULLDOC/src/prompts.py",
+   "source": "FULLDOC:src/prompts.py",
+   "sha256": "c44a12ba4d02da24c4bbc4364e85273bb0f9fe5bfb56d690dcb98121e89a20cc",
+   "bytes": 19613,
+   "mtime": "2026-09-26T06:42:13"
+  },
+  {
+   "copy": "FULLDOC/src/fence_tolerant.py",
+   "source": "FULLDOC:src/fence_tolerant.py",
+   "sha256": "6ec29dae94a6e9152fa7162cac9a4fa0a1139fcb081b5f0107266758fc7de906",
+   "bytes": 3214,
+   "mtime": "2026-10-07T09:46:05"
+  },
+  {
+   "copy": "FULLDOC/src/rep_guard.py",
+   "source": "FULLDOC:src/rep_guard.py",
+   "sha256": "9bcf0f91cd11b5303fa7ba19f547e3594c1c3d18b123b9937a9a2a64f925f4dd",
+   "bytes": 5884,
+   "mtime": "2026-10-12T06:42:19"
+  },
+  {
+   "copy": "FULLDOC/src/obliq_adapter.py",
+   "source": "FULLDOC:src/obliq_adapter.py",
+   "sha256": "954c78cd645f03be24ebfdca10ef398dd16112d6cbdc81a6cdfe854c92c9b13f",
+   "bytes": 4495,
+   "mtime": "2026-09-26T07:13:23"
+  },
+  {
+   "copy": "FULLDOC/src/retrieval_server.py",
+   "source": "FULLDOC:src/retrieval_server.py",
+   "sha256": "74f7de8a7c4c42c23c8646586eb24cb886d256d57978453b7a950ba99f32a626",
+   "bytes": 11457,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/retrieval_server_colbert.py",
+   "source": "FULLDOC:src/retrieval_server_colbert.py",
+   "sha256": "9550523d36cd7af01a4ae7009944ceadf691baff196a942d87ece46d5ac207a9",
+   "bytes": 14306,
+   "mtime": "2026-09-25T09:47:35"
+  },
+  {
+   "copy": "FULLDOC/src/encoder.py",
+   "source": "FULLDOC:src/encoder.py",
+   "sha256": "8582fbe6e7ae5d50204eee59931383f6476ef491c0613b089d20398b4fa679fe",
+   "bytes": 4978,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/hybrid.py",
+   "source": "FULLDOC:src/hybrid.py",
+   "sha256": "5cd9ad65940949039ebf346267de03716f3dddb01f3194c49cba1501f86c0e35",
+   "bytes": 5482,
+   "mtime": "2026-09-21T15:11:24"
+  },
+  {
+   "copy": "FULLDOC/src/build_bm25.py",
+   "source": "FULLDOC:src/build_bm25.py",
+   "sha256": "cb952fe86d5bd7a9241a377a3489d0b779e4dd6e06b27431cfd2d2bc24e03560",
+   "bytes": 1846,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/prepare_data.py",
+   "source": "FULLDOC:src/prepare_data.py",
+   "sha256": "c8a5c9f3a3fea5636b7c2ee440e7c8f3071f559b5d54c359f229200b53489dbc",
+   "bytes": 3322,
+   "mtime": "2026-09-21T15:11:24"
+  },
+  {
+   "copy": "FULLDOC/src/run_experiment.py",
+   "source": "FULLDOC:src/run_experiment.py",
+   "sha256": "047cf4219f3b997d470e1887ad00268a585774a09aeea1b0104fedde66120b0d",
+   "bytes": 15982,
+   "mtime": "2026-09-23T08:37:41"
+  },
+  {
+   "copy": "FULLDOC/src/judge.py",
+   "source": "FULLDOC:src/judge.py",
+   "sha256": "3ee888afc0613c27b1fdeccdd0ffa70701a283c1606f74626651100b835fa1de",
+   "bytes": 25265,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/grade_local.py",
+   "source": "FULLDOC:src/grade_local.py",
+   "sha256": "98185879df39e507436142e804901f70cb4566faefe4eb712c5db54f9e7b8c71",
+   "bytes": 3971,
+   "mtime": "2026-09-22T20:22:46"
+  },
+  {
+   "copy": "FULLDOC/src/score_obliq.py",
+   "source": "FULLDOC:src/score_obliq.py",
+   "sha256": "037143652beebe6ccd0d80aa2f329e2a00ff58ee7724703875b9b19553f55691",
+   "bytes": 2115,
+   "mtime": "2026-09-26T08:22:00"
+  },
+  {
+   "copy": "FULLDOC/src/provenance.py",
+   "source": "FULLDOC:src/provenance.py",
+   "sha256": "7536b2c229604c70fd7986b8a92a5504d7d14068102063acf7e64a2b45b96b7a",
+   "bytes": 6478,
+   "mtime": "2026-09-21T15:11:24"
+  },
+  {
+   "copy": "FULLDOC/src/final830_run.sh",
+   "source": "FULLDOC:src/final830_run.sh",
+   "sha256": "036d7f40233e48b4bd897ca4a5e6d86bc8e64465263ef2db16e28745722f9a88",
+   "bytes": 1812,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/final830_complete.sh",
+   "source": "FULLDOC:src/final830_complete.sh",
+   "sha256": "3c2ea3e93a606367cae1ea0eacc8499b325ee230ff119680b380f01a97387449",
+   "bytes": 1683,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/launch_high400.sh",
+   "source": "FULLDOC:src/launch_high400.sh",
+   "sha256": "4854f8015bdbfa0569530a87649862a095126b990bbcdea0393eaa027aef6bd1",
+   "bytes": 1246,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/launch_high100b.sh",
+   "source": "FULLDOC:src/launch_high100b.sh",
+   "sha256": "18de69babf2bcbd6e5806d05747629b82bddc98619c8717aff12cc10c860f9dd",
+   "bytes": 960,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/launch_high100c.sh",
+   "source": "FULLDOC:src/launch_high100c.sh",
+   "sha256": "0b2b1641db333276afb9faaadc7a686f6d6e8df5c7f26580d179e83e7b2e1220",
+   "bytes": 1156,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/launch_high_rest230.sh",
+   "source": "FULLDOC:src/launch_high_rest230.sh",
+   "sha256": "02dd21357290a11928128179a9041811aee2b8acb03b6d2ea00a3469ecdd7bc7",
+   "bytes": 1002,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/apply_answer_check_patch.py",
+   "source": "FULLDOC:src/apply_answer_check_patch.py",
+   "sha256": "5a52389b01cd24b8399dd14c830017b205cb3d9ef466a708ced535839592ed65",
+   "bytes": 5410,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/apply_cap_patch.py",
+   "source": "FULLDOC:src/apply_cap_patch.py",
+   "sha256": "0ee92aa84db4bfc4c8dc79b3cfb257a1d26df4e464382a938a4191d14b76dce1",
+   "bytes": 11865,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/apply_design_d_patch.py",
+   "source": "FULLDOC:src/apply_design_d_patch.py",
+   "sha256": "60fdb59960945161461d58c1ce82f564a1917f7f8fede2b408e2c549981c0832",
+   "bytes": 8603,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/apply_design_e_patch.py",
+   "source": "FULLDOC:src/apply_design_e_patch.py",
+   "sha256": "06dab74baf207de33b6dc06ead4ba570de08381a250fcdaee95c4df6639da989",
+   "bytes": 6441,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/apply_design_f_patch.py",
+   "source": "FULLDOC:src/apply_design_f_patch.py",
+   "sha256": "abec9808df497036bddaf50af3d57093e000a6bad7826641c013c79e66c805b2",
+   "bytes": 13189,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/apply_design_g_patch.py",
+   "source": "FULLDOC:src/apply_design_g_patch.py",
+   "sha256": "8f71d7b7a99782e9fb6e34a15e878ed08917c576d0f5cdea9f580620f11f6fea",
+   "bytes": 7134,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/apply_design_m_patch.py",
+   "source": "FULLDOC:src/apply_design_m_patch.py",
+   "sha256": "9bd0b9fb825af48522e6f3254122633f08ba7a7b12acfed7368318eefeb35445",
+   "bytes": 6206,
+   "mtime": "2026-09-21T15:11:24"
+  },
+  {
+   "copy": "FULLDOC/src/apply_hybrid_patch.py",
+   "source": "FULLDOC:src/apply_hybrid_patch.py",
+   "sha256": "1c645f2d10c7033040e2d44ddee95470ded50b800c7623bf8441eb293f3bc055",
+   "bytes": 7369,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "FULLDOC/src/apply_rlm_side_patch.py",
+   "source": "FULLDOC:src/apply_rlm_side_patch.py",
+   "sha256": "6afb8d009b5b4b4767d831791530ac3e30d95f718269f52922a4e5d940ea4288",
+   "bytes": 3484,
+   "mtime": "2026-09-22T15:39:09"
+  },
+  {
+   "copy": "RLM/scripts/bcp_gpt5_sup.sh",
+   "source": "RLM:scripts/bcp_gpt5_sup.sh",
+   "sha256": "dffb85d75bf3fa24e6302cf487058b9153ae69af924c604cdd3c518bb090886b",
+   "bytes": 2315,
+   "mtime": "2026-10-26T22:49:48"
+  },
+  {
+   "copy": "RLM/scripts/bcp_gpt5_bm25.sh",
+   "source": "RLM:scripts/bcp_gpt5_bm25.sh",
+   "sha256": "5e38a35ab2ddeeeb0ba20a92e1d82270bd07ed14e22692cfe04675af8f7f4dae",
+   "bytes": 3131,
+   "mtime": "2026-10-26T22:49:48"
+  },
+  {
+   "copy": "RLM/scripts/frames_sup_run_one.py",
+   "source": "RLM:scripts/frames_sup_run_one.py",
+   "sha256": "2458e7ae891c9fbc463ceccedfc00a431f90c79b0ea4215d5c4454a60ab3d114",
+   "bytes": 7374,
+   "mtime": "2026-10-21T17:23:34"
+  },
+  {
+   "copy": "RLM/scripts/run_frames_sup.sh",
+   "source": "RLM:scripts/run_frames_sup.sh",
+   "sha256": "105b9ea87765dc0d029b9d0ff8d4e37a0b003752d40b3ce29d0d40f64ada5b79",
+   "bytes": 3913,
+   "mtime": "2026-10-18T16:10:05"
+  },
+  {
+   "copy": "RLM/scripts/run5d/frames_fd_gpt5.sh",
+   "source": "RLM:scripts/run5d/frames_fd_gpt5.sh",
+   "sha256": "cf39274f3047e2f5ab34afa909ebbdadacab4422d0547d463d9be44246b04299",
+   "bytes": 2276,
+   "mtime": "2026-10-27T18:21:55"
+  },
+  {
+   "copy": "RLM/scripts/run5d/bcp_fd_qwen_dense.py",
+   "source": "RLM:scripts/run5d/bcp_fd_qwen_dense.py",
+   "sha256": "6b5d25270880b6824ee6cb7a7c14b5b5ace0135a9f8de63d9e2512413b3b0679",
+   "bytes": 2281,
+   "mtime": "2026-10-27T17:55:58"
+  },
+  {
+   "copy": "RLM/scripts/gepa_bcp.py",
+   "source": "RLM:scripts/gepa_bcp.py",
+   "sha256": "17431d4264bbfd287e15ab237baa82fbc9f28509deb79dbd5701ad6ef91337d5",
+   "bytes": 34025,
+   "mtime": "2026-10-12T20:28:45"
+  },
+  {
+   "copy": "RLM/scripts/bcp_bm25_test.py",
+   "source": "RLM:scripts/bcp_bm25_test.py",
+   "sha256": "5e1360290a019bbd764139aefb783e1f6d0ea6be215047abc925618ab0eccf03",
+   "bytes": 3866,
+   "mtime": "2026-10-17T07:38:14"
+  }
+ ],
+ "source_roots": {
+  "RLM": {
+   "git_head": "7685538a2a545aaa257a2d2008766342c12e005c",
+   "note": "working tree, including uncommitted changes"
+  },
+  "FULLDOC": {
+   "git_head": null,
+   "note": "not a git repository; files as on disk"
+  }
+ }
+}
