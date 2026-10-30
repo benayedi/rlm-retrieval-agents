@@ -286,13 +286,24 @@ pytest`. Running experiments needs model endpoints, retrieval servers and data, 
 
 ## 16. GitHub repository
 
-**Not yet created.** Creating it requires the repository owner's explicit approval of: the repository name, private
-visibility, and the exact contents of the first commit. Once created, this section will be updated with the actual URL.
+**https://github.com/benayedi/rlm-retrieval-agents**: **private**, created 2026-10-30 with the owner's approval. The
+initial commit `443a26f` (315 files) was pushed to `main`.
+
+Before the push:
+- the remote branch head was checked to equal the local commit;
+- the BrowseComp-Plus leak scan and the secrets scan passed on every committed file.
+
+The repository is not public; making it public needs the owner's explicit approval.
 
 ## 17. Supervisor access
 
-**Not yet granted.** `Torky24` will be invited as a collaborator after the repository is created. The invitation's
-status will be checked through the GitHub API and reported here. It is not assumed.
+`Torky24` was invited as a collaborator with **write** permission (invitation id 340570807, created
+2026-10-30T12:45:03Z). Verified through the GitHub API (`GET /repos/benayedi/rlm-retrieval-agents/invitations`): the
+invitation exists and has not expired.
+
+**It is pending.** GitHub grants access only once the invitee accepts. At the time of writing the collaborator list
+contains only the owner. Torky24 can accept at https://github.com/benayedi/rlm-retrieval-agents/invitations or from
+the GitHub notification.
 
 ## 18. Final verification summary
 
