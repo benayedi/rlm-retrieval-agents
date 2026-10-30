@@ -1,0 +1,4 @@
+# Per-question run outputs (compressed; BrowseComp-Plus archives encrypted): stored with Git LFS
+trajectories/**/*.tar.zst filter=lfs diff=lfs merge=lfs -text
+trajectories/**/*.tar.zst.enc filter=lfs diff=lfs merge=lfs -text
+trajectories/**/*.part* filter=lfs diff=lfs merge=lfs -text

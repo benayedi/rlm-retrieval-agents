@@ -107,7 +107,8 @@ Launcher: [algorithms/snippet_rlm/experiments/september/bcp_snip_no_orchestrator
 - Data loaders: [shared/rlm_shared/](../../../shared/rlm_shared/__init__.py) (`browsecomp_data.py`, `obliq_data.py`)
 - Grading: [shared/rlm_shared/grading/](../../../shared/rlm_shared/grading) · Metrics: [metrics.py](../../../shared/rlm_shared/metrics.py)
 - Tests: [algorithms/snippet_rlm/tests/](../../../algorithms/snippet_rlm/tests), [tests/](../../../tests)
-- Original outputs (not in this repository; on the machine that ran the experiments): `logs/rlmfix{24,25,29,30,31}_q*.json`; `logs/bcp_rejudge_gpt41/9.json (gpt-4.1 verdicts)`
+- **Per-question outputs in this repository** (Git LFS): [trajectories/snippet_rlm/BCP-11/](../../../trajectories/snippet_rlm/BCP-11/MANIFEST.json). 832 files, 0.00 GB as written by the run, encrypted with the BrowseComp canary key; extract with `python scripts/provenance/unpack_trajectories.py BCP-11 OUT_DIR` ([format notes](../../../trajectories/README.md))
+- Original locations on the machine that ran the experiments: `logs/rlmfix{24,25,29,30,31}_q*.json`; `logs/bcp_rejudge_gpt41/9.json (gpt-4.1 verdicts)`
 
 ## 7. Existing experimental results
 

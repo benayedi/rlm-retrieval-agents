@@ -100,7 +100,8 @@ Launcher: [algorithms/full_doc_rlm/experiments/frames_qwen.sh](../../../algorith
 - Data loaders: [shared/rlm_shared/](../../../shared/rlm_shared/__init__.py) (`browsecomp_data.py`, `obliq_data.py`)
 - Grading: [shared/rlm_shared/grading/](../../../shared/rlm_shared/grading) · Metrics: [metrics.py](../../../shared/rlm_shared/metrics.py)
 - Tests: [algorithms/full_doc_rlm/tests/](../../../algorithms/full_doc_rlm/tests), [tests/](../../../tests)
-- Original outputs (not in this repository; on the machine that ran the experiments): `logs/frames/sup_q36_bm25f/`
+- **Per-question outputs in this repository** (Git LFS): [trajectories/full_doc_rlm/FR-13/](../../../trajectories/full_doc_rlm/FR-13/MANIFEST.json). 1,645 files, 9.31 GB as written by the run; extract with `python scripts/provenance/unpack_trajectories.py FR-13 OUT_DIR` ([format notes](../../../trajectories/README.md))
+- Original locations on the machine that ran the experiments: `logs/frames/sup_q36_bm25f/`
 
 ## 7. Existing experimental results
 

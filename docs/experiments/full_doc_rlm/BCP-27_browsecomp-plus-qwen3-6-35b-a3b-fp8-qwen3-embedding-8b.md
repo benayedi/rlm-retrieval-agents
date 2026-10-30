@@ -108,7 +108,8 @@ Launcher: [algorithms/full_doc_rlm/src/bcp_qwen_dense.py](../../../algorithms/fu
 - Data loaders: [shared/rlm_shared/](../../../shared/rlm_shared/__init__.py) (`browsecomp_data.py`, `obliq_data.py`)
 - Grading: [shared/rlm_shared/grading/](../../../shared/rlm_shared/grading) · Metrics: [metrics.py](../../../shared/rlm_shared/metrics.py)
 - Tests: [algorithms/full_doc_rlm/tests/](../../../algorithms/full_doc_rlm/tests), [tests/](../../../tests)
-- Original outputs (not in this repository; on the machine that ran the experiments): `logs/run5d/bcp_fd_qwen_dense/ (cache.json, rollouts/e925f0f6c7/, graded_gpt41.json)`
+- **Per-question outputs in this repository** (Git LFS): [trajectories/full_doc_rlm/BCP-27/](../../../trajectories/full_doc_rlm/BCP-27/MANIFEST.json). 820 files, 25.72 GB as written by the run, encrypted with the BrowseComp canary key; extract with `python scripts/provenance/unpack_trajectories.py BCP-27 OUT_DIR` ([format notes](../../../trajectories/README.md))
+- Original locations on the machine that ran the experiments: `logs/run5d/bcp_fd_qwen_dense/ (cache.json, rollouts/e925f0f6c7/, graded_gpt41.json)`
 
 ## 7. Existing experimental results
 

@@ -16,7 +16,7 @@ This repository turns the original working repository into a reviewable research
   of them match.
 - **Review.** The three implementations were reviewed against their method descriptions. The review records 30
   issues with their effect on the results, and fixes none of them.
-- **Documentation.** Every experiment in the results table has its own document, and the test suite has 427 tests.
+- **Documentation.** Every experiment in the results table has its own document, and the test suite has 446 tests.
 
 **No experiment was re-run.** The refactored code was shown to be equivalent at source level (identical syntax trees,
 prompts, tool specifications, cache keys and records under mocks). It was **not** shown to be equivalent at the level
@@ -65,6 +65,7 @@ began. The only exceptions were log files written by servers that were running a
 | `benchmarks/` | retrieval servers, index builders, benchmark sources and licences |
 | `experiments/registry.yaml` | one entry per experiment |
 | `results/` | the results workbooks (BrowseComp-Plus text removed) and generated figures |
+| `trajectories/` | per-question records and full trajectories of 17 rows, as byte-exact Git LFS archives with SHA-256 manifests; BrowseComp-Plus archives encrypted with the benchmark's canary key ([README](../trajectories/README.md)) |
 | `scripts/` | provenance (snapshots, leak scan, wording), audit (recompute results), docs (generators), reporting |
 | `docs/` | overview, architecture, one document per experiment, verification reports |
 
@@ -181,8 +182,8 @@ proposed action.
 
 | Run | Tests | Passed | Failed | Skipped |
 |---|---|---|---|---|
-| with the RLM library importable | 427 | 423 | 0 | 4 (need a GPU model, a FAISS index or Vertex AI) |
-| without it | 427 | 398 | 0 | 29 |
+| with the RLM library importable | 446 | 442 | 0 | 4 (need a GPU model, a FAISS index or Vertex AI) |
+| without it | 446 | 417 | 0 | 29 |
 
 - **Also run:** `compileall` and `bash -n` on all 30 launchers, both clean.
 - **Not run:** linting, type checking and coverage, because those tools are not installed and none was added.
@@ -229,6 +230,14 @@ per-question outcomes exactly: sampling is unseeded, and an earlier repeat of a 
 questions.
 
 ## 12. Reproducibility
+
+The outputs of the original runs can be inspected without re-running anything: `git lfs pull`, then
+`python scripts/provenance/unpack_trajectories.py <ID> OUT_DIR` restores and hash-checks a row's records and trajectories.
+Not included:
+- BCP-31 (left out for now);
+- BCP-21 and BCP-23 (not available);
+- BCP-9 and BCP-11 trajectories (deleted before this work; their records are included);
+- BCP-15 and BCP-17 (unfinished).
 
 To re-run any row:
 1. Install `requirements.txt`, which pins the versions that ran and the RLM library at 854e688.
@@ -311,7 +320,7 @@ the GitHub notification.
 |---|---|
 | Completed | inventory; preservation of originals; refactor of all three algorithms and shared code; 22 experiment documents; algorithm READMEs and reviews; comparison; testing; results audit; this audit |
 | Reviewed | all source used by the 22 rows, the DSPy.RLM package and drivers, graders, retrieval servers, reporting scripts |
-| Tested | 427 tests, 0 failures; static compile and shell checks |
+| Tested | 446 tests, 0 failures; static compile and shell checks |
 | Independently verified | every headline number of the 20 complete rows (recomputed); metric implementations (reference + hand-computed); source equivalence of the refactor (AST, prompts, keys, records); absence of BrowseComp-Plus plain text; absence of secrets |
-| Original evidence preserved | 104 source files with SHA-256 manifests; both workbooks (numbers identical to the originals); per-question records left in place on the original machine |
+| Original evidence preserved | 104 source files with SHA-256 manifests; both workbooks (numbers identical to the originals); per-question records and trajectories of 17 rows as byte-exact archives (`trajectories/`, each member hash-verified after packing); the rest left on the original machine |
 | Not verified | behaviour with real models; judge correctness; benchmark-level equivalence of the refactored code; BCP-21/23 exact code; the two unfinished Qwen3.6 rows |

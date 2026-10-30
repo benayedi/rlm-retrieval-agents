@@ -60,6 +60,7 @@ experiments/        registry.yaml: one entry per experiment
 results/
   original_baselines/   Experiments.xlsx (the results table), Failure_Analysis.xlsx (BrowseComp-Plus text removed)
   comparisons/          figures generated from the workbooks
+trajectories/       per-question records and full trajectories of every available row (Git LFS; BrowseComp-Plus encrypted)
 scripts/            provenance/ (snapshots, leak scan), audit/ (recompute the results), docs/ (generators), reporting/
 docs/               research_overview, experiments/ (one document per experiment), architecture/, verification/
 tests/              cross-cutting tests (metrics, grading, retrieval servers)
@@ -73,7 +74,7 @@ tests you need only the first:
 ```bash
 python3.12 -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt            # pins the versions that ran, incl. the rlm library at commit 854e688
-python -m pytest                           # 427 tests, no network, no GPU; see docs/verification/TESTING_REPORT.md
+python -m pytest                           # 446 tests, no network, no GPU; see docs/verification/TESTING_REPORT.md
 ```
 
 Running an experiment additionally needs:
@@ -97,7 +98,9 @@ exact command, configuration, original output location and grading step: start a
 
 ## Data and licences
 
-Benchmark data, corpora and indexes are not included. [benchmarks/README.md](benchmarks/README.md) explains how to
+Per-question records and trajectories are in [`trajectories/`](trajectories/README.md), stored with Git LFS. Pull only
+the rows you need: `git lfs pull --include "trajectories/<algorithm>/<ID>/*"`. Benchmark data, corpora and indexes are
+not included. [benchmarks/README.md](benchmarks/README.md) explains how to
 obtain and build them.
 
 - **BrowseComp-Plus.** Its questions and answers are distributed encrypted, with a canary asking that they never

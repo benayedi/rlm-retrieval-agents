@@ -61,8 +61,9 @@ the evidence. Configurations become YAML files that reproduce the env vars and C
 
 ## Deviations from this plan (as executed)
 
-- **Results:** published as the Excel workbooks only (decision D3). No per-question files and no per-algorithm result
-  folders. The audit reads the per-question records on the original machine instead.
+- **Results:** published as the Excel workbooks (decision D3). Later, at the owner's request, the per-question records
+  and trajectories of every available row were added as Git LFS archives in `trajectories/`: byte-exact, with
+  BrowseComp-Plus archives encrypted with the benchmark's canary key. BCP-31 is left out for now.
 - **Experiment documents:** one per row of Experiments.xlsx (22 rows). DSPy.RLM has none, because it has no row
   (decision D2).
 - **Full-Doc code:** included as `algorithms/full_doc_rlm/` with no separate origin note (decision D1).

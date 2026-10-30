@@ -107,7 +107,8 @@ Launcher: [algorithms/full_doc_rlm/src/bcp_bm25_split.py](../../../algorithms/fu
 - Data loaders: [shared/rlm_shared/](../../../shared/rlm_shared/__init__.py) (`browsecomp_data.py`, `obliq_data.py`)
 - Grading: [shared/rlm_shared/grading/](../../../shared/rlm_shared/grading) · Metrics: [metrics.py](../../../shared/rlm_shared/metrics.py)
 - Tests: [algorithms/full_doc_rlm/tests/](../../../algorithms/full_doc_rlm/tests), [tests/](../../../tests)
-- Original outputs (not in this repository; on the machine that ran the experiments): `logs/{bcp_bm25_test200,bcp_bm25_rest_gpu0,bcp_bm25_rest_gpu1}/cache.json`; `logs/bcp_rejudge_gpt41/18.json`
+- Per-question outputs: **not in this repository** (see [trajectories/README.md](../../../trajectories/README.md) for why)
+- Original locations on the machine that ran the experiments: `logs/{bcp_bm25_test200,bcp_bm25_rest_gpu0,bcp_bm25_rest_gpu1}/cache.json`; `logs/bcp_rejudge_gpt41/18.json`
 
 ## 7. Existing experimental results
 

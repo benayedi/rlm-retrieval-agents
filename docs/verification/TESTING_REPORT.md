@@ -25,8 +25,8 @@ Without it on the path, the tests that import it skip themselves.
 
 | Run | Tests | Passed | Failed | Skipped |
 |---|---|---|---|---|
-| with `rlm` importable | 427 | **423** | **0** | 4 |
-| without `rlm` | 427 | 398 | 0 | 29 (25 need `rlm`) |
+| with `rlm` importable | 446 | **442** | **0** | 4 |
+| without `rlm` | 446 | 417 | 0 | 29 (25 need `rlm`) |
 
 The raw JUnit XML is in `data/pytest_with_rlm.xml` and `data/pytest_without_rlm.xml`.
 
@@ -44,6 +44,7 @@ The raw JUnit XML is in `data/pytest_with_rlm.xml` and `data/pytest_without_rlm.
 | Full-Doc RLM | `test_run_one_record.py` | Record building; `n_iterations` = trajectory length including the forced-answer call | 6 |
 | Full-Doc RLM | `test_documented_issues.py` | Pins the behaviour behind K9 and K12, so a future fix is a visible change | 3 |
 | Full-Doc RLM | `test_static.py` | Configs, launchers, `py_compile`, `bash -n`, no machine paths | 57 |
+| shared | `tests/test_trajectories.py` | Every trajectory manifest is consistent (unique paths, sizes, encrypted ⇔ BrowseComp-Plus, parts under the LFS 2 GB limit); two archives (BCP-25 encrypted, FR-11 plain) round-trip through `unpack_trajectories.py` with every file's SHA-256 matching. Skips when LFS content is not pulled | 19 |
 | DSPy.RLM | `test_dspy_rlm_signatures.py` | Every signature class constructs; signature set, prompt constants and `make_rlm_signature` / budget-signature output equal the original `rag` package's | 49 |
 | DSPy.RLM | `test_dspy_rlm_agent.py` | `build_rlm_agent` wiring (max_iters, tools, signature, sub-LM incl. the Azure requirement), real `dspy.RLM` construction, tool docstrings; `search_index` truncation, caching, per-turn cap, hard `max_search_calls` stub, top-k clamp; search sequence equals the original's; `run_question` with a fake RLM | 18 |
 | DSPy.RLM | `test_dspy_rlm_tools.py` | `RemoteRetriever` request payloads (index, top-k, timeout) with `requests` mocked, equal to the original's | 9 |

@@ -99,7 +99,8 @@ Launcher: [algorithms/full_doc_rlm/experiments/bcp_gpt5_bm25.sh](../../../algori
 - Data loaders: [shared/rlm_shared/](../../../shared/rlm_shared/__init__.py) (`browsecomp_data.py`, `obliq_data.py`)
 - Grading: [shared/rlm_shared/grading/](../../../shared/rlm_shared/grading) · Metrics: [metrics.py](../../../shared/rlm_shared/metrics.py)
 - Tests: [algorithms/full_doc_rlm/tests/](../../../algorithms/full_doc_rlm/tests), [tests/](../../../tests)
-- Original outputs (not in this repository; on the machine that ran the experiments): `logs/bcp_gpt5_bm25/runs/<qid>.json`; `logs/bcp_rejudge_gpt41/bm25_gpt5.json (gpt-4.1 verdicts)`
+- **Per-question outputs in this repository** (Git LFS): [trajectories/full_doc_rlm/BCP-25/](../../../trajectories/full_doc_rlm/BCP-25/MANIFEST.json). 1,712 files, 0.01 GB as written by the run, encrypted with the BrowseComp canary key; extract with `python scripts/provenance/unpack_trajectories.py BCP-25 OUT_DIR` ([format notes](../../../trajectories/README.md))
+- Original locations on the machine that ran the experiments: `logs/bcp_gpt5_bm25/runs/<qid>.json`; `logs/bcp_rejudge_gpt41/bm25_gpt5.json (gpt-4.1 verdicts)`
 
 ## 7. Existing experimental results
 

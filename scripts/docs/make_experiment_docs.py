@@ -180,7 +180,17 @@ def doc(e):
     L.append(f"- Data loaders: [shared/rlm_shared/]({rel('shared/rlm_shared/__init__.py', path)}) (`browsecomp_data.py`, `obliq_data.py`)")
     L.append(f"- Grading: [shared/rlm_shared/grading/]({rel('shared/rlm_shared/grading', path)}) · Metrics: [metrics.py]({rel('shared/rlm_shared/metrics.py', path)})")
     L.append(f"- Tests: [algorithms/{algo}/tests/]({rel(f'algorithms/{algo}/tests', path)}), [tests/]({rel('tests', path)})")
-    L.append("- Original outputs (not in this repository; on the machine that ran the experiments): " + "; ".join(f"`{o}`" for o in e["original_outputs"]) + "\n")
+    tm = ROOT / f"trajectories/{algo}/{eid}/MANIFEST.json"
+    if tm.exists():
+        tx = json.loads(tm.read_text())
+        L.append(f"- **Per-question outputs in this repository** (Git LFS): [trajectories/{algo}/{eid}/]({rel(f'trajectories/{algo}/{eid}/MANIFEST.json', path)}). "
+                 f"{tx['members']:,} files, {tx['member_bytes'] / 1e9:.2f} GB as written by the run"
+                 f"{', encrypted with the BrowseComp canary key' if tx['encrypted'] else ''}; "
+                 f"extract with `python scripts/provenance/unpack_trajectories.py {eid} OUT_DIR` "
+                 f"([format notes]({rel('trajectories/README.md', path)}))")
+    else:
+        L.append(f"- Per-question outputs: **not in this repository** (see [trajectories/README.md]({rel('trajectories/README.md', path)}) for why)")
+    L.append("- Original locations on the machine that ran the experiments: " + "; ".join(f"`{o}`" for o in e["original_outputs"]) + "\n")
 
     # 7 results
     L.append("## 7. Existing experimental results\n")

@@ -104,7 +104,8 @@ Launcher: [algorithms/full_doc_rlm/src/split_runner.py](../../../algorithms/full
 - Data loaders: [shared/rlm_shared/](../../../shared/rlm_shared/__init__.py) (`browsecomp_data.py`, `obliq_data.py`)
 - Grading: [shared/rlm_shared/grading/](../../../shared/rlm_shared/grading) · Metrics: [metrics.py](../../../shared/rlm_shared/metrics.py)
 - Tests: [algorithms/full_doc_rlm/tests/](../../../algorithms/full_doc_rlm/tests), [tests/](../../../tests)
-- Original outputs (not in this repository; on the machine that ran the experiments): `logs/{gepa_bcp2,bcp_testrest_ctrl,gepa_bcp}/cache.json and rollouts/ee5ea32a1c/`; `logs/bcp_rejudge_gpt41/16.json (gpt-4.1 verdicts)`
+- **Per-question outputs in this repository** (Git LFS): [trajectories/full_doc_rlm/BCP-29/](../../../trajectories/full_doc_rlm/BCP-29/MANIFEST.json). 825 files, 23.48 GB as written by the run, encrypted with the BrowseComp canary key; extract with `python scripts/provenance/unpack_trajectories.py BCP-29 OUT_DIR` ([format notes](../../../trajectories/README.md))
+- Original locations on the machine that ran the experiments: `logs/{gepa_bcp2,bcp_testrest_ctrl,gepa_bcp}/cache.json and rollouts/ee5ea32a1c/`; `logs/bcp_rejudge_gpt41/16.json (gpt-4.1 verdicts)`
 
 ## 7. Existing experimental results
 

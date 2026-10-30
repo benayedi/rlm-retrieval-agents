@@ -94,7 +94,8 @@ Launcher: [algorithms/snippet_rlm/experiments/bcp_snip2.sh](../../../algorithms/
 - Data loaders: [shared/rlm_shared/](../../../shared/rlm_shared/__init__.py) (`browsecomp_data.py`, `obliq_data.py`)
 - Grading: [shared/rlm_shared/grading/](../../../shared/rlm_shared/grading) · Metrics: [metrics.py](../../../shared/rlm_shared/metrics.py)
 - Tests: [algorithms/snippet_rlm/tests/](../../../algorithms/snippet_rlm/tests), [tests/](../../../tests)
-- Original outputs (not in this repository; on the machine that ran the experiments): `logs/run5d/full/bcp_snip_qwen_bm25/`
+- **Per-question outputs in this repository** (Git LFS): [trajectories/snippet_rlm/BCP-19/](../../../trajectories/snippet_rlm/BCP-19/MANIFEST.json). 2,250 files, 4.13 GB as written by the run, encrypted with the BrowseComp canary key; extract with `python scripts/provenance/unpack_trajectories.py BCP-19 OUT_DIR` ([format notes](../../../trajectories/README.md))
+- Original locations on the machine that ran the experiments: `logs/run5d/full/bcp_snip_qwen_bm25/`
 
 ## 7. Existing experimental results
 

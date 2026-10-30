@@ -92,7 +92,8 @@ Launcher: [algorithms/snippet_rlm/experiments/bcp_snip2.sh](../../../algorithms/
 - Data loaders: [shared/rlm_shared/](../../../shared/rlm_shared/__init__.py) (`browsecomp_data.py`, `obliq_data.py`)
 - Grading: [shared/rlm_shared/grading/](../../../shared/rlm_shared/grading) · Metrics: [metrics.py](../../../shared/rlm_shared/metrics.py)
 - Tests: [algorithms/snippet_rlm/tests/](../../../algorithms/snippet_rlm/tests), [tests/](../../../tests)
-- Original outputs (not in this repository; on the machine that ran the experiments): `logs/run5d/full/bcp_snip_qwen_dense/`
+- Per-question outputs: **not in this repository** (see [trajectories/README.md](../../../trajectories/README.md) for why)
+- Original locations on the machine that ran the experiments: `logs/run5d/full/bcp_snip_qwen_dense/`
 
 ## 7. Existing experimental results
 

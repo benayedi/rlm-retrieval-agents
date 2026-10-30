@@ -96,7 +96,8 @@ Launcher: [algorithms/full_doc_rlm/src/run_experiment.py](../../../algorithms/fu
 - Data loaders: [shared/rlm_shared/](../../../shared/rlm_shared/__init__.py) (`browsecomp_data.py`, `obliq_data.py`)
 - Grading: [shared/rlm_shared/grading/](../../../shared/rlm_shared/grading) · Metrics: [metrics.py](../../../shared/rlm_shared/metrics.py)
 - Tests: [algorithms/full_doc_rlm/tests/](../../../algorithms/full_doc_rlm/tests), [tests/](../../../tests)
-- Original outputs (not in this repository; on the machine that ran the experiments): `docs/supervisor_artifact.html (embedded per-question trace: verdict, evidence recall, searches, turns, time, answer cut at 1,500 chars); raw run records not available`
+- Per-question outputs: **not in this repository** (see [trajectories/README.md](../../../trajectories/README.md) for why)
+- Original locations on the machine that ran the experiments: `docs/supervisor_artifact.html (embedded per-question trace: verdict, evidence recall, searches, turns, time, answer cut at 1,500 chars); raw run records not available`
 
 ## 7. Existing experimental results
 
