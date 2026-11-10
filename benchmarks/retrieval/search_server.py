@@ -1,6 +1,6 @@
 """
 Refactored copy of scripts/search_server.py of the original repository (unchanged code; documentation only, see
-shared/CHANGES_FROM_ORIGINAL.md). Single-index Qwen3-Embedding-8B FAISS server, rlm wire format (benchmarks/README.md).
+agents/shared/CHANGES_FROM_ORIGINAL.md). Single-index Qwen3-Embedding-8B FAISS server, rlm wire format (benchmarks/README.md).
 Run: python benchmarks/retrieval/search_server.py --model-path ... --index-dir ... --port 8002
 
 Generic search server — loads a locally-built FAISS index + corpus pkl.

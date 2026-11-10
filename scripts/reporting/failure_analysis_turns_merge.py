@@ -1,16 +1,16 @@
 """Add per-question turn counts, the turn budget and a turn outcome to per_question.json (in place).
 Snippet rows: turns from failure_analysis_turns.py outputs (run5d) or the September token maps (BCP-9 / BCP-11, which
-were counted from the now-deleted logs/rlm_traj32 and rlm_traj24). Full-doc rows: n_iterations, already in 'iters'.
+were counted from the now-deleted logs/rlm_traj32 and rlm_traj24). Document REPL rows: n_iterations, already in 'iters'.
 
 usage: failure_analysis_turns_merge.py <per_question.json> <turns_dir>
 
 Refactored copy of scripts/failure_analysis_turns_merge.py of the original repository; see scripts/reporting/README.md for the pipeline order
-and shared/CHANGES_FROM_ORIGINAL.md for the changes (the original repository root from ORIGINAL_REPO_ROOT,
+and agents/shared/CHANGES_FROM_ORIGINAL.md for the changes (the original repository root from ORIGINAL_REPO_ROOT,
 run logs from LOGS_ROOT).
 """
 import json, os, re, sys
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "shared"))   # <repo>/shared
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "agents", "shared"))   # <repo>/agents/shared
 from rlm_shared.paths import path
 R = str(path("ORIGINAL_REPO_ROOT"))   # refactor: was the absolute path of the original repository
 P, T = sys.argv[1], sys.argv[2]

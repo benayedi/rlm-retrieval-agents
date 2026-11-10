@@ -5,12 +5,12 @@ Refactored copy of scripts/gemini/vertex.py of the original repository; imported
 build_index.py next to it. CONFIGURATION REQUIREMENT: the service-account JSON comes from the environment variable
 NNEXT_PROVIDERS_GCP_VERTEX_SERVICE_ACCOUNT_JSON or, when that is unset, from the line of the same name in the .env-format
 file named by GCP_VERTEX_ENV (originally the .env of the original repository, a fixed absolute path). Nothing here
-prints or stores it. Location: GEMINI_LOCATION, default "eu". See shared/CHANGES_FROM_ORIGINAL.md.
+prints or stores it. Location: GEMINI_LOCATION, default "eu". See agents/shared/CHANGES_FROM_ORIGINAL.md.
 """
 import json, os, sys
 
-# Refactor (import wiring): <repo>/shared on sys.path, computed from this file (<repo>/benchmarks/retrieval/gemini/).
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", "shared"))
+# Refactor (import wiring): <repo>/agents/shared on sys.path, computed from this file (<repo>/benchmarks/retrieval/gemini/).
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", "agents", "shared"))
 from rlm_shared.paths import path  # noqa: E402
 
 from google import genai

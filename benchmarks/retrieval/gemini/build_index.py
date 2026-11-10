@@ -1,5 +1,5 @@
 """Refactored copy of scripts/gemini/build_index.py of the original repository (unchanged code; documentation only,
-see shared/CHANGES_FROM_ORIGINAL.md). Needs Vertex AI credentials (vertex.py: GCP_VERTEX_ENV). Run:
+see agents/shared/CHANGES_FROM_ORIGINAL.md). Needs Vertex AI credentials (vertex.py: GCP_VERTEX_ENV). Run:
   ${GEMINI_PYTHON} benchmarks/retrieval/gemini/build_index.py \
       --corpus $OBLIQ_BENCH_ROOT/analogues/math/corpus/corpus.jsonl --out ~/indexes/gemini/obliq-ana-math
 Original docstring follows (interpreter and corpus paths replaced by the variables above).

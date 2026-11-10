@@ -1,5 +1,5 @@
 """Refactored copy of scripts/reindex_rmcb_8192.py of the original repository (unchanged code; documentation only, see
-shared/CHANGES_FROM_ORIGINAL.md). Needs a GPU with >30 GB free and pylate; run from the directory that holds (or should
+agents/shared/CHANGES_FROM_ORIGINAL.md). Needs a GPU with >30 GB free and pylate; run from the directory that holds (or should
 hold) .pylate_idx/:  ${PYLATE_PYTHON} <repo>/benchmarks/retrieval/reindex_rmcb_8192.py [--start N]
 
 Rebuild Reason-ModernColBERT at 8192 — RESUMABLE, chunked.
@@ -9,7 +9,7 @@ exactly ONE add_documents call and checkpoints nothing: the 4096 build's own hea
 losing a two-hour encode to a CUDA OOM with 15 GB of partial shards left unusable on disk. A
 6-10 hour job with no resume is not worth running when the fix is this small.
 
-Adapted from the Full-Doc RLM's src/reindex_colbert_8192.py, keeping its three fixes:
+Adapted from the document REPL agent's src/reindex_colbert_8192.py, keeping its three fixes:
   1. torch.cuda.empty_cache() BEFORE add_documents, not after. The encoder leaves ~16 GB of
      freed blocks in PyTorch's caching allocator; PLAID's centroid update then moves the whole
      chunk onto the GPU and OOMs.

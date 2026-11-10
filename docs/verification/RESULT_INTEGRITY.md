@@ -5,7 +5,7 @@ Date: 2026-10-30. Scope: every row of [`results/original_baselines/Experiments.x
 **What was done.** The headline numbers were recomputed from the per-question records the runs wrote, using code
 written for this audit:
 - [`scripts/audit/recompute_experiments.py`](../../scripts/audit/recompute_experiments.py), with the reference metrics
-  in [`shared/rlm_shared/metrics.py`](../../shared/rlm_shared/metrics.py), which are tested in
+  in [`agents/shared/rlm_shared/metrics.py`](../../agents/shared/rlm_shared/metrics.py), which are tested in
   [`tests/test_metrics.py`](../../tests/test_metrics.py).
 - Correctness comes from the gpt-4.1 verdicts already on disk. No judge or model was called, and no experiment was
   re-run.
@@ -22,37 +22,37 @@ definitions.
 
 ## 1. Recomputed vs reported
 
-| Row | Algorithm | Reported accuracy / NDCG@10 | Recomputed | Reported recall | Recomputed recall (definition) | Reported searches | Recomputed | Verdict |
+| Row | Agent | Reported accuracy / NDCG@10 | Recomputed | Reported recall | Recomputed recall (definition) | Reported searches | Recomputed | Verdict |
 |---|---|---|---|---|---|---|---|---|
-| BCP-9 | Snippet | 0.794 | 0.7940 | 0.804 | 0.8040 (over results) | 29.5 | 29.46 | match |
-| BCP-11 | Snippet | 0.8578 | 0.8578 | 0.824 | 0.8239 (over results) | 22.3 | 22.33 | match |
-| BCP-13 | Snippet | 0.6747 | 0.6747 | 0.6815 | 0.6815 (over the 828 results) | 60.87 | 60.87 | match |
-| BCP-15 | Snippet | 0.380 † (276 done) | — | 0.4979 | — | 19.23 | — | still running, not audited |
-| BCP-17 | Snippet | — | — | — | — | — | — | not run yet |
-| BCP-19 | Snippet | 0.2494 | 0.2494 | 0.3571 | 0.3571 (over the 587 results) | 20.15 | 20.15 | match |
-| BCP-21 | Full-Doc | 0.8313 | 0.8313 | 0.7619 | 0.7619 (**evidence** recall) | 7.9 | 7.90 | match |
-| BCP-23 | Full-Doc | 0.8747 | 0.8747 | 0.7875 | 0.7875 (**evidence** recall) | 8.12 | 8.12 | match |
-| BCP-25 | Full-Doc | 0.6 | 0.6000 | 0.4973 | 0.4973 (gold recall, all 830 records incl. 4 unfinished) | 9.2 | 9.19 | match |
-| BCP-27 | Full-Doc | 0.4422 | 0.4422 | 0.3973 | 0.3973 (over the 817 records written; 13 killed runs left none) | 8.66 | 8.66 | match |
-| BCP-29 | Full-Doc | 0.5795 | 0.5795 | 0.5123 | 0.5123 (all 830 cache entries, incl. 53 errored or killed) | 8.6 | 8.57 | match |
-| BCP-31 | Full-Doc | 0.2241 | 0.2241 | 0.1806 | 0.1806 (all 830 cache entries, incl. 18 errored or killed) | 9.7 | 9.71 | match |
-| FR-7 | Snippet | 0.7633 | 0.7633 | 0.6716 | 0.6716 (over results = all 824) | 6.59 | 6.59 | match |
-| FR-9 | Snippet | 0.6201 | 0.6201 | 0.5752 | 0.5752 (over **all 824**; 0.6311 over the 751 results) | 12.85 | 12.85 | match |
-| FR-11 | Full-Doc | 0.807 | 0.8070 | 0.7039 | 0.7039 (over results = all 824) | 6.17 | 6.17 | match |
-| FR-13 | Full-Doc | 0.6104 | 0.6104 | 0.5981 | 0.5981 (over **all 824**; 0.6025 over the 818 results) | 7.6 | 7.62 | match |
-| MAT-9 | Snippet | 0.1489 | 0.1489 | 0.1409 | 0.1409 (Recall@10) | — | 28.26 | match |
-| MAT-11 | Full-Doc | 0.1590 | 0.1590 | 0.1361 | 0.1361 | — | 10.00 | match |
-| TWI-9 | Snippet | 0.1019 | 0.1019 | 0.1058 | 0.1058 | — | 34.36 | match |
-| TWI-11 | Full-Doc | 0.0950 | 0.0950 | 0.0951 | 0.0951 | — | 10.00 | match |
-| CON-9 | Snippet | 0.1876 | 0.1876 | 0.2008 | 0.2008 | — | 54.54 | match |
-| CON-11 | Full-Doc | 0.1332 | 0.1332 | 0.1496 | 0.1496 | — | 10.00 | match |
+| BCP-9 | Snippet REPL | 0.794 | 0.7940 | 0.804 | 0.8040 (over results) | 29.5 | 29.46 | match |
+| BCP-11 | Snippet REPL | 0.8578 | 0.8578 | 0.824 | 0.8239 (over results) | 22.3 | 22.33 | match |
+| BCP-13 | Snippet REPL | 0.6747 | 0.6747 | 0.6815 | 0.6815 (over the 828 results) | 60.87 | 60.87 | match |
+| BCP-15 | Snippet REPL | 0.380 † (276 done) | — | 0.4979 | — | 19.23 | — | still running, not audited |
+| BCP-17 | Snippet REPL | — | — | — | — | — | — | not run yet |
+| BCP-19 | Snippet REPL | 0.2494 | 0.2494 | 0.3571 | 0.3571 (over the 587 results) | 20.15 | 20.15 | match |
+| BCP-21 | Document REPL | 0.8313 | 0.8313 | 0.7619 | 0.7619 (**evidence** recall) | 7.9 | 7.90 | match |
+| BCP-23 | Document REPL | 0.8747 | 0.8747 | 0.7875 | 0.7875 (**evidence** recall) | 8.12 | 8.12 | match |
+| BCP-25 | Document REPL | 0.6 | 0.6000 | 0.4973 | 0.4973 (gold recall, all 830 records incl. 4 unfinished) | 9.2 | 9.19 | match |
+| BCP-27 | Document REPL | 0.4422 | 0.4422 | 0.3973 | 0.3973 (over the 817 records written; 13 killed runs left none) | 8.66 | 8.66 | match |
+| BCP-29 | Document REPL | 0.5795 | 0.5795 | 0.5123 | 0.5123 (all 830 cache entries, incl. 53 errored or killed) | 8.6 | 8.57 | match |
+| BCP-31 | Document REPL | 0.2241 | 0.2241 | 0.1806 | 0.1806 (all 830 cache entries, incl. 18 errored or killed) | 9.7 | 9.71 | match |
+| FR-7 | Snippet REPL | 0.7633 | 0.7633 | 0.6716 | 0.6716 (over results = all 824) | 6.59 | 6.59 | match |
+| FR-9 | Snippet REPL | 0.6201 | 0.6201 | 0.5752 | 0.5752 (over **all 824**; 0.6311 over the 751 results) | 12.85 | 12.85 | match |
+| FR-11 | Document REPL | 0.807 | 0.8070 | 0.7039 | 0.7039 (over results = all 824) | 6.17 | 6.17 | match |
+| FR-13 | Document REPL | 0.6104 | 0.6104 | 0.5981 | 0.5981 (over **all 824**; 0.6025 over the 818 results) | 7.6 | 7.62 | match |
+| MAT-9 | Snippet REPL | 0.1489 | 0.1489 | 0.1409 | 0.1409 (Recall@10) | — | 28.26 | match |
+| MAT-11 | Document REPL | 0.1590 | 0.1590 | 0.1361 | 0.1361 | — | 10.00 | match |
+| TWI-9 | Snippet REPL | 0.1019 | 0.1019 | 0.1058 | 0.1058 | — | 34.36 | match |
+| TWI-11 | Document REPL | 0.0950 | 0.0950 | 0.0951 | 0.0951 | — | 10.00 | match |
+| CON-9 | Snippet REPL | 0.1876 | 0.1876 | 0.2008 | 0.2008 | — | 54.54 | match |
+| CON-11 | Document REPL | 0.1332 | 0.1332 | 0.1496 | 0.1496 | — | 10.00 | match |
 
 All 20 complete rows reproduce every audited number.
 
 - Accuracy is correct answers over all questions; a missing result counts as wrong. This holds for every BrowseComp+
   and FRAMES row.
 - OBLIQ NDCG@10 and Recall@10 were recomputed from the answer text with the binary NDCG of
-  [`shared/rlm_shared/obliq_data.py`](../../shared/rlm_shared/obliq_data.py), checked against the independent reference.
+  [`agents/shared/rlm_shared/obliq_data.py`](../../agents/shared/rlm_shared/obliq_data.py), checked against the independent reference.
 
 ## 2. Findings
 
@@ -67,7 +67,7 @@ All 20 complete rows reproduce every audited number.
 | **Evidence**-document recall (evidence ⊇ gold), from the trace page | BCP-21, BCP-23 |
 
 The differences within a row are small (≤ 0.06), but recall is not comparable across rows without restating it under one
-definition. The Full-Doc GPT-5 dense and ColBERT rows (BCP-21, -23) can only be restated with access to their raw
+definition. The document REPL GPT-5 dense and ColBERT rows (BCP-21, -23) can only be restated with access to their raw
 records, which are not in the original repository: they come from the trace embedded in `docs/supervisor_artifact.html`.
 
 **Recommendation:** footnote the column in the paper table, or restate it as gold recall over all questions where the
@@ -75,7 +75,7 @@ records allow.
 
 ### R2. Content-filtered verdicts counted as correct: latent, no affected question
 
-`shared/original/RLM/scripts/run5d/bcp_snip_grade.py:24` stores `bool(verdict)`. The judge returns the string
+`agents/shared/original/RLM/scripts/run5d/bcp_snip_grade.py:24` stores `bool(verdict)`. The judge returns the string
 `"filtered"` when Azure's content filter blocks the prompt, so a filtered question would be counted correct.
 
 Checked offline: filtered verdicts are never cached, so every answered question missing from `_judge_cache_gpt41.json`
@@ -120,7 +120,7 @@ F3 (no gold seen) and F5 (all gold seen) are the same under either definition on
 
 - `scripts/provenance/preserve_originals.py --check`: every preserved source file matches its SHA-256 manifest.
 - Duplicates: no question appears twice within a row's final record set.
-  - Snippet September runs: a retried question's later record replaces the earlier one, by file time.
+  - Snippet REPL September runs: a retried question's later record replaces the earlier one, by file time.
   - BCP-21/23 trace: 0 questions appear in two runs.
 - Verdict files contain only booleans, apart from the latent R2 path, which was never taken.
 - [`results/original_baselines/Failure_Analysis.xlsx`](../../results/original_baselines/Failure_Analysis.xlsx) is

@@ -1,5 +1,5 @@
 """Refactored copy of scripts/gemini/search_server.py of the original repository (unchanged code; documentation only,
-see shared/CHANGES_FROM_ORIGINAL.md). Needs Vertex AI credentials (vertex.py: GCP_VERTEX_ENV). Run:
+see agents/shared/CHANGES_FROM_ORIGINAL.md). Needs Vertex AI credentials (vertex.py: GCP_VERTEX_ENV). Run:
   ${GEMINI_PYTHON} benchmarks/retrieval/gemini/search_server.py --port 8020 --index-root ~/indexes/gemini \
       --default-index obliq-ana-math         # 8021 obliq-des-twitter, 8022 obliq-tot-congress in the OBLIQ rows
 Original docstring follows (interpreter path replaced by ${GEMINI_PYTHON}).

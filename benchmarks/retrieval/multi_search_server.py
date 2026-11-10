@@ -1,6 +1,6 @@
 """
 Refactored copy of scripts/multi_search_server.py of the original repository (unchanged code; documentation only, see
-shared/CHANGES_FROM_ORIGINAL.md). Qwen3-Embedding-8B FAISS server for several indexes, rlm wire format
+agents/shared/CHANGES_FROM_ORIGINAL.md). Qwen3-Embedding-8B FAISS server for several indexes, rlm wire format
 (benchmarks/README.md). Run: python benchmarks/retrieval/multi_search_server.py --model-path ... --index NAME=DIR
 
 Multi-index search server — ONE embedding model, MANY FAISS indexes.

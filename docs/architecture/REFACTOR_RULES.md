@@ -1,16 +1,16 @@
-# Refactor rules (binding for every file in `algorithms/*/src/`)
+# Refactor rules (binding for every file in `agents/*/src/`)
 
-The code in `algorithms/<algorithm>/original/` is the exact code that produced the results in
+The code in `agents/<agent>/original/` is the exact code that produced the results in
 `results/original_baselines/Experiments.xlsx`. It is never edited (`scripts/provenance/preserve_originals.py --check`
 verifies it). `src/` is a readable, runnable copy of it. The research logic in `src/` must stay identical.
 
 ## Allowed changes (and only these)
 
-1. **File and module names.** Rename to intuitive names. Every rename is listed in the algorithm's
+1. **File and module names.** Rename to intuitive names. Every rename is listed in the agent's
    `CHANGES_FROM_ORIGINAL.md`, with original → new.
 2. **Import wiring.** Replace `sys.path.insert(<absolute path>)`, `examples.*` imports and `spec_from_file_location`
    paths with imports that work from the new layout:
-   - Shared code is in `shared/rlm_shared/`: `paths.py`, `browsecomp_data.py`, `obliq_data.py`,
+   - Shared code is in `agents/shared/rlm_shared/`: `paths.py`, `browsecomp_data.py`, `obliq_data.py`,
      `obliq_score_advice.py`.
    - The `rlm` library comes from `RLMLIB_PATH` on `PYTHONPATH`.
    - Compute repo-relative locations from `__file__`; never hard-code an absolute path.
@@ -24,7 +24,7 @@ verifies it). `src/` is a readable, runnable copy of it. The research logic in `
    - A module docstring at the top of every file: what it does, which original file it comes from, and how it is run.
    - Short comments that explain non-obvious research logic.
    - Do not reword prompt strings, tool docstrings or any text the model sees: that is research logic.
-5. **Launchers.** Put shell wrappers in `algorithms/<algorithm>/experiments/`. They source `configs/paths.env`, set
+5. **Launchers.** Put shell wrappers in `agents/<agent>/experiments/`. They source `configs/paths.env`, set
    `PYTHONPATH` to the new layout, and run `src/`. Their arguments and environment settings must be identical to the
    original wrapper.
 
@@ -43,4 +43,4 @@ verifies it). `src/` is a readable, runnable copy of it. The research logic in `
 - `python -m py_compile` on every `.py` in `src/`; `bash -n` on every `.sh`.
 - `diff -u original/<file> src/<file>` for every file. Every hunk must fall under rules 1–5. List any hunk that does
   not in `CHANGES_FROM_ORIGINAL.md`.
-- `pytest algorithms/<algorithm>/tests -q` passes, using mocks only.
+- `pytest agents/<agent>/tests -q` passes, using mocks only.

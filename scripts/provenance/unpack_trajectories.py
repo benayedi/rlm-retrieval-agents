@@ -1,4 +1,4 @@
-"""Restore the per-question run outputs of one experiment from trajectories/<algorithm>/<ID>/.
+"""Restore the per-question run outputs of one experiment from trajectories/<agent>/<ID>/.
 
 Undoes scripts/provenance/pack_trajectories.py. It joins the archive parts and checks each part's SHA-256 against
 MANIFEST.json. BrowseComp-Plus archives are then decrypted with the BrowseComp canary string, the same public key the
@@ -6,7 +6,7 @@ benchmark uses for its own data. Finally the archive is decompressed, the files 
 file is checked against its SHA-256 in the manifest.
 
 Needs: zstd, openssl (BrowseComp-Plus rows), and the archive contents. With Git LFS: git lfs pull --include
-"trajectories/<algorithm>/<ID>/*".
+"trajectories/<agent>/<ID>/*".
 
 BrowseComp-Plus outputs contain the benchmark's questions and answers in plain text. Keep the extracted files off
 the web (the benchmark's canary asks that they never appear online in plain text).

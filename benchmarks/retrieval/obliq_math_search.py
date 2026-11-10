@@ -1,5 +1,5 @@
 """Refactored copy of scripts/obliq_math_search.py of the original repository: OBLIQ_ROOT now comes from
-rlm_shared.obliq_data (OBLIQ_BENCH_ROOT) instead of examples.obliq_data (shared/CHANGES_FROM_ORIGINAL.md).
+rlm_shared.obliq_data (OBLIQ_BENCH_ROOT) instead of examples.obliq_data (agents/shared/CHANGES_FROM_ORIGINAL.md).
 Run: set -a; . configs/paths.env; set +a
   python benchmarks/retrieval/obliq_math_search.py --port 8014 --upstream http://localhost:8020 --index obliq-ana-math
 (port 8014 / upstream 8020 = the Gemini-Embedding-2 Math server of the Experiments.xlsx OBLIQ Math rows.)
@@ -15,7 +15,7 @@ Rather than patch three harnesses, every arm searches through this one process, 
 scaffold:
   * snippet RLM (scripts/run_obliq_mine.py, OBLIQ_TAG_SEARCH=1): our wire, {query, top_k, tag} -> {results:
     [{doc_id, text, score}]}, plus /document {doc_id};
-  * full-doc RLM (suprlm run_experiment.py): the Full-Doc RLM's wire, {query, k, mode, tag} -> {results: [{docid,
+  * Document REPL agent (suprlm run_experiment.py): the document REPL agent's wire, {query, k, mode, tag} -> {results: [{docid,
     ...}]}, plus /tag_counts, /tag_docids, /stats -- same field mapping as suprlm/src/obliq_adapter.py;
   * the paper's multi-hop agent (scripts/obliq_multihop.py, OBLIQ_SUBSET=math): our wire with a tag.
 The question id is the tag's prefix ("<query_id>-<uuid>"). A search without a tag is refused (400), so a
@@ -30,7 +30,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import requests
 
 # Refactor (import wiring): was sys.path.insert(0, "<original repo>"); from examples.obliq_data import OBLIQ_ROOT
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "shared"))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "agents", "shared"))
 from rlm_shared.obliq_data import OBLIQ_ROOT  # noqa: E402
 
 ap = argparse.ArgumentParser()
@@ -105,7 +105,7 @@ class H(BaseHTTPRequestHandler):
                     hits = search(req["query"], req.get("top_k", 5), tag)
                     return self._send(200, {"results": [{"doc_id": str(h["doc_id"]), "text": h.get("text") or "",
                                                          "score": h.get("score", 0.0)} for h in hits]})
-                hits = search(req["query"], req.get("k", 5), tag)   # Full-Doc wire
+                hits = search(req["query"], req.get("k", 5), tag)   # document REPL wire
                 return self._send(200, {"results": [sup_shape(h, req.get("mode", "snippet")) for h in hits]})
             if self.path == "/document":
                 r = requests.post(f"{UP}/document", json={"doc_id": str(req.get("doc_id") or req.get("docid")),

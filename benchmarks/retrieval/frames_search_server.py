@@ -1,8 +1,8 @@
 """Refactored copy of scripts/frames_search_server.py of the original repository: data, corpus and tokenizer paths
-are now FRAMES_DATA_DIR, BCP_BM25_INDEX_DIR and FULLDOC_ROOT (shared/CHANGES_FROM_ORIGINAL.md).
+are now FRAMES_DATA_DIR, BCP_BM25_INDEX_DIR and FULLDOC_ROOT (agents/shared/CHANGES_FROM_ORIGINAL.md).
 Run (CPU only):  set -a; . configs/paths.env; set +a
-  python benchmarks/retrieval/frames_search_server.py --port 8040 --protocol rlm                  # FRAMES, Snippet RLM
-  python benchmarks/retrieval/frames_search_server.py --port 8041 --protocol sup                  # FRAMES, Full-Doc RLM
+  python benchmarks/retrieval/frames_search_server.py --port 8040 --protocol rlm                  # FRAMES, snippet REPL agent
+  python benchmarks/retrieval/frames_search_server.py --port 8041 --protocol sup                  # FRAMES, document REPL agent
   python benchmarks/retrieval/frames_search_server.py --port 8044 --protocol rlm --dataset bcp    # BrowseComp-Plus BM25
   python benchmarks/retrieval/frames_search_server.py --port 8043 --protocol sup --dataset bcp
 Original docstring follows (data/frames = $FRAMES_DATA_DIR).
@@ -14,7 +14,7 @@ BM25 search server over the FRAMES Wikipedia (June 2023 dump), in either harness
   POST /search    {"query", "top_k"}  -> {"results": [{"score", "doc_id", "text"}]}
   POST /document  {"doc_id"}          -> {"doc_id", "text"}
 
---protocol sup  as suprlm/src/retrieval_server.py, for the Full-Doc RLM harness suprlm/src/run_one.py
+--protocol sup  as suprlm/src/retrieval_server.py, for the document REPL agent harness suprlm/src/run_one.py
                 (pass --server here):
   POST /search      {"query", "k", "mode": snippet|full|ids, "snippet_max_tokens", "tag"}
                     -> {"results": [{"docid", "score", "snippet"} | {"docid", "score", "text",
@@ -34,8 +34,8 @@ import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
-# Refactor (import wiring): <repo>/shared on sys.path, computed from this file's location.
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "shared"))
+# Refactor (import wiring): <repo>/agents/shared on sys.path, computed from this file's location.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "agents", "shared"))
 from rlm_shared.paths import path  # noqa: E402
 
 # Refactor: DATA was the absolute path <original repo>/data/frames, assigned here; it is now read below, after the

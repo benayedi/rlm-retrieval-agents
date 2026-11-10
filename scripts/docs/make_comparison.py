@@ -1,14 +1,16 @@
-"""Build docs/experiments/ALGORITHM_COMPARISON.md and its figures (results/comparisons/*.svg) from the evidence files only:
+"""Build docs/experiments/AGENT_COMPARISON.md and its figures (results/comparisons/*.svg) from the evidence files only:
 results/original_baselines/Experiments.xlsx (reported values) and Failure_Analysis.xlsx (paired McNemar tests).
 
 Figures are plain SVG written here (no plotting dependency). Colours: categorical slots 1-2 of the dataviz reference
-palette (#2a78d6 Snippet RLM, #eb6834 Full-Doc RLM), validated for colour-vision deficiency; every bar is also
+palette (#2a78d6 snippet REPL agent, #eb6834 document REPL agent), validated for colour-vision deficiency; every bar is also
 labelled with its value, so identity never rests on colour alone.
 
 usage: python scripts/docs/make_comparison.py
 """
 import re
 from pathlib import Path
+
+from naming import paper_names
 
 from openpyxl import load_workbook
 
@@ -55,7 +57,7 @@ def svg_panels(title, panels, ymax, yfmt, fname, note=""):
     lx = left
     for h, c in COL.items():                                   # legend (always present for 2 series)
         s.append(f'<rect x="{lx}" y="36" width="11" height="11" rx="2" fill="{c}"/><text x="{lx + 16}" y="46" font-size="12" fill="{INK}">{h}</text>')
-        lx += 130
+        lx += 170
     for pi, (ptitle, groups) in enumerate(panels):
         x0 = left + pi * (pw + 24); y0 = top + 18
         s.append(f'<text x="{x0}" y="{top + 8}" font-size="13" font-weight="600" fill="{INK}">{ptitle}</text>')
@@ -86,7 +88,7 @@ def svg_panels(title, panels, ymax, yfmt, fname, note=""):
     s.append("</svg>")
     out = ROOT / "results/comparisons" / fname
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text("\n".join(s))
+    out.write_text(paper_names("\n".join(s)))
     return f"../../results/comparisons/{fname}"
 
 
@@ -154,11 +156,11 @@ def qa_table(rs):
             out.append([r["Harness"], model_of(r), retr_of(r), "not run (queued)", "", "", "", "", ""]); continue
         out.append([f"{r['Harness']}", model_of(r), retr_of(r), r["Accuracy"], r["Recall"], r["Avg. Search Calls Per Query"],
                     r["Avg. Iterations Per Query"], r["Time Per Query"], r["Uncached Cost Per Query"]])
-    return table(out, ["Algorithm", "Model", "Retriever", "Accuracy", "Recall*", "Searches / q", "Turns / q", "Time / q", "Uncached cost / q ($)"])
+    return table(out, ["Agent", "Model", "Retriever", "Accuracy", "Recall*", "Searches / q", "Turns / q", "Time / q", "Uncached cost / q ($)"])
 
 
-md = ROOT / "docs/experiments/ALGORITHM_COMPARISON.md"
-tmpl = (ROOT / "scripts/docs/ALGORITHM_COMPARISON.template.md").read_text()
+md = ROOT / "docs/experiments/AGENT_COMPARISON.md"
+tmpl = (ROOT / "scripts/docs/AGENT_COMPARISON.template.md").read_text()
 pair_rows = [[p["label"], p["a"], p["b"], p["onlyA"], p["onlyB"], f"{p['p']:.2g}" if isinstance(p["p"], float) else p["p"],
               "yes" if isinstance(p["p"], float) and p["p"] < 0.05 else "no"] for p in PW]
 OBL = []
@@ -167,10 +169,10 @@ for t, rs in OB.items():
         OBL.append([t, r["Harness"], r.get("Recall@10 (G)", r.get("Recall@10")), r.get("NDCG@10 (G / P)", r.get("NDCG@10")),
                     r.get("NDCG@50 (G / P)", r.get("NDCG@50")), r["Avg. Search Calls Per Query"], r["Avg. Iterations Per Query"], r["Time Per Query"],
                     r["Uncached Cost Per Query"]])
-md.write_text(tmpl.replace("{{FIG_BCP}}", f"![BrowseComp-Plus accuracy]({figs['bcp']})")
+md.write_text(paper_names(tmpl.replace("{{FIG_BCP}}", f"![BrowseComp-Plus accuracy]({figs['bcp']})")
               .replace("{{FIG_FRAMES}}", f"![FRAMES accuracy]({figs['frames']})")
               .replace("{{FIG_OBLIQ}}", f"![OBLIQ NDCG@10]({figs['obliq']})")
               .replace("{{TABLE_BCP}}", qa_table(B)).replace("{{TABLE_FRAMES}}", qa_table(F))
-              .replace("{{TABLE_OBLIQ}}", table(OBL, ["Task", "Algorithm", "Recall@10 (G)", "NDCG@10 (G / P)", "NDCG@50 (G / P)", "Searches / q", "Turns / q", "Time / q", "Uncached cost / q ($)"]))
-              .replace("{{TABLE_PAIRS}}", table(pair_rows, ["Comparison", "A", "B", "Only A right", "Only B right", "McNemar p", "p < 0.05"])))
+              .replace("{{TABLE_OBLIQ}}", table(OBL, ["Task", "Agent", "Recall@10 (G)", "NDCG@10 (G / P)", "NDCG@50 (G / P)", "Searches / q", "Turns / q", "Time / q", "Uncached cost / q ($)"]))
+              .replace("{{TABLE_PAIRS}}", table(pair_rows, ["Comparison", "A", "B", "Only A right", "Only B right", "McNemar p", "p < 0.05"]))))
 print("wrote", md.relative_to(ROOT), "and", len(figs), "figures")

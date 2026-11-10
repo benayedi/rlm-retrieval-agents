@@ -1,6 +1,6 @@
 """
 Refactored copy of scripts/fusion_proxy.py of the original repository (unchanged code; documentation only, see
-shared/CHANGES_FROM_ORIGINAL.md). Serves the Reason-ModernColBERT rows of the Snippet RLM on BrowseComp-Plus as
+agents/shared/CHANGES_FROM_ORIGINAL.md). Serves the Reason-ModernColBERT rows of the snippet REPL agent on BrowseComp-Plus as
 `--mv-only` over the PLAID index bc_reason_mcb (doc length 512), port 8024 in those runs; see benchmarks/README.md.
 Run: ${PYLATE_PYTHON} benchmarks/retrieval/fusion_proxy.py <flags as below>. Usage text below names the original paths.
 
