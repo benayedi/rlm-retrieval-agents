@@ -2,7 +2,7 @@
 """Build a BM25 index over the BrowseComp-Plus corpus.
 
 Refactored copy of scripts/build_bm25_index.py of the original repository (unchanged code; documentation only, see
-shared/CHANGES_FROM_ORIGINAL.md). bm25s.BM25() with its library defaults (bm25s 0.3.11: k1 1.5, b 0.75, method
+agents/shared/CHANGES_FROM_ORIGINAL.md). bm25s.BM25() with its library defaults (bm25s 0.3.11: k1 1.5, b 0.75, method
 lucene), corpus from the Hugging Face dataset Tevatron/browsecomp-plus-corpus, output ~/bm25_index (home-relative,
 kept). Its layout (bm25s index + docids.json) is what fusion_proxy.py --bm25-index reads. It is NOT the k1 0.9 / b 0.4
 index of the Experiments.xlsx BM25 rows (that one is bcp_build_bm25_default.py).

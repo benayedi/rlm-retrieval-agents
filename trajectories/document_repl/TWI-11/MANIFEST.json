@@ -1,0 +1,1443 @@
+{
+"row": "TWI-11",
+"agent": "document_repl",
+"created": "2026-10-30T14:09:55",
+"format": "tar (PAX) | zstd -19 --long=27",
+"encrypted": false,
+"archive_parts": [
+{
+"file": "TWI-11.tar.zst",
+"bytes": 5861994,
+"sha256": "a2fa87189e5d7c29fdfc5a8c1e4513e3f162efd84a68925e424e6186ff35db76"
+}
+],
+"members": 285,
+"member_bytes": 614424126,
+"files": [
+{
+"path": "fulldoc/runs/obliq_fd_twitter/_provenance.json",
+"bytes": 45948,
+"sha256": "9409cd4c6540402e0e6e72ccf9dd3ad760da8fd5475da49d98bd551be4f187c3"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/_provenance_resume_20261027T1824.json",
+"bytes": 45957,
+"sha256": "d81952a5904590b5c1b9eb1914e151b105eac3c27f238dab32dc178f1e45363f"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0000.json",
+"bytes": 1760134,
+"sha256": "67efba8fd28cef0c4655d98412d60a7e999b3ad0ee95b69d5ba51f120c638dd4"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0001.json",
+"bytes": 2120682,
+"sha256": "57cd32e5e1b76982b6495b9e5bdb3a714eaeaac4474b3f7b4fe567fcfabf93b4"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0002.json",
+"bytes": 2656429,
+"sha256": "2d0c85d5552a4144ab2457dcc23e340159f43fb07a967baa5c63cdc3cbabfad7"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0003.json",
+"bytes": 4588214,
+"sha256": "071b92c0e04e8d5d4427d806d5bb903c69fa62aab0f186c058e3ec3bb2854a18"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0004.json",
+"bytes": 509800,
+"sha256": "8a074af5b46a814c97dce6fbda6906becdeba37876e87de8d15ef115e8e3eb26"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0006.json",
+"bytes": 5799848,
+"sha256": "4acd1762ad7d981e34190b17c2a120f08b3ba3cfa0d8cc14da1f7ea23b3cfbc3"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0008.json",
+"bytes": 2456800,
+"sha256": "2853f22d8e1a2b9227b98188ac90b2ab937adec765db6a01813c639833edb628"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0009.json",
+"bytes": 936156,
+"sha256": "29e6d3ccda0e74277f355759bd78f7f00c02b150897db2f034183f79b9f8a80a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0010.json",
+"bytes": 2175845,
+"sha256": "026a6dd693ae518e7215265fd564786f1048be63298f6413f91df954c39855d9"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0011.json",
+"bytes": 1093406,
+"sha256": "73c83e48d3a09f765938c65c3f3a6fdc1d968d0052b8ec170cfeebe8b192d1dc"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0013.json",
+"bytes": 4736929,
+"sha256": "fd6c474227afdcd9694968a078ed689cdb12909f6cf482485025f9e94fc786c9"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0017.json",
+"bytes": 3231302,
+"sha256": "1916b245527c827571b26a84f8be35c2637e6f8433eded8823d832e9d6ce708a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0021.json",
+"bytes": 1800644,
+"sha256": "c5e6363ea69f2be9465f735db2611b8f79f6382047c6954692f51d77b3b3e273"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0023.json",
+"bytes": 4848756,
+"sha256": "253c29bc76d2aaac7307f11eb3f67618127b15b594bb01758ff34cc1dc438a07"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0026.json",
+"bytes": 669967,
+"sha256": "04eb3dd12e624771406e0ed29a4e17c6b342d3236e9a2dbfbcb305e4adf9bbf3"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0028.json",
+"bytes": 1237728,
+"sha256": "8c1a949d7a03a7f145d27f9385f98ef3b950ecad88505345edac857022f538e2"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0030.json",
+"bytes": 1395546,
+"sha256": "c6fa00ac40568a0aa2a64e765ab75e9c5e58562c75058ede2cfa5c399f2c9591"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0031.json",
+"bytes": 1234011,
+"sha256": "66c47777335e2367ea42c1b4c33d6a9c02a43a720f2a17f2e886448a72600873"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0032.json",
+"bytes": 1758708,
+"sha256": "6f58e080824d78e757a3907a5f659b614e531edc8b5503a6a72a0099fdd6a265"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0034.json",
+"bytes": 1991805,
+"sha256": "fcc7369f3fa39bad1197ac41ad43cbb0edb7259534ede53ba3e2bd3f831dee34"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0038.json",
+"bytes": 534818,
+"sha256": "3da0384eae742a3fa7f3444252e5cc63e7e49786be28fb743c1da6e5e204abf3"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0039.json",
+"bytes": 1980280,
+"sha256": "3e51c29931b033685b825acc3250d9b46ebb61f33b6094a04c9db181b2ad182e"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0040.json",
+"bytes": 1343596,
+"sha256": "eadb9f15ddc8eb569dc25d311acd6a3ed710e4f98e5f697c48ab8be1846912bf"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0041.json",
+"bytes": 1424074,
+"sha256": "fd15ba8308c30d696a02ee6629070402e7d1c73c100b3ea9d05037839963b612"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0043.json",
+"bytes": 814973,
+"sha256": "3e2730e87876204f7ec7d9be8597f125e24df9025495fe31396f2086bb951ed5"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0046.json",
+"bytes": 1331640,
+"sha256": "9e973e867b2d2f968cb3b585c178f4073bf7833a9e5037f05046b810e5f4b8f9"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0047.json",
+"bytes": 4874669,
+"sha256": "c880fca0182cb01b091cfda9107a5f5a58b57a9d62a8e7f1b1dc35fac0912a45"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0048.json",
+"bytes": 4297490,
+"sha256": "9c232847fe7f7bc111fa3b15ea7e35b0c5e4ad79a22d7ee6c1fce17a8af8d0bd"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0049.json",
+"bytes": 2566556,
+"sha256": "92c8326e68d7e6d6fb0eb3873c410a4e198a81d4bafe1023b15b8460ffefe96b"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0051.json",
+"bytes": 10035746,
+"sha256": "4d3b043094b7ef9ae2dbb757eebcdaffbbdd41478fc2d6e9ca70b220f0e41a4e"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0052.json",
+"bytes": 1223509,
+"sha256": "55f6aa14b08aaa21af97f6ed9afc8d43a7b90a35945dc19d3a0076d5b150a2d2"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0054.json",
+"bytes": 2154919,
+"sha256": "e117d2827387a4e664aa3e342738a2aebb43ef58e6988e463ad83f92ab3edf0c"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0056.json",
+"bytes": 2018737,
+"sha256": "69b58587426c2a699c5c6e8c91a47d7b8ff8a33350b38a3843a4a464de1843b0"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0057.json",
+"bytes": 1354417,
+"sha256": "2bcd126523ef56e7a4dc14055d715662389e0b159cf3fcd486de7f758223bc91"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0060.json",
+"bytes": 4939101,
+"sha256": "3e04bff84eb86d5f3a388cf9dacb6c2f1a6cb347cc51f7c97513fac3f9e70949"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0061.json",
+"bytes": 3772699,
+"sha256": "b9515ff5f4755f8a76242ac3d6b1773faf51d8bf48c46fc0aa69b4248fc226ab"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0062.json",
+"bytes": 709525,
+"sha256": "cfbba66aede5f4a8fda00adf02606afb7059daabad8aca60032c997ff92bffee"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0063.json",
+"bytes": 5284538,
+"sha256": "fb16a1fbcd4007ff3bd43d73247f1b3fbf0d1d0660dabd2c309f4d622c2be3df"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0065.json",
+"bytes": 307040,
+"sha256": "b1476675d0010c226092e3c70241d015ae706dfcbe8e22d05aca05c629c19b9e"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0067.json",
+"bytes": 5707124,
+"sha256": "31f38cd96eb3a574331d5a0e1ee194eb48d4c35a04eb4e8ab9df412583f10233"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0068.json",
+"bytes": 1423022,
+"sha256": "04903f09e2b73bc31f5e37a1ed5291556b104958c4f47fccc135ab16746db5fd"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0070.json",
+"bytes": 2128664,
+"sha256": "cb5c676e88bf65db73ac65d4090c80e50bca2a143870ca768a97c9a20b491428"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0071.json",
+"bytes": 1062363,
+"sha256": "be7a521cbfa757ab2d50c3a74237abeb45f6a10f44bd9e993584020065033024"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0072.json",
+"bytes": 768678,
+"sha256": "58ff45c07f17e6224107ff237a808808a4c24f78800cdf81678bfbd9a71e29d9"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0074.json",
+"bytes": 506458,
+"sha256": "16e115c46b081a34ce08205b53de472aca9121ae369ee3e72957980bcc3174d1"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0075.json",
+"bytes": 2171123,
+"sha256": "35c55c5b37b0f36929c167d220bc67827e3609f1708b3a288b582fceccdf1519"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0077.json",
+"bytes": 1421798,
+"sha256": "6a8c9c2691659285741dce20626be4fdf9dc3e01981413779f5efc0fa07ed46b"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0078.json",
+"bytes": 2930884,
+"sha256": "e18d26db88d99e3ef576da95e06b75424efb5fbfdb101dd9900333dd76b8c81e"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0080.json",
+"bytes": 518262,
+"sha256": "68149b4cbe0255aed47a5180d0a3fd8dfcc34f260e802fd97bcca9ede5fa45ca"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0083.json",
+"bytes": 7936362,
+"sha256": "5aba273869243676bcd0ea439391cd67418076b38826b7b3f57913430268ef80"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0084.json",
+"bytes": 2528512,
+"sha256": "df2cdd00268b6cb9835655a582df964ade63a3da9f34862c3808e3881164ff4d"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0087.json",
+"bytes": 1509788,
+"sha256": "291211fde3ae3481f7d2f6618894976ca5798495021546388be8c1dbee476971"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0097.json",
+"bytes": 2540577,
+"sha256": "f898f961169c9a8fd15ac891c48ec0c4ad8f3cf1438003c83ba95ee3d0281f99"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0098.json",
+"bytes": 1119135,
+"sha256": "78f08e13a65653ed0b34393ba59d773ae75d5fd9fe8c05cb8d3dbc91c1b3c32b"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0100.json",
+"bytes": 2699252,
+"sha256": "ebd497ff9aee2768ee2f64c49e532e055673e80c12de650a22cb832a7a593748"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0102.json",
+"bytes": 10907358,
+"sha256": "78f6f00cb81afa9c9b44b01106f659b14d556e827a20fe31043dad08792614a9"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0103.json",
+"bytes": 599216,
+"sha256": "8fd84554501f2fb20000773e464b872b93973c418ae16f350c3351a3a11f8e8f"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0105.json",
+"bytes": 2948057,
+"sha256": "ff16b980aef4851865fd2dda64e8b2dbc5af268a117ce9f17d8fb6e99523e78f"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0106.json",
+"bytes": 3168660,
+"sha256": "981f32397d1398e37712b0cadc9fd2aee5ded1bb92a38917245960860f9ee4c4"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0109.json",
+"bytes": 1947169,
+"sha256": "309e256dcda6d410121054846c46e0bb77d7ea34c876fe40c233333882b02310"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0111.json",
+"bytes": 2028850,
+"sha256": "9e634c424713d2b3b572f4e98c3d5e0e04f147170ad3ca2f891bc306fb79d2bc"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0112.json",
+"bytes": 962829,
+"sha256": "2c21ae76b0329ea630f09562575e2890e138870902a69623842b735c90435cab"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0113.json",
+"bytes": 1360249,
+"sha256": "5f3fbb600004e352c10ae695c97fc63cb5caef555ca8991ceef63cb89b460c59"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0114.json",
+"bytes": 3403160,
+"sha256": "97dc898b80e92b85acf09a29e518c9c6d26fc0920cfc48646fc2eefa359b39d3"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0115.json",
+"bytes": 2663041,
+"sha256": "039a846dd53798b6bec6b840c1501ffbf75a7de3cbb2e10cc5a996b38cad1116"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0117.json",
+"bytes": 1243526,
+"sha256": "7d57cf51c4e8ff18123323bc776ea9283d48a71195f3373ca4fe6ae40239a9e1"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0118.json",
+"bytes": 917646,
+"sha256": "b312efbe26da58310e792231f84642adeb9c47346b60de97066f40025e680a7b"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0119.json",
+"bytes": 670450,
+"sha256": "8a7f9c59925210df4623a21adb8df5f9a8500591d11c9d9f7a6cdb313057d7d8"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0121.json",
+"bytes": 1159011,
+"sha256": "81a681cff97f9042cc7b9c0065a49afceba42447e38b3ea5eacfa1259b7c7a28"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0122.json",
+"bytes": 1166169,
+"sha256": "2f4a68f031912fbebb57c26c20a8d7170956b53132e4a95e1cedebe77723eb5f"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0123.json",
+"bytes": 3759599,
+"sha256": "b01db4d19ae6b11a553e7d71508cb784bd64ce17f18880df93c53e44ba0cce0f"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0127.json",
+"bytes": 1334299,
+"sha256": "dccb010b387707b643be8ac5cf56b329273a937b8d03ace5a7e60510f95b08ea"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0128.json",
+"bytes": 965105,
+"sha256": "2be1cc75fa4d36af15a5bc59a953b39c11af6c58d81d0bf9fc110b86bc4516fa"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0130.json",
+"bytes": 949253,
+"sha256": "0e5f6d44d63912982056393111b792ce24cbbbf15e157890f25ecc6eea3c7efd"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0131.json",
+"bytes": 2486863,
+"sha256": "ef639f8076c4f9d2db3514714f2c9b270344c1b4d2f098fc5fb37a7aacb10705"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0132.json",
+"bytes": 2581200,
+"sha256": "00ed48e991ca5658979bf00a7b38b81bf07ab2dad7622214f25d4ebf76ba0a12"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0133.json",
+"bytes": 1816715,
+"sha256": "b3aa812e6f0a89768be80fcdf621bed5525b6b2e0f48588fef337f8bcfb65da9"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0135.json",
+"bytes": 1119798,
+"sha256": "08be1725a3c9eace1ae95b159496ca15f14311438bdfe826e099b0bab23ff195"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0137.json",
+"bytes": 927139,
+"sha256": "8401b9946cd05cd479220cf0800df69bb340b8ef6d5262abc19450dc49c480c4"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0139.json",
+"bytes": 1674327,
+"sha256": "cca992544b2ab26409f122ee799204e4ea0131012cc2385f124eddfafd81a1c3"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0141.json",
+"bytes": 2934235,
+"sha256": "3db5a4ee7ac4f3728c583808849b3c5ddb243747122ad0b40942966ac45d5d0a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0142.json",
+"bytes": 1622469,
+"sha256": "1f75dcc72a39d9fb9155efbc17221b86489573709835d8bdf4a36451ca473290"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0147.json",
+"bytes": 658411,
+"sha256": "af59e4e534d9af12fc586c011f5cc9aec990e9c9fc22e2e15a16cfdab1c09b23"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0151.json",
+"bytes": 804721,
+"sha256": "303e0adee8de6377c64dc2c55475848ec09097ce15f4d0f3bf9fbf6459ef2c94"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0152.json",
+"bytes": 694509,
+"sha256": "e3f8bc03b934fd66a681e54f776b31c8857ce0cb1013dff1232da5c420c24596"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0156.json",
+"bytes": 1587631,
+"sha256": "27a99e772e097acabeb2a2f561f612cd0e4cf30db62991bc5e5ca9d775370ca5"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0157.json",
+"bytes": 3874613,
+"sha256": "3846d10a58f7d6bea037242bc43b495c1468ab96d3c5f8d67199e5eb6c8002a1"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0158.json",
+"bytes": 1008383,
+"sha256": "33eaa6bd89d312185612edefd8fae2c90124673aa159398d0ca2ba0f4e4f93cf"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0159.json",
+"bytes": 1080627,
+"sha256": "4599574df0936dcef2cfb4688b1e17993bd4248559ee246caf5ff2f9701b358c"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0160.json",
+"bytes": 2970355,
+"sha256": "54797d039aa7f05df3f2d8586ef2f557d30a84fd14a6f6e5dbe260c697d5a423"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0161.json",
+"bytes": 2734619,
+"sha256": "b2826bdc2d1d582a3901e49be38790d99949f33089e107621b5524b263ce36ec"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0163.json",
+"bytes": 495250,
+"sha256": "401994ad6199fc9e02986a4fc3206ef6e5564e60027656e94db41fbb7ec0c979"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0165.json",
+"bytes": 7234174,
+"sha256": "1adcdfa3ac2d2da4200d635d60090e0c6ede072c36016c159d72b6966131bf4e"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0168.json",
+"bytes": 3167574,
+"sha256": "98abd97c3f00548c9852a182692b64e6a423454454fa97c5aac8e4b6842b7bc2"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0169.json",
+"bytes": 1270717,
+"sha256": "29162ccf639802b9bb6914b91cd7e8ab2c23e4bcb1e54d7a1e74acd8f8d74d9a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0171.json",
+"bytes": 1324779,
+"sha256": "9ba6a87fbe32e5a6d7a2ec48ce9ea6261709bfc9739239228ecf5d0f8413fdb9"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0173.json",
+"bytes": 2345133,
+"sha256": "982c6f86776a4e1e2788280fe32feb46a96a9577b18de6f78541897a0489b4c1"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0174.json",
+"bytes": 1154187,
+"sha256": "784c5910d201ad73596dc238f723e8f353ae6df88cb9d3623a826ecb119542ea"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0178.json",
+"bytes": 396228,
+"sha256": "e94ff27679b7ae290eaeaf50cf280196b6edad966fb31e3a743e1fcc81588b50"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0180.json",
+"bytes": 1010057,
+"sha256": "ac1d3ef2d1bc19354fe252968010c00faf3a090900b0109f451ae185aad89a22"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0183.json",
+"bytes": 1423053,
+"sha256": "557d526ada6b6f00b855a368a2b61f60a1f3b0ebe4b44b7ddfd4cea3edfda031"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0184.json",
+"bytes": 8190414,
+"sha256": "fbfa23e6f2319cb99f18578a472ac89e22078832d49d4051ddb3afa20bab2c1e"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0188.json",
+"bytes": 1100063,
+"sha256": "19ae7e11e4dc63eab8f519559d6171747f0b7e42f4e867e85f38f0969c27b8c4"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0190.json",
+"bytes": 1301883,
+"sha256": "cd025c56a51aeffcf48dd6eb7a8d7e062f8f643eceeb732fd3e39898c39e4fea"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0192.json",
+"bytes": 744699,
+"sha256": "2f61c660499c573a21216ae96fe5ca9f406570cc7e865e4d514da0068c7a4794"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0194.json",
+"bytes": 946582,
+"sha256": "c67e333be43a22fb52624476096420afdd6cc68884515eea8c31c3681801e272"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0195.json",
+"bytes": 1195103,
+"sha256": "ff830cd6ff6e62ddfbe19460ff399107c8074e14e79481c4aff1bc6d90a79ee6"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0197.json",
+"bytes": 7440519,
+"sha256": "1d1852922fcdb053cee96df351e0c7e5d23e77e84a7edc2bc587f63de878d4c3"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0198.json",
+"bytes": 3170331,
+"sha256": "8563671bcb03d28c6a1f9b9a21acf0e94873edaaf9e0f138da5240b2b940807b"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0199.json",
+"bytes": 2206241,
+"sha256": "d73a1429cba21a2b386bf3e7a3f4e561228e333cfdb61c94ef96078c2b4bf177"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0202.json",
+"bytes": 1463309,
+"sha256": "011306757682be03fd311e71a32dd7ed3f9d530e856312a50a93bc5d802e9d2c"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0203.json",
+"bytes": 534894,
+"sha256": "96fcd4aa19a40c3409b654961b3ed8bf851eeb44e8e4ab18508d9186437fafa9"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0205.json",
+"bytes": 1943319,
+"sha256": "8e608a6a16697b9659fac2cbac6d23aa4555fd86396879a2db0b1d739bf7f0c3"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0206.json",
+"bytes": 901852,
+"sha256": "c3480559b4300e457de2897b3dd23ad541cc438e9333c76fea52e7c0399bf395"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0207.json",
+"bytes": 720207,
+"sha256": "bce186db049b25892570b45168775cf567867093ff8134c9721f14931fbbfb67"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0209.json",
+"bytes": 1194132,
+"sha256": "30f4756fd4c5dc88224e496e87ef5e55da1d965e9fc297b943a3841416bba35a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0211.json",
+"bytes": 2578209,
+"sha256": "cfc4573a4a2093e69b76cf186e6f0063e5c6f29c46de52012d00c67e7b9acba5"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0212.json",
+"bytes": 1081403,
+"sha256": "a75f05adfd8daa5487b95d0e4171b57959497cf0ae0028f212d8c23c20084744"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0213.json",
+"bytes": 590570,
+"sha256": "f7cb1c37eba839847ee67647069244cddb495cb84e7e0646bf0fbc280ee02657"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0214.json",
+"bytes": 1413076,
+"sha256": "37eef79ca76a5e14af683edcab181d2273d08ac8f6c964c9391f41bd6bccfdf6"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0215.json",
+"bytes": 1095179,
+"sha256": "c8051f1792cc82a7a89a2e16ad4f910f4f340967c7c1dad46ce8f050c7cb81df"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0217.json",
+"bytes": 1596761,
+"sha256": "a8a90c5016635a549b82a85cba1e1e7c03319923c56e91a56b6cecd8cf4151c2"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0218.json",
+"bytes": 3977265,
+"sha256": "311a979f6c20c15ee39a722c53dae80f0895ac541f7758a0340300a930711a52"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0219.json",
+"bytes": 1638874,
+"sha256": "0a511787c3f061019304a543a1d8ed2857ecf2f907c11face5be065d2b3dc713"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0220.json",
+"bytes": 1684582,
+"sha256": "a586771db388a115911fc45c9b803b887753845dcb60e3beafdd6e3762527b3d"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0221.json",
+"bytes": 1217500,
+"sha256": "7de46045a2abfffac04bdade6ffc2071518b741767c6d0ea5612550c051b8109"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0223.json",
+"bytes": 2354952,
+"sha256": "a1365172425986c9d144624426aeebc0dc21986db9c67d947059d5eb88c6342e"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0225.json",
+"bytes": 2200351,
+"sha256": "3bb7c863600cac495acdb81741c4cf39f128c1c5e458ff56f925b5716c74d4c3"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0226.json",
+"bytes": 492262,
+"sha256": "8498c7b4fd3ecfa6af51e703003022d779303249f5dc0e50d41f2acab74e4288"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0233.json",
+"bytes": 557029,
+"sha256": "9f259f2410e95eabec79516ddb94f3d4134de1bbc4ddeb75acbf0fabda4ce5b1"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0234.json",
+"bytes": 1897568,
+"sha256": "babac86114f8e95b732a8512f0e0b040fc25d12338f6b21ff52dc52f6c98051a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0235.json",
+"bytes": 1346971,
+"sha256": "3724c4bd7859a8ec3cacac6495097ca75b9ed23af099eddbd5d69da75118fb42"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0237.json",
+"bytes": 1710477,
+"sha256": "8cc77dd1dfd5c1350f7bd2b0214d9c566920e796b28a7b1c50722064d92e1e48"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0238.json",
+"bytes": 1695148,
+"sha256": "92f39f54ebd3f5aa5a5aef9396bf419dccf4e536e62cf07891722be4dee22d31"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0239.json",
+"bytes": 723894,
+"sha256": "2522fdd9e489f66232bf9325495c9032ef6d5a81335de1e9e92f6ebc45761698"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0240.json",
+"bytes": 1220305,
+"sha256": "efd86c8f934782f9b3139b6e892a179693352d546dfc2db82039d487f35905b4"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0243.json",
+"bytes": 980105,
+"sha256": "a5697db3321debe7d42164bbec11b492d4a9e9a851cdec4f01ba3fdfb8f4f774"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0245.json",
+"bytes": 1111579,
+"sha256": "100d45babc960c8dae03ef0084efc5fbdea4a8dfe40b3d4206265fffc85b5fd3"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0246.json",
+"bytes": 844009,
+"sha256": "ebae07b4208ab974170073484b6936211f28ffb11587339d1ab4c0d097b4fa15"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0247.json",
+"bytes": 869518,
+"sha256": "476bfbdd8f817c3bb57d5649d6336a4f370bee829c0bcbac19186aff742e92f6"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0248.json",
+"bytes": 1052846,
+"sha256": "14326f52f6be601aa2ca241389d39715e9426cbad3a7ec408c4172a0713b5155"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0249.json",
+"bytes": 1951920,
+"sha256": "2d4b0ad2b84a4b13fc5a38aeba32f99cce66d28841dff89b925b1b9967bdf6a0"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0252.json",
+"bytes": 5801402,
+"sha256": "90c0933ccc886e4789613b201642742dd751061c0c39442b84f4f2b025c1461e"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0253.json",
+"bytes": 1134888,
+"sha256": "71cf16e15a6d2832afeb9a67196465d6f580e07f88faf77b85571bb6d640441a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0255.json",
+"bytes": 970750,
+"sha256": "b11679e63a215f9b09d01f04e3815ab4cc9e0d95f968d893bb261ef37bfe4361"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0256.json",
+"bytes": 5059480,
+"sha256": "1e9a6e136df33673d772f27c8bc9cb3e52c57f828487693714e8f924d9fd5d0b"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0257.json",
+"bytes": 2643107,
+"sha256": "d909b02c2f6ebd516d868fede533130b853d8f34a88bcb9b8a176f3dabd538f1"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0259.json",
+"bytes": 811627,
+"sha256": "972369771283160c48674065e1c85d6001ffa46dade0a3db9311f51a2fe8e66a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0260.json",
+"bytes": 2756580,
+"sha256": "597592e5b1f0542287e70a7bd4a98578fae2fba100954a2b47685ff9339ec177"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0262.json",
+"bytes": 3185096,
+"sha256": "8739f2abda2f7223143a0600dcd2308f69e61b70e31447ac05723d990d4d5770"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0264.json",
+"bytes": 925216,
+"sha256": "31e76b29b497153048e2e27f101ec672a5fbca66b185b13a11a4d0cfe120be19"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0265.json",
+"bytes": 1201271,
+"sha256": "22edceaba8e540b856ccd78eb135877a41a6a18bb6f41a359e51b6e29416f81f"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0269.json",
+"bytes": 3636976,
+"sha256": "18ad3d63b15491c46557bacc8e6aa659415f402d9d3b0cd78d4412b1b8641918"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0270.json",
+"bytes": 713355,
+"sha256": "6980caf3b2bf576a506253a3fe705cb4a1ebfe7fd9ae47b2ed662f2f50fb0c9f"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0273.json",
+"bytes": 3389004,
+"sha256": "edebd4cd40f56e20f0e6becdb128a496fb62c46b083f1163700d65ab42990684"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0275.json",
+"bytes": 2337176,
+"sha256": "d0fed5d39249abf1b90ce98ce24054c881e4b37b9b48891f42f2b209e60f43dc"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0277.json",
+"bytes": 551855,
+"sha256": "ba832851f3ffccf387ba8fcf74d600f501b096948cb23bc4f529a7fcfd0e5640"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0278.json",
+"bytes": 5652160,
+"sha256": "400d1b6ed1b420331e00566d37fe84b4265e4d55e65341198c4c607038554b7d"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0279.json",
+"bytes": 2336787,
+"sha256": "87fbe5c0c565bde244681747e6034feccbc9ecde239ee376c0d73900cec98f83"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0281.json",
+"bytes": 755333,
+"sha256": "45d858e006dbd2ded81878b6a429e2e7da789d143b672aed6ace32b96211e0df"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0282.json",
+"bytes": 1968947,
+"sha256": "732f4179db518d588ea2bae47a7eabe2d5a128c892df01be2787e726172334ee"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0285.json",
+"bytes": 9965403,
+"sha256": "87fa2a42efe1f1398a74c90d1d8ecaf53c7ae164a80c102d407091f0b17aa20c"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0286.json",
+"bytes": 1223055,
+"sha256": "ea14b7e441b34555239a4201d205b4a9eaf9d15507ad8f617310ad77e0d59fe0"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0290.json",
+"bytes": 2316377,
+"sha256": "9ee1dbbcc2d76741032ecf6d1e287edfdad316d8f0743266e287bbb1580f91bf"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0293.json",
+"bytes": 991734,
+"sha256": "21fe4adaf6fd5791eeae6f75d1067e236f9fa0c0d06d51ef9476c3d76d25c490"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0294.json",
+"bytes": 1814406,
+"sha256": "b8fb495df6c8bb67b193151da2146de6d3980cf47f2609f8ec991a395c466137"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0295.json",
+"bytes": 1003250,
+"sha256": "ceecf1cd404fca9963eb03e02d7fadc4da834d6428623d41937ccbf69911c5b1"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0296.json",
+"bytes": 1224690,
+"sha256": "f6476b8488a13e7ecebe720669c00695d138f3fd8855497ecadd341b36af4d91"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0298.json",
+"bytes": 698202,
+"sha256": "c990401c7c97653fc4e436c44e46851adf8bfbd7072c37cae86e43c7f71aaeb8"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0299.json",
+"bytes": 2199033,
+"sha256": "08516166d80c454abf95063aaaccee9fefa95abde4eb4a5fc59586845b718ada"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0302.json",
+"bytes": 985042,
+"sha256": "eac664f4481114480c02c0506186546a5ef2768f76ab20621056f769c7a476a5"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0304.json",
+"bytes": 2413957,
+"sha256": "ea8ec67c255c900e31bcdba036f2c34ecc90f8504e6d0bc2ecfaa497b56a904a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0305.json",
+"bytes": 384764,
+"sha256": "cc51557f43f8b157a5abeff94298370a70c075f0f7a07a21b447d89a6c74f496"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0306.json",
+"bytes": 1318034,
+"sha256": "af05269830edaea451c57e32e1141693d8a9006911422db841d2f6e467e13986"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0308.json",
+"bytes": 1698135,
+"sha256": "5f0162316f49523ef2be4b2fc5e9434175e3ec00f3db4e5ff74f3be94bccf272"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0312.json",
+"bytes": 1139789,
+"sha256": "c49a376248c4ccacf4caa08ac48f22ce387016e4ffbb08073f64b734324bf3e0"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0313.json",
+"bytes": 2232535,
+"sha256": "3b8662145e988bc2140a1e5c95845e20c4f21157c7810b5c1e678eff98942ffb"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0315.json",
+"bytes": 1234082,
+"sha256": "6dab1b2f79eb1b10e26a9114156356afda8f0a202b1835f5bf472e1c0da4452f"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0316.json",
+"bytes": 4847660,
+"sha256": "784b4d2c77fc69b41b6bd79849544e56a24ab1caa775fb9d650fbdb73e71db03"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0317.json",
+"bytes": 1899330,
+"sha256": "77788e8d7aea29f0e4724bde296ecb0fdc5b710878650efaa0ad28e62067ff15"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0318.json",
+"bytes": 8121012,
+"sha256": "552174805a1be7bc72655500289973a44fad5e64fe3f89ed807f37d1fc5d34b9"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0324.json",
+"bytes": 2396348,
+"sha256": "0f4d1362d3ea946ccddadcfeee2fea3e95bebb2d03dad17c0bb62d82772c0803"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0325.json",
+"bytes": 3430504,
+"sha256": "58452269f80a899929c1f8cd4c935b8719a41ac12844d9dc8957d321ad34a812"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0326.json",
+"bytes": 783874,
+"sha256": "40f41efd4b95f03647ec7e5a0063089a2e59fbcd15bf8460e7777eb8482283ae"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0331.json",
+"bytes": 4110630,
+"sha256": "a99fe18c0bcaeeb4ed6402999ea666432760a67ba6df2661bba2144c7bfdc106"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0334.json",
+"bytes": 2562363,
+"sha256": "d4c7e944e63d820441db3ccc248e6756f202bfac9bdc8a4dfb6b2e76ac3872db"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0335.json",
+"bytes": 8845806,
+"sha256": "dc29b903fd6aba4e2e89e27fcbcd69de9670c3f712f1d074383e60cbeaf58843"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0336.json",
+"bytes": 2849526,
+"sha256": "f8343165da7899221c10c244d7a63a78924b9cad066109f71137ff8c322a4163"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0337.json",
+"bytes": 3262796,
+"sha256": "e2e97c566016fa7241251f58e4541ac468d35aa5bb9f62704b1e3288e900aa0f"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0338.json",
+"bytes": 483939,
+"sha256": "327356b37828d2007d2a7947a05f3411e16b333e960d1e8c7630c494526636ae"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0339.json",
+"bytes": 1921151,
+"sha256": "a55d1773754d4108b0e685be4db8d745c351e593c7e062dd8a3d73e973aa0105"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0340.json",
+"bytes": 1396750,
+"sha256": "664b45dd4a9fabf3be20ddaea5d37d4b8b4938e797fdee32ad9fc170b162d62a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0343.json",
+"bytes": 5967377,
+"sha256": "bafbaff842a3624f746a926360e4e84e77f2408d1158ced6aabdb271d4513ec9"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0346.json",
+"bytes": 1242696,
+"sha256": "21cd882d507f8094aaff9d4538a26e9b6f0b3840f66fdc9cf705155320fa46b6"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0347.json",
+"bytes": 2035634,
+"sha256": "a1cebbb48f628fb8db3de17c7f50b2c4725c74b6a8dfecedcb122d580ace00e5"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0348.json",
+"bytes": 1998730,
+"sha256": "89df66c025efe9811ae23672bcb2e48434132b3a5976034f0c50daab0ee9e4ed"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0349.json",
+"bytes": 690243,
+"sha256": "dd69297504a013bfae155ca2b1b50c23bbd734e4e126802cf7ba8ceb1108e148"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0350.json",
+"bytes": 2032400,
+"sha256": "93a6af36a1cde3b51215be923ed1ed8e9e32894df7b439f8e0df6ccd2724a086"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0351.json",
+"bytes": 1062657,
+"sha256": "ad07ab8707dc8cb5444eed6799ce00bcb31dd192fc70c684a68b749243db21d4"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0352.json",
+"bytes": 5854666,
+"sha256": "092b49ca95a08a8420ea0c13d9b4cc1189f9ffb6c7767c2ee074fb6bcfb27a6c"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0353.json",
+"bytes": 1171080,
+"sha256": "1df2790c23868bcd2dab45ecfdf6ab6ba715cdad4a6bedca1933758192132952"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0354.json",
+"bytes": 409605,
+"sha256": "c55dd251710f2e9aa40aa6b0631c8b1a43e66a255133bb928844f1ee17fbb4a6"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0355.json",
+"bytes": 888766,
+"sha256": "c9ead1da960e34a35f24de71634de346e64ed67904b1b099597a51caceca4a5f"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0356.json",
+"bytes": 1305705,
+"sha256": "eb7b5de701b4634d0bfc287f04584e44be642da66ece6fe240f845df242525d7"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0358.json",
+"bytes": 2553243,
+"sha256": "8ed7a99bfb2a36bc90bf3b834895626c64709cda9c687f204666b3e96e196a90"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0359.json",
+"bytes": 955624,
+"sha256": "32b50a82f8d56fe221efba73307f16bb1880186cadfd6eb1b9ea1199a2c12781"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0360.json",
+"bytes": 3867528,
+"sha256": "e25f8b1d25e4e7b819adb7971243bb5d3f6b354a35595733668826a455ac9e4d"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0363.json",
+"bytes": 2870710,
+"sha256": "f0bcef24caa3e79b5e79bca1b1bb912c5903c459838aef8d22430a7f75c1d92d"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0364.json",
+"bytes": 1972659,
+"sha256": "28cadc27a46ecd80bd9f2b3a9106c310b45b2de8fb5c7a6a8deafa63a9923216"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0366.json",
+"bytes": 3848101,
+"sha256": "be393553d34a33f878632bc7c88e186cd61cdc9dda6727033a1bc975e54a9a7c"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0367.json",
+"bytes": 613364,
+"sha256": "74711c7ac51b257d4550ea07c7e44f8bdf48a997f957645d548631a4e443b88f"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0372.json",
+"bytes": 2734513,
+"sha256": "173084fa9369b2270cdb7894eee4014f65c0b3f44b804c69f445f5632d621fda"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0373.json",
+"bytes": 2467362,
+"sha256": "8bef4a2f52962d31f8745f918b7e2b1ba6b841adc66264e5185b73f2a9a111ed"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0374.json",
+"bytes": 3726398,
+"sha256": "429ee3cc03fc088bbe84efb45e637d76fddb41810e117cd97ff93c772d39d9a6"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0376.json",
+"bytes": 836866,
+"sha256": "6803de3748d305ef825b4aea6523118dcf7ec3ad624b7d11f12abac22939225d"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0378.json",
+"bytes": 1711285,
+"sha256": "f8e10c7d6c15afb98c5548c756198dcaba7cfbfed5541c22395fa8f19f18d7a4"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0380.json",
+"bytes": 877293,
+"sha256": "2c9e9989f346ede2cbea3ab1f8800d60d7110c696c0b327beb746f36241a7321"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0382.json",
+"bytes": 583325,
+"sha256": "a10fd35c11f008e13f9c73443cad379db643c99fe03aed1bc594a97358fdd7f0"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0388.json",
+"bytes": 1022887,
+"sha256": "4ee9eb7b01202334e49e0dc32bbe5be48138d0c13aafc6e25376dc93b9bb5328"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0390.json",
+"bytes": 448206,
+"sha256": "3e9b3ad54e0d074acc7f2eef493ffff8ef53d2f2bedd2ac53a78d3d7eae0314f"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0391.json",
+"bytes": 550986,
+"sha256": "62045852295d245397e43559c05aca523af5bbbb62d68f3dfd96a32ae3e333e6"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0392.json",
+"bytes": 747844,
+"sha256": "127d129cf7fc4c00ce6da73b41d743cc3538ef7a4ca68d16aa3a84641fb8d8f6"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0393.json",
+"bytes": 943557,
+"sha256": "2d6e50f12d9be392e1c1d2431a6dfdf9af0d38eff7dcedbb95d11664f9ccbfc7"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0394.json",
+"bytes": 2604185,
+"sha256": "a576dd20661c5fd9f8ec8c02c88ee3863b68c805a154845fd851d543daa61a15"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0395.json",
+"bytes": 1387390,
+"sha256": "9e147b32f6c2eb16d2be277662e821fbc95de58594178a18ef28c68bb387a6a2"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0396.json",
+"bytes": 1118886,
+"sha256": "93d16a5971030848187cbab022f527200d56722c0da3104f4135a45977d22945"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0397.json",
+"bytes": 3808631,
+"sha256": "9cc6e4a61c485723d44847c4a62f41839a9a76e4a82244cc3e448b7c0115e9d7"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0401.json",
+"bytes": 1245201,
+"sha256": "07a0700af1cef34ebb78f0630e91c37d55d811e7e78942319aed85c5c9735801"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0402.json",
+"bytes": 1654435,
+"sha256": "c21ee672ad122ab747e1fdc2f50f041246c0cc3831139892eb88b43467d3d834"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0404.json",
+"bytes": 1775989,
+"sha256": "90fab6054872669b2911b65b13a4153f2aa0469ddc3b8c2013b0a88f5588161b"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0406.json",
+"bytes": 1654233,
+"sha256": "c110cc5de5d003f57216b1dc39c1f5cc845ba34a8ba4d6d87af2869536e281a0"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0407.json",
+"bytes": 963096,
+"sha256": "0820371addf735fa1d0c1df75265fbb8ab94f8b49bf40dd2260c02b827d8720e"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0409.json",
+"bytes": 738174,
+"sha256": "6c51abac92c37c2eeeb60f719bfcb5e941aa6465f4beac13f43b4e4cc9562b3a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0411.json",
+"bytes": 2249015,
+"sha256": "247b8be1e4ab3b5ab7318ae6d7b282d918b9f37c87fc3d7aa0545c182b938e3e"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0413.json",
+"bytes": 1757568,
+"sha256": "10b14c1c9aa80737ea7bd5c2f9d8a11306b8f8fb1e5d34ed3d26f21d659e9284"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0418.json",
+"bytes": 2327079,
+"sha256": "efbc388b55d068d2c5ad173ce99d1cc125b4f30729bff69ce4088bbb2e676d98"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0419.json",
+"bytes": 1542203,
+"sha256": "5dea65c8c10079ced283bbd79c673b196e90f598f6e8c34d7a5c1fea368047a1"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0421.json",
+"bytes": 1559983,
+"sha256": "f9f178d0df8f16a14ff9783b9216cdc6fea1eabdfe9e575f74d9a4799dd46242"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0422.json",
+"bytes": 747956,
+"sha256": "09f1f3d5d93246331afbf51ef6f198651b7006897f22bc3f90de3fe35315c741"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0424.json",
+"bytes": 3548405,
+"sha256": "c700008101f3261acb765bb93ff8f58f6f1717407fe87c65d4ecb962c48bed5a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0428.json",
+"bytes": 1490795,
+"sha256": "cdc8f655905794915a9a6b70c3f7f154f7e0e18d98ee23ee81bcb2d5dbb3d96a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0429.json",
+"bytes": 2152357,
+"sha256": "fa0cf636e13461cea0f5e4d3db702eb75dae3c6ca36d799c8bc1d0f48f959fd6"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0430.json",
+"bytes": 1449545,
+"sha256": "f3e2043aaca6dec589dcf8c658c2d54c62aabb3fc180655e4077259884da36f5"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0433.json",
+"bytes": 819108,
+"sha256": "53ef301b398aecdb4f1a29da12cd5e2e370793525475b0a80d6057fb355e4159"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0442.json",
+"bytes": 1272295,
+"sha256": "3974f3362d5e309eba1ffcf8ccdcc2d22062110298cfd3e22f5f8de4eada316d"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0446.json",
+"bytes": 638934,
+"sha256": "f61468d19a7376ce9c57342dc4fa58b6b74577de6aacd9bbe1dbbb359b5e6937"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0447.json",
+"bytes": 3060331,
+"sha256": "caddffd08e5b26e55a09cb1e9ff7d98892d086e323e7820fcebc30558cd4daad"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0448.json",
+"bytes": 803012,
+"sha256": "354a89b6f4bbbf156e4d05c4d384d310b75dfed61bcfa74edbfb85d14ed74856"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0449.json",
+"bytes": 3684634,
+"sha256": "9c5a667a98d6ca2eccf29d7584027ae27134e12fa69666b5ba03bb1f23e25bda"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0450.json",
+"bytes": 2717072,
+"sha256": "77450d4547abc37eaef73fd6304a2ca68b3e24b0aeef8f548a65b6609c1ddca7"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0456.json",
+"bytes": 1677215,
+"sha256": "044291be8ea79cc63b0ecf24c76f809451f7ec60f08ec3ca84f1a4f45a723e9a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0458.json",
+"bytes": 1304799,
+"sha256": "d66a43907b9e7ad68e626787ac7f32c0e2e0429e08b39b8c53a09a6d4cccb9d3"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0459.json",
+"bytes": 7636177,
+"sha256": "e15f60eba8ea325542e9d397319afc89bd8ef236bbd562774b853a525069a014"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0461.json",
+"bytes": 1374625,
+"sha256": "f28442c4694f9bfccd92ac1cca71d26ed527dde2435d3d80e8ebe718678d323d"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0462.json",
+"bytes": 1144563,
+"sha256": "4e82a1c57f834fc6bc24feb5ccadd56a903b7093690376cdf3e03fe103e61f8a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0463.json",
+"bytes": 977812,
+"sha256": "9f4b1db1a586a672dc17a7e1d67125d2c0cfea4a4843b67ceda70d482da6488e"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0466.json",
+"bytes": 1643079,
+"sha256": "88f949c90e027ecc66319bf985c3aa5381843a2bbc7a4ee4f1c7314111aa5ac9"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0469.json",
+"bytes": 1256370,
+"sha256": "51ad5ac8df19ebfb287ae0b89191ef6bd540f9e4db3aa6456ef181b8200b4692"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0470.json",
+"bytes": 930383,
+"sha256": "7ca6145eb356a60724edcc4da76e517d9abb7fb726728f86d4a4e018e52d5e06"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0471.json",
+"bytes": 8020687,
+"sha256": "57d10295de7fe9291dcf2c411ccbb3f2b75551c1ffc0f7a6eadf16b5e57808e0"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0473.json",
+"bytes": 1994679,
+"sha256": "5feea4817fb22689d59ee1bd9cf3fc2b017be80af11ecf66134ea4f675a6c7fd"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0481.json",
+"bytes": 14373448,
+"sha256": "b0bf42bce428181f8742dd4b6ebfba668c0b95a2302cd86bd856638f71265405"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0482.json",
+"bytes": 1193122,
+"sha256": "e506e3b7277930873a21bc32765d601c6c226cb26116832f80bdd116565d5cb9"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0484.json",
+"bytes": 714200,
+"sha256": "3d2d2d15a38b5985facee079b0e66b133da38214627a46057d4fc6495eb017ff"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0485.json",
+"bytes": 389712,
+"sha256": "758e6abc807ff85a522779a40ceea05d44522c84fc0af7fa25d76b4b39492a6b"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0486.json",
+"bytes": 2466556,
+"sha256": "8fdf6c1613bfc5fb92d2d2999075f2f4ffd3e9df3fa52b2aaad73bd9a96660f1"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0488.json",
+"bytes": 1586179,
+"sha256": "9c848e67d7e3b27158e2ee3b1f3c1912111ed5b8aaa1cad4e0d36e541ccca626"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0489.json",
+"bytes": 409694,
+"sha256": "d9c0e1f71cc0c38bc3dec4a3a92ceaefec5f9cfdfb5d8ba55c4f5cdd61920b8a"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0493.json",
+"bytes": 10355440,
+"sha256": "4f2880afb9d8363055e6bd38067e9fce728289ea3f425abe8ba0390f21a91242"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0494.json",
+"bytes": 4418611,
+"sha256": "966be2b5c4eb58836c9cd3931c3e666bfe78668ba4621182d91e7a1945853990"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0496.json",
+"bytes": 3188538,
+"sha256": "3540e6e2a9305d8e7ff192f52adc9f445cc8bfb0069c9b7b7572d25a172173ce"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0499.json",
+"bytes": 1576591,
+"sha256": "18e6ed7310550df126608374113e0ecd270206c5bc3551f759e28e1b9d34a579"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0503.json",
+"bytes": 2292260,
+"sha256": "dbe52ce776aa0787bf3e6babe750e39ca5897933936f0832a11036bebf1c0b7c"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0504.json",
+"bytes": 622096,
+"sha256": "e7526f2c85566ea5e48db4183a6edf10053e8c75d650504ab72393ffd574cf23"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0507.json",
+"bytes": 1289846,
+"sha256": "2035a33956fda310e9d9c832b0fc12349b174df02530b6e4c37784ff6dd4f450"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0509.json",
+"bytes": 651718,
+"sha256": "8b7a6bf54cd0ef9f07d189f1f38dbb043fbac80cc24b800e10259fb574e19828"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0514.json",
+"bytes": 894511,
+"sha256": "8ddeab4301f1683637ab48c5bdc6d2a33b5db4d6a2aa7886a3d700df4ee1fea5"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0515.json",
+"bytes": 1019023,
+"sha256": "d5cd40c3a10a1878daa57b898e0d6586182807bc83680232b4a85bb46104a102"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0516.json",
+"bytes": 1320730,
+"sha256": "f8ac3345fd557aacffc4859c2df3dc88c5e7370eeef51386be8ca2be3fe1c4bc"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0517.json",
+"bytes": 5158198,
+"sha256": "77c9f8d8bc2d6801c61f42773199ad053f5814c25cc3d944d4d46399cc3f583d"
+},
+{
+"path": "fulldoc/runs/obliq_fd_twitter/q0520.json",
+"bytes": 1356069,
+"sha256": "50efdeeb41ea8dcf55baa85a1d209c5b2ea228c96b374d73fdcc51b9dbaff711"
+},
+{
+"path": "logs/run5d/full/obliq_fd_twitter.out",
+"bytes": 33685,
+"sha256": "3c2f740fb9f4ea4a1107579f1cd3dd28a4cd446ad451469875aff84be4f4d9dc"
+},
+{
+"path": "logs/run5d/full/obliq_fd_twitter/usage.jsonl",
+"bytes": 284242,
+"sha256": "f1b01b793d32bee74ba7567caea7b2f0fde680e84a16519151bdbcd27a32ef86"
+}
+]
+}

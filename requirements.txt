@@ -1,7 +1,7 @@
 # Versions of the environment the experiments ran in (Python 3.12.14, conda env "vllm"), October 2026.
 # Pinned to what ran, not to a tested minimum. Three environments were used; see README.md "Installation".
 
-# --- agent harnesses (Snippet RLM, Full-Doc RLM): the RLM authors' library at the exact commit used
+# --- agent harnesses (snippet REPL agent, document REPL agent): the RLM authors' library at the exact commit used
 rlms @ git+https://github.com/alexzhang13/rlm@854e688fbba9d8f8989e3da9989812e4b6dfe270
 
 # --- DSPy.RLM

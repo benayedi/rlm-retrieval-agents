@@ -12,11 +12,11 @@ defaults:
 
 experiments:
 
-# ───────────────────────────── BrowseComp-Plus, Snippet RLM ─────────────────────────────
+# ───────────────────────────── BrowseComp-Plus, snippet REPL agent ─────────────────────────────
 - id: BCP-9
   sheet: BrowseComp+
   row: 9
-  algorithm: snippet_rlm
+  agent: snippet_repl
   benchmark: BrowseComp-Plus (830 questions, 100,195 documents)
   model: gpt-5 (Azure)
   effort_requested: "root high, sub-LLM medium"
@@ -26,17 +26,17 @@ experiments:
   run_name: rlmfix32
   dates: "2026-09-11 to 2026-09-12 (trajectory timestamps)"
   original_outputs: ["logs/rlmfix32_q*.json", "logs/rlm_traj32/ (deleted; turn counts kept in scripts/workbook/tokmaps)", "logs/bcp_rejudge_gpt41/10.json (gpt-4.1 verdicts)"]
-  launcher: algorithms/snippet_rlm/experiments/september/bcp_snip_qwen_embed.sh
-  config: algorithms/snippet_rlm/configs/BCP-9.env
-  harness_version: "September state of the harness; closest preserved copy: algorithms/snippet_rlm/original/RLM_git_7685538 (commit of 2026-09-22, after the run)"
-  question: "How accurate is the Snippet RLM with GPT-5 when the retriever is a strong dense embedding model?"
+  launcher: agents/snippet_repl/experiments/september/bcp_snip_qwen_embed.sh
+  config: agents/snippet_repl/configs/BCP-9.env
+  harness_version: "September state of the harness; closest preserved copy: agents/snippet_repl/original/RLM_git_7685538 (commit of 2026-09-22, after the run)"
+  question: "How accurate is the snippet REPL agent with GPT-5 when the retriever is a strong dense embedding model?"
   status: complete
   notes: ['Both root and sub-LLM ran at the deployment default effort, not the high/medium the workbook footnote states (KNOWN_ISSUES K3).', 'Ran on an earlier, unpreserved state of the harness; the closest preserved copy is the commit of 2026-09-22.']
 
 - id: BCP-11
   sheet: BrowseComp+
   row: 11
-  algorithm: snippet_rlm
+  agent: snippet_repl
   benchmark: BrowseComp-Plus (830 questions, 100,195 documents)
   model: gpt-5 (Azure)
   effort_requested: "root high, sub-LLM medium"
@@ -46,17 +46,17 @@ experiments:
   run_name: "rlmfix24 + rlmfix25/29/30/31 (five 100-to-230-question blocks of one frozen configuration)"
   dates: "2026-09-11 (trajectory timestamps)"
   original_outputs: ["logs/rlmfix{24,25,29,30,31}_q*.json", "logs/bcp_rejudge_gpt41/9.json (gpt-4.1 verdicts)"]
-  launcher: algorithms/snippet_rlm/experiments/september/bcp_snip_no_orchestrator.sh
-  config: algorithms/snippet_rlm/configs/BCP-11.env
-  harness_version: "September state; closest preserved copy: algorithms/snippet_rlm/original/RLM_git_7685538. Launchers of rlmfix25/29/30/31 are not in the repository"
-  question: "Does a small late-interaction retriever (149M) beat an 8B dense retriever under the same Snippet RLM agent?"
+  launcher: agents/snippet_repl/experiments/september/bcp_snip_no_orchestrator.sh
+  config: agents/snippet_repl/configs/BCP-11.env
+  harness_version: "September state; closest preserved copy: agents/snippet_repl/original/RLM_git_7685538. Launchers of rlmfix25/29/30/31 are not in the repository"
+  question: "Does a small late-interaction retriever (149M) beat an 8B dense retriever under the same snippet REPL agent?"
   status: complete
   notes: [Both root and sub-LLM ran at the deployment default effort (KNOWN_ISSUES K3)., Four of the five launchers (rlmfix25/29/30/31) are not preserved; their settings are assumed identical to rlmfix24 (one frozen configuration run in blocks).]
 
 - id: BCP-13
   sheet: BrowseComp+
   row: 13
-  algorithm: snippet_rlm
+  agent: snippet_repl
   benchmark: BrowseComp-Plus (830 questions, 100,195 documents)
   model: gpt-5 (Azure)
   effort_requested: "root high, sub-LLM medium"
@@ -66,16 +66,16 @@ experiments:
   run_name: bcp_snip_gpt5_bm25
   dates: "2026-10-27 to 2026-10-28"
   original_outputs: ["logs/run5d/full/bcp_snip_gpt5_bm25/ (q*.json, traj/, usage.jsonl, graded_gpt41.json)"]
-  launcher: algorithms/snippet_rlm/experiments/bcp_snip.sh
-  config: algorithms/snippet_rlm/configs/BCP-13.env
-  question: "How much does a lexical retriever cost the Snippet RLM, and can unlimited searching compensate?"
+  launcher: agents/snippet_repl/experiments/bcp_snip.sh
+  config: agents/snippet_repl/configs/BCP-13.env
+  question: "How much does a lexical retriever cost the snippet REPL agent, and can unlimited searching compensate?"
   status: complete
   notes: ['9 questions have no completed answer (2 without a record, 7 with an error) and count as wrong.']
 
 - id: BCP-15
   sheet: BrowseComp+
   row: 15
-  algorithm: snippet_rlm
+  agent: snippet_repl
   benchmark: BrowseComp-Plus (830 questions, 100,195 documents)
   model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
   effort_requested: medium
@@ -85,15 +85,15 @@ experiments:
   run_name: bcp_snip_qwen_dense
   dates: "started 2026-10-30 02:27, running at the time of writing"
   original_outputs: ["logs/run5d/full/bcp_snip_qwen_dense/"]
-  launcher: algorithms/snippet_rlm/experiments/bcp_snip2.sh
-  config: algorithms/snippet_rlm/configs/BCP-15.env
-  question: "Snippet RLM with an open-weight model: dense retrieval."
+  launcher: agents/snippet_repl/experiments/bcp_snip2.sh
+  config: agents/snippet_repl/configs/BCP-15.env
+  question: "Snippet REPL agent with an open-weight model: dense retrieval."
   status: running
 
 - id: BCP-17
   sheet: BrowseComp+
   row: 17
-  algorithm: snippet_rlm
+  agent: snippet_repl
   benchmark: BrowseComp-Plus (830 questions, 100,195 documents)
   model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
   effort_requested: medium
@@ -103,15 +103,15 @@ experiments:
   run_name: bcp_snip_qwen_colbert
   dates: "queued after BCP-15"
   original_outputs: ["logs/run5d/full/bcp_snip_qwen_colbert/ (not yet created)"]
-  launcher: algorithms/snippet_rlm/experiments/bcp_snip2.sh
-  config: algorithms/snippet_rlm/configs/BCP-17.env
-  question: "Snippet RLM with an open-weight model: ColBERT retrieval."
+  launcher: agents/snippet_repl/experiments/bcp_snip2.sh
+  config: agents/snippet_repl/configs/BCP-17.env
+  question: "Snippet REPL agent with an open-weight model: ColBERT retrieval."
   status: queued
 
 - id: BCP-19
   sheet: BrowseComp+
   row: 19
-  algorithm: snippet_rlm
+  agent: snippet_repl
   benchmark: BrowseComp-Plus (830 questions, 100,195 documents)
   model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
   effort_requested: medium
@@ -121,17 +121,17 @@ experiments:
   run_name: bcp_snip_qwen_bm25
   dates: "2026-10-28 17:56 to 2026-10-30 02:27"
   original_outputs: ["logs/run5d/full/bcp_snip_qwen_bm25/"]
-  launcher: algorithms/snippet_rlm/experiments/bcp_snip2.sh
-  config: algorithms/snippet_rlm/configs/BCP-19.env
-  question: "Snippet RLM with an open-weight model and a lexical retriever."
+  launcher: agents/snippet_repl/experiments/bcp_snip2.sh
+  config: agents/snippet_repl/configs/BCP-19.env
+  question: "Snippet REPL agent with an open-weight model and a lexical retriever."
   status: complete
   notes: ['243 of 830 questions hit the 1 h limit without an answer and count as wrong: the row measures accuracy within that budget.']
 
-# ───────────────────────────── BrowseComp-Plus, Full-Doc RLM ─────────────────────────────
+# ───────────────────────────── BrowseComp-Plus, document REPL agent ─────────────────────────────
 - id: BCP-21
   sheet: BrowseComp+
   row: 21
-  algorithm: full_doc_rlm
+  agent: document_repl
   benchmark: BrowseComp-Plus (830 questions, 100,195 documents)
   model: gpt-5 (Azure, served gpt-5-2025-08-07)
   effort_requested: medium
@@ -141,17 +141,17 @@ experiments:
   run_name: "final100_medium + final200_medium + final100_e + final_rest"
   dates: "before 2026-10-26; exact dates not recorded in the repository"
   original_outputs: ["docs/supervisor_artifact.html (embedded per-question trace: verdict, evidence recall, searches, turns, time, answer cut at 1,500 chars); raw run records not available"]
-  launcher: algorithms/full_doc_rlm/src/run_experiment.py
+  launcher: agents/document_repl/src/run_experiment.py
   launcher_note: "the launchers of this run were not preserved; the configuration is rebuilt from the per-question run summaries, with unknown fields marked UNKNOWN"
-  config: algorithms/full_doc_rlm/configs/BCP-21.env
-  question: "Full-Doc RLM with GPT-5 and a dense retriever: the counterpart of BCP-9."
+  config: agents/document_repl/configs/BCP-21.env
+  question: "Document REPL agent with GPT-5 and a dense retriever: the counterpart of BCP-9."
   status: complete
   notes: ['Ran on a patched build of the rlm library that was not preserved; the code in this repository is the closest available, not the exact code.', 'Per-question data exist only as a summary trace (answers cut at 1,500 characters); raw run records are not on this host.']
 
 - id: BCP-23
   sheet: BrowseComp+
   row: 23
-  algorithm: full_doc_rlm
+  agent: document_repl
   benchmark: BrowseComp-Plus (830 questions, 100,195 documents)
   model: gpt-5 (Azure, served gpt-5-2025-08-07)
   effort_requested: high
@@ -161,17 +161,17 @@ experiments:
   run_name: "colbert8192_high400 + high100b + high100c + high_rest230"
   dates: "before 2026-10-26; exact dates not recorded in the repository"
   original_outputs: ["docs/supervisor_artifact.html (embedded trace); raw run records not available"]
-  launcher: algorithms/full_doc_rlm/experiments/bcp_gpt5_final830/launch_high400.sh
+  launcher: agents/document_repl/experiments/bcp_gpt5_final830/launch_high400.sh
   launcher_note: "one launcher per batch (launch_high400, high100b, high100c, high_rest230); they abort as preserved because helper scripts they call (assert_served_model.py, report.py, budget.py) are missing"
-  config: algorithms/full_doc_rlm/configs/BCP-23.env
-  question: "Full-Doc RLM with GPT-5 and ColBERT: the counterpart of BCP-11 and the best configuration in the table."
+  config: agents/document_repl/configs/BCP-23.env
+  question: "Document REPL agent with GPT-5 and ColBERT: the counterpart of BCP-11 and the best configuration in the table."
   status: complete
   notes: [Ran on a patched build of the rlm library that was not preserved; the trace logs up to 19 searches per question although the client-side cap is 10., 'Per-question data exist only as a summary trace (answers cut at 1,500 characters); raw run records are not on this host.']
 
 - id: BCP-25
   sheet: BrowseComp+
   row: 25
-  algorithm: full_doc_rlm
+  agent: document_repl
   benchmark: BrowseComp-Plus (830 questions, 100,195 documents)
   model: gpt-5 (Azure)
   effort_requested: high
@@ -181,35 +181,35 @@ experiments:
   run_name: bcp_gpt5_bm25
   dates: "2026-10-26 to 2026-10-27"
   original_outputs: ["logs/bcp_gpt5_bm25/runs/<qid>.json", "logs/bcp_rejudge_gpt41/bm25_gpt5.json (gpt-4.1 verdicts)"]
-  launcher: algorithms/full_doc_rlm/experiments/bcp_gpt5_bm25.sh
-  config: algorithms/full_doc_rlm/configs/BCP-25.env
-  question: "Full-Doc RLM with GPT-5 and a lexical retriever: the counterpart of BCP-13."
+  launcher: agents/document_repl/experiments/bcp_gpt5_bm25.sh
+  config: agents/document_repl/configs/BCP-25.env
+  question: "Document REPL agent with GPT-5 and a lexical retriever: the counterpart of BCP-13."
   status: complete
   notes: [154 of 830 runs reached the 30-turn limit and got a forced final answer.]
 
 - id: BCP-27
   sheet: BrowseComp+
   row: 27
-  algorithm: full_doc_rlm
+  agent: document_repl
   benchmark: BrowseComp-Plus (830 questions, 100,195 documents)
   model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
   effort_requested: medium
   effort_sent: "as requested"
-  retriever: Qwen3-Embedding-8B, exact dense (Full-Doc retrieval server, port 8765)
+  retriever: Qwen3-Embedding-8B, exact dense (document REPL retrieval server, port 8765)
   budgets: {turns: "30 + forced final answer", searches: 10, results_per_search: "model-chosen k (≤ 50)", documents: "whole documents into DOCS", timeout: "5,400 s harness limit; 6,300 s runaway kill"}
   run_name: "bcp_fd_qwen_dense (cache key e925f0f6c7)"
   dates: "2026-10-27 to 2026-10-29"
   original_outputs: ["logs/run5d/bcp_fd_qwen_dense/ (cache.json, rollouts/e925f0f6c7/, graded_gpt41.json)"]
-  launcher: algorithms/full_doc_rlm/src/bcp_qwen_dense.py
-  config: algorithms/full_doc_rlm/configs/BCP-27.env
-  question: "Full-Doc RLM with an open-weight model and a dense retriever."
+  launcher: agents/document_repl/src/bcp_qwen_dense.py
+  config: agents/document_repl/configs/BCP-27.env
+  question: "Document REPL agent with an open-weight model and a dense retriever."
   status: complete
   notes: ['121 questions have no completed answer (108 errors, 13 killed) and count as wrong.']
 
 - id: BCP-29
   sheet: BrowseComp+
   row: 29
-  algorithm: full_doc_rlm
+  agent: document_repl
   benchmark: BrowseComp-Plus (830 questions, 100,195 documents)
   model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
   effort_requested: medium
@@ -219,15 +219,15 @@ experiments:
   run_name: "baseline prompt (cache key ee5ea32a1c) collected from gepa_bcp2, bcp_testrest_ctrl and gepa_bcp"
   dates: "2026-10-07 to 2026-10-12"
   original_outputs: ["logs/{gepa_bcp2,bcp_testrest_ctrl,gepa_bcp}/cache.json and rollouts/ee5ea32a1c/", "logs/bcp_rejudge_gpt41/16.json (gpt-4.1 verdicts)"]
-  launcher: algorithms/full_doc_rlm/src/split_runner.py
-  config: algorithms/full_doc_rlm/configs/BCP-29.env
-  question: "Full-Doc RLM with an open-weight model and ColBERT; the unoptimised seed prompt of the GEPA study, evaluated on all 830 questions."
+  launcher: agents/document_repl/src/split_runner.py
+  config: agents/document_repl/configs/BCP-29.env
+  question: "Document REPL agent with an open-weight model and ColBERT; the unoptimised seed prompt of the GEPA study, evaluated on all 830 questions."
   status: complete
 
 - id: BCP-31
   sheet: BrowseComp+
   row: 31
-  algorithm: full_doc_rlm
+  agent: document_repl
   benchmark: BrowseComp-Plus (830 questions, 100,195 documents)
   model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
   effort_requested: medium
@@ -237,16 +237,16 @@ experiments:
   run_name: "cache key 11d0c5bc6b over bcp_bm25_test200, bcp_bm25_rest_gpu0, bcp_bm25_rest_gpu1"
   dates: "2026-10-16 to 2026-10-18"
   original_outputs: ["logs/{bcp_bm25_test200,bcp_bm25_rest_gpu0,bcp_bm25_rest_gpu1}/cache.json", "logs/bcp_rejudge_gpt41/18.json"]
-  launcher: algorithms/full_doc_rlm/src/bcp_bm25_split.py
-  config: algorithms/full_doc_rlm/configs/BCP-31.env
-  question: "Full-Doc RLM with an open-weight model and a lexical retriever."
+  launcher: agents/document_repl/src/bcp_bm25_split.py
+  config: agents/document_repl/configs/BCP-31.env
+  question: "Document REPL agent with an open-weight model and a lexical retriever."
   status: complete
 
 # ───────────────────────────── FRAMES ─────────────────────────────
 - id: FR-7
   sheet: FRAMES
   row: 7
-  algorithm: snippet_rlm
+  agent: snippet_repl
   benchmark: FRAMES (824 questions, Wikipedia 20230601.en)
   model: gpt-5 (Azure)
   effort_requested: "root high, sub-LLM medium"
@@ -256,15 +256,15 @@ experiments:
   run_name: frames_snip_gpt5
   dates: "2026-10-27"
   original_outputs: ["logs/run5d/full/frames_snip_gpt5/"]
-  launcher: algorithms/snippet_rlm/experiments/frames_snip.sh
-  config: algorithms/snippet_rlm/configs/FR-7.env
-  question: "Snippet RLM on multi-hop Wikipedia questions where answers sit deep inside long articles."
+  launcher: agents/snippet_repl/experiments/frames_snip.sh
+  config: agents/snippet_repl/configs/FR-7.env
+  question: "Snippet REPL agent on multi-hop Wikipedia questions where answers sit deep inside long articles."
   status: complete
 
 - id: FR-9
   sheet: FRAMES
   row: 9
-  algorithm: snippet_rlm
+  agent: snippet_repl
   benchmark: FRAMES (824 questions, Wikipedia 20230601.en)
   model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
   effort_requested: medium
@@ -274,16 +274,16 @@ experiments:
   run_name: frames_snip_qwen
   dates: "2026-10-27 to 2026-10-29"
   original_outputs: ["logs/run5d/full/frames_snip_qwen/"]
-  launcher: algorithms/snippet_rlm/experiments/frames_snip.sh
-  config: algorithms/snippet_rlm/configs/FR-9.env
-  question: "Snippet RLM on FRAMES with an open-weight model."
+  launcher: agents/snippet_repl/experiments/frames_snip.sh
+  config: agents/snippet_repl/configs/FR-9.env
+  question: "Snippet REPL agent on FRAMES with an open-weight model."
   status: complete
   notes: [73 of 824 questions hit the 2 h limit and count as wrong.]
 
 - id: FR-11
   sheet: FRAMES
   row: 11
-  algorithm: full_doc_rlm
+  agent: document_repl
   benchmark: FRAMES (824 questions, Wikipedia 20230601.en)
   model: gpt-5 (Azure)
   effort_requested: high
@@ -293,15 +293,15 @@ experiments:
   run_name: frames_fd_gpt5
   dates: "2026-10-27 to 2026-10-28"
   original_outputs: ["logs/run5d/full/frames_fd_gpt5/"]
-  launcher: algorithms/full_doc_rlm/experiments/frames_gpt5.sh
-  config: algorithms/full_doc_rlm/configs/FR-11.env
-  question: "Full-Doc RLM on FRAMES: the counterpart of FR-7."
+  launcher: agents/document_repl/experiments/frames_gpt5.sh
+  config: agents/document_repl/configs/FR-11.env
+  question: "Document REPL agent on FRAMES: the counterpart of FR-7."
   status: complete
 
 - id: FR-13
   sheet: FRAMES
   row: 13
-  algorithm: full_doc_rlm
+  agent: document_repl
   benchmark: FRAMES (824 questions, Wikipedia 20230601.en)
   model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
   effort_requested: medium
@@ -311,15 +311,15 @@ experiments:
   run_name: sup_q36_bm25f
   dates: "2026-10-15 (re-judged with gpt-4.1 on 2026-10-27)"
   original_outputs: ["logs/frames/sup_q36_bm25f/"]
-  launcher: algorithms/full_doc_rlm/experiments/frames_qwen.sh
-  config: algorithms/full_doc_rlm/configs/FR-13.env
-  question: "Full-Doc RLM on FRAMES with an open-weight model: the counterpart of FR-9."
+  launcher: agents/document_repl/experiments/frames_qwen.sh
+  config: agents/document_repl/configs/FR-13.env
+  question: "Document REPL agent on FRAMES with an open-weight model: the counterpart of FR-9."
   status: complete
 
 # ───────────────────────────── OBLIQ-Bench ─────────────────────────────
-- {id: MAT-9, sheet: "OBLIQ - Math", row: 9, algorithm: snippet_rlm, benchmark: "OBLIQ-Bench Math analogues (151 queries)", model: "gpt-5.2 (Azure)", effort_requested: "root high, sub-LLM medium", effort_sent: "as requested (run5d hook loaded)", retriever: "Gemini-Embedding-2 (Vertex AI), raw query", budgets: {turns: 12, searches: "no cap", results_per_search: 20, snippet: "server text ≤ 2,000 chars", timeout: "none", compaction: "off"}, run_name: obliq_snip_math, dates: "2026-10-27", original_outputs: ["logs/run5d/full/obliq_snip_math/all.json"], launcher: algorithms/snippet_rlm/experiments/obliq_snip.sh, config: algorithms/snippet_rlm/configs/MAT-9.env, question: "Snippet RLM on a ranking task where relevance is structural (same technique, different problem).", status: complete, notes: ['The BrowseComp answer-format gate stayed on: it rejected at least one submission on 140 of 151 questions; rejected doc-id-only rankings are a likely source of unusable rankings (O1).']}
-- {id: TWI-9, sheet: "OBLIQ - Twitter", row: 9, algorithm: snippet_rlm, benchmark: "OBLIQ-Bench Twitter conflict, descriptive (281 queries)", model: "gpt-5.2 (Azure)", effort_requested: "root high, sub-LLM medium", effort_sent: "as requested (run5d hook loaded)", retriever: "Gemini-Embedding-2 (Vertex AI), raw query", budgets: {turns: 12, searches: "no cap", results_per_search: 20, snippet: "server text ≤ 2,000 chars", timeout: "none", compaction: "off"}, run_name: obliq_snip_twitter, dates: "2026-10-27", original_outputs: ["logs/run5d/full/obliq_snip_twitter/all.json"], launcher: algorithms/snippet_rlm/experiments/obliq_snip.sh, config: algorithms/snippet_rlm/configs/TWI-9.env, question: "Snippet RLM on a ranking task where relevance is an implied stance.", status: complete, notes: ['The BrowseComp answer-format gate stayed on: it rejected at least one submission on 279 of 281 questions.']}
-- {id: CON-9, sheet: "OBLIQ - Congress", row: 9, algorithm: snippet_rlm, benchmark: "OBLIQ-Bench Congress hearings, tip-of-the-tongue (254 queries)", model: "gpt-5.2 (Azure)", effort_requested: "root high, sub-LLM medium", effort_sent: "as requested (run5d hook loaded)", retriever: "Gemini-Embedding-2 (Vertex AI), raw query", budgets: {turns: 12, searches: "no cap", results_per_search: 20, snippet: "server text ≤ 2,000 chars", timeout: "none", compaction: "off"}, run_name: obliq_snip_congress, dates: "2026-10-27", original_outputs: ["logs/run5d/full/obliq_snip_congress/all.json"], launcher: algorithms/snippet_rlm/experiments/obliq_snip.sh, config: algorithms/snippet_rlm/configs/CON-9.env, question: "Snippet RLM on a tip-of-the-tongue task: find a passage from a vague recollection of it.", status: complete, notes: ['The BrowseComp answer-format gate stayed on: it rejected at least one submission on 237 of 254 questions.']}
-- {id: MAT-11, sheet: "OBLIQ - Math", row: 11, algorithm: full_doc_rlm, benchmark: "OBLIQ-Bench Math analogues (151 queries)", model: "gpt-5.2 (Azure)", effort_requested: high, effort_sent: "as requested (run5d hook loaded)", retriever: "Gemini-Embedding-2 (Vertex AI), raw query", budgets: {turns: "30 + forced ranking (cap_ranking hook)", searches: 10, results_per_search: "fixed k 20", documents: "whole passages into DOCS", timeout: "3,600 s"}, run_name: obliq_fd_math, dates: "2026-10-27", original_outputs: ["<FULLDOC_ROOT>/runs/obliq_fd_math/q*.json"], launcher: algorithms/full_doc_rlm/experiments/obliq_fd.sh, config: algorithms/full_doc_rlm/configs/MAT-11.env, question: "Full-Doc RLM on the Math ranking task: the counterpart of MAT-9.", status: complete}
-- {id: TWI-11, sheet: "OBLIQ - Twitter", row: 11, algorithm: full_doc_rlm, benchmark: "OBLIQ-Bench Twitter conflict, descriptive (281 queries)", model: "gpt-5.2 (Azure)", effort_requested: high, effort_sent: "as requested (run5d hook loaded)", retriever: "Gemini-Embedding-2 (Vertex AI), raw query", budgets: {turns: "30 + forced ranking (cap_ranking hook)", searches: 10, results_per_search: "fixed k 20", documents: "whole passages into DOCS", timeout: "3,600 s"}, run_name: obliq_fd_twitter, dates: "2026-10-27", original_outputs: ["<FULLDOC_ROOT>/runs/obliq_fd_twitter/q*.json"], launcher: algorithms/full_doc_rlm/experiments/obliq_fd.sh, config: algorithms/full_doc_rlm/configs/TWI-11.env, question: "Full-Doc RLM on the Twitter ranking task: the counterpart of TWI-9.", status: complete, notes: [The sub-LLM functions remained installed; the model called them on 17 questions despite the prompt.]}
-- {id: CON-11, sheet: "OBLIQ - Congress", row: 11, algorithm: full_doc_rlm, benchmark: "OBLIQ-Bench Congress hearings, tip-of-the-tongue (254 queries)", model: "gpt-5.2 (Azure)", effort_requested: high, effort_sent: "as requested (run5d hook loaded)", retriever: "Gemini-Embedding-2 (Vertex AI), raw query", budgets: {turns: "30 + forced ranking (cap_ranking hook)", searches: 10, results_per_search: "fixed k 20", documents: "whole passages into DOCS", timeout: "3,600 s"}, run_name: obliq_fd_congress, dates: "2026-10-27", original_outputs: ["<FULLDOC_ROOT>/runs/obliq_fd_congress/q*.json"], launcher: algorithms/full_doc_rlm/experiments/obliq_fd.sh, config: algorithms/full_doc_rlm/configs/CON-11.env, question: "Full-Doc RLM on the Congress task: the counterpart of CON-9.", status: complete, notes: [The sub-LLM functions remained installed; the model called them on 37 questions despite the prompt.]}
+- {id: MAT-9, sheet: "OBLIQ - Math", row: 9, agent: snippet_repl, benchmark: "OBLIQ-Bench Math analogues (151 queries)", model: "gpt-5.2 (Azure)", effort_requested: "root high, sub-LLM medium", effort_sent: "as requested (run5d hook loaded)", retriever: "Gemini-Embedding-2 (Vertex AI), raw query", budgets: {turns: 12, searches: "no cap", results_per_search: 20, snippet: "server text ≤ 2,000 chars", timeout: "none", compaction: "off"}, run_name: obliq_snip_math, dates: "2026-10-27", original_outputs: ["logs/run5d/full/obliq_snip_math/all.json"], launcher: agents/snippet_repl/experiments/obliq_snip.sh, config: agents/snippet_repl/configs/MAT-9.env, question: "Snippet REPL agent on a ranking task where relevance is structural (same technique, different problem).", status: complete, notes: ['The BrowseComp answer-format gate stayed on: it rejected at least one submission on 140 of 151 questions; rejected doc-id-only rankings are a likely source of unusable rankings (O1).']}
+- {id: TWI-9, sheet: "OBLIQ - Twitter", row: 9, agent: snippet_repl, benchmark: "OBLIQ-Bench Twitter conflict, descriptive (281 queries)", model: "gpt-5.2 (Azure)", effort_requested: "root high, sub-LLM medium", effort_sent: "as requested (run5d hook loaded)", retriever: "Gemini-Embedding-2 (Vertex AI), raw query", budgets: {turns: 12, searches: "no cap", results_per_search: 20, snippet: "server text ≤ 2,000 chars", timeout: "none", compaction: "off"}, run_name: obliq_snip_twitter, dates: "2026-10-27", original_outputs: ["logs/run5d/full/obliq_snip_twitter/all.json"], launcher: agents/snippet_repl/experiments/obliq_snip.sh, config: agents/snippet_repl/configs/TWI-9.env, question: "Snippet REPL agent on a ranking task where relevance is an implied stance.", status: complete, notes: ['The BrowseComp answer-format gate stayed on: it rejected at least one submission on 279 of 281 questions.']}
+- {id: CON-9, sheet: "OBLIQ - Congress", row: 9, agent: snippet_repl, benchmark: "OBLIQ-Bench Congress hearings, tip-of-the-tongue (254 queries)", model: "gpt-5.2 (Azure)", effort_requested: "root high, sub-LLM medium", effort_sent: "as requested (run5d hook loaded)", retriever: "Gemini-Embedding-2 (Vertex AI), raw query", budgets: {turns: 12, searches: "no cap", results_per_search: 20, snippet: "server text ≤ 2,000 chars", timeout: "none", compaction: "off"}, run_name: obliq_snip_congress, dates: "2026-10-27", original_outputs: ["logs/run5d/full/obliq_snip_congress/all.json"], launcher: agents/snippet_repl/experiments/obliq_snip.sh, config: agents/snippet_repl/configs/CON-9.env, question: "Snippet REPL agent on a tip-of-the-tongue task: find a passage from a vague recollection of it.", status: complete, notes: ['The BrowseComp answer-format gate stayed on: it rejected at least one submission on 237 of 254 questions.']}
+- {id: MAT-11, sheet: "OBLIQ - Math", row: 11, agent: document_repl, benchmark: "OBLIQ-Bench Math analogues (151 queries)", model: "gpt-5.2 (Azure)", effort_requested: high, effort_sent: "as requested (run5d hook loaded)", retriever: "Gemini-Embedding-2 (Vertex AI), raw query", budgets: {turns: "30 + forced ranking (cap_ranking hook)", searches: 10, results_per_search: "fixed k 20", documents: "whole passages into DOCS", timeout: "3,600 s"}, run_name: obliq_fd_math, dates: "2026-10-27", original_outputs: ["<FULLDOC_ROOT>/runs/obliq_fd_math/q*.json"], launcher: agents/document_repl/experiments/obliq_fd.sh, config: agents/document_repl/configs/MAT-11.env, question: "Document REPL agent on the Math ranking task: the counterpart of MAT-9.", status: complete}
+- {id: TWI-11, sheet: "OBLIQ - Twitter", row: 11, agent: document_repl, benchmark: "OBLIQ-Bench Twitter conflict, descriptive (281 queries)", model: "gpt-5.2 (Azure)", effort_requested: high, effort_sent: "as requested (run5d hook loaded)", retriever: "Gemini-Embedding-2 (Vertex AI), raw query", budgets: {turns: "30 + forced ranking (cap_ranking hook)", searches: 10, results_per_search: "fixed k 20", documents: "whole passages into DOCS", timeout: "3,600 s"}, run_name: obliq_fd_twitter, dates: "2026-10-27", original_outputs: ["<FULLDOC_ROOT>/runs/obliq_fd_twitter/q*.json"], launcher: agents/document_repl/experiments/obliq_fd.sh, config: agents/document_repl/configs/TWI-11.env, question: "Document REPL agent on the Twitter ranking task: the counterpart of TWI-9.", status: complete, notes: [The sub-LLM functions remained installed; the model called them on 17 questions despite the prompt.]}
+- {id: CON-11, sheet: "OBLIQ - Congress", row: 11, agent: document_repl, benchmark: "OBLIQ-Bench Congress hearings, tip-of-the-tongue (254 queries)", model: "gpt-5.2 (Azure)", effort_requested: high, effort_sent: "as requested (run5d hook loaded)", retriever: "Gemini-Embedding-2 (Vertex AI), raw query", budgets: {turns: "30 + forced ranking (cap_ranking hook)", searches: 10, results_per_search: "fixed k 20", documents: "whole passages into DOCS", timeout: "3,600 s"}, run_name: obliq_fd_congress, dates: "2026-10-27", original_outputs: ["<FULLDOC_ROOT>/runs/obliq_fd_congress/q*.json"], launcher: agents/document_repl/experiments/obliq_fd.sh, config: agents/document_repl/configs/CON-11.env, question: "Document REPL agent on the Congress task: the counterpart of CON-9.", status: complete, notes: [The sub-LLM functions remained installed; the model called them on 37 questions despite the prompt.]}

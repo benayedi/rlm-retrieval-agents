@@ -12,8 +12,8 @@ large corpus.
 
 ## Research questions
 
-1. **Reading strategy.** Should an RLM see short snippets and read documents through a sub-LLM (Snippet RLM)? Or should
-   it get whole documents and read them itself (Full-Doc RLM)? Does the answer depend on the retriever and the
+1. **Reading strategy.** Should an RLM see short snippets and read documents through a sub-LLM (snippet REPL agent)? Or should
+   it get whole documents and read them itself (document REPL agent)? Does the answer depend on the retriever and the
    benchmark?
 2. **Retriever.** How much do the first-stage retriever and its index matter under an agentic loop? The candidates are
    lexical BM25, an 8B single-vector dense embedder (Qwen3-Embedding-8B), a 149M late-interaction model
@@ -25,7 +25,7 @@ large corpus.
 
 ## The three approaches
 
-| | DSPy.RLM | Snippet RLM | Full-Doc RLM |
+| | DSPy.RLM | Snippet REPL agent | Document REPL agent |
 |---|---|---|---|
 | Agent loop | `dspy.RLM` (DSPy 3.3.1) | the RLM authors' library (`rlm` @ 854e688) with runtime patches | the same library, separate harness |
 | Prompting | typed DSPy signatures with task-specific strategy text | the authors' RLM system prompt, adapted task text and tool docs | its own solo system prompt |
@@ -34,8 +34,8 @@ large corpus.
 | Budgets (final rows) | 16 iterations, 35 searches (earlier campaign) | 100 / 50 / 12 turns; no cap or 25 searches | 30 turns + forced answer; 10 searches |
 | In the final table | **no** (earlier campaign only) | yes | yes |
 
-Details: [algorithms/dspy_rlm](../algorithms/dspy_rlm/README.md), [algorithms/snippet_rlm](../algorithms/snippet_rlm/README.md),
-[algorithms/full_doc_rlm](../algorithms/full_doc_rlm/README.md).
+Details: [agents/dspy_rlm](../agents/dspy_rlm/README.md), [agents/snippet_repl](../agents/snippet_repl/README.md),
+[agents/document_repl](../agents/document_repl/README.md).
 
 ## Benchmarks
 
@@ -49,7 +49,7 @@ Sources, indexes and licence notes: [benchmarks/README.md](../benchmarks/README.
 
 ## Experimental methodology
 
-Each experiment is one row of [Experiments.xlsx](../results/original_baselines/Experiments.xlsx): one algorithm × model ×
+Each experiment is one row of [Experiments.xlsx](../results/original_baselines/Experiments.xlsx): one agent × model ×
 retriever on one benchmark, run over every question.
 
 - **Execution.** Each question runs in its own process with a time limit. The run writes a per-question record
@@ -62,14 +62,14 @@ retriever on one benchmark, run over every question.
 
 ## Findings
 
-The full, sourced statement is in [ALGORITHM_COMPARISON.md](experiments/ALGORITHM_COMPARISON.md). In short:
+The full, sourced statement is in [AGENT_COMPARISON.md](experiments/AGENT_COMPARISON.md). In short:
 
 - **Retriever and model dominate.** Reason-ModernColBERT > BM25, and GPT-5 > Qwen3.6, in every paired test (p < 1e-15
   for the model).
-- **Snippet vs Full-Doc depends on the retriever.** With GPT-5 on BrowseComp-Plus, Full-Doc wins with the dense
-  retriever, the two tie with ColBERT, and Snippet wins with BM25. On FRAMES with GPT-5, Full-Doc wins. These pairs
+- **Snippet REPL vs document REPL depends on the retriever.** With GPT-5 on BrowseComp-Plus, document REPL wins with the dense
+  retriever, the two tie with ColBERT, and snippet REPL wins with BM25. On FRAMES with GPT-5, document REPL wins. These pairs
   also differ in search and turn budgets, so they compare complete packages.
-- **Retrieval limits the best runs.** On BrowseComp-Plus, with every gold document retrieved, the GPT-5 Full-Doc runs
+- **Retrieval limits the best runs.** On BrowseComp-Plus, with every gold document retrieved, the GPT-5 document REPL runs
   are right 95–96% of the time (84% on FRAMES). Most failures are partial or missing evidence (failure analysis:
   [Failure_Analysis.xlsx](../results/original_baselines/Failure_Analysis.xlsx)).
 - **OBLIQ is hard for every configuration.** NDCG@10 stays at 0.09–0.19, near or below the OBLIQ paper's multi-hop
@@ -80,6 +80,6 @@ The full, sourced statement is in [ALGORITHM_COMPARISON.md](experiments/ALGORITH
 - One run per cell, sampled without seeds. An earlier repeat of a whole run disagreed on 17.8% of questions.
 - Paired rows differ in several settings at once (see [KNOWN_ISSUES.md](verification/KNOWN_ISSUES.md) K2).
 - Some effort labels do not match what reached the model (K3).
-- Two Full-Doc rows ran on an unpreserved library build (K5).
+- Two document REPL rows ran on an unpreserved library build (K5).
 - DSPy.RLM was not evaluated under the final protocol.
-- Two Qwen3.6 Snippet rows were still running or queued when this repository was prepared.
+- Two Qwen3.6 snippet REPL rows were still running or queued when this repository was prepared.

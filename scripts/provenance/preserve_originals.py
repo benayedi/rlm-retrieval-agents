@@ -1,8 +1,8 @@
 """Copy, byte for byte, the source files that produced the results in Experiments.xlsx into
-algorithms/<algorithm>/original/ (and shared/original/), and write a MANIFEST.json per destination with each file's
+agents/<agent>/original/ (and agents/shared/original/), and write a MANIFEST.json per destination with each file's
 origin path, SHA-256, size and modification time.
 
-These snapshots are the reference for every refactor: algorithms/*/src/ is compared against them
+These snapshots are the reference for every refactor: agents/*/src/ is compared against them
 (tests/test_preservation.py), and they are never edited.
 
 usage: python scripts/provenance/preserve_originals.py [--check]
@@ -19,7 +19,7 @@ FD = Path(os.environ.get("FULLDOC_SRC_ROOT", "/home/extstu_00/suprlm"))
 
 # destination -> list of (source root, relative path). Paths are files; a trailing "/" copies a directory's *.py/*.sh.
 SETS = {
-    "algorithms/snippet_rlm/original": [(RLM, p) for p in [
+    "agents/snippet_repl/original": [(RLM, p) for p in [
         "examples/browsecomp_eval_official_rlm.py", "examples/browsecomp_data.py", "examples/frames_eval_rlm.py",
         "examples/obliq_data.py", "scripts/run_bcp_snippet.py", "scripts/run_obliq_mine.py",
         "scripts/official_prompt_modules.py", "scripts/run_obliq_shard.sh",
@@ -30,7 +30,7 @@ SETS = {
         "scripts/run5d/frames_snip.sh", "scripts/run5d/obliq_gemini.sh", "scripts/run5d/qwen_bcp_snip_queue2.sh",
         "scripts/run5d/question_watchdog.sh", "scripts/run5d/budget_guard.sh", "scripts/run5d/night_finisher.sh",
         "scripts/run_qwen_full.sh", "scripts/run_no_orchestrator.sh"]],
-    "algorithms/full_doc_rlm/original": [(FD, f"src/{p}") for p in [
+    "agents/document_repl/original": [(FD, f"src/{p}") for p in [
         "run_one.py", "tools.py", "prompts.py", "fence_tolerant.py", "rep_guard.py", "obliq_adapter.py",
         "retrieval_server.py", "retrieval_server_colbert.py", "encoder.py", "hybrid.py", "build_bm25.py",
         "prepare_data.py", "run_experiment.py", "judge.py", "grade_local.py", "score_obliq.py", "provenance.py",
@@ -42,11 +42,11 @@ SETS = {
         "scripts/bcp_gpt5_sup.sh", "scripts/bcp_gpt5_bm25.sh", "scripts/frames_sup_run_one.py",
         "scripts/run_frames_sup.sh", "scripts/run5d/frames_fd_gpt5.sh", "scripts/run5d/bcp_fd_qwen_dense.py",
         "scripts/gepa_bcp.py", "scripts/bcp_bm25_test.py"]],
-    "algorithms/dspy_rlm/original": [(RLM, p) for p in [
+    "agents/dspy_rlm/original": [(RLM, p) for p in [
         "rag/__init__.py", "rag/agent.py", "rag/signatures.py", "rag/tools.py",
         "examples/browsecomp_eval_dspy_rlm.py", "examples/obliq_eval_dspy_rlm.py", "scripts/run_obliq_dspy_shard.sh",
         "pyproject.toml"]],
-    "shared/original": [(RLM, p) for p in [
+    "agents/shared/original": [(RLM, p) for p in [
         # retrieval servers and index builders
         "examples/obliq_score_advice.py", "scripts/fusion_proxy.py", "scripts/frames_search_server.py", "scripts/multi_search_server.py",
         "scripts/search_server.py", "scripts/obliq_math_search.py", "scripts/gemini/search_server.py",

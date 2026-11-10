@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 754 384" width="754" height="384" font-family="Helvetica, Arial, sans-serif">
 <rect width="754" height="384" fill="#ffffff"/>
 <text x="46" y="24" font-size="15" font-weight="600" fill="#1f2328">BrowseComp-Plus: accuracy (gpt-4.1 judge, 830 questions)</text>
-<rect x="46" y="36" width="11" height="11" rx="2" fill="#2a78d6"/><text x="62" y="46" font-size="12" fill="#1f2328">Snippet RLM</text>
-<rect x="176" y="36" width="11" height="11" rx="2" fill="#eb6834"/><text x="192" y="46" font-size="12" fill="#1f2328">Full-Doc RLM</text>
+<rect x="46" y="36" width="11" height="11" rx="2" fill="#2a78d6"/><text x="62" y="46" font-size="12" fill="#1f2328">Snippet REPL agent</text>
+<rect x="216" y="36" width="11" height="11" rx="2" fill="#eb6834"/><text x="232" y="46" font-size="12" fill="#1f2328">Document REPL agent</text>
 <text x="46" y="68" font-size="13" font-weight="600" fill="#1f2328">GPT-5</text>
 <line x1="46" x2="376" y1="298.0" y2="298.0" stroke="#d8dee4" stroke-width="1"/>
 <text x="40" y="302.0" font-size="11" fill="#59636e" text-anchor="end">0.00</text>
@@ -14,19 +14,19 @@
 <text x="40" y="137.0" font-size="11" fill="#59636e" text-anchor="end">0.75</text>
 <line x1="46" x2="376" y1="78.0" y2="78.0" stroke="#d8dee4" stroke-width="1"/>
 <text x="40" y="82.0" font-size="11" fill="#59636e" text-anchor="end">1.00</text>
-<path d="M66.0,298.0 V127.3 Q66.0,123.3 70.0,123.3 H96.0 Q100.0,123.3 100.0,127.3 V298.0 Z" fill="#2a78d6"><title>Snippet RLM, Qwen3-Embed-8B: 0.794</title></path>
+<path d="M66.0,298.0 V127.3 Q66.0,123.3 70.0,123.3 H96.0 Q100.0,123.3 100.0,127.3 V298.0 Z" fill="#2a78d6"><title>Snippet REPL agent, Qwen3-Embed-8B: 0.794</title></path>
 <text x="83.0" y="119.3" font-size="10" fill="#1f2328" text-anchor="middle">0.794</text>
-<path d="M102.0,298.0 V119.1 Q102.0,115.1 106.0,115.1 H132.0 Q136.0,115.1 136.0,119.1 V298.0 Z" fill="#eb6834"><title>Full-Doc RLM, Qwen3-Embed-8B: 0.831</title></path>
+<path d="M102.0,298.0 V119.1 Q102.0,115.1 106.0,115.1 H132.0 Q136.0,115.1 136.0,119.1 V298.0 Z" fill="#eb6834"><title>Document REPL agent, Qwen3-Embed-8B: 0.831</title></path>
 <text x="119.0" y="111.1" font-size="10" fill="#1f2328" text-anchor="middle">0.831</text>
 <text x="101.0" y="314.0" font-size="11.5" fill="#1f2328" text-anchor="middle">Qwen3-Embed-8B</text>
-<path d="M176.0,298.0 V113.3 Q176.0,109.3 180.0,109.3 H206.0 Q210.0,109.3 210.0,113.3 V298.0 Z" fill="#2a78d6"><title>Snippet RLM, ColBERT: 0.858</title></path>
+<path d="M176.0,298.0 V113.3 Q176.0,109.3 180.0,109.3 H206.0 Q210.0,109.3 210.0,113.3 V298.0 Z" fill="#2a78d6"><title>Snippet REPL agent, ColBERT: 0.858</title></path>
 <text x="193.0" y="105.3" font-size="10" fill="#1f2328" text-anchor="middle">0.858</text>
-<path d="M212.0,298.0 V109.6 Q212.0,105.6 216.0,105.6 H242.0 Q246.0,105.6 246.0,109.6 V298.0 Z" fill="#eb6834"><title>Full-Doc RLM, ColBERT: 0.875</title></path>
+<path d="M212.0,298.0 V109.6 Q212.0,105.6 216.0,105.6 H242.0 Q246.0,105.6 246.0,109.6 V298.0 Z" fill="#eb6834"><title>Document REPL agent, ColBERT: 0.875</title></path>
 <text x="229.0" y="101.6" font-size="10" fill="#1f2328" text-anchor="middle">0.875</text>
 <text x="211.0" y="314.0" font-size="11.5" fill="#1f2328" text-anchor="middle">ColBERT</text>
-<path d="M286.0,298.0 V153.6 Q286.0,149.6 290.0,149.6 H316.0 Q320.0,149.6 320.0,153.6 V298.0 Z" fill="#2a78d6"><title>Snippet RLM, BM25: 0.675</title></path>
+<path d="M286.0,298.0 V153.6 Q286.0,149.6 290.0,149.6 H316.0 Q320.0,149.6 320.0,153.6 V298.0 Z" fill="#2a78d6"><title>Snippet REPL agent, BM25: 0.675</title></path>
 <text x="303.0" y="145.6" font-size="10" fill="#1f2328" text-anchor="middle">0.675</text>
-<path d="M322.0,298.0 V170.0 Q322.0,166.0 326.0,166.0 H352.0 Q356.0,166.0 356.0,170.0 V298.0 Z" fill="#eb6834"><title>Full-Doc RLM, BM25: 0.600</title></path>
+<path d="M322.0,298.0 V170.0 Q322.0,166.0 326.0,166.0 H352.0 Q356.0,166.0 356.0,170.0 V298.0 Z" fill="#eb6834"><title>Document REPL agent, BM25: 0.600</title></path>
 <text x="339.0" y="162.0" font-size="10" fill="#1f2328" text-anchor="middle">0.600</text>
 <text x="321.0" y="314.0" font-size="11.5" fill="#1f2328" text-anchor="middle">BM25</text>
 <line x1="46" x2="376" y1="298" y2="298" stroke="#59636e" stroke-width="1"/>
@@ -37,18 +37,18 @@
 <line x1="400" x2="730" y1="133.0" y2="133.0" stroke="#d8dee4" stroke-width="1"/>
 <line x1="400" x2="730" y1="78.0" y2="78.0" stroke="#d8dee4" stroke-width="1"/>
 <text x="437.0" y="292.0" font-size="10" fill="#59636e" text-anchor="middle" transform="rotate(-90 437.0 292.0)">running</text>
-<path d="M456.0,298.0 V204.7 Q456.0,200.7 460.0,200.7 H486.0 Q490.0,200.7 490.0,204.7 V298.0 Z" fill="#eb6834"><title>Full-Doc RLM, Qwen3-Embed-8B: 0.442</title></path>
+<path d="M456.0,298.0 V204.7 Q456.0,200.7 460.0,200.7 H486.0 Q490.0,200.7 490.0,204.7 V298.0 Z" fill="#eb6834"><title>Document REPL agent, Qwen3-Embed-8B: 0.442</title></path>
 <text x="473.0" y="196.7" font-size="10" fill="#1f2328" text-anchor="middle">0.442</text>
 <text x="455.0" y="314.0" font-size="11.5" fill="#1f2328" text-anchor="middle">Qwen3-Embed-8B</text>
 <text x="547.0" y="292.0" font-size="10" fill="#59636e" text-anchor="middle" transform="rotate(-90 547.0 292.0)">not run</text>
-<path d="M566.0,298.0 V174.5 Q566.0,170.5 570.0,170.5 H596.0 Q600.0,170.5 600.0,174.5 V298.0 Z" fill="#eb6834"><title>Full-Doc RLM, ColBERT: 0.580</title></path>
+<path d="M566.0,298.0 V174.5 Q566.0,170.5 570.0,170.5 H596.0 Q600.0,170.5 600.0,174.5 V298.0 Z" fill="#eb6834"><title>Document REPL agent, ColBERT: 0.580</title></path>
 <text x="583.0" y="166.5" font-size="10" fill="#1f2328" text-anchor="middle">0.580</text>
 <text x="565.0" y="314.0" font-size="11.5" fill="#1f2328" text-anchor="middle">ColBERT</text>
-<path d="M640.0,298.0 V247.1 Q640.0,243.1 644.0,243.1 H670.0 Q674.0,243.1 674.0,247.1 V298.0 Z" fill="#2a78d6"><title>Snippet RLM, BM25: 0.249</title></path>
+<path d="M640.0,298.0 V247.1 Q640.0,243.1 644.0,243.1 H670.0 Q674.0,243.1 674.0,247.1 V298.0 Z" fill="#2a78d6"><title>Snippet REPL agent, BM25: 0.249</title></path>
 <text x="657.0" y="239.1" font-size="10" fill="#1f2328" text-anchor="middle">0.249</text>
-<path d="M676.0,298.0 V252.7 Q676.0,248.7 680.0,248.7 H706.0 Q710.0,248.7 710.0,252.7 V298.0 Z" fill="#eb6834"><title>Full-Doc RLM, BM25: 0.224</title></path>
+<path d="M676.0,298.0 V252.7 Q676.0,248.7 680.0,248.7 H706.0 Q710.0,248.7 710.0,252.7 V298.0 Z" fill="#eb6834"><title>Document REPL agent, BM25: 0.224</title></path>
 <text x="693.0" y="244.7" font-size="10" fill="#1f2328" text-anchor="middle">0.224</text>
 <text x="675.0" y="314.0" font-size="11.5" fill="#1f2328" text-anchor="middle">BM25</text>
 <line x1="400" x2="730" y1="298" y2="298" stroke="#59636e" stroke-width="1"/>
-<text x="46" y="374" font-size="11" fill="#59636e">Qwen3.6 Snippet dense and ColBERT rows were still running or queued on 2026-10-30.</text>
+<text x="46" y="374" font-size="11" fill="#59636e">Qwen3.6 snippet REPL dense and ColBERT rows were still running or queued on 2026-10-30.</text>
 </svg>

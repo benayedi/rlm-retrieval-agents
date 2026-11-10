@@ -1,4 +1,4 @@
-"""Write one Markdown document per experiment (docs/experiments/<algorithm>/<ID>_*.md) and the index
+"""Write one Markdown document per experiment (docs/experiments/<agent>/<ID>_*.md) and the index
 docs/experiments/README.md.
 
 Facts come from experiments/registry.yaml. Every number comes from an evidence file:
@@ -18,6 +18,8 @@ from pathlib import Path
 import yaml
 from openpyxl import load_workbook
 
+from naming import paper_names
+
 ROOT = Path(__file__).resolve().parents[2]
 REG = yaml.safe_load(open(ROOT / "experiments/registry.yaml"))
 DEF = REG["defaults"]
@@ -25,7 +27,7 @@ XL = load_workbook(ROOT / "results/original_baselines/Experiments.xlsx", data_on
 FA = load_workbook(ROOT / "results/original_baselines/Failure_Analysis.xlsx", data_only=True)
 AUDIT = json.load(open(ROOT / "docs/verification/data/recompute_experiments.json"))
 OUT = ROOT / "docs/experiments"
-ALGO_NAME = {"snippet_rlm": "Snippet RLM", "full_doc_rlm": "Full-Doc RLM", "dspy_rlm": "DSPy.RLM"}
+ALGO_NAME = {"snippet_repl": "Snippet REPL agent", "document_repl": "Document REPL agent", "dspy_rlm": "DSPy.RLM"}
 
 
 def rel(target, frm):
@@ -96,7 +98,7 @@ def exists(p):
 
 
 def doc(e):
-    algo = e["algorithm"]; eid = e["id"]
+    algo = e["agent"]; eid = e["id"]
     slug = re.sub(r"[^a-z0-9]+", "-", f"{e['benchmark'].split('(')[0]} {e['model'].split('(')[0]} {e['retriever'].split(', ')[0].split('(')[0]}".lower()).strip("-")
     path = f"docs/experiments/{algo}/{eid}_{slug}.md"
     w = workbook_row(e); a = AUDIT.get(eid, {}); rec = a.get("recomputed") or {}
@@ -111,7 +113,7 @@ def doc(e):
     # 1 overview
     L.append("## 1. Experiment overview\n")
     L.append(table([["Identifier", f"`{eid}` (sheet `{e['sheet']}`, row {e['row']})"],
-                    ["Algorithm", f"[{ALGO_NAME[algo]}]({rel(f'algorithms/{algo}/README.md', path)})"],
+                    ["Agent", f"[{ALGO_NAME[algo]}]({rel(f'agents/{algo}/README.md', path)})"],
                     ["Benchmark", e["benchmark"]], ["Model", e["model"]], ["Retriever", e["retriever"]],
                     ["Research question", e["question"]],
                     ["Original execution", e["dates"]], ["Run name in the logs", f"`{e['run_name']}`"]], ["", ""]))
@@ -119,23 +121,23 @@ def doc(e):
     # 2 motivation
     L.append("## 2. Research motivation\n")
     L.append(f"{e['question']} This row is one cell of the comparison matrix in Experiments.xlsx: the same benchmark is run "
-             f"with each algorithm × model × retriever combination, so this row is read against its neighbours (section 8). "
-             f"See [ALGORITHM_COMPARISON.md]({rel('docs/experiments/ALGORITHM_COMPARISON.md', path)}) for the matrix and "
+             f"with each agent × model × retriever combination, so this row is read against its neighbours (section 8). "
+             f"See [AGENT_COMPARISON.md]({rel('docs/experiments/AGENT_COMPARISON.md', path)}) for the matrix and "
              f"[research_overview.md]({rel('docs/research_overview.md', path)}) for the research questions.\n")
 
     # 3 methodology
     L.append("## 3. Experimental methodology\n")
-    if algo == "snippet_rlm":
-        L.append("The Snippet RLM answers each question by writing Python in a persistent REPL, one turn at a time. "
+    if algo == "snippet_repl":
+        L.append("The snippet REPL agent answers each question by writing Python in a persistent REPL, one turn at a time. "
                  "Its tools return search results as short snippets (the first tokens of each document) into a variable; "
                  "it can open a whole document and pass text to a sub-LLM (`llm_query`) to read it. "
                  "A run ends when the model sets a final answer or the turn limit is reached.")
     else:
-        L.append("The Full-Doc RLM answers each question by writing Python in a persistent REPL. Each search puts the "
+        L.append("The document REPL agent answers each question by writing Python in a persistent REPL. Each search puts the "
                  "**whole** retrieved documents into a `DOCS` variable; the model reads slices of them itself (prints "
                  "are capped per code block). Searches are capped client-side; at the turn limit the harness forces a "
                  "final answer.")
-    L.append(f" Algorithm details: [algorithms/{algo}/README.md]({rel(f'algorithms/{algo}/README.md', path)}).\n")
+    L.append(f" Agent details: [agents/{algo}/README.md]({rel(f'agents/{algo}/README.md', path)}).\n")
     L.append("Per question: the agent runs on one benchmark question with the budgets in section 4; the run record "
              "(answer, retrieved document ids, tool counts, turns, time, tokens) is written to the run directory.")
     if qa:
@@ -169,17 +171,17 @@ def doc(e):
     L.append(f"Launcher: [{e['launcher']}]({rel(e['launcher'], path)}){'' if exists(e['launcher']) else ' (**missing**)'}. "
              "It reads the benchmark questions, talks to the retrieval server named in the config and writes one record per "
              "question (plus trajectories) under `$RUNS_DIR`. Grade afterwards with the matching script in "
-             f"[shared/rlm_shared/grading/]({rel('shared/rlm_shared/grading', path)}).\n")
+             f"[agents/shared/rlm_shared/grading/]({rel('agents/shared/rlm_shared/grading', path)}).\n")
 
     # 6 implementation references
     L.append("## 6. Implementation references\n")
-    src = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / f"algorithms/{algo}/src").rglob("*.py")) if exists(f"algorithms/{algo}/src") else []
-    L.append(f"- Algorithm source: " + (", ".join(f"[{Path(p).name}]({rel(p, path)})" for p in src[:12]) or "—") + (" …" if len(src) > 12 else ""))
-    L.append(f"- Original code that produced the result (verbatim, SHA-256 manifest): [algorithms/{algo}/original/]({rel(f'algorithms/{algo}/original/MANIFEST.json', path)})")
+    src = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / f"agents/{algo}/src").rglob("*.py")) if exists(f"agents/{algo}/src") else []
+    L.append(f"- Agent source: " + (", ".join(f"[{Path(p).name}]({rel(p, path)})" for p in src[:12]) or "—") + (" …" if len(src) > 12 else ""))
+    L.append(f"- Original code that produced the result (verbatim, SHA-256 manifest): [agents/{algo}/original/]({rel(f'agents/{algo}/original/MANIFEST.json', path)})")
     L.append(f"- Configuration: [{cfg}]({rel(cfg, path)}) · Launcher: [{e['launcher']}]({rel(e['launcher'], path)})")
-    L.append(f"- Data loaders: [shared/rlm_shared/]({rel('shared/rlm_shared/__init__.py', path)}) (`browsecomp_data.py`, `obliq_data.py`)")
-    L.append(f"- Grading: [shared/rlm_shared/grading/]({rel('shared/rlm_shared/grading', path)}) · Metrics: [metrics.py]({rel('shared/rlm_shared/metrics.py', path)})")
-    L.append(f"- Tests: [algorithms/{algo}/tests/]({rel(f'algorithms/{algo}/tests', path)}), [tests/]({rel('tests', path)})")
+    L.append(f"- Data loaders: [agents/shared/rlm_shared/]({rel('agents/shared/rlm_shared/__init__.py', path)}) (`browsecomp_data.py`, `obliq_data.py`)")
+    L.append(f"- Grading: [agents/shared/rlm_shared/grading/]({rel('agents/shared/rlm_shared/grading', path)}) · Metrics: [metrics.py]({rel('agents/shared/rlm_shared/metrics.py', path)})")
+    L.append(f"- Tests: [agents/{algo}/tests/]({rel(f'agents/{algo}/tests', path)}), [tests/]({rel('tests', path)})")
     tm = ROOT / f"trajectories/{algo}/{eid}/MANIFEST.json"
     if tm.exists():
         tx = json.loads(tm.read_text())
@@ -200,7 +202,7 @@ def doc(e):
     notes = []
     for f in footnotes(e["sheet"]):
         tag = re.match(r"\*\s*(.+?\)\*)", f)
-        if tag and tag.group(1) in model_cell and ("Snippet" in f) == (algo == "snippet_rlm"):
+        if tag and tag.group(1) in model_cell and ("Snippet" in f) == (algo == "snippet_repl"):
             notes.append(f)
         elif f.startswith("†") and "†" in acc_cell:
             notes.append(f)
@@ -209,7 +211,7 @@ def doc(e):
     if notes:
         L.append("\nWorkbook footnotes that apply to this row:\n")
         L += [f"> {n}\n" for n in notes]
-    if "deployment default" in e["effort_sent"] and "(high)*" in model_cell and algo == "snippet_rlm":
+    if "deployment default" in e["effort_sent"] and "(high)*" in model_cell and algo == "snippet_repl":
         L.append("> **Correction (this audit):** the launcher of this run loaded no hook that forwards `reasoning_effort` to "
                  "Azure, so both the root model and the sub-LLM ran at the deployment's default effort (measured as medium "
                  f"for gpt-5), not high/medium as the footnote says. See [KNOWN_ISSUES.md]({rel('docs/verification/KNOWN_ISSUES.md', path)}) K3.\n")
@@ -287,7 +289,7 @@ def doc(e):
     vrows = [["Experiment previously executed", "yes" if e["status"] == "complete" else e["status"]],
              ["Original outputs found", "yes (on the original machine; paths in section 6)" if e["status"] != "queued" else "no (not run)"],
              ["Configuration identified", "yes" if exists(cfg) else "**no**"],
-             ["Implementation reviewed", f"yes ([algorithm review]({rel(f'docs/verification/REVIEW_{algo}.md', path)}))"],
+             ["Implementation reviewed", f"yes ([agent review]({rel(f'docs/verification/REVIEW_{algo}.md', path)}))"],
              ["Lightweight tests", f"unit tests with mocks ([TESTING_REPORT.md]({rel('docs/verification/TESTING_REPORT.md', path)})); the experiment itself was not re-run"]]
     if rec:
         if qa:
@@ -306,15 +308,15 @@ def doc(e):
     # 10 limitations
     L.append("\n## 10. Limitations\n")
     lim = ["No random seed; model sampling is stochastic, so a re-run gives different per-question results "
-           "(two identical 830-question Snippet RLM runs disagreed on 17.8% of questions in the earlier campaign).",
+           "(two identical 830-question snippet REPL agent runs disagreed on 17.8% of questions in the earlier campaign).",
            f"Reasoning effort actually sent: {e['effort_sent']}.",
            "The judge (gpt-4.1) is an LLM; its verdicts were not audited by hand." if qa else "Binary relevance on gold qrels only (graded relevance ignored).",
            "Comparisons with other rows can differ in more than one variable (search cap, turn limit, time limit, effort, index document length); "
-           f"see [ALGORITHM_COMPARISON.md]({rel('docs/experiments/ALGORITHM_COMPARISON.md', path)})."]
+           f"see [AGENT_COMPARISON.md]({rel('docs/experiments/AGENT_COMPARISON.md', path)})."]
     if "trace" in " ".join(e["original_outputs"]):
         lim.append("Per-question data exist only as the trace embedded in the results page; raw run records were not available for audit.")
-    if algo == "full_doc_rlm":
-        lim.append("The number of documents per search is chosen by the model (up to 50), not fixed at 5 like the Snippet RLM; "
+    if algo == "document_repl":
+        lim.append("The number of documents per search is chosen by the model (up to 50), not fixed at 5 like the snippet REPL agent; "
                    "the `llm_query` sub-LLM functions remain installed in the REPL (only the prompt says not to use them).")
     L += [f"- {x}" for x in lim]
 
@@ -325,9 +327,9 @@ def doc(e):
              f"[registry.yaml]({rel('experiments/registry.yaml', path)})")
     L.append(f"- [Known issues]({rel('docs/verification/KNOWN_ISSUES.md', path)}) · "
              f"[Result integrity]({rel('docs/verification/RESULT_INTEGRITY.md', path)}) · "
-             f"[Changes from the original code]({rel(f'algorithms/{algo}/CHANGES_FROM_ORIGINAL.md', path)})")
+             f"[Changes from the original code]({rel(f'agents/{algo}/CHANGES_FROM_ORIGINAL.md', path)})")
     (ROOT / path).parent.mkdir(parents=True, exist_ok=True)
-    (ROOT / path).write_text("\n".join(L) + "\n")
+    (ROOT / path).write_text(paper_names("\n".join(L) + "\n"))
     return path
 
 
@@ -339,10 +341,10 @@ if __name__ == "__main__":
     idx = ["# Experiments\n", "One document per row of [Experiments.xlsx](../../results/original_baselines/Experiments.xlsx) that this "
            "project ran. Generated by `scripts/docs/make_experiment_docs.py` from `experiments/registry.yaml` and the evidence files. "
            "DSPy.RLM has no row in the final table (it was evaluated in an earlier campaign with a different judge; see "
-           "[its README](../../algorithms/dspy_rlm/README.md)).\n",
-           "Cross-row comparison: [ALGORITHM_COMPARISON.md](ALGORITHM_COMPARISON.md).\n"]
-    idx.append(table([[e["id"], ALGO_NAME[e["algorithm"]], e["benchmark"].split(" (")[0], e["model"].split(" (")[0], e["retriever"].split(", ")[0],
+           "[its README](../../agents/dspy_rlm/README.md)).\n",
+           "Cross-row comparison: [AGENT_COMPARISON.md](AGENT_COMPARISON.md).\n"]
+    idx.append(table([[e["id"], ALGO_NAME[e["agent"]], e["benchmark"].split(" (")[0], e["model"].split(" (")[0], e["retriever"].split(", ")[0],
                        e["status"], f"[doc]({os.path.relpath(ROOT / p, OUT)})"] for e, p in made],
-                     ["ID", "Algorithm", "Benchmark", "Model", "Retriever", "Status", "Document"]))
-    (OUT / "README.md").write_text("\n".join(idx))
+                     ["ID", "Agent", "Benchmark", "Model", "Retriever", "Status", "Document"]))
+    (OUT / "README.md").write_text(paper_names("\n".join(idx)))
     print(len(made), "experiment documents written")

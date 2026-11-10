@@ -2,8 +2,8 @@
 compared by work done instead of wall time (wall time depends on workers, rate limits and server load).
 Sources, per row:
   run5d GPT runs          <run>/usage.jsonl (one line per Azure call, exact; includes retried attempts, like the cost cells)
-  suprlm full-doc runs    per-question records, usage.model_usage_summaries (exact; no sub-LLM in design B)
-  Full-Doc GPT-5 docs/supervisor_artifact.html, questions[].tok_in / tok_out (exact; its cost_per_q = these x
+  suprlm document REPL runs    per-question records, usage.model_usage_summaries (exact; no sub-LLM in design B)
+  Document REPL GPT-5 docs/supervisor_artifact.html, questions[].tok_in / tok_out (exact; its cost_per_q = these x
                           $1.25 / $10 per 1M, i.e. uncached)
   DSPy rows               logs/<files>.json input_tokens / output_tokens as logged by the harness
   Sept snippet rows       ESTIMATE: the JSON token fields hold only the sub-LM's usage when llm_query ran. Input = root
@@ -14,12 +14,12 @@ Sources, per row:
 Prints {sheet: {row: (input, output, kind)}} as JSON; kind is exact | estimate.
 
 Refactored copy of scripts/run5d/token_columns.py of the original repository; see scripts/reporting/README.md and
-shared/CHANGES_FROM_ORIGINAL.md (changes: the original repository root from ORIGINAL_REPO_ROOT, run logs from
+agents/shared/CHANGES_FROM_ORIGINAL.md (changes: the original repository root from ORIGINAL_REPO_ROOT, run logs from
 LOGS_ROOT). Paths in the text above are relative to the original repository.
   python scripts/reporting/token_columns.py > tokens.json
 """
 import glob, json, os, re, statistics as st, sys, ast
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "shared"))   # <repo>/shared
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "agents", "shared"))   # <repo>/agents/shared
 from rlm_shared.paths import path
 R = str(path("ORIGINAL_REPO_ROOT")); L = str(path("LOGS_ROOT"))   # refactor: was R = "<original repo>"; L = f"{R}/logs"
 sys.path.insert(0, f"{R}/scripts/workbook")   # unused: nothing is imported from scripts/workbook (kept, as in the original)
@@ -67,7 +67,7 @@ def dspy(patterns):
 
 
 def rollouts(parts):
-    """Qwen3.6 full-doc rows: first completed rollout per question across the run's cache dirs."""
+    """Qwen3.6 document REPL rows: first completed rollout per question across the run's cache dirs."""
     seen = {}
     for d, key in parts:
         for f in glob.glob(f"{L}/{d}/rollouts/{key}/*.json"):

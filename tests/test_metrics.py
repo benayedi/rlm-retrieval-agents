@@ -1,5 +1,5 @@
 """Metric correctness: the reference implementations against hand-computed values, and the implementations the
-experiments actually used (shared/rlm_shared/obliq_data.py) against the reference. No network, no models."""
+experiments actually used (agents/shared/rlm_shared/obliq_data.py) against the reference. No network, no models."""
 import math
 
 import pytest

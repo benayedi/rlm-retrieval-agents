@@ -1,5 +1,5 @@
 #!/bin/bash
-# Refactored copy of scripts/build_bc_rmcb_dl8192.sh of the original repository (shared/CHANGES_FROM_ORIGINAL.md).
+# Refactored copy of scripts/build_bc_rmcb_dl8192.sh of the original repository (agents/shared/CHANGES_FROM_ORIGINAL.md).
 # Changed: the working directory (the checkout holding scripts/retrieval_eval.py, which is NOT part of this repository)
 # is ${RETRIEVAL_EVAL_ROOT}, and the interpreter of the original "embed_server" conda env is ${PYLATE_PYTHON}; both
 # come from configs/paths.env, sourced below. Needs a GPU with >30 GB free. Run: bash benchmarks/retrieval/build_bc_rmcb_dl8192.sh
@@ -9,7 +9,7 @@
 #
 # LINEAGE. bc_reason_mcb was built at doc-len 512 to match an earlier LateOn run, and every
 # result in this project used it. bc_rmcb_dl4096 removed most of that handicap. This is the
-# last step: the model card specifies 8192 and the Full-Doc RLM's branch measured 512 -> 8192 as
+# last step: the model card specifies 8192 and the document REPL agent's branch measured 512 -> 8192 as
 # 82.00% -> 87.00% on 200 paired questions with HIS scaffold.
 #
 # WHAT WE ALREADY KNOW, so nobody repeats it:
@@ -21,7 +21,7 @@
 #
 # THE TWO FAILURE MODES THAT HAVE ACTUALLY BITTEN, both recorded rather than guessed:
 #   1. PLAID construction holds a chunk's embeddings on the GPU. The 4096 build died after 2h
-#      when only 7.7 GB of the card was free; the Full-Doc RLM's 8192 attempt OOM'd trying to
+#      when only 7.7 GB of the card was free; the document REPL agent's 8192 attempt OOM'd trying to
 #      allocate 18.18 GiB. Hence the >30 GB gate below.
 #   2. nvidia-smi is BROKEN on this host (kernel module 595.71.05 vs NVML 595.91), so the
 #      4096 script's gate cannot run. It is replaced with a torch mem_get_info check, which
@@ -66,6 +66,6 @@ say "index size: $(du -sh .pylate_idx/bc_rmcb_dl8192 2>/dev/null | cut -f1)"
 say "RETRIEVAL-ONLY GATE (830 queries, doc_len 8192):"
 grep -aE "^  (NDCG|Recall)@" logs/bc_rmcb_dl8192_build.log | tail -6 | tee -a logs/bc_rmcb_dl8192.log
 say "compare: doc_len 512 baseline Recall@10 .1971, Recall@50 .3196, NDCG@10 .1545"
-say "NOTE the Full-Doc RLM work measured first-stage recall going DOWN at 8192 (R@10 13.2% vs 18.8%)"
+say "NOTE the document REPL agent work measured first-stage recall going DOWN at 8192 (R@10 13.2% vs 18.8%)"
 say "     while end-to-end accuracy went UP — so a lower gate number here is not disqualifying."
 say "done"

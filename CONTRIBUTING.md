@@ -3,7 +3,7 @@
 ## Understand the project first
 
 1. Read [docs/research_overview.md](docs/research_overview.md) and [docs/architecture/OVERVIEW.md](docs/architecture/OVERVIEW.md).
-2. Read the README of the algorithm you will touch (`algorithms/<algorithm>/README.md`) and its
+2. Read the README of the agent you will touch (`agents/<agent>/README.md`) and its
    `CHANGES_FROM_ORIGINAL.md`.
 3. Check [docs/verification/KNOWN_ISSUES.md](docs/verification/KNOWN_ISSUES.md) before relying on a result or a code path.
 
@@ -28,21 +28,21 @@ Set `RLMLIB_PATH` (or `pip install` the `rlms` line of `requirements.txt`) to al
   - be recorded in `CHANGES_FROM_ORIGINAL.md`;
   - invalidate the affected rows until they are re-run.
   Never mix it with refactoring.
-- **No machine paths or secrets in code.** Add a variable to `shared/rlm_shared/paths.py` and
+- **No machine paths or secrets in code.** Add a variable to `agents/shared/rlm_shared/paths.py` and
   `configs/paths.example.env` instead.
 - **No BrowseComp-Plus plain text.** Questions, answers and model outputs on BrowseComp-Plus must not be committed. Run
   `python scripts/provenance/bcp_leak_scan.py <paths>` before committing anything derived from runs.
 - **Numbers come from evidence files, never from typing.** Regenerate documents with `scripts/docs/*.py`.
 
-## Run an algorithm
+## Run an agent
 
-Every results row has `algorithms/<algorithm>/configs/<ID>.env`. Launch it with the algorithm's launcher (the experiment
+Every results row has `agents/<agent>/configs/<ID>.env`. Launch it with the agent's launcher (the experiment
 document of the row gives the exact command). Outputs go to `$RUNS_DIR`. Grade with
-`shared/rlm_shared/grading/`.
+`agents/shared/rlm_shared/grading/`.
 
 ## Add an experiment
 
-1. **Write the config.** Create `algorithms/<algorithm>/configs/<NEW-ID>.env` with every environment variable and
+1. **Write the config.** Create `agents/<agent>/configs/<NEW-ID>.env` with every environment variable and
    argument the run uses. Use a header comment like the existing ones.
 2. **Run it.** Run it, grade it, and add the row to `results/original_baselines/Experiments.xlsx`. Keep the column
    conventions; state the recall definition.
@@ -52,17 +52,17 @@ document of the row gives the exact command). Outputs go to `$RUNS_DIR`. Grade w
 
 ## Add a benchmark
 
-1. **Loader.** Add a loader to `shared/rlm_shared/` (questions, gold, scoring) with tests in `tests/`.
+1. **Loader.** Add a loader to `agents/shared/rlm_shared/` (questions, gold, scoring) with tests in `tests/`.
 2. **Retrieval.** Build an index and serve it through the `/search` + `/document` wire format
-   (`benchmarks/retrieval/`), so every algorithm can use it unchanged.
-3. **Adapter.** Add a thin runner per algorithm that adapts task text and answer parsing; see `run_frames.py` /
-   `run_obliq.py` in the Snippet RLM.
+   (`benchmarks/retrieval/`), so every agent can use it unchanged.
+3. **Adapter.** Add a thin runner per agent that adapts task text and answer parsing; see `run_frames.py` /
+   `run_obliq.py` in the snippet REPL agent.
 4. **Document it.** Record the benchmark's source and licence in `benchmarks/README.md`.
 
 ## Tests
 
 Tests must not call models, judges or servers. Use fakes: see `tests/test_shared_grading.py` (fake OpenAI client) and
-`algorithms/full_doc_rlm/tests/test_toolbox.py` (fake retrieval server). A test that needs a model or an index must
+`agents/document_repl/tests/test_toolbox.py` (fake retrieval server). A test that needs a model or an index must
 skip itself with a reason.
 
 ## Pull requests

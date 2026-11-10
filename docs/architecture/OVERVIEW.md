@@ -11,14 +11,14 @@ flowchart LR
   subgraph retr[benchmarks/retrieval]
     S[search servers<br/>POST /search · /document]
   end
-  subgraph algos[algorithms]
+  subgraph algos[agents]
     D[DSPy.RLM<br/>dspy.RLM]
-    SN[Snippet RLM<br/>rlm + runtime patches]
-    FD[Full-Doc RLM<br/>rlm + ToolBox / DOCS]
+    SN[snippet REPL agent<br/>rlm + runtime patches]
+    FD[document REPL agent<br/>rlm + ToolBox / DOCS]
   end
   M[(model servers<br/>Azure GPT-5 / 5.2 · vLLM Qwen3.6)]
   R[(run records + trajectories<br/>$RUNS_DIR)]
-  G[shared/rlm_shared/grading<br/>gpt-4.1 judge · NDCG]
+  G[agents/shared/rlm_shared/grading<br/>gpt-4.1 judge · NDCG]
   W[results/original_baselines<br/>Experiments.xlsx · Failure_Analysis.xlsx]
   C --> S
   Q --> D & SN & FD
@@ -28,22 +28,22 @@ flowchart LR
   R --> RP[scripts/reporting<br/>turns · tokens · failure analysis] --> W
 ```
 
-| Layer | Directory | Shared or per algorithm |
+| Layer | Directory | Shared or per agent |
 |---|---|---|
-| Configuration (machine paths, credentials, deployments) | `configs/paths.example.env`, `shared/rlm_shared/paths.py` | shared |
-| Benchmark data access | `shared/rlm_shared/browsecomp_data.py`, `obliq_data.py`, `obliq_score_advice.py` | shared |
+| Configuration (machine paths, credentials, deployments) | `configs/paths.example.env`, `agents/shared/rlm_shared/paths.py` | shared |
+| Benchmark data access | `agents/shared/rlm_shared/browsecomp_data.py`, `obliq_data.py`, `obliq_score_advice.py` | shared |
 | Retrieval servers and index builders | `benchmarks/retrieval/` | shared |
-| Agent harness | `algorithms/<algorithm>/src/` | per algorithm |
-| Experiment launchers and exact configurations | `algorithms/<algorithm>/experiments/`, `configs/<ID>.env` | per algorithm |
-| Code that produced the results (verbatim) | `algorithms/<algorithm>/original/`, `shared/original/` | per algorithm |
-| Judging and scoring | `shared/rlm_shared/grading/`, `shared/rlm_shared/metrics.py` | shared |
+| Agent harness | `agents/<agent>/src/` | per agent |
+| Experiment launchers and exact configurations | `agents/<agent>/experiments/`, `configs/<ID>.env` | per agent |
+| Code that produced the results (verbatim) | `agents/<agent>/original/`, `agents/shared/original/` | per agent |
+| Judging and scoring | `agents/shared/rlm_shared/grading/`, `agents/shared/rlm_shared/metrics.py` | shared |
 | Reporting | `scripts/reporting/` (turn and token counts, failure analysis) | shared |
 | Provenance, audit and documentation generators | `scripts/provenance/`, `scripts/audit/`, `scripts/docs/` | shared |
 | Experiment registry | `experiments/registry.yaml` | shared |
 
-The algorithms import shared code and never each other. There is one exception, recorded in the Snippet RLM's change
-record (S16): its snippet truncation loads the Qwen3-0.6B tokenizer through `dspy_rlm.agent`. The Full-Doc judge
-templates (`algorithms/full_doc_rlm/src/judge.py`) are imported by `shared/rlm_shared/grading/bcp_judge.py`. All BrowseComp+
+The agents import shared code and never each other. There is one exception, recorded in the snippet REPL agent's change
+record (S16): its snippet truncation loads the Qwen3-0.6B tokenizer through `dspy_rlm.agent`. The document REPL judge
+templates (`agents/document_repl/src/judge.py`) are imported by `agents/shared/rlm_shared/grading/bcp_judge.py`. All BrowseComp+
 grading uses them.
 
 ## Retrieval contract
@@ -56,19 +56,19 @@ POST /document  {"doc_id": str}                                             ->  
 GET  /health
 ```
 
-Servers cut `text` to 2,000 characters. The Snippet RLM then truncates it to 512 tokens. The Full-Doc RLM requests full
+Servers cut `text` to 2,000 characters. The snippet REPL agent then truncates it to 512 tokens. The document REPL agent requests full
 text through its own ToolBox protocol. Scores carry no information for BM25 and ColBERT (the ColBERT proxy returns 1/rank).
 
 ## Execution flow of one experiment
 
-1. `set -a; . configs/paths.env; . algorithms/<a>/configs/<ID>.env; set +a`: machine paths, credentials file, the exact
+1. `set -a; . configs/paths.env; . agents/<a>/configs/<ID>.env; set +a`: machine paths, credentials file, the exact
    environment switches and arguments of the row.
-2. The launcher in `algorithms/<a>/experiments/` starts one process per question, in parallel with `xargs -P`, under a
+2. The launcher in `agents/<a>/experiments/` starts one process per question, in parallel with `xargs -P`, under a
    per-question `timeout`. It puts the `rlm` checkout and, for Azure runs, a startup hook on `PYTHONPATH`. The hook
    forwards `reasoning_effort`, retries HTTP 429 and logs usage.
 3. The harness loads the question, runs the REPL loop against the model server and the search server, and writes the
    record and the trajectory under `$RUNS_DIR/<run>/`.
-4. A grader in `shared/rlm_shared/grading/` judges every answer (gpt-4.1, 3 votes, cached) or scores the ranking
+4. A grader in `agents/shared/rlm_shared/grading/` judges every answer (gpt-4.1, 3 votes, cached) or scores the ranking
    (NDCG). It writes `graded_gpt41.json` and prints the workbook numbers.
 5. `scripts/reporting/` adds turn counts (from trajectories), token and cost columns (from `usage.jsonl`) and the
    failure analysis.
@@ -91,5 +91,5 @@ text through its own ToolBox protocol. Scores carry no information for BM25 and 
 ## Refactoring policy
 
 See [REFACTOR_RULES.md](REFACTOR_RULES.md). `src/` may differ from `original/` only by renames, import wiring,
-parametrised paths and credentials, documentation and launchers. Each algorithm's `CHANGES_FROM_ORIGINAL.md` lists every
+parametrised paths and credentials, documentation and launchers. Each agent's `CHANGES_FROM_ORIGINAL.md` lists every
 change, and tests compare the two (AST equality, identical prompts, tool specs, cache keys and records under mocks).

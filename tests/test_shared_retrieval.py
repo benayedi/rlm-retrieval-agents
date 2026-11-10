@@ -279,7 +279,7 @@ def test_math_search_handler_wires(math_search):
     assert code == 400 and "tag required" in body["error"] and math_search.STATS["refused_untagged"] == 1
     code, body = _post(math_search, "/search", {"query": "q", "top_k": 1, "tag": "q2-1"})       # our wire
     assert code == 200 and body == {"results": [{"doc_id": "self", "text": "text self", "score": 0.9}]}
-    code, body = _post(math_search, "/search", {"query": "q", "k": 1, "mode": "ids", "tag": "q1-1"})  # Full-Doc wire
+    code, body = _post(math_search, "/search", {"query": "q", "k": 1, "mode": "ids", "tag": "q1-1"})  # document REPL wire
     assert code == 200 and body == {"results": [{"docid": "x", "score": 0.8}]}
     code, body = _post(math_search, "/document", {"docid": "x"})
     assert code == 200 and math_search._sent[-1][1] == {"doc_id": "x", "index": "obliq-ana-math"}
@@ -335,10 +335,10 @@ def test_vertex_service_account_from_env_file(monkeypatch, tmp_path, capsys):
 # ---------------------------------------------------------------------------------------------------- static checks
 
 WRITTEN = sorted(
-    [p for p in (REPO / "shared" / "rlm_shared" / "grading").glob("*.py")]
+    [p for p in (REPO / "agents" / "shared" / "rlm_shared" / "grading").glob("*.py")]
     + [p for p in RETR.rglob("*.py")]
     + [p for p in (REPO / "scripts" / "reporting").glob("*.py")]
-    + [REPO / "shared" / "rlm_shared" / "paths.py"]
+    + [REPO / "agents" / "shared" / "rlm_shared" / "paths.py"]
     + sorted((REPO / "tests").glob("test_shared_*.py")))
 
 

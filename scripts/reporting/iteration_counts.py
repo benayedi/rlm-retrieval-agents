@@ -1,15 +1,15 @@
 """Average iterations (root-model REPL turns) per question for every filled row of docs/Experiments.xlsx (2026-10-29).
-Snippet RLM: counted from the trajectory logs (one 'iteration' record per root turn; the harness's own `iterations`
+Snippet REPL agent: counted from the trajectory logs (one 'iteration' record per root turn; the harness's own `iterations`
 field is broken, HANDOFF Part II §4), one trajectory per question (the latest, when a question was retried; keyed by
-the question message). Full-doc RLM: n_iterations of each run_one record (head-parsed; records can be 70 MB). Earlier
+the question message). Document REPL agent: n_iterations of each run_one record (head-parsed; records can be 70 MB). Earlier
 rows reuse the stored, already trajectory-counted values (rlm_results_summary.xlsx Experiments column S).
 Prints {sheet: {row: value}}.
 
 Refactored copy of scripts/run5d/iteration_counts.py of the original repository; see scripts/reporting/README.md for the pipeline order
-and shared/CHANGES_FROM_ORIGINAL.md for the changes (run-log paths from LOGS_ROOT and FULLDOC_ROOT).
+and agents/shared/CHANGES_FROM_ORIGINAL.md for the changes (run-log paths from LOGS_ROOT and FULLDOC_ROOT).
   python scripts/reporting/iteration_counts.py > iterations.json"""
 import glob, json, os, re, statistics as st, sys
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "shared"))   # <repo>/shared
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "agents", "shared"))   # <repo>/agents/shared
 from rlm_shared.paths import path
 # Refactor: was R = "<original repo>"; F = f"{R}/logs/run5d/full". Every f"{R}/logs/..." below is now f"{L}/...".
 L = str(path("LOGS_ROOT")); F = f"{L}/run5d/full"

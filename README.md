@@ -1,19 +1,19 @@
-# Recursive-language-model retrieval agents: DSPy.RLM, Snippet RLM and Full-Doc RLM
+# Recursive-language-model retrieval agents: DSPy.RLM, snippet REPL agent and document REPL agent
 
 Code, exact configurations, results and audit for a study of **recursive language model (RLM) agents** on
 retrieval-heavy benchmarks. An RLM answers by writing Python, one turn at a time, in a persistent REPL that holds its
 search tools and data. The study compares three ways of building such an agent, several retrievers, and a frontier vs
 an open-weight model, on **BrowseComp-Plus**, **FRAMES** and **OBLIQ-Bench**.
 
-| Algorithm | Idea | In the final results |
+| Agent | Idea | In the final results |
 |---|---|---|
-| [**DSPy.RLM**](algorithms/dspy_rlm/README.md) | `dspy.RLM` with typed signatures and task-specific strategy text | no (earlier campaign only) |
-| [**Snippet RLM**](algorithms/snippet_rlm/README.md) | the RLM authors' library; search returns short snippets; documents are read through `llm_query` sub-LLM calls | yes, 11 rows (2 still running) |
-| [**Full-Doc RLM**](algorithms/full_doc_rlm/README.md) | the same library; search puts whole documents into a `DOCS` variable that the model reads itself | yes, 11 rows |
+| [**DSPy.RLM**](agents/dspy_rlm/README.md) | `dspy.RLM` with typed signatures and task-specific strategy text | no (earlier campaign only) |
+| [**Snippet REPL agent**](agents/snippet_repl/README.md) | the RLM authors' library; search returns short snippets; documents are read through `llm_query` sub-LLM calls | yes, 11 rows (2 still running) |
+| [**Document REPL agent**](agents/document_repl/README.md) | the same library; search puts whole documents into a `DOCS` variable that the model reads itself | yes, 11 rows |
 
 **Start here:**
 - [docs/research_overview.md](docs/research_overview.md): the questions, methods and findings.
-- [docs/experiments/ALGORITHM_COMPARISON.md](docs/experiments/ALGORITHM_COMPARISON.md): the results side by side, with
+- [docs/experiments/AGENT_COMPARISON.md](docs/experiments/AGENT_COMPARISON.md): the results side by side, with
   what they do and do not show.
 - [docs/FINAL_RESEARCH_AUDIT.md](docs/FINAL_RESEARCH_AUDIT.md): what was reviewed, tested and verified, and what was not.
 
@@ -21,7 +21,7 @@ an open-weight model, on **BrowseComp-Plus**, **FRAMES** and **OBLIQ-Bench**.
 
 Accuracy, judged by gpt-4.1 (BrowseComp-Plus 830 questions, FRAMES 824):
 
-| Benchmark | Model | Retriever | Snippet RLM | Full-Doc RLM |
+| Benchmark | Model | Retriever | Snippet REPL agent | Document REPL agent |
 |---|---|---|---|---|
 | BrowseComp-Plus | GPT-5 | Qwen3-Embedding-8B | 0.794 | 0.831 |
 | BrowseComp-Plus | GPT-5 | Reason-ModernColBERT | 0.858 | **0.875** |
@@ -33,12 +33,12 @@ Accuracy, judged by gpt-4.1 (BrowseComp-Plus 830 questions, FRAMES 824):
 | FRAMES | Qwen3.6-35B-A3B | BM25 | 0.620 | 0.610 |
 
 OBLIQ-Bench NDCG@10, GPT-5.2 with Gemini-Embedding-2: Math 0.149 / 0.159, Twitter 0.102 / 0.095, Congress 0.188 / 0.133
-(Snippet / Full-Doc).
+(Snippet REPL / document REPL).
 
-Read these with [ALGORITHM_COMPARISON.md](docs/experiments/ALGORITHM_COMPARISON.md):
+Read these with [AGENT_COMPARISON.md](docs/experiments/AGENT_COMPARISON.md):
 - Paired rows differ in more than the reading strategy (search and turn budgets).
 - Each cell is one unseeded run.
-- Some effort labels and two Full-Doc rows carry caveats listed in
+- Some effort labels and two document REPL rows carry caveats listed in
   [docs/verification/KNOWN_ISSUES.md](docs/verification/KNOWN_ISSUES.md).
 - Every number above was recomputed from the per-question records
   ([RESULT_INTEGRITY.md](docs/verification/RESULT_INTEGRITY.md)).
@@ -46,15 +46,15 @@ Read these with [ALGORITHM_COMPARISON.md](docs/experiments/ALGORITHM_COMPARISON.
 ## Repository structure
 
 ```text
-algorithms/
-  dspy_rlm/  snippet_rlm/  full_doc_rlm/
+agents/
+  dspy_rlm/  snippet_repl/  document_repl/
     src/            readable, runnable code (behaviour identical to original/)
     original/       the exact files that produced the results, with SHA-256 manifest (never edited)
     experiments/    launchers
     configs/        one <ID>.env per results row: the exact settings it ran with
     tests/          lightweight tests (mocks only)
     README.md  CHANGES_FROM_ORIGINAL.md
-shared/rlm_shared/  paths, benchmark loaders, reference metrics, grading (gpt-4.1 judge, NDCG)
+  shared/rlm_shared/  paths, benchmark loaders, reference metrics, grading (gpt-4.1 judge, NDCG)
 benchmarks/         retrieval servers and index builders; benchmark sources and licences (README)
 experiments/        registry.yaml: one entry per experiment
 results/
@@ -65,6 +65,23 @@ scripts/            provenance/ (snapshots, leak scan), audit/ (recompute the re
 docs/               research_overview, experiments/ (one document per experiment), architecture/, verification/
 tests/              cross-cutting tests (metrics, grading, retrieval servers)
 ```
+
+## Agent and run names
+
+The agents and folders use the names of the paper and its replication package
+([neulandAI/program-state-agents](https://github.com/neulandAI/program-state-agents)). Run names, the workbooks in
+`results/original_baselines/`, the run records and the `original/` snapshots keep the names used during the research.
+They map as follows:
+
+| In run names, workbooks and records | In the paper and in this repository |
+|---|---|
+| Full-Doc RLM, full-doc, `fd_*` runs, `FULLDOC_ROOT`, `original/FULLDOC/` | document REPL agent, [`agents/document_repl/`](agents/document_repl/README.md) |
+| Snippet RLM, `snip_*` runs | snippet REPL agent, [`agents/snippet_repl/`](agents/snippet_repl/README.md) |
+| DSPy.RLM | DSPy.RLM, [`agents/dspy_rlm/`](agents/dspy_rlm/README.md) (not in the paper) |
+| `algorithms/<name>/`, `shared/` | `agents/<name>/`, `agents/shared/` |
+
+The documentation generators in `scripts/docs/` write the paper's names (`scripts/docs/naming.py`); the reporting scripts
+in `scripts/reporting/` keep the research-time labels, so they still reproduce the workbooks.
 
 ## Installation
 
@@ -89,7 +106,7 @@ Running an experiment additionally needs:
 
 ```bash
 set -a; . configs/paths.env; set +a
-bash algorithms/snippet_rlm/experiments/run_config.sh algorithms/snippet_rlm/configs/FR-7.env   # example: one full row
+bash agents/snippet_repl/experiments/run_config.sh agents/snippet_repl/configs/FR-7.env   # example: one full row
 ```
 
 **This launches the full experiment:** hundreds of model calls and hours of compute. Each experiment document gives its
@@ -99,7 +116,7 @@ exact command, configuration, original output location and grading step: start a
 ## Data and licences
 
 Per-question records and trajectories are in [`trajectories/`](trajectories/README.md), stored with Git LFS. Pull only
-the rows you need: `git lfs pull --include "trajectories/<algorithm>/<ID>/*"`. Benchmark data, corpora and indexes are
+the rows you need: `git lfs pull --include "trajectories/<agent>/<ID>/*"`. Benchmark data, corpora and indexes are
 not included. [benchmarks/README.md](benchmarks/README.md) explains how to
 obtain and build them.
 
@@ -112,7 +129,7 @@ obtain and build them.
 
 See [docs/verification/KNOWN_ISSUES.md](docs/verification/KNOWN_ISSUES.md). The main ones:
 - one run per cell, without seeds;
-- Snippet vs Full-Doc pairs differ in budgets;
+- Snippet REPL vs document REPL pairs differ in budgets;
 - reasoning effort did not always reach the model as labelled;
-- two Full-Doc rows (BCP-21, BCP-23) ran on an unpreserved library build;
+- two document REPL rows (BCP-21, BCP-23) ran on an unpreserved library build;
 - DSPy.RLM was not evaluated under the final protocol.

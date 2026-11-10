@@ -1,5 +1,5 @@
 """Refactored copy of scripts/bcp_build_bm25_default.py of the original repository: the corpus and output paths are now
-FULLDOC_ROOT/data/prepared/corpus.jsonl and BCP_BM25_INDEX_DIR (shared/CHANGES_FROM_ORIGINAL.md).
+FULLDOC_ROOT/data/prepared/corpus.jsonl and BCP_BM25_INDEX_DIR (agents/shared/CHANGES_FROM_ORIGINAL.md).
 Run: set -a; . configs/paths.env; set +a; python benchmarks/retrieval/bcp_build_bm25_default.py
 Original docstring follows (data/bcp_bm25_default = $BCP_BM25_INDEX_DIR, suprlm = $FULLDOC_ROOT).
 
@@ -11,8 +11,8 @@ Output data/bcp_bm25_default/: bm25_index/, docids.json, offsets.npy (byte offse
 suprlm/data/prepared/corpus.jsonl, same order as the index)."""
 import json, os, sys, time
 import bm25s, Stemmer, numpy as np
-# Refactor (import wiring): <repo>/shared on sys.path, computed from this file's location.
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "shared"))
+# Refactor (import wiring): <repo>/agents/shared on sys.path, computed from this file's location.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "agents", "shared"))
 from rlm_shared.paths import path  # noqa: E402
 CORPUS = f"{path('FULLDOC_ROOT')}/data/prepared/corpus.jsonl"   # refactor: was an absolute path
 OUT = str(path("BCP_BM25_INDEX_DIR"))                            # refactor: was an absolute path

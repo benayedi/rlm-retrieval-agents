@@ -1,5 +1,5 @@
 """Refactored copy of scripts/frames_build_bm25.py of the original repository: TFDS and OUT are now
-$FRAMES_DATA_DIR/tfds and $FRAMES_DATA_DIR (shared/CHANGES_FROM_ORIGINAL.md).
+$FRAMES_DATA_DIR/tfds and $FRAMES_DATA_DIR (agents/shared/CHANGES_FROM_ORIGINAL.md).
 Run: set -a; . configs/paths.env; set +a; python benchmarks/retrieval/frames_build_bm25.py all --workers 48
 Original docstring follows.
 
@@ -22,8 +22,8 @@ from multiprocessing import Pool
 
 import numpy as np
 
-# Refactor (import wiring): <repo>/shared on sys.path, computed from this file's location.
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "shared"))
+# Refactor (import wiring): <repo>/agents/shared on sys.path, computed from this file's location.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "agents", "shared"))
 from rlm_shared.paths import path  # noqa: E402
 
 TFDS = f"{path('FRAMES_DATA_DIR')}/tfds"   # refactor: was <original repo>/data/frames/tfds

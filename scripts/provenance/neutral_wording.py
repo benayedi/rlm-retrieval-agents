@@ -1,4 +1,4 @@
-"""Reword origin notes in the text of the published workbooks so the Full-Doc RLM is described neutrally, as the rest of
+"""Reword origin notes in the text of the published workbooks so the document REPL agent is described neutrally, as the rest of
 the repository does. Only text strings change (cell comments and text cells); every number and formula stays as it
 was, which --check verifies against a reference copy.
 

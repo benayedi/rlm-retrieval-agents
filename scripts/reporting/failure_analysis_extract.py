@@ -1,14 +1,14 @@
 """Per-question records for every filled row of docs/Experiments.xlsx -> per_question.json (failure analysis).
 
 Refactored copy of scripts/failure_analysis_extract.py of the original repository; see scripts/reporting/README.md for the pipeline order
-and shared/CHANGES_FROM_ORIGINAL.md for the changes (import wiring; run-log, FRAMES, Full-Doc and docs/ paths
+and agents/shared/CHANGES_FROM_ORIGINAL.md for the changes (import wiring; run-log, FRAMES, Full-Doc and docs/ paths
 from LOGS_ROOT, FRAMES_DATA_DIR, FULLDOC_ROOT and ORIGINAL_REPO_ROOT).
 Reads run logs that exist only on the original machine. Loads Tevatron/browsecomp-plus (Hugging Face) and
 OBLIQ-Bench qrels (OBLIQ_BENCH_ROOT). No LLM call.
   python scripts/reporting/failure_analysis_extract.py <per_question.json>"""
 import glob, json, os, re, sys, time
 # Refactor: was R = "<original repo>"; L = f"{R}/logs"; sys.path.insert(0, R) and examples.* imports.
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "shared"))   # <repo>/shared
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "agents", "shared"))   # <repo>/agents/shared
 from rlm_shared.paths import path
 R = str(path("ORIGINAL_REPO_ROOT")); L = str(path("LOGS_ROOT")); F = f"{L}/run5d/full"
 from datasets import load_dataset

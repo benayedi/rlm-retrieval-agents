@@ -1,5 +1,5 @@
 """Result-integrity audit: recompute the headline numbers of Experiments.xlsx from the per-question records the runs
-wrote, with code written for this audit (shared/rlm_shared/metrics.py), and compare them with the workbook.
+wrote, with code written for this audit (agents/shared/rlm_shared/metrics.py), and compare them with the workbook.
 
 Read-only. It makes no API call and starts no model: correctness comes from the gpt-4.1 verdicts already on disk.
 For each row it reports accuracy (correct / all questions), mean recall over questions with a result and over all
@@ -8,12 +8,12 @@ result, duplicate or missing records, and verdicts that are not plain booleans.
 
 usage: python scripts/audit/recompute_experiments.py WORKBOOK.xlsx LOGS_ROOT FULLDOC_ROOT OUT.json
   LOGS_ROOT     the original repository root holding logs/ and docs/supervisor_artifact.html
-  FULLDOC_ROOT  the Full-Doc RLM directory holding runs/obliq_fd_*
+  FULLDOC_ROOT  the document REPL agent directory holding runs/obliq_fd_*
 Needs the HF dataset Tevatron/browsecomp-plus (for the question order) and OBLIQ_BENCH_ROOT (OBLIQ qrels)."""
 import glob, json, os, re, sys
 from collections import Counter
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "shared"))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "agents", "shared"))
 from rlm_shared import metrics as M  # noqa: E402
 from rlm_shared import obliq_data as OD  # noqa: E402
 
@@ -69,7 +69,7 @@ def row(qids, verdict, recall, searches, note=""):
 
 R = {}
 
-# ---- BrowseComp+ Snippet RLM, September runs (verdicts re-judged with gpt-4.1)
+# ---- BrowseComp+ snippet REPL agent, September runs (verdicts re-judged with gpt-4.1)
 def sept(prefixes, vfile):
     rec = {}
     for pre in prefixes:
@@ -83,7 +83,7 @@ def sept(prefixes, vfile):
 R["BCP-9"] = sept(["rlmfix32"], "10.json")
 R["BCP-11"] = sept([f"rlmfix{n}" for n in (24, 25, 29, 30, 31)], "9.json")
 
-# ---- run5d graded directories (snippet BCP and FRAMES, full-doc FRAMES / Qwen dense)
+# ---- run5d graded directories (snippet BCP and FRAMES, document REPL FRAMES / Qwen dense)
 def graded(d, qids, rec_key="gold_recall"):
     G = json.load(open(f"{d}/graded_gpt41.json"))
     return row(qids, {q: v.get("correct") for q, v in G.items()}, {q: fnum(v.get(rec_key)) for q, v in G.items()},
@@ -104,7 +104,7 @@ R["FR-9"] = graded(f"{F}/frames_snip_qwen", FQ)
 R["FR-11"] = graded(f"{F}/frames_fd_gpt5", FQ)
 R["FR-13"] = graded(f"{L}/frames/sup_q36_bm25f", FQ)
 
-# ---- BrowseComp+ Full-Doc GPT-5 dense / ColBERT: the trace embedded in the results page
+# ---- BrowseComp+ document REPL GPT-5 dense / ColBERT: the trace embedded in the results page
 T = json.loads(re.search(r'<script id="trace"[^>]*>(.*?)</script>', open(f"{ROOT}/docs/supervisor_artifact.html").read(), re.S).group(1))
 for rid, names in (("BCP-21", {"final100_medium", "final200_medium", "final100_e", "final_rest"}),
                    ("BCP-23", {"colbert8192_high400", "colbert8192_high100b", "colbert8192_high100c", "colbert8192_high_rest230"})):
@@ -118,14 +118,14 @@ for rid, names in (("BCP-21", {"final100_medium", "final200_medium", "final100_e
     R[rid] = row(BQ, {q: truth(x["correct"]) for q, x in one.items()}, {q: (fnum(x.get("final_recall")) or 0) / 100 for q, x in one.items()},
                  {q: fnum(x.get("searches")) for q, x in one.items()}, f"{len(one)} questions in trace, {dup} duplicated across runs; recall = evidence recall")
 
-# ---- BrowseComp+ Full-Doc GPT-5 BM25
+# ---- BrowseComp+ document REPL GPT-5 BM25
 V = json.load(open(f"{L}/bcp_rejudge_gpt41/bm25_gpt5.json"))["verdicts"]
 recs = {}
 for p in glob.glob(f"{L}/bcp_gpt5_bm25/runs/*.json"):
     if not os.path.basename(p).startswith("_"):
         qid = str(head_field(p, "query_id")); recs[qid] = p
 import importlib.util  # noqa: E402
-_bd = importlib.util.spec_from_file_location("bd", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "shared", "rlm_shared", "browsecomp_data.py"))
+_bd = importlib.util.spec_from_file_location("bd", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "agents", "shared", "rlm_shared", "browsecomp_data.py"))
 BD = importlib.util.module_from_spec(_bd); _bd.loader.exec_module(BD)
 EV = {str(r["query_id"]): BD.get_evidence_doc_ids(r) for r in load_dataset("Tevatron/browsecomp-plus", split="test")}
 GD = {str(r["query_id"]): BD.get_gold_doc_ids(r) for r in load_dataset("Tevatron/browsecomp-plus", split="test")}
@@ -145,7 +145,7 @@ R["BCP-25"] = row(BQ, V, rc_e, sc, f"{len(recs)} records, {len(rc_e)} completed;
 R["BCP-25"]["recall_workbook_definition"] = M.mean(_all_gold)
 R["BCP-25"]["recall_workbook_definition_is"] = "gold-document recall, mean over all 830 records incl. unfinished"
 
-# ---- BrowseComp+ Full-Doc Qwen3.6 ColBERT / BM25: cache.json keyed '<key>|<qid>', verdicts re-judged
+# ---- BrowseComp+ document REPL Qwen3.6 ColBERT / BM25: cache.json keyed '<key>|<qid>', verdicts re-judged
 def caches(parts, vfile):
     C = {}
     for d, key in parts:

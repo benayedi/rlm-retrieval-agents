@@ -7,9 +7,9 @@ uses mocks.
 
 | Tree | Files |
 |---|---|
-| Original (the code that ran, checksummed in `algorithms/dspy_rlm/original/MANIFEST.json`) | `original/RLM/rag/{__init__,agent,signatures,tools}.py`, `examples/browsecomp_eval_dspy_rlm.py`, `examples/obliq_eval_dspy_rlm.py`, `scripts/run_obliq_dspy_shard.sh`, `pyproject.toml` |
-| Refactored | `algorithms/dspy_rlm/src/dspy_rlm/*.py`, `src/run_browsecomp.py`, `src/run_obliq.py`, `experiments/{obliq_shard,browsecomp}.sh`, `configs/example.env` |
-| Shared code used | `shared/rlm_shared/{browsecomp_data,obliq_score_advice,obliq_data,paths}.py` |
+| Original (the code that ran, checksummed in `agents/dspy_rlm/original/MANIFEST.json`) | `original/RLM/rag/{__init__,agent,signatures,tools}.py`, `examples/browsecomp_eval_dspy_rlm.py`, `examples/obliq_eval_dspy_rlm.py`, `scripts/run_obliq_dspy_shard.sh`, `pyproject.toml` |
+| Refactored | `agents/dspy_rlm/src/dspy_rlm/*.py`, `src/run_browsecomp.py`, `src/run_obliq.py`, `experiments/{obliq_shard,browsecomp}.sh`, `configs/example.env` |
+| Shared code used | `agents/shared/rlm_shared/{browsecomp_data,obliq_score_advice,obliq_data,paths}.py` |
 | Library behaviour relied on | installed DSPy 3.3.1, `dspy/predict/rlm.py` (`RLM.forward`, `_make_llm_tools`, `_extract_fallback`) and `dspy/primitives/python_interpreter.py` |
 
 Out of scope:
@@ -76,17 +76,17 @@ on it.
 8. **Diff review.** `diff -u` of every original/refactored pair; each hunk was classified under REFACTOR_RULES 1–5,
    and none falls outside them. `preserve_originals.py --check`: all copies match their manifest.
 
-Result: `pytest algorithms/dspy_rlm/tests`: **98 passed** (49 signatures, 18 agent, 14 static, 9 tools, 8 drivers).
+Result: `pytest agents/dspy_rlm/tests`: **98 passed** (49 signatures, 18 agent, 14 static, 9 tools, 8 drivers).
 
 ## Findings
 
-The IDs are those of [CHANGES_FROM_ORIGINAL.md](../../algorithms/dspy_rlm/CHANGES_FROM_ORIGINAL.md), which gives
+The IDs are those of [CHANGES_FROM_ORIGINAL.md](../../agents/dspy_rlm/CHANGES_FROM_ORIGINAL.md), which gives
 file:line for both trees. They are cited as Dn in [KNOWN_ISSUES.md](KNOWN_ISSUES.md). None was fixed (REFACTOR_RULES).
 
 | ID | Finding | Evidence | KNOWN_ISSUES |
 |---|---|---|---|
 | D1 | `--timeout > 0`: the worker's signature map lacks v13–v17 and v20; they fall back to v1 | inspected; pinned by a test that reads the worker source | K20 |
-| D2 | `heuristic_match` (`shared/rlm_shared/browsecomp_data.py:112-114`): an empty prediction, or any substring of the gold, is correct before the LLM judge runs | **demonstrated** (`heuristic_match("Queen Arwa University", "") is True`) | K17 |
+| D2 | `heuristic_match` (`agents/shared/rlm_shared/browsecomp_data.py:112-114`): an empty prediction, or any substring of the gold, is correct before the LLM judge runs | **demonstrated** (`heuristic_match("Queen Arwa University", "") is True`) | K17 |
 | D3 | a local root LM still requires Azure for the BrowseComp sub-LM; OBLIQ too unless `LOCAL_SUB_LM=1` | **demonstrated** for BrowseComp (`KeyError` without `AZURE_OPENAI_ENDPOINT` while `build_lm` is local); OBLIQ inspected | K20 |
 | D4 | OBLIQ records (and the BrowseComp TXT header) log `AZURE_OPENAI_MODEL` for local-model runs | inspected | K20 |
 | D5 | the OBLIQ `judge_model` field's default (`gpt-5.4-mini`) differs from the sub-LM fallback (`AZURE_OPENAI_MODEL`) | inspected | K20 |

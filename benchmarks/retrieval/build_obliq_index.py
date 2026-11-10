@@ -1,6 +1,6 @@
 """
 Refactored copy of scripts/build_obliq_index.py of the original repository (unchanged code; documentation only, see
-shared/CHANGES_FROM_ORIGINAL.md). The usage lines below name scripts/; here the file is benchmarks/retrieval/.
+agents/shared/CHANGES_FROM_ORIGINAL.md). The usage lines below name scripts/; here the file is benchmarks/retrieval/.
 
 Build a FAISS flat index for an OBLIQ-Bench corpus.
 

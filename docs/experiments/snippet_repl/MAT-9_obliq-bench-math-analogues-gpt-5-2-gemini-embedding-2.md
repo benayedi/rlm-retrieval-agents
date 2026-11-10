@@ -1,0 +1,163 @@
+# MAT-9: Snippet REPL agent · OBLIQ-Bench Math analogues · gpt-5.2 · Gemini-Embedding-2 (Vertex AI)
+
+Status: complete. Row 9 of the `OBLIQ - Math` sheet of [Experiments.xlsx](../../../results/original_baselines/Experiments.xlsx).
+
+## 1. Experiment overview
+
+|  |  |
+|---|---|
+| Identifier | `MAT-9` (sheet `OBLIQ - Math`, row 9) |
+| Agent | [Snippet REPL agent](../../../agents/snippet_repl/README.md) |
+| Benchmark | OBLIQ-Bench Math analogues (151 queries) |
+| Model | gpt-5.2 (Azure) |
+| Retriever | Gemini-Embedding-2 (Vertex AI), raw query |
+| Research question | Snippet REPL agent on a ranking task where relevance is structural (same technique, different problem). |
+| Original execution | 2026-10-27 |
+| Run name in the logs | `obliq_snip_math` |
+
+## 2. Research motivation
+
+Snippet REPL agent on a ranking task where relevance is structural (same technique, different problem). This row is one cell of the comparison matrix in Experiments.xlsx: the same benchmark is run with each agent × model × retriever combination, so this row is read against its neighbours (section 8). See [AGENT_COMPARISON.md](../AGENT_COMPARISON.md) for the matrix and [research_overview.md](../../research_overview.md) for the research questions.
+
+## 3. Experimental methodology
+
+The snippet REPL agent answers each question by writing Python in a persistent REPL, one turn at a time. Its tools return search results as short snippets (the first tokens of each document) into a variable; it can open a whole document and pass text to a sub-LLM (`llm_query`) to read it. A run ends when the model sets a final answer or the turn limit is reached.
+ Agent details: [agents/snippet_repl/README.md](../../../agents/snippet_repl/README.md).
+
+Per question: the agent runs on one benchmark question with the budgets in section 4; the run record (answer, retrieved document ids, tool counts, turns, time, tokens) is written to the run directory.
+ Scoring: none (NDCG@10 / Recall@10 against the gold qrels, binary relevance; ranking parsed from the answer text). A question without a parsable ranking scores 0.
+
+## 4. Configuration
+
+| Setting | Value |
+|---|---|
+| Model | gpt-5.2 (Azure) |
+| Reasoning effort requested | root high, sub-LLM medium |
+| Reasoning effort actually sent | as requested (run5d hook loaded) |
+| Retriever / index | Gemini-Embedding-2 (Vertex AI), raw query |
+| Turns | 12 |
+| Searches | no cap |
+| Results per search | 20 |
+| Snippet | server text ≤ 2,000 chars |
+| Timeout | none |
+| Compaction | off |
+| Random seed | none set (API / vLLM sampling defaults); runs are not bit-reproducible |
+
+
+Exact environment and arguments ([agents/snippet_repl/configs/MAT-9.env](../../../agents/snippet_repl/configs/MAT-9.env)):
+
+```bash
+# MAT-9  snippet REPL agent | GPT-5.2 (Azure; root effort high, llm_query medium) | Gemini-Embedding-2 raw-text server behind scripts/obliq_math_search.py on :8014 (drops each query's own problem) | OBLIQ math (151 q)
+# Budgets: 12 turns, depth 1, no compaction, NO search cap, top_k default 20 (OFFICIAL_TOP_K), 512-token snippets, no
+#          per-question timeout, 5 worker shards (experiments/obliq_shard.sh), per-LM-call timeout 1800 s (run_obliq.py
+#          default). Format gate: ON (OBLIQ_NO_FORMAT_GATE not set; see CHANGES_FROM_ORIGINAL.md issues).
+# Launch line (logs/run5d/full/obliq_snip_math.out): 2026-10-27 18:22:19 arm=snip task=math ids=all151.json workers=5;
+#          merged NDCG@10 = 0.1489 (the merged all.json holds every question twice, see issues; the mean is unaffected).
+# Original outputs: <original repo>/logs/run5d/full/obliq_snip_math/ (all.json, all_s<k>.json, all_s<k>.log, traj/, usage.jsonl)
+# Question ids: configs/obliq/math/all151.json (byte-identical copy of the ids file passed to the original launcher)
+# Use: experiments/run_config.sh configs/MAT-9.env
+ROW=MAT-9
+LAUNCHER=experiments/obliq_snip.sh
+LAUNCHER_ARGS=(snip math "$ALG/configs/obliq/math/all151.json" "$RUNS_DIR/run5d/full/obliq_snip_math" 5)
+# --- effective environment of every shard process (set by the launchers; listed for the record) ---
+export AZURE_OPENAI_API_VERSION=2025-04-01-preview LOCAL_LLM_BASE_URL="" OBLIQ_RELATIVE_SCORES=1
+export OBLIQ_TASK=analogues OBLIQ_SUBSET=math OBLIQ_INDEX=obliq-ana-math EMBEDDING_SERVER_URL=http://localhost:8014
+export OBLIQ_REPL_CUE=1 OBLIQ_TAG_SEARCH=1 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 TOKENIZERS_PARALLELISM=false
+export AZURE_OPENAI_REASONING_EFFORT=high SUB_LM_REASONING_EFFORT=medium   # ROOT_EFFORT / SUB_EFFORT; sent: hook run5d loaded
+export ORCHESTRATOR=0 LIGHTON_TOOL_DOCS=1 LIGHTON_TASK_TEXT=1 SEARCH_SNIPPET_TOKENS=512 OFFICIAL_TOP_K=20
+export OBLIQ_TASK_FILE="$ALG/configs/obliq/math/task_snippet.txt" OBLIQ_STRATEGY_FILE="$ALG/configs/obliq/math/strategy_snippet.txt"
+#   (byte-identical copies of <original repo>/data/obliq_math/{task,strategy}_snippet.txt; set by the launcher)
+# AZURE_OPENAI_MODEL = $AZURE_DEPLOYMENT_GPT52 (gpt-5.2), used for root and llm_query. Unset: AZURE_OPENAI_DEPLOYMENT
+#   OBLIQ_FENCE_TOLERANT OBLIQ_PRESENCE_PENALTY. LOCAL_LLM_MODEL defaults to qwen3.8-27b-bf16 in obliq_shard.sh but is
+#   unused (LOCAL_LLM_BASE_URL is empty, so the Azure backend is used).
+#   CLI per shard: run_obliq.py --ids-file <shard>.json --max-iterations 12 --max-depth 1 --out <out>/all_s<k>
+```
+
+## 5. Execution instructions (reproduction, not executed for this documentation)
+
+These commands launch the full experiment: hundreds of model calls and hours of GPU or API time. They were **not** run while preparing this repository.
+
+```bash
+set -a; . configs/paths.env; . agents/snippet_repl/configs/MAT-9.env; set +a
+# then the launcher; its header documents its arguments:
+agents/snippet_repl/experiments/obliq_snip.sh
+```
+
+Launcher: [agents/snippet_repl/experiments/obliq_snip.sh](../../../agents/snippet_repl/experiments/obliq_snip.sh). It reads the benchmark questions, talks to the retrieval server named in the config and writes one record per question (plus trajectories) under `$RUNS_DIR`. Grade afterwards with the matching script in [agents/shared/rlm_shared/grading/](../../../agents/shared/rlm_shared/grading).
+
+## 6. Implementation references
+
+- Agent source: [harness.py](../../../agents/snippet_repl/src/harness.py), [sitecustomize.py](../../../agents/snippet_repl/src/hooks/azure_sampling/sitecustomize.py), [sitecustomize.py](../../../agents/snippet_repl/src/hooks/cap_ranking/sitecustomize.py), [sitecustomize.py](../../../agents/snippet_repl/src/hooks/retry429/sitecustomize.py), [sitecustomize.py](../../../agents/snippet_repl/src/hooks/retry429_cap_ranking/sitecustomize.py), [sitecustomize.py](../../../agents/snippet_repl/src/hooks/run5d/sitecustomize.py), [prompt_modules.py](../../../agents/snippet_repl/src/prompt_modules.py), [run_browsecomp.py](../../../agents/snippet_repl/src/run_browsecomp.py), [run_frames.py](../../../agents/snippet_repl/src/run_frames.py), [run_obliq.py](../../../agents/snippet_repl/src/run_obliq.py)
+- Original code that produced the result (verbatim, SHA-256 manifest): [agents/snippet_repl/original/](../../../agents/snippet_repl/original/MANIFEST.json)
+- Configuration: [agents/snippet_repl/configs/MAT-9.env](../../../agents/snippet_repl/configs/MAT-9.env) · Launcher: [agents/snippet_repl/experiments/obliq_snip.sh](../../../agents/snippet_repl/experiments/obliq_snip.sh)
+- Data loaders: [agents/shared/rlm_shared/](../../../agents/shared/rlm_shared/__init__.py) (`browsecomp_data.py`, `obliq_data.py`)
+- Grading: [agents/shared/rlm_shared/grading/](../../../agents/shared/rlm_shared/grading) · Metrics: [metrics.py](../../../agents/shared/rlm_shared/metrics.py)
+- Tests: [agents/snippet_repl/tests/](../../../agents/snippet_repl/tests), [tests/](../../../tests)
+- **Per-question outputs in this repository** (Git LFS): [trajectories/snippet_repl/MAT-9/](../../../trajectories/snippet_repl/MAT-9/MANIFEST.json). 169 files, 0.38 GB as written by the run; extract with `python scripts/provenance/unpack_trajectories.py MAT-9 OUT_DIR` ([format notes](../../../trajectories/README.md))
+- Original locations on the machine that ran the experiments: `logs/run5d/full/obliq_snip_math/all.json`
+
+## 7. Existing experimental results
+
+Reported in Experiments.xlsx (every non-empty column of the row):
+
+| Metric | Value |
+|---|---|
+| Accuracy | — |
+| Recall@10 (G) | 0.1409 |
+| NDCG@10 (G / P) | 0.1489 / 0.1954 |
+| NDCG@50 (G / P) | 0.1437 / 0.1834 |
+| Avg. Search Calls Per Query | 28.26 |
+| Avg. Iterations Per Query | 12.1 |
+| Time Per Query | 372 s (6.2 min) |
+| Cached Cost Per Query | 0.7603 |
+| Uncached Cost Per Query | 0.8733 |
+| Input Tokens Per Query | 238340 |
+| Output Tokens Per Query | 32583 |
+
+
+Workbook footnotes that apply to this row:
+
+> * GPT 5.2 (high)* (snippet REPL agent row): the root model runs at high effort, its sub-LLM reading calls (llm_query) at medium; top-k 20, 12 turns, no search cap. Document REPL agent: effort high, fixed k 20, max 10 searches, 30 turns, no sub-LLM. Both on Gemini-Embedding-2 over raw text (the paper's setup), run 2026-10-27. Costs from the logged Azure usage: gpt-5.2 $1.75 / $0.175 (cached) / $14 per 1M input / cached input / output tokens. Input / Output Tokens Per Query: all model calls of a question (root + sub-LLM), reasoning tokens included in output; these do not depend on how many runs shared a server, unlike Time Per Query. Exact from logged per-call usage, except values marked ≈ (Sept. 2026 snippet runs, whose logs overwrote the root model's usage with the sub-LLM's: rebuilt from the trajectories, about 10% low when the same method is checked on a run with exact usage). Uncached cost = input x list input price + output x list output price. Avg. Iterations Per Query: root-model turns per question, counted from the trajectory logs (snippet RLM) or the run records (document REPL agent); sub-LLM calls are not counted. A run that reaches its turn cap adds one forced final-answer turn.
+
+
+**Per-question outcome** (Failure_Analysis.xlsx, OBLIQ Summary):
+
+| Outcome | Queries | Share |
+|---|---|---|
+| Hit (≥ 1 gold in top 10) | 77 | 51.0% |
+| O1 no usable ranking | 14 | 9.3% |
+| O2 gold never retrieved | 16 | 10.6% |
+| O3 retrieved, not ranked in top 10 | 44 | 29.1% |
+
+
+Gold documents retrieved at any point: 646 of 2044; placed in the top 10: 153.
+
+## 8. Results interpretation
+
+
+- Statements about *why* a configuration wins or loses are hypotheses unless the comparison isolates one variable; see the confounds in section 10.
+
+## 9. Verification status
+
+| Check | Result |
+|---|---|
+| Experiment previously executed | yes |
+| Original outputs found | yes (on the original machine; paths in section 6) |
+| Configuration identified | yes |
+| Implementation reviewed | yes ([agent review](../../verification/REVIEW_snippet_repl.md)) |
+| Lightweight tests | unit tests with mocks ([TESTING_REPORT.md](../../verification/TESTING_REPORT.md)); the experiment itself was not re-run |
+| Numbers independently recomputed | **matches the workbook**: NDCG@10 0.1489, Recall@10 0.1409 recomputed from the answer text ([audit](../../verification/RESULT_INTEGRITY.md)) |
+| Reproduced by re-running | **no**: no experiment was re-run; full experimental equivalence of the refactored code is not established |
+
+
+## 10. Limitations
+
+- No random seed; model sampling is stochastic, so a re-run gives different per-question results (two identical 830-question snippet REPL agent runs disagreed on 17.8% of questions in the earlier campaign).
+- Reasoning effort actually sent: as requested (run5d hook loaded).
+- Binary relevance on gold qrels only (graded relevance ignored).
+- Comparisons with other rows can differ in more than one variable (search cap, turn limit, time limit, effort, index document length); see [AGENT_COMPARISON.md](../AGENT_COMPARISON.md).
+
+## 11. Related files
+
+- [Experiments.xlsx](../../../results/original_baselines/Experiments.xlsx) · [Failure_Analysis.xlsx](../../../results/original_baselines/Failure_Analysis.xlsx) · [registry.yaml](../../../experiments/registry.yaml)
+- [Known issues](../../verification/KNOWN_ISSUES.md) · [Result integrity](../../verification/RESULT_INTEGRITY.md) · [Changes from the original code](../../../agents/snippet_repl/CHANGES_FROM_ORIGINAL.md)

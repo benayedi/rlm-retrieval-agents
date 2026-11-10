@@ -2,6 +2,8 @@
 .env
 *.env
 !configs/*.example.env
+# per-row run configurations and the DSPy.RLM variable reference: no secrets, part of the record
+!agents/*/configs/**/*.env
 # python
 __pycache__/
 *.pyc

@@ -1,7 +1,7 @@
 """Per-question turn counts for the snippet-RLM runs, counted from the trajectory JSONL (one 'iteration' record per root
 turn; the harness's own `iterations` field is broken, HANDOFF Part II §4). Also records the turn budget (metadata
 max_iterations) and whether the last turn carried a final answer. Keyed by the first 400 characters of the question.
-Full-doc runs need none of this: their n_iterations field is correct and failure_analysis_extract.py already reads it.
+Document REPL runs need none of this: their n_iterations field is correct and failure_analysis_extract.py already reads it.
 
 usage: failure_analysis_turns.py <traj_dir> <out.json>
 

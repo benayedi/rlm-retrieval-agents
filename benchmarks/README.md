@@ -4,7 +4,7 @@ Three benchmarks are used in `results/original_baselines/Experiments.xlsx`: Brow
 This file says where each one comes from, how the code loads its questions and corpus, which index and server every
 filled Experiments.xlsx row used, and how to build those indexes. The servers and index builders are in
 `benchmarks/retrieval/`. They are refactored copies of the original scripts. Only paths and import wiring changed; see
-`shared/CHANGES_FROM_ORIGINAL.md`.
+`agents/shared/CHANGES_FROM_ORIGINAL.md`.
 
 Paths are environment variables from `configs/paths.example.env`. Copy that file to `configs/paths.env`, fill it in,
 and load it with `set -a; . configs/paths.env; set +a`. Nothing in this directory is run by the tests. They exercise
@@ -18,7 +18,7 @@ No benchmark data, corpus or index is part of this repository (see `.gitignore`)
 
 Every retriever the agents call speaks one of two HTTP formats.
 
-### "rlm" format (Snippet RLM, DSPy.RLM, every server in `benchmarks/retrieval/`)
+### "rlm" format (snippet REPL agent, DSPy.RLM, every server in `benchmarks/retrieval/`)
 
 | request | body | response |
 |---|---|---|
@@ -38,13 +38,13 @@ Every retriever the agents call speaks one of two HTTP formats.
 - `/encode` (`{"inputs": [str]}` → `{"embeddings": [[float]]}`) exists on the Qwen3 and Gemini servers. The OBLIQ
   index builder uses it.
 
-### "sup" format (Full-Doc RLM)
+### "sup" format (document REPL agent)
 
-This is the format of `algorithms/full_doc_rlm/src/retrieval_server.py`. `frames_search_server.py --protocol sup` and
+This is the format of `agents/document_repl/src/retrieval_server.py`. `frames_search_server.py --protocol sup` and
 `obliq_math_search.py` also serve it. `POST /search {"query", "k", "mode": snippet|full|ids, "snippet_max_tokens",
 "tag"}` → `{"results": [{"docid", "score", "snippet"} | {"docid", "score", "text", "n_chars", "embedded_span",
 "snippet_span"}]}`. There are also `POST /tag_counts {"tag"}`, `POST /tag_docids {"tag"}` and `GET /health`. A search
-without a tag is refused with HTTP 400. The Full-Doc harness uses the tag to count searches and retrieved documents
+without a tag is refused with HTTP 400. The document REPL harness uses the tag to count searches and retrieved documents
 per question on the server side.
 
 ---
@@ -62,37 +62,37 @@ Both names are taken from the code (`rlm_shared/grading/bcp_judge.py`, `benchmar
 
 **The questions and answers are distributed encrypted and must not be published in plain text.** Each test row holds
 `query` and `answer`, and the docids in `gold_docs` / `evidence_docs`, as base64 of the plain text XOR-ed with the
-SHA-256 of a canary string. `shared/rlm_shared/browsecomp_data.py` decrypts them in memory with `get_question`,
+SHA-256 of a canary string. `agents/shared/rlm_shared/browsecomp_data.py` decrypts them in memory with `get_question`,
 `get_gold_answer`, `get_gold_doc_ids` and `get_evidence_doc_ids`. Never write decrypted questions or answers into this
 repository, a log you publish, or a results file. `scripts/provenance/bcp_leak_scan.py` checks for leaks.
 
 **Loading.**
-- Snippet RLM and the graders: `datasets.load_dataset("Tevatron/browsecomp-plus", split="test")`, then decryption.
+- Snippet REPL agent and the graders: `datasets.load_dataset("Tevatron/browsecomp-plus", split="test")`, then decryption.
   The question index `q_idx` is the row position in that split.
-- Full-Doc RLM: reads a decrypted local copy, `$FULLDOC_ROOT/data/prepared/{corpus.jsonl,queries.jsonl,
-  qrel_evidence.json}`, written by `algorithms/full_doc_rlm/src/prepare_data.py`. The BM25 index below is built from
+- Document REPL agent: reads a decrypted local copy, `$FULLDOC_ROOT/data/prepared/{corpus.jsonl,queries.jsonl,
+  qrel_evidence.json}`, written by `agents/document_repl/src/prepare_data.py`. The BM25 index below is built from
   that `corpus.jsonl` (`{"docid", "text"}` per line).
 
 **Index and server of each Experiments.xlsx row** (BrowseComp+ sheet):
 
 | rows | harness | retrieval signal | index | server and port |
 |---|---|---|---|---|
-| 9, 15 | Snippet RLM | Qwen3-Embedding-8B | FAISS IVF-SQ8 over the corpus embeddings | `embed_server_new.py` on :8001. **Not among the copied sources.** The original repository's `docs/server_commands.md` launches it with `--faiss-index ~/faiss_cache/_cached_ivfsq8.faiss --max-length 8192 --nprobe 128`. It speaks the rlm format, like `search_server.py` |
-| 11, 17 | Snippet RLM | Reason-ModernColBERT | PLAID index `bc_reason_mcb`, **document length 512** | `fusion_proxy.py --mv lightonai/Reason-ModernColBERT:bc_reason_mcb --mv-only --dense-url http://localhost:8001` on :8024. Scores are 1/rank. `/document` text comes from :8001 |
-| 13, 19 | Snippet RLM | BM25 (k1 0.9, b 0.4) | `$BCP_BM25_INDEX_DIR` (`bcp_build_bm25_default.py`) | `frames_search_server.py --dataset bcp --protocol rlm` on :8044 |
-| 21, 27 | Full-Doc RLM | Qwen3-Embedding-8B | exact cosine over the Tevatron embeddings, `$FULLDOC_ROOT/data/indexes/qwen3-embedding-8b` | `algorithms/full_doc_rlm/src/retrieval_server.py` on :8765 (sup format) |
-| 23, 29 | Full-Doc RLM | Reason-ModernColBERT | PLAID, **document length 8192**, `$FULLDOC_ROOT/data/indexes/lighton/pylate` | `algorithms/full_doc_rlm/src/retrieval_server_colbert.py` on :8766 (sup format) |
-| 25, 31 | Full-Doc RLM | BM25 (k1 0.9, b 0.4) | `$BCP_BM25_INDEX_DIR` | `frames_search_server.py --dataset bcp --protocol sup` on :8043 |
+| 9, 15 | Snippet REPL agent | Qwen3-Embedding-8B | FAISS IVF-SQ8 over the corpus embeddings | `embed_server_new.py` on :8001. **Not among the copied sources.** The original repository's `docs/server_commands.md` launches it with `--faiss-index ~/faiss_cache/_cached_ivfsq8.faiss --max-length 8192 --nprobe 128`. It speaks the rlm format, like `search_server.py` |
+| 11, 17 | Snippet REPL agent | Reason-ModernColBERT | PLAID index `bc_reason_mcb`, **document length 512** | `fusion_proxy.py --mv lightonai/Reason-ModernColBERT:bc_reason_mcb --mv-only --dense-url http://localhost:8001` on :8024. Scores are 1/rank. `/document` text comes from :8001 |
+| 13, 19 | Snippet REPL agent | BM25 (k1 0.9, b 0.4) | `$BCP_BM25_INDEX_DIR` (`bcp_build_bm25_default.py`) | `frames_search_server.py --dataset bcp --protocol rlm` on :8044 |
+| 21, 27 | Document REPL agent | Qwen3-Embedding-8B | exact cosine over the Tevatron embeddings, `$FULLDOC_ROOT/data/indexes/qwen3-embedding-8b` | `agents/document_repl/src/retrieval_server.py` on :8765 (sup format) |
+| 23, 29 | Document REPL agent | Reason-ModernColBERT | PLAID, **document length 8192**, `$FULLDOC_ROOT/data/indexes/lighton/pylate` | `agents/document_repl/src/retrieval_server_colbert.py` on :8766 (sup format) |
+| 25, 31 | Document REPL agent | BM25 (k1 0.9, b 0.4) | `$BCP_BM25_INDEX_DIR` | `frames_search_server.py --dataset bcp --protocol sup` on :8043 |
 
 Rows 5 and 7 are the paper's own baselines. They are not run here.
 
-Sources for the ports: the run launchers in `algorithms/snippet_rlm/original/RLM/scripts/run5d/bcp_snip*.sh`
+Sources for the ports: the run launchers in `agents/snippet_repl/original/RLM/scripts/run5d/bcp_snip*.sh`
 (":8001 Qwen3-Embedding-8B FAISS IVFSQ8 | :8044 BM25 k1 0.9 b 0.4 | :8024 Reason-ModernColBERT"),
-`algorithms/full_doc_rlm/original/RLM/scripts/bcp_gpt5_bm25.sh` (:8043) and `run5d/bcp_fd_qwen_dense.py` (:8765). The
+`agents/document_repl/original/RLM/scripts/bcp_gpt5_bm25.sh` (:8043) and `run5d/bcp_fd_qwen_dense.py` (:8765). The
 512-length index behind :8024 is named in the original `docs/HANDOFF.md` ("bc_reason_mcb (512) ... every published
 result uses it"). `bc_rmcb_dl8192` is this project's own 8192-length rebuild, made with `build_bc_rmcb_dl8192.sh` and
-then `reindex_rmcb_8192.py`. No Experiments.xlsx row is documented as using it in the files read. The Full-Doc
-ColBERT rows used the Full-Doc harness's own 8192 index.
+then `reindex_rmcb_8192.py`. No Experiments.xlsx row is documented as using it in the files read. The document REPL
+ColBERT rows used the document REPL harness's own 8192 index.
 
 **Build commands.**
 
@@ -126,7 +126,7 @@ $PYLATE_PYTHON benchmarks/retrieval/fusion_proxy.py --dense-url http://localhost
 The fusion-proxy command is the one in the original `scripts/start_mvonly_proxy.sh`, which used port 8021, run from
 the directory that holds `.pylate_idx/`.
 
-**Grading:** `shared/rlm_shared/grading/` (`grade_bcp_snippet.py`, `grade_bcp_fulldoc.py`, `rejudge_bcp.py`). The
+**Grading:** `agents/shared/rlm_shared/grading/` (`grade_bcp_snippet.py`, `grade_bcp_fulldoc.py`, `rejudge_bcp.py`). The
 judge is gpt-4.1 with the official BrowseComp-Plus template, 3 votes and a majority.
 
 ---
@@ -152,18 +152,18 @@ judge is gpt-4.1 with the official BrowseComp-Plus template, 3 votes and a major
 - `frames_search_server.py` also reads `$FRAMES_DATA_DIR/corpus_meta.npz` (`offsets`, the byte offset of each line).
   **The step that writes `corpus_meta.npz` is not among the copied sources.** The array is the byte offset of every
   line of `corpus.jsonl`, in order.
-- `shared/rlm_shared/grading/grade_frames.py` reads the gold answers and `gold_ids` from `frames_rows.json`.
+- `agents/shared/rlm_shared/grading/grade_frames.py` reads the gold answers and `gold_ids` from `frames_rows.json`.
 
 **Index and server of each Experiments.xlsx row** (FRAMES sheet). Every row uses BM25 with k1 0.9 / b 0.4 (Lucene)
 over the same index:
 
 | rows | harness | server and port |
 |---|---|---|
-| 7, 9 | Snippet RLM | `frames_search_server.py --protocol rlm` on :8040 |
-| 11, 13 | Full-Doc RLM | `frames_search_server.py --protocol sup` on :8041. Snippets are cut with the Qwen3-0.6B tokenizer from `$FULLDOC_ROOT/data/models/Qwen3-0.6B` |
+| 7, 9 | Snippet REPL agent | `frames_search_server.py --protocol rlm` on :8040 |
+| 11, 13 | Document REPL agent | `frames_search_server.py --protocol sup` on :8041. Snippets are cut with the Qwen3-0.6B tokenizer from `$FULLDOC_ROOT/data/models/Qwen3-0.6B` |
 
-Row 5 is the paper's baseline. The ports come from `algorithms/snippet_rlm/original/RLM/scripts/run5d/frames_snip.sh`
-(:8040) and `algorithms/full_doc_rlm/original/RLM/scripts/run5d/frames_fd_gpt5.sh` (:8041).
+Row 5 is the paper's baseline. The ports come from `agents/snippet_repl/original/RLM/scripts/run5d/frames_snip.sh`
+(:8040) and `agents/document_repl/original/RLM/scripts/run5d/frames_fd_gpt5.sh` (:8041).
 
 **Build and serve.**
 
@@ -188,24 +188,24 @@ for Math). Tasks used: `analogues/math` (3,508 documents), `descriptive/twitter`
 **Licence:** not determined.
 
 **Loading.**
-- `shared/rlm_shared/obliq_data.py` reads queries and qrels from `$OBLIQ_BENCH_ROOT/<task>/<subset>/queries+qrels/`
+- `agents/shared/rlm_shared/obliq_data.py` reads queries and qrels from `$OBLIQ_BENCH_ROOT/<task>/<subset>/queries+qrels/`
   (`load_queries`, `load_qrels(pool=...)`).
 - It parses each ranked answer into document ids (`extract_doc_ids_from_answer`).
-- It scores NDCG@k and Recall@k (`ndcg_at`, `recall_at`), which `shared/rlm_shared/grading/obliq_report.py` uses.
+- It scores NDCG@k and Recall@k (`ndcg_at`, `recall_at`), which `agents/shared/rlm_shared/grading/obliq_report.py` uses.
 - Math excludes each query's own source problem (`per_query_excluded_ids.json`). `obliq_math_search.py` applies the
   exclusion on the server, for both formats.
 
-**Index and server of each Experiments.xlsx row** (OBLIQ sheets, rows 9 = Snippet RLM and 11 = Full-Doc RLM). Every
+**Index and server of each Experiments.xlsx row** (OBLIQ sheets, rows 9 = snippet REPL agent and 11 = document REPL agent). Every
 row uses Gemini-Embedding-2 on Vertex AI over the raw document text, as in the paper (`--doc-format raw`,
 `--query-format raw`), with an exact FAISS `IndexFlatIP` on CPU:
 
-| task | index (under `~/indexes/gemini/`) | Snippet RLM endpoint | Full-Doc RLM endpoint |
+| task | index (under `~/indexes/gemini/`) | Snippet REPL agent endpoint | Document REPL agent endpoint |
 |---|---|---|---|
 | Math | `obliq-ana-math` | `obliq_math_search.py` :8014, in front of the Gemini server :8020 | the same :8014 (sup format) |
-| Twitter | `obliq-des-twitter` | `gemini/search_server.py` :8021 | `algorithms/full_doc_rlm/src/obliq_adapter.py` :8768 |
+| Twitter | `obliq-des-twitter` | `gemini/search_server.py` :8021 | `agents/document_repl/src/obliq_adapter.py` :8768 |
 | Congress | `obliq-tot-congress` | `gemini/search_server.py` :8022 | `obliq_adapter.py` :8769 |
 
-The ports come from `algorithms/snippet_rlm/original/RLM/scripts/run5d/obliq_gemini.sh`. Rows 5 and 7 are the paper's
+The ports come from `agents/snippet_repl/original/RLM/scripts/run5d/obliq_gemini.sh`. Rows 5 and 7 are the paper's
 numbers. The WildChat and Writing sheets have no run.
 
 **Build and serve.** Gemini needs a Vertex AI service account. **Configuration requirement:**
