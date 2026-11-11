@@ -295,6 +295,13 @@ BCP-15/17/19; FR = FR-7/9; OBLIQ = MAT-9/TWI-9/CON-9. Exact per-row values are i
 | TWI-9 | [TWI-9_obliq-bench-twitter-conflict-descriptive-gpt-5-2-gemini-embedding-2.md](../../docs/experiments/snippet_repl/TWI-9_obliq-bench-twitter-conflict-descriptive-gpt-5-2-gemini-embedding-2.md) |
 | CON-9 | [CON-9_obliq-bench-congress-hearings-tip-of-the-tongue-gpt-5-2-gemini-embedding-2.md](../../docs/experiments/snippet_repl/CON-9_obliq-bench-congress-hearings-tip-of-the-tongue-gpt-5-2-gemini-embedding-2.md) |
 
+### Follow-up runs
+
+- **TWQ-1**: OBLIQ-Twitter with Qwen3.6 and plain dense search (dev100 + rest181), the control of SP-6:
+  `experiments/obliq_twitter_qwen36.sh`, `configs/TWQ-1.env`, [TWQ-1](../../docs/experiments/snippet_repl/TWQ-1.md).
+- **SP-6** (search policy on OBLIQ-Twitter) and **GEPA-4** (GEPA on OBLIQ-Twitter, Qwen3.8-27B) run this agent; see
+  [studies/](../../studies/README.md).
+
 ## 11. Existing results and findings
 
 All values are copied from [Experiments.xlsx](../../results/original_baselines/Experiments.xlsx). BrowseComp-Plus

@@ -16,6 +16,8 @@ an open-weight model, on **BrowseComp-Plus**, **FRAMES** and **OBLIQ-Bench**.
 - [docs/experiments/AGENT_COMPARISON.md](docs/experiments/AGENT_COMPARISON.md): the results side by side, with
   what they do and do not show.
 - [docs/FINAL_RESEARCH_AUDIT.md](docs/FINAL_RESEARCH_AUDIT.md): what was reviewed, tested and verified, and what was not.
+- [docs/experiments/FOLLOW_UP_STUDIES.md](docs/experiments/FOLLOW_UP_STUDIES.md): the work after the results table
+  (search policy, GEPA, the FRAMES search cap, the DSPy.RLM ablation, run-to-run variation, FRAMES error analysis).
 
 ## Results at a glance
 
@@ -43,6 +45,23 @@ Read these with [AGENT_COMPARISON.md](docs/experiments/AGENT_COMPARISON.md):
 - Every number above was recomputed from the per-question records
   ([RESULT_INTEGRITY.md](docs/verification/RESULT_INTEGRITY.md)).
 
+## Follow-up studies
+
+After the results table, two ways of improving the agent's search without changing the agent were tested on the
+document REPL agent ([FOLLOW_UP_STUDIES.md](docs/experiments/FOLLOW_UP_STUDIES.md); code in [`studies/`](studies/README.md)).
+Accuracies judged by gpt-4.1; every number with its source in [results/follow_up/studies.md](results/follow_up/studies.md):
+
+| Study | Setting | Result |
+|---|---|---|
+| Search policy (novelty filter + Qwen3-Reranker-4B), SP-1 | BrowseComp-Plus, Qwen3.6, all 830 | 67.5 % vs 58.0 % (control BCP-29) |
+| Reranker only, SP-2 | BrowseComp-Plus test200 | 70.1 % vs 57.9 % (37/13, p 0.00094) |
+| Search policy with GPT-5, SP-3 | 100-question pilot | no better than a plain re-run |
+| Search policy on FRAMES, SP-4 | Qwen3.6, search cap 25, all 824 | 67.8 % vs 67.8 % |
+| Search cap 25 instead of 10, FRC-1 | FRAMES, Qwen3.6, all 824 | 67.8 % vs 61.0 % (105/49, p 7.5e-6) |
+| GEPA prompt optimisation, GEPA-2 / GEPA-3 | BrowseComp-Plus test200 / FRAMES unused questions | 59.3 % vs 57.3 % (p 0.64) / 63.2 % vs 61.6 % (p 0.59) |
+| GEPA pipeline check on HoVer, GEPA-5 | the GEPA paper's task | 38.3 % -> 67.3 % (exact metric) |
+| DSPy.RLM with models and search output matched, DSA-5 | BrowseComp-Plus, 100 stratified questions | 0.791 vs 0.783 for the snippet REPL agent |
+
 ## Repository structure
 
 ```text
@@ -60,10 +79,15 @@ experiments/        registry.yaml: one entry per experiment
 results/
   original_baselines/   Experiments.xlsx (the results table), Failure_Analysis.xlsx (BrowseComp-Plus text removed)
   comparisons/          figures generated from the workbooks
-trajectories/       per-question records and full trajectories of every available row (Git LFS; BrowseComp-Plus encrypted)
+trajectories/       per-question records and full trajectories of every available row and follow-up study (Git LFS;
+                    BrowseComp-Plus encrypted)
 scripts/            provenance/ (snapshots, leak scan), audit/ (recompute the results), docs/ (generators), reporting/
 docs/               research_overview, experiments/ (one document per experiment), architecture/, verification/
-tests/              cross-cutting tests (metrics, grading, retrieval servers)
+studies/            work around an agent (search_policy, prompt_optimisation, run_variation, error_analysis,
+                    frames_baselines): original/, src/, experiments/, tests/ as for the agents (studies/README.md)
+results/follow_up/  verdicts/ (gpt-4.1), numbers.yaml (every follow-up number with its source), studies.md
+benchmarks/models/  serve_qwen36.sh: the vLLM server of every Qwen3.6 run (262,144 context, 16,384-token output cap)
+tests/              cross-cutting tests (metrics, grading, retrieval servers, follow-up registry)
 ```
 
 ## Agent and run names
@@ -91,7 +115,7 @@ tests you need only the first:
 ```bash
 python3.12 -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt            # pins the versions that ran, incl. the rlm library at commit 854e688
-python -m pytest                           # 446 tests, no network, no GPU; see docs/verification/TESTING_REPORT.md
+python -m pytest                           # 838 tests, no network, no GPU; see docs/verification/TESTING_REPORT.md
 ```
 
 Running an experiment additionally needs:
@@ -99,7 +123,8 @@ Running an experiment additionally needs:
   credentials file.
 - **Retrieval server.** One per retriever: see [benchmarks/README.md](benchmarks/README.md). The ColBERT and Gemini
   servers use their own environments, listed at the end of `requirements.txt`.
-- **Models.** Either Azure OpenAI deployments of GPT-5 / GPT-5.2 / gpt-4.1, or a vLLM server for Qwen3.6-35B-A3B-FP8.
+- **Models.** Either Azure OpenAI deployments of GPT-5 / GPT-5.2 / gpt-4.1, or a vLLM server for Qwen3.6-35B-A3B-FP8
+  (`benchmarks/models/serve_qwen36.sh`; the runs used a 262,144-token context and `GEN_OVERRIDE='{"max_new_tokens": 16384}'`).
 - **Deno,** for DSPy.RLM's default interpreter.
 
 ## Running

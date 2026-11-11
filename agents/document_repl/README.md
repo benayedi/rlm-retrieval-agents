@@ -242,6 +242,16 @@ return the server's own record (see [benchmarks/README.md](../../benchmarks/READ
 - [TWI-11: OBLIQ Twitter descriptive, GPT-5.2, Gemini-Embedding-2](../../docs/experiments/document_repl/TWI-11_obliq-bench-twitter-conflict-descriptive-gpt-5-2-gemini-embedding-2.md)
 - [CON-11: OBLIQ Congress tip-of-the-tongue, GPT-5.2, Gemini-Embedding-2](../../docs/experiments/document_repl/CON-11_obliq-bench-congress-hearings-tip-of-the-tongue-gpt-5-2-gemini-embedding-2.md)
 
+### Follow-up runs
+
+- **FRC-1**: FRAMES with search cap 25 / 50 turns (FR-13 with only the caps raised): `experiments/frames_qwen_cap25_test200.sh`,
+  `frames_qwen_cap25_rest.sh`, `configs/FRC-1.env`, [FRC-1](../../docs/experiments/document_repl/FRC-1.md).
+- **TWQ-2**: OBLIQ-Twitter with Qwen3.6 and plain dense search, the control of SP-7: `experiments/obliq_twitter_qwen36.sh`,
+  `configs/TWQ-2.env`, [TWQ-2](../../docs/experiments/document_repl/TWQ-2.md).
+- The search-policy and GEPA studies run this agent unchanged ([studies/](../../studies/README.md)); their agent-side
+  configs are `configs/SP-{1,2,3,4,7}.env`, and `src/split_runner.py` is also the BrowseComp-Plus GEPA driver.
+- The Qwen3.6 server settings (262,144-token context, 16,384-token output cap) are in `benchmarks/models/serve_qwen36.sh`.
+
 ## 11. Existing results
 
 Copied from [Experiments.xlsx](../../results/original_baselines/Experiments.xlsx) (document REPL agent rows; "Iterations"

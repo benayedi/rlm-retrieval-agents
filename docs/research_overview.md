@@ -22,6 +22,8 @@ large corpus.
    under the same harness?
 4. **Where agents fail.** Do failures come from never retrieving the evidence, from seeing only part of it, from
    misreading it, or from running out of time or turns?
+5. **Improving the search (follow-up studies).** Can the document REPL agent be improved without changing it, by
+   optimising its prompt (GEPA) or by changing what each search returns (a search policy)?
 
 ## The three approaches
 
@@ -74,10 +76,21 @@ The full, sourced statement is in [AGENT_COMPARISON.md](experiments/AGENT_COMPAR
   [Failure_Analysis.xlsx](../results/original_baselines/Failure_Analysis.xlsx)).
 - **OBLIQ is hard for every configuration.** NDCG@10 stays at 0.09–0.19, near or below the OBLIQ paper's multi-hop
   agent.
+- **Follow-up studies** ([FOLLOW_UP_STUDIES.md](experiments/FOLLOW_UP_STUDIES.md), gpt-4.1 judge). A search policy
+  (drop already-seen documents, rerank the retriever's top 30 with Qwen3-Reranker-4B against the full question) raises
+  the Qwen3.6 document REPL agent on BrowseComp-Plus from 58.0 % to 67.5 % (all 830); the reranker carries the gain. It
+  does not help GPT-5 beyond re-run variation (100-question pilot), nor FRAMES (67.8 % both), where raising the search
+  cap from 10 to 25 does (61.0 % -> 67.8 %), nor OBLIQ-Twitter. GEPA prompt optimisation does not beat the hand-written
+  prompt on held-out questions (BrowseComp-Plus 59.3 vs 57.3 %, FRAMES 63.2 vs 61.6 %, both n.s.), although the same
+  pipeline gains 29 points on the GEPA paper's HoVer task. With models and search output matched, DSPy.RLM ties the
+  snippet REPL agent (0.791 vs 0.783).
 
 ## Limitations
 
-- One run per cell, sampled without seeds. An earlier repeat of a whole run disagreed on 17.8% of questions.
+- One run per cell, sampled without seeds. Run-to-run variation was not measured with two full runs: the 17.8 % often
+  quoted is extrapolated from a 112-question replay of one DSPy.RLM run and is an upper bound
+  ([KNOWN_ISSUES.md](verification/KNOWN_ISSUES.md) K36); re-runs of GPT-5 document REPL runs fix ~45 % of wrong and break
+  ~8 % of right answers (VAR-2).
 - Paired rows differ in several settings at once (see [KNOWN_ISSUES.md](verification/KNOWN_ISSUES.md) K2).
 - Some effort labels do not match what reached the model (K3).
 - Two document REPL rows ran on an unpreserved library build (K5).

@@ -51,7 +51,7 @@ Exact environment and arguments ([agents/document_repl/configs/CON-11.env](../..
 # effort requested: high; effort actually sent: high -- startup hook run5d (retry429 + azure_sampling + cap_ranking;
 #   OBLIQ_CAP_RANKING=1 replaces the forced final-answer message with a request for a plain ranking)
 # retriever: src/obliq_adapter.py on :8769 in front of the Gemini-Embedding-2 server (upstream URL / --index of the adapter: UNKNOWN)
-# prompts: GEPA_PROMPTS=$RLM_DATA_DIR/obliq_fd_gemini/prompts_congress.json (record prompt_id 891e1319f80c); no grounding gate
+# prompts: GEPA_PROMPTS=configs/obliq/prompts_congress.json (original: $RLM_DATA_DIR/obliq_fd_gemini/prompts_congress.json) (record prompt_id 891e1319f80c); no grounding gate
 # caps: --max-searches 10 (client-side), --max-iterations 30 (+1 forced final answer), FIXED k 20 (--fixed-k),
 #   --max-timeout 3600, --lm-timeout 1800; run_experiment per-query guard 4200 s
 # original output: <FULLDOC_ROOT>/runs/obliq_fd_congress (254 records; config read from one record; launch argv read from
@@ -65,7 +65,8 @@ OBLIQ_TASK=tip-of-tongue
 OBLIQ_SUBSET=congress
 IDS_FILE="${RLM_DATA_DIR}/obliq_congress/all254.json"
 QUERIES_FILE="${RLM_DATA_DIR}/obliq_congress/queries.jsonl"
-GEPA_PROMPTS="${RLM_DATA_DIR}/obliq_fd_gemini/prompts_congress.json"
+# original: GEPA_PROMPTS="${RLM_DATA_DIR}/obliq_fd_gemini/prompts_congress.json" (byte-identical copy below; configs/obliq/MANIFEST.json)
+GEPA_PROMPTS="agents/document_repl/configs/obliq/prompts_congress.json"
 OBLIQ_CAP_RANKING=1
 ROOT_MODEL=gpt-5.2
 SUB_MODEL=gpt-5.2
@@ -97,7 +98,7 @@ Launcher: [agents/document_repl/experiments/obliq_fd.sh](../../../agents/documen
 
 ## 6. Implementation references
 
-- Agent source: [bcp_bm25_split.py](../../../agents/document_repl/src/bcp_bm25_split.py), [bcp_qwen_dense.py](../../../agents/document_repl/src/bcp_qwen_dense.py), [build_bm25.py](../../../agents/document_repl/src/build_bm25.py), [encoder.py](../../../agents/document_repl/src/encoder.py), [fence_tolerant.py](../../../agents/document_repl/src/fence_tolerant.py), [grade_local.py](../../../agents/document_repl/src/grade_local.py), [hybrid.py](../../../agents/document_repl/src/hybrid.py), [judge.py](../../../agents/document_repl/src/judge.py), [obliq_adapter.py](../../../agents/document_repl/src/obliq_adapter.py), [prepare_data.py](../../../agents/document_repl/src/prepare_data.py), [prompts.py](../../../agents/document_repl/src/prompts.py), [provenance.py](../../../agents/document_repl/src/provenance.py) …
+- Agent source: [bcp_bm25_split.py](../../../agents/document_repl/src/bcp_bm25_split.py), [bcp_qwen_dense.py](../../../agents/document_repl/src/bcp_qwen_dense.py), [build_bm25.py](../../../agents/document_repl/src/build_bm25.py), [encoder.py](../../../agents/document_repl/src/encoder.py), [fence_tolerant.py](../../../agents/document_repl/src/fence_tolerant.py), [frames_cap25_report.py](../../../agents/document_repl/src/frames_cap25_report.py), [grade_local.py](../../../agents/document_repl/src/grade_local.py), [hybrid.py](../../../agents/document_repl/src/hybrid.py), [judge.py](../../../agents/document_repl/src/judge.py), [obliq_adapter.py](../../../agents/document_repl/src/obliq_adapter.py), [prepare_data.py](../../../agents/document_repl/src/prepare_data.py), [prompts.py](../../../agents/document_repl/src/prompts.py) …
 - Original code that produced the result (verbatim, SHA-256 manifest): [agents/document_repl/original/](../../../agents/document_repl/original/MANIFEST.json)
 - Configuration: [agents/document_repl/configs/CON-11.env](../../../agents/document_repl/configs/CON-11.env) · Launcher: [agents/document_repl/experiments/obliq_fd.sh](../../../agents/document_repl/experiments/obliq_fd.sh)
 - Data loaders: [agents/shared/rlm_shared/](../../../agents/shared/rlm_shared/__init__.py) (`browsecomp_data.py`, `obliq_data.py`)

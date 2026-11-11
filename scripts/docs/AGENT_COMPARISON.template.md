@@ -106,8 +106,12 @@ Each finding below is measured, and cites the pair that shows it.
   Document REPL result changes sign with the retriever.
 - **Run-to-run stability.**
   - Each cell is a single run, and the agents sample without seeds.
-  - In the earlier campaign, two identical 830-question snippet REPL agent runs disagreed on 17.8% of questions. That is a
-    ±2.9-point no-change band on accuracy.
+  - Run-to-run variation was never measured with two full runs. The 17.8 % figure of earlier documents is an
+    extrapolation from a replay of 112 failed questions of one DSPy.RLM run (gpt-5 medium), assumed symmetric, and an
+    upper bound ([KNOWN_ISSUES.md](../verification/KNOWN_ISSUES.md) K36). The direct measurements are small: three
+    identical runs of 50 questions of a DSPy.RLM configuration (accuracy 0.76 / 0.90 / 0.82), and pairs of earlier GPT-5
+    document REPL runs that fix ~45 % of wrong and break ~8 % of right answers on a re-run (VAR-2, not identical
+    configurations; [FOLLOW_UP_STUDIES.md](FOLLOW_UP_STUDIES.md)).
   - Between unpaired rows, differences smaller than that should not be read as effects.
 - **The Qwen3.6 snippet REPL rows on BrowseComp-Plus with dense and ColBERT retrieval.** On 2026-10-30 they were still
   running or queued.

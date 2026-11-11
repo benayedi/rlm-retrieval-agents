@@ -2,7 +2,9 @@
 
 This folder holds the per-question run outputs of every Experiments.xlsx row that are still available: final records,
 full trajectories (every turn's prompt, response, code and REPL output), grades and run logs, exactly as the runs
-wrote them. There is one folder per row: `<agent>/<ID>/`. Each folder holds:
+wrote them, and of the follow-up studies ([FOLLOW_UP_STUDIES.md](../docs/experiments/FOLLOW_UP_STUDIES.md)). There is
+one folder per row or study ID: `<agent>/<ID>/` or `<study>/<ID>/`. For GEPA, only held-out evaluations and run metadata
+are archived, not the optimisation-time rollouts. Each folder holds:
 
 - `<ID>.tar.zst` (or `.tar.zst.enc`, possibly split into `.partNN`): the archive, stored with **Git LFS**;
 - `MANIFEST.json`: every file in the archive with its original path, size and SHA-256, plus the archive's own hashes.
@@ -25,7 +27,8 @@ download counts against the repository owner's LFS bandwidth.
 ## BrowseComp-Plus archives are encrypted
 
 BrowseComp-Plus distributes its questions and answers encrypted, with a canary asking that they never appear online
-in plain text. Its trajectories contain both in plain text, so the `BCP-*` archives are encrypted:
+in plain text. Its trajectories contain both in plain text, so the `BCP-*` archives and the BrowseComp-Plus follow-up archives (SP-1, SP-2, SP-3, DSA-3, DSA-5,
+GEPA-1, GEPA-2, VAR-2) are encrypted:
 - AES-256-CTR via `openssl enc`, PBKDF2 with 200,000 iterations and a random salt;
 - the passphrase is the benchmark's own public canary string.
 
@@ -46,14 +49,31 @@ the web.** FRAMES and OBLIQ archives are compressed only.
 | [BCP-29](document_repl/BCP-29/MANIFEST.json) | Document REPL agent | 825 | 23.48 GB | 0.231 GB (1 part) | yes |
 | [CON-9](snippet_repl/CON-9/MANIFEST.json) | Snippet REPL agent | 272 | 1.33 GB | 0.026 GB (1 part) | no |
 | [CON-11](document_repl/CON-11/MANIFEST.json) | Document REPL agent | 258 | 1.54 GB | 0.013 GB (1 part) | no |
+| [DSA-3](dspy_rlm/DSA-3/MANIFEST.json) | DSPy.RLM | 38 | 0.00 GB | 0.000 GB (1 part) | yes |
+| [DSA-5](dspy_rlm/DSA-5/MANIFEST.json) | DSPy.RLM | 32 | 0.00 GB | 0.000 GB (1 part) | yes |
 | [FR-7](snippet_repl/FR-7/MANIFEST.json) | Snippet REPL agent | 2,500 | 0.50 GB | 0.022 GB (1 part) | no |
 | [FR-9](snippet_repl/FR-9/MANIFEST.json) | Snippet REPL agent | 2,403 | 3.78 GB | 0.026 GB (1 part) | no |
 | [FR-11](document_repl/FR-11/MANIFEST.json) | Document REPL agent | 1,681 | 0.01 GB | 0.001 GB (1 part) | no |
 | [FR-13](document_repl/FR-13/MANIFEST.json) | Document REPL agent | 1,645 | 9.31 GB | 0.090 GB (1 part) | no |
+| [FRC-1](document_repl/FRC-1/MANIFEST.json) | Document REPL agent | 1,659 | 16.15 GB | 0.117 GB (1 part) | no |
+| [GEPA-1](prompt_optimisation/GEPA-1/MANIFEST.json) | Study: prompt optimisation | 279 | 0.02 GB | 0.001 GB (1 part) | yes |
+| [GEPA-2](prompt_optimisation/GEPA-2/MANIFEST.json) | Study: prompt optimisation | 389 | 5.23 GB | 0.056 GB (1 part) | yes |
+| [GEPA-3](prompt_optimisation/GEPA-3/MANIFEST.json) | Study: prompt optimisation | 492 | 3.42 GB | 0.035 GB (1 part) | no |
+| [GEPA-4](prompt_optimisation/GEPA-4/MANIFEST.json) | Study: prompt optimisation | 571 | 0.01 GB | 0.001 GB (1 part) | no |
+| [GEPA-5](prompt_optimisation/GEPA-5/MANIFEST.json) | Study: prompt optimisation | 453 | 0.01 GB | 0.001 GB (1 part) | no |
 | [MAT-9](snippet_repl/MAT-9/MANIFEST.json) | Snippet REPL agent | 169 | 0.38 GB | 0.003 GB (1 part) | no |
 | [MAT-11](document_repl/MAT-11/MANIFEST.json) | Document REPL agent | 155 | 0.65 GB | 0.005 GB (1 part) | no |
+| [SP-1](search_policy/SP-1/MANIFEST.json) | Study: search policy | 853 | 28.97 GB | 0.335 GB (1 part) | yes |
+| [SP-2](search_policy/SP-2/MANIFEST.json) | Study: search policy | 204 | 4.69 GB | 0.054 GB (1 part) | yes |
+| [SP-3](search_policy/SP-3/MANIFEST.json) | Study: search policy | 212 | 0.00 GB | 0.000 GB (1 part) | yes |
+| [SP-4](search_policy/SP-4/MANIFEST.json) | Study: search policy | 1,658 | 20.29 GB | 0.177 GB (1 part) | no |
+| [SP-6](search_policy/SP-6/MANIFEST.json) | Study: search policy | 367 | 0.30 GB | 0.008 GB (1 part) | no |
+| [SP-7](search_policy/SP-7/MANIFEST.json) | Study: search policy | 291 | 1.13 GB | 0.019 GB (1 part) | no |
 | [TWI-9](snippet_repl/TWI-9/MANIFEST.json) | Snippet REPL agent | 299 | 0.66 GB | 0.008 GB (1 part) | no |
 | [TWI-11](document_repl/TWI-11/MANIFEST.json) | Document REPL agent | 285 | 0.61 GB | 0.006 GB (1 part) | no |
+| [TWQ-1](snippet_repl/TWQ-1/MANIFEST.json) | Snippet REPL agent | 365 | 0.39 GB | 0.009 GB (1 part) | no |
+| [TWQ-2](document_repl/TWQ-2/MANIFEST.json) | Document REPL agent | 282 | 1.12 GB | 0.018 GB (1 part) | no |
+| [VAR-2](run_variation/VAR-2/MANIFEST.json) | Study: run variation | 1 | 0.01 GB | 0.001 GB (1 part) | yes |
 
 Not included:
 - **BCP-31** (Document REPL agent, Qwen3.6, BM25): left out for now at the owner's request. Its trajectories are 206 GB

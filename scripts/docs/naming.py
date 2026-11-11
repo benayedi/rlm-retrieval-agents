@@ -8,6 +8,10 @@ documents use the paper's names while the evidence files stay unchanged:
 |---|---|
 | Full-Doc RLM, full-doc, `fd_*` runs | document REPL agent |
 | Snippet RLM, Snippet, `snip_*` runs | snippet REPL agent |
+
+Follow-up studies (2026-11-11): the run names, logs and `original/` files of the original repository keep their names;
+`RUN_NAMES` below maps them to the study IDs and the paper's terms. It is documentation (used by tests and readers); the
+generators do not rewrite these names.
 """
 import re
 
@@ -34,3 +38,41 @@ def paper_names(text):
     text = _cap_sub(r"\bSnippet\b(?! REPL|s\b| length|\0|-run)", "snippet REPL", text)
     text = text.replace("\0", " ").replace("Snippet-run", "Snippet REPL run")
     return text
+
+
+# research-time name (run directory, script, phrase) -> (study ID or term in the paper / this repository)
+RUN_NAMES = {
+    # agents and harness phrases
+    "supervisor harness": "document REPL agent (agents/document_repl)",
+    "suprlm": "the document REPL agent's working directory (FULLDOC_ROOT)",
+    "full-doc RLM": "document REPL agent",
+    "official RLM harness": "snippet REPL agent (agents/snippet_repl)",
+    "run_obliq_mine.py": "snippet REPL agent on OBLIQ-Bench (agents/snippet_repl/src/run_obliq.py)",
+    "dspy RLM": "DSPy.RLM (agents/dspy_rlm)",
+    "10 searches / 25 searches, MAX_SEARCHES, s25": "search cap 10 / search cap 25",
+    "rr, reranker proxy, search policy, bcp_rerank_proxy.py": "the search-policy proxy (studies/search_policy/src/rerank_proxy.py)",
+    "gepa_bcp.py": "agents/document_repl/src/split_runner.py",
+    # BrowseComp-Plus runs
+    "bcp_policy_e2e, bcp_testrest_rr, bcp_rest300_rr, bcp_pareto_rr, bcp_feedback_rr": "SP-1",
+    "bcp_policy_e2e_rerankonly": "SP-2",
+    "bcp_gpt5_rr/rr": "SP-3",
+    "gepa_bcp": "GEPA-1",
+    "gepa_bcp2 (winner d911ebbe23, test200)": "GEPA-2",
+    "gepa_bcp2/bcp_testrest_ctrl/gepa_bcp rollouts ee5ea32a1c": "BCP-29 (control of SP-1, SP-2, GEPA-2)",
+    "dspy_ablation/arm3, arm5": "DSA-3, DSA-5",
+    "supervisor_artifact.html pairs": "VAR-2",
+    # FRAMES runs
+    "frames/sup_q36_bm25f": "FR-13 (control of FRC-1; seed of GEPA-3)",
+    "frames/sup_q36_bm25f_s25, _s25_rest0, _s25_rest1": "FRC-1",
+    "frames/sup_q36_s25_rr_g0, _g1": "SP-4",
+    "gepa_frames, gepa_frames_confirm (8ba345b481)": "GEPA-3",
+    "frames/failure_taxonomy*.json": "ERR-1",
+    "frames/llm_closed, llm_bm25_4, llm_oracle": "FB-1",
+    # OBLIQ-Twitter runs
+    "obliq_mine_rr ctrl_dev100 + snip_rest181": "TWQ-1",
+    "obliq_mine_rr rr_dev100 + rr_rest181": "SP-6",
+    "suprlm/runs/obliq_q36_ctrl": "TWQ-2",
+    "suprlm/runs/obliq_q36_rr": "SP-7",
+    "gepa_official, gepa_official_v2, gepa_paper, gepa_wide": "GEPA-4 runs 1-4",
+    "hover_gepa": "GEPA-5",
+}
