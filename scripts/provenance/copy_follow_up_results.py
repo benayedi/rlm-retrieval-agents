@@ -17,7 +17,7 @@ import argparse, datetime, hashlib, json, os, shutil, sys
 from pathlib import Path
 
 ART = Path(__file__).resolve().parents[2]
-L = Path(os.environ.get("LOGS_ROOT", "/home/extstu_00/RLM/logs"))
+L = Path(os.environ.get("LOGS_ROOT", ""))   # required for copying (logs/ of the original repository)
 
 _FRAMES_GPT41 = ["sup_q36_bm25f", "sup_q36_bm25f_s25", "sup_q36_bm25f_s25_rest0", "sup_q36_bm25f_s25_rest1",
                  "sup_q36_s25_rr_g0", "sup_q36_s25_rr_g1"]
@@ -50,6 +50,8 @@ def sha256(p):
 
 
 def copy():
+    if not os.environ.get("LOGS_ROOT"):
+        sys.exit("set LOGS_ROOT to logs/ of the original repository")
     for dest, items in SETS.items():
         d = ART / dest
         man = {"created": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"), "files": []}

@@ -31,7 +31,7 @@ from pathlib import Path
 ART = Path(__file__).resolve().parents[2]
 RLM = Path(os.environ.get("RLM_SRC_ROOT", "/home/extstu_00/RLM"))
 FD = Path(os.environ.get("FULLDOC_SRC_ROOT", "/home/extstu_00/suprlm"))
-TRX = Path(os.environ.get("CLAUDE_TRANSCRIPTS_ROOT", "/home/extstu_00/.claude/projects"))
+TRX = Path(os.environ.get("CLAUDE_TRANSCRIPTS_ROOT") or Path.home() / ".claude" / "projects")
 ROOTS = {"RLM": RLM, "FULLDOC": FD, "TRANSCRIPT": TRX}
 
 # ---------------------------------------------------------------- 2026-10-30 (first migration; copied, never again)
