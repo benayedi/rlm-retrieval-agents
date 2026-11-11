@@ -154,6 +154,7 @@ Workbook footnotes that apply to this row:
 |---|---|---|---|---|---|
 | Snippet REPL vs document REPL, GPT-5, BM25 | BCP-25 | 136 | 74 | 2.3e-05 | significant at 0.05 |
 | ColBERT vs BM25, snippet, GPT-5 | BCP-11 | 44 | 196 | 4.4e-24 | significant at 0.05 |
+| GPT-5 vs Qwen3.6, snippet, BM25 | BCP-19 | 380 | 27 | 7.1e-81 | significant at 0.05 |
 
 
 - **Largest failure mode:** never retrieving a gold document (123 of 270 failures, 45.6%). Retrieval-side failures (F3 + F4) are 61.5% of failures; reading-side (F5) 14.1%. *(Measured.)*

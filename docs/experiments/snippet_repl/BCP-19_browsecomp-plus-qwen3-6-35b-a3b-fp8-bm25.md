@@ -124,12 +124,12 @@ Workbook footnotes that apply to this row:
 
 | Category | Questions | Share of failures |
 |---|---|---|
-| F1 did not finish | 137 | 40.5% |
-| F2 no / abstained | 34 | 10.1% |
-| F3 retrieval miss | 130 | 38.5% |
-| F4 partial evidence | 21 | 6.2% |
-| F5 all gold, wrong | 16 | 4.7% |
-| **Failed in total** | 338 |  |
+| F1 did not finish | 243 | 39.0% |
+| F2 no / abstained | 55 | 8.8% |
+| F3 retrieval miss | 256 | 41.1% |
+| F4 partial evidence | 43 | 6.9% |
+| F5 all gold, wrong | 26 | 4.2% |
+| **Failed in total** | 623 |  |
 
 
 > The failure analysis was extracted on 2026-10-30 while this run was still going, from the 455 questions attempted by then. The accuracy above (Experiments.xlsx) covers all 830.
@@ -139,18 +139,25 @@ Workbook footnotes that apply to this row:
 
 | Evidence retrieved | Questions | Accuracy |
 |---|---|---|
-| no gold retrieved | 167 | 4.2% |
-| some gold | 64 | 64.1% |
-| all gold | 87 | 79.3% |
+| no gold retrieved | 318 | 3.5% |
+| some gold | 112 | 59.8% |
+| all gold | 157 | 82.2% |
 
 
-**Turns** (By Turns sheet): limit 50, mean 14.1 (correct 8.7, not correct 16.0); 8 questions used every turn (1.8%), accuracy when answered before the limit 37.7%.
+**Turns** (By Turns sheet): limit 50, mean 15.4 (correct 9.0, not correct 17.5); 20 questions used every turn (2.4%), accuracy when answered before the limit 36.5%.
 
 ## 8. Results interpretation
 
+**Paired comparisons on the same questions** (Pairwise sheet; exact McNemar test on the discordant pairs):
 
-- **Largest failure mode:** unfinished runs (137 of 338 failures, 40.5%). Retrieval-side failures (F3 + F4) are 44.7% of failures; reading-side (F5) 4.7%. *(Measured.)*
-- **With all gold evidence retrieved** the run is right 79.3% of the time (87 questions); with none, 4.2%. The gap between the two bounds how much better retrieval alone could help. *(Measured; causal reading is a hypothesis.)*
+| Comparison | Other row | Only BCP-19 right | Only other right | p | Reading |
+|---|---|---|---|---|---|
+| GPT-5 vs Qwen3.6, snippet, BM25 | BCP-13 | 27 | 380 | 7.1e-81 | significant at 0.05 |
+| Snippet REPL vs document REPL, Qwen3.6, BM25 | BCP-31 | 82 | 61 | 0.094 | not significant |
+
+
+- **Largest failure mode:** never retrieving a gold document (256 of 623 failures, 41.1%). Retrieval-side failures (F3 + F4) are 48.0% of failures; reading-side (F5) 4.2%. *(Measured.)*
+- **With all gold evidence retrieved** the run is right 82.2% of the time (157 questions); with none, 3.5%. The gap between the two bounds how much better retrieval alone could help. *(Measured; causal reading is a hypothesis.)*
 - Statements about *why* a configuration wins or loses are hypotheses unless the comparison isolates one variable; see the confounds in section 10.
 
 ## 9. Verification status

@@ -272,18 +272,18 @@ first snapshot of 2026-10-30.
 |---|---|---|
 | `scripts/bcp_rejudge_gpt41_rq4.py` (written 2026-11-10) | `rlm_shared/grading/rejudge_bcp_rq4.py` | gpt-4.1 re-judge of SP-2 (reranker only) and GEPA-2 (run-2 winner) on test200. Changed only: import wiring (`bcp_judge.py` of this package, same judge and template), `LOGS_ROOT` / `ORIGINAL_REPO_ROOT` for the original machine's paths, the split file from `studies/prompt_optimisation/splits/bcp_gepa_splits/split.json` (byte-identical copy), documentation |
 | `scripts/serve_qwen36_moe.sh` | `benchmarks/models/serve_qwen36.sh` | the vLLM launcher of every Qwen3.6 run: native 262,144-token context, 16,384-token output cap per call (via `GEN_OVERRIDE`). Changed only: `ENV_BIN` from `VLLM_BIN`, `HF_HOME` from `configs/paths.env`, documentation (including the non-default arguments the saved vLLM logs show) |
-| `scripts/failure_analysis_{extract,build,findings,extras,turns_merge,turns_sheet}.py` (changed 2026-10-31 13:16–13:20) | not copied to `scripts/reporting/` | see F-A below |
+| `scripts/failure_analysis_{extract,build,findings,extras,turns_merge,turns_sheet}.py` (changed 2026-10-31 13:16–13:20) | `scripts/reporting/` (the same six files, updated) | the 2026-10-31 hunks applied to the readable copies; every refactor hunk is unchanged (checked: the set of changed lines vs the 2026-10-30 original equals the set vs the 2026-10-31 original). See F-A |
 
 New configuration variable: `VLLM_BIN` (absolute path of the vllm executable; `configs/paths.example.env`).
 
 ### Issues found, not fixed (second snapshot)
-- **F-A. `Failure_Analysis.xlsx` in this repository is the 2026-10-30 state.** The six `failure_analysis_*` scripts were
+- **F-A (resolved 2026-11-11, owner's decision). `Failure_Analysis.xlsx` was the 2026-10-30 state.** The six `failure_analysis_*` scripts were
   changed on 2026-10-31, after the snapshot, to add the completed Qwen3.6 snippet REPL rows (BCP-15 dense, BCP-17
   ColBERT, BCP-19 BM25 on all 830) and the Qwen3.6 snippet-vs-document pairs; the original repository's
   `docs/Failure_Analysis.xlsx` was rebuilt from them at 13:21. `scripts/reporting/` and
   `results/original_baselines/Failure_Analysis.xlsx` are both the earlier state (BCP-19 partial, BCP-15/17 absent), so
   they agree with each other, but the workbook does not cover the final Qwen3.6 snippet rows. The later scripts are
-  preserved in `original/RLM_2026-11-11/`; the later workbook is not migrated (owner's decision pending).
+  preserved in `original/RLM_2026-11-11/`. Now: `results/original_baselines/Failure_Analysis.xlsx` is the 2026-10-31 workbook (sanitised as before) and `scripts/reporting/` reproduces it.
 - **G-RQ4-1. Content-filtered verdicts count wrong.** `rlm_shared/grading/rejudge_bcp_rq4.py` maps a `"filtered"`
   verdict to wrong (`x is True`) and lists the question ids in the summary (none in either arm). This differs from
   `rejudge_bcp.py`, which keeps the old verdict for a filtered prompt (EXPERIMENTS_STATUS §5); stated in its summary field.

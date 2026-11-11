@@ -160,6 +160,7 @@ Workbook footnotes that apply to this row:
 | Comparison | Other row | Only BCP-29 right | Only other right | p | Reading |
 |---|---|---|---|---|---|
 | GPT-5 vs Qwen3.6, document REPL, Reason-ModernColBERT | BCP-23 | 17 | 262 | 1.4e-57 | significant at 0.05 |
+| Snippet REPL vs document REPL, Qwen3.6, Reason-ModernColBERT | BCP-17 | 103 | 121 | 0.26 | not significant |
 
 
 - **Largest failure mode:** never retrieving a gold document (203 of 349 failures, 58.2%). Retrieval-side failures (F3 + F4) are 72.8% of failures; reading-side (F5) 9.2%. *(Measured.)*

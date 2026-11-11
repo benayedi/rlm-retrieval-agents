@@ -113,6 +113,13 @@ recomputed for this repository.
 | Snippet REPL vs document REPL, Qwen3.6, BM25 (FRAMES) | FR-9 | FR-13 | 89 | 81 | 0.59 | no |
 | GPT-5 vs Qwen3.6, document REPL (FRAMES) | FR-11 | FR-13 | 184 | 22 | 4.9e-33 | yes |
 | GPT-5 vs Qwen3.6, snippet (FRAMES) | FR-7 | FR-9 | 168 | 50 | 4.1e-16 | yes |
+| GPT-5 vs Qwen3.6, snippet, Qwen3-Embed-8B | BCP-9 | BCP-15 | 372 | 18 | 3.8e-87 | yes |
+| GPT-5 vs Qwen3.6, snippet, Reason-ModernColBERT | BCP-11 | BCP-17 | 237 | 24 | 3.2e-45 | yes |
+| GPT-5 vs Qwen3.6, snippet, BM25 | BCP-13 | BCP-19 | 380 | 27 | 7.1e-81 | yes |
+| Snippet REPL vs document REPL, Qwen3.6, Qwen3-Embed-8B | BCP-15 | BCP-27 | 75 | 137 | 2.5e-05 | yes |
+| Snippet REPL vs document REPL, Qwen3.6, Reason-ModernColBERT | BCP-17 | BCP-29 | 121 | 103 | 0.26 | no |
+| Snippet REPL vs document REPL, Qwen3.6, BM25 | BCP-19 | BCP-31 | 82 | 61 | 0.094 | no |
+| ColBERT vs dense, snippet, Qwen3.6 | BCP-17 | BCP-15 | 255 | 61 | 2.4e-29 | yes |
 
 
 ## What the evidence establishes

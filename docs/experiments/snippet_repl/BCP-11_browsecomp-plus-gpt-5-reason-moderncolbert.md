@@ -169,6 +169,7 @@ Workbook footnotes that apply to this row:
 | Snippet REPL vs document REPL, GPT-5, Reason-ModernColBERT | BCP-23 | 51 | 65 | 0.23 | not significant |
 | ColBERT vs BM25, snippet, GPT-5 | BCP-13 | 196 | 44 | 4.4e-24 | significant at 0.05 |
 | ColBERT vs dense, snippet, GPT-5 | BCP-9 | 100 | 47 | 1.5e-05 | significant at 0.05 |
+| GPT-5 vs Qwen3.6, snippet, Reason-ModernColBERT | BCP-17 | 237 | 24 | 3.2e-45 | significant at 0.05 |
 
 
 - **Largest failure mode:** wrong answers despite all gold evidence (39 of 118 failures, 33.1%). Retrieval-side failures (F3 + F4) are 42.4% of failures; reading-side (F5) 33.1%. *(Measured.)*
