@@ -2382,3 +2382,22 @@ BrowseCompReadInContextSignature.__doc__ = (
     BrowseCompReadInContextSignature.__doc__.replace(_ORCHESTRATION, _V11_ORCHESTRATION))
 BrowseCompReadInContextSignature.__name__ = "BrowseCompReadInContextSignature"
 BrowseCompReadInContextSignature._sig_key = "v11"
+
+
+# v21 = the snippet RLM's prompt (2026-10-31 DSPy ablation, arm 3). The task text is LightOn's QUERY_TEMPLATE as
+# the snippet RLM runs it (LIGHTON_TASK_TEXT=1), with SUBMIT in place of answer["ready"] and a short answer field
+# instead of the Explanation / Exact Answer / Confidence block. None of the shared blocks (_REPL_TOOLS, _REPL_RULES,
+# _ORCHESTRATION): no "one search per code block" rule, no score-threshold claim, no "Unknown" escape. Tool
+# descriptions come from MINIMAL_TOOL_DOCS=1; the REPL description is dspy.RLM's own.
+class BrowseCompSnippetPromptSignature(dspy.Signature):
+    """You are a deep research agent. You need to answer the given question by interacting with a
+search engine, using the search_index and get_document tools provided. Please perform
+reasoning and use the tools step by step, in an interleaved manner. You may use the
+search_index and get_document tools multiple times.
+
+When you are done, call SUBMIT(answer=...) with the exact name, date, title, or value the question asks for."""
+    question: str = dspy.InputField(desc="The research question to answer.")
+    answer: str = dspy.OutputField(desc="Concise final answer (name, date, title, etc.).")
+
+
+BrowseCompSnippetPromptSignature._sig_key = "v21"

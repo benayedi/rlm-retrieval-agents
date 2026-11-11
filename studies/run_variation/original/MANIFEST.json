@@ -1,0 +1,38 @@
+{
+ "created": "2026-11-11T15:40:47+00:00",
+ "files": [
+  {
+   "copy": "TRANSCRIPT/var2_flip_rates_draft.py",
+   "source": "TRANSCRIPT:-home-extstu-00-RLM/2a1318b5-524a-4d81-9aba-3918a191383c.jsonl:3606",
+   "sha256": "1d1a63f4ca5d7f839b0e5f41a85ff44f6dec8a2ccf87b065f3040c96c1cd07e7",
+   "bytes": 1314,
+   "tool_use_id": "toolu_01SxLzc8Tm72VhvAiSZrbvsG",
+   "timestamp": "2026-10-27T02:05:18.688Z",
+   "command_sha256": "5ac69e48f9be9e3c2c3c46c2d5c0259993387e7db49751537f56b0111e267009",
+   "extraction": "heredoc body between the <<'EOF' line and the closing EOF, plus one newline"
+  },
+  {
+   "copy": "TRANSCRIPT/var2_flip_rates.py",
+   "source": "TRANSCRIPT:-home-extstu-00-RLM/2a1318b5-524a-4d81-9aba-3918a191383c.jsonl:3616",
+   "sha256": "6c190e4450abaaebaa35aa12b15d58a4fa9d2d75b79e5b19991d07cd73390270",
+   "bytes": 1098,
+   "tool_use_id": "toolu_01MpYYpR3Exbw7m3QNjsFUe3",
+   "timestamp": "2026-10-27T02:05:25.316Z",
+   "command_sha256": "c5c6dd3d8366ea424e5412a5d9ca50f48a0557b3b61b850b9295ddcf9bb1272b",
+   "extraction": "heredoc body between the <<'EOF' line and the closing EOF, plus one newline"
+  }
+ ],
+ "source_roots": {
+  "RLM": {
+   "git_head": "67f0fe2966c092a9df1c5466cd5d4281c625cb30",
+   "note": "working tree, including uncommitted changes"
+  },
+  "FULLDOC": {
+   "git_head": null,
+   "note": "not a git repository; files as on disk"
+  },
+  "TRANSCRIPT": {
+   "note": "Claude Code session transcripts (JSON lines), read only"
+  }
+ }
+}

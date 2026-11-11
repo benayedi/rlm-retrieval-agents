@@ -1,0 +1,106 @@
+{
+ "created": "2026-11-11T15:40:47+00:00",
+ "files": [
+  {
+   "copy": "RLM/rag/__init__.py",
+   "source": "RLM:rag/__init__.py",
+   "sha256": "83dae42d2450d53cd4019ad076b090975a62f462e2ca70ab4f9d45f6d96f73a6",
+   "bytes": 384,
+   "git_state": "committed",
+   "mtime": "2026-09-22T13:39:12"
+  },
+  {
+   "copy": "RLM/rag/agent.py",
+   "source": "RLM:rag/agent.py",
+   "sha256": "ec5f40fff7a91659e7444b21f64d50b1c2b73f4ead55e531f0cd31026e0965a0",
+   "bytes": 29002,
+   "git_state": "modified",
+   "mtime": "2026-10-31T13:59:34"
+  },
+  {
+   "copy": "RLM/rag/signatures.py",
+   "source": "RLM:rag/signatures.py",
+   "sha256": "601f07ee597c420b6785c47868270262cd180964751e794c672fbe3759073d78",
+   "bytes": 135229,
+   "git_state": "modified",
+   "mtime": "2026-10-31T13:56:56"
+  },
+  {
+   "copy": "RLM/rag/tools.py",
+   "source": "RLM:rag/tools.py",
+   "sha256": "266e63f2c3ee91898963ba934507032c6cc09b89a7ca33e6cfda198ce9ff65c7",
+   "bytes": 2590,
+   "git_state": "committed",
+   "mtime": "2026-09-22T13:39:57"
+  },
+  {
+   "copy": "RLM/examples/browsecomp_eval_dspy_rlm.py",
+   "source": "RLM:examples/browsecomp_eval_dspy_rlm.py",
+   "sha256": "fa9dc5f735cf1657b94eb10a77da8ed5669e64ac3b659791b74df6f1e1f64463",
+   "bytes": 21147,
+   "git_state": "modified",
+   "mtime": "2026-10-31T16:13:30"
+  },
+  {
+   "copy": "RLM/examples/browsecomp_data.py",
+   "source": "RLM:examples/browsecomp_data.py",
+   "sha256": "014053405563d8fc9a96b6aab174805d124aa1b204db01965e3fe6733c806e78",
+   "bytes": 7474,
+   "git_state": "committed",
+   "mtime": "2026-09-22T13:39:56"
+  },
+  {
+   "copy": "RLM/scripts/run5d/dspy_ablation_arm3.sh",
+   "source": "RLM:scripts/run5d/dspy_ablation_arm3.sh",
+   "sha256": "789f24fbb8312494d349ce79796b9a5f7ce6a95fdf291aee4d20f1ac19905b0b",
+   "bytes": 2180,
+   "git_state": "untracked",
+   "mtime": "2026-10-31T13:59:34"
+  },
+  {
+   "copy": "RLM/scripts/run5d/dspy_ablation_arm5.sh",
+   "source": "RLM:scripts/run5d/dspy_ablation_arm5.sh",
+   "sha256": "6646554e208b433c0359c1ade320dd80f2731e24c88af99e49145d3a2fcfd378",
+   "bytes": 2526,
+   "git_state": "untracked",
+   "mtime": "2026-10-31T20:37:20"
+  },
+  {
+   "copy": "RLM/scripts/run5d/dspy_ablation_report.py",
+   "source": "RLM:scripts/run5d/dspy_ablation_report.py",
+   "sha256": "6d2b678e1778f6caba03d47cda4e9eb70edcf5f4bc3ea7fdc02a1a8cde6c9b2d",
+   "bytes": 4123,
+   "git_state": "untracked",
+   "mtime": "2026-11-01T08:15:14"
+  },
+  {
+   "copy": "RLM/scripts/run5d/dspy_ablation_strata.py",
+   "source": "RLM:scripts/run5d/dspy_ablation_strata.py",
+   "sha256": "d64db2d05960dc3ad84f50447d1a24d65e3487291227b774df915b9987565bf6",
+   "bytes": 2719,
+   "git_state": "untracked",
+   "mtime": "2026-11-01T08:15:22"
+  },
+  {
+   "copy": "RLM/scripts/run5d/dspy_vs_snip.py",
+   "source": "RLM:scripts/run5d/dspy_vs_snip.py",
+   "sha256": "36d4cb407d7ecbc473b8a48756aa8db46f4d095cde46ae0981b259a1476d083f",
+   "bytes": 5339,
+   "git_state": "untracked",
+   "mtime": "2026-11-01T08:15:22"
+  }
+ ],
+ "source_roots": {
+  "RLM": {
+   "git_head": "67f0fe2966c092a9df1c5466cd5d4281c625cb30",
+   "note": "working tree, including uncommitted changes"
+  },
+  "FULLDOC": {
+   "git_head": null,
+   "note": "not a git repository; files as on disk"
+  },
+  "TRANSCRIPT": {
+   "note": "Claude Code session transcripts (JSON lines), read only"
+  }
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "created": "2026-11-11T15:40:47+00:00",
+ "files": [
+  {
+   "copy": "RLM/scripts/bcp_rejudge_gpt41_rq4.py",
+   "source": "RLM:scripts/bcp_rejudge_gpt41_rq4.py",
+   "sha256": "66b4812a8a5a9eafd880ef8e16f9520391bf8b60bd2cfd5e650cd0f6ec37235b",
+   "bytes": 3096,
+   "git_state": "untracked",
+   "mtime": "2026-11-10T13:37:34"
+  },
+  {
+   "copy": "RLM/scripts/serve_qwen36_moe.sh",
+   "source": "RLM:scripts/serve_qwen36_moe.sh",
+   "sha256": "6faad9e19f4b366d193ddb4f1db1a450a021a9eede43dbba552d00a31b5e6898",
+   "bytes": 1996,
+   "git_state": "committed",
+   "mtime": "2026-10-07T09:33:21"
+  },
+  {
+   "copy": "RLM/scripts/failure_analysis_extract.py",
+   "source": "RLM:scripts/failure_analysis_extract.py",
+   "sha256": "2a7b0a6d24ac1d61517bfaf45223323563fae0777526d0d810492c69055569f6",
+   "bytes": 15946,
+   "git_state": "modified",
+   "mtime": "2026-10-31T13:16:15"
+  },
+  {
+   "copy": "RLM/scripts/failure_analysis_build.py",
+   "source": "RLM:scripts/failure_analysis_build.py",
+   "sha256": "f4964e6a5c11dcb857cb1bc274199c0f173cb7d0fe41f0e63794f931f1ca45c9",
+   "bytes": 29638,
+   "git_state": "modified",
+   "mtime": "2026-10-31T13:18:53"
+  },
+  {
+   "copy": "RLM/scripts/failure_analysis_findings.py",
+   "source": "RLM:scripts/failure_analysis_findings.py",
+   "sha256": "3cf6ad7f8ea588ec30a82add106e1ba881d90a92a8f14cd6ff0e91d399f634ab",
+   "bytes": 9397,
+   "git_state": "modified",
+   "mtime": "2026-10-31T13:20:37"
+  },
+  {
+   "copy": "RLM/scripts/failure_analysis_extras.py",
+   "source": "RLM:scripts/failure_analysis_extras.py",
+   "sha256": "7b76e9cc65687a4520d846b4752ee3b475be8770b95c15b4e86824ca78db7b99",
+   "bytes": 13044,
+   "git_state": "modified",
+   "mtime": "2026-10-31T13:19:08"
+  },
+  {
+   "copy": "RLM/scripts/failure_analysis_turns_merge.py",
+   "source": "RLM:scripts/failure_analysis_turns_merge.py",
+   "sha256": "067c6fc9a3c02026081e030a156100bb643268f4f49ca78a202ff313f26945ef",
+   "bytes": 3971,
+   "git_state": "modified",
+   "mtime": "2026-10-31T13:16:15"
+  },
+  {
+   "copy": "RLM/scripts/failure_analysis_turns_sheet.py",
+   "source": "RLM:scripts/failure_analysis_turns_sheet.py",
+   "sha256": "19c4025fd89cdbc2b5f20af5ff1c79da032a3d95a420697d4832a03954b4e739",
+   "bytes": 10078,
+   "git_state": "modified",
+   "mtime": "2026-10-31T13:19:08"
+  }
+ ],
+ "source_roots": {
+  "RLM": {
+   "git_head": "67f0fe2966c092a9df1c5466cd5d4281c625cb30",
+   "note": "working tree, including uncommitted changes"
+  },
+  "FULLDOC": {
+   "git_head": null,
+   "note": "not a git repository; files as on disk"
+  },
+  "TRANSCRIPT": {
+   "note": "Claude Code session transcripts (JSON lines), read only"
+  }
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "created": "2026-11-11T15:40:47+00:00",
+ "files": [
+  {
+   "copy": "RLM/scripts/frames_failure_taxonomy.py",
+   "source": "RLM:scripts/frames_failure_taxonomy.py",
+   "sha256": "f5a2a4d643e2a2c3e053c9948efa81c3c2fec4c01b53114463c440e58df767e0",
+   "bytes": 5855,
+   "git_state": "committed",
+   "mtime": "2026-10-21T16:29:26"
+  },
+  {
+   "copy": "RLM/scripts/frames_s25_failure_drill.py",
+   "source": "RLM:scripts/frames_s25_failure_drill.py",
+   "sha256": "de0c61bddc39b608a47570eb899cfc6739969a4372c5e9a6eccf04279b03fb58",
+   "bytes": 4592,
+   "git_state": "committed",
+   "mtime": "2026-10-21T16:41:48"
+  }
+ ],
+ "source_roots": {
+  "RLM": {
+   "git_head": "67f0fe2966c092a9df1c5466cd5d4281c625cb30",
+   "note": "working tree, including uncommitted changes"
+  },
+  "FULLDOC": {
+   "git_head": null,
+   "note": "not a git repository; files as on disk"
+  },
+  "TRANSCRIPT": {
+   "note": "Claude Code session transcripts (JSON lines), read only"
+  }
+ }
+}

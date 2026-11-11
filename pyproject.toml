@@ -6,5 +6,7 @@ requires-python = ">=3.11"
 
 [tool.pytest.ini_options]
 pythonpath = ["agents/shared"]
-testpaths = ["tests", "agents/dspy_rlm/tests", "agents/snippet_repl/tests", "agents/document_repl/tests"]
+testpaths = ["tests", "agents/dspy_rlm/tests", "agents/snippet_repl/tests", "agents/document_repl/tests",
+             "studies/search_policy/tests", "studies/prompt_optimisation/tests", "studies/run_variation/tests",
+             "studies/error_analysis/tests", "studies/frames_baselines/tests"]
 addopts = "-q"

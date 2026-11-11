@@ -1,0 +1,370 @@
+{
+ "created": "2026-11-11T15:40:47+00:00",
+ "files": [
+  {
+   "copy": "RLM/scripts/gepa_frames.py",
+   "source": "RLM:scripts/gepa_frames.py",
+   "sha256": "036f299674501f9452a087cc8238aea76f8e8aad6b0da3fd3221249cfe730e87",
+   "bytes": 17407,
+   "git_state": "committed",
+   "mtime": "2026-10-15T15:25:15"
+  },
+  {
+   "copy": "RLM/scripts/gepa_frames_confirm.py",
+   "source": "RLM:scripts/gepa_frames_confirm.py",
+   "sha256": "28b47081ca3cbdc20fb9e40e2787e0444ef3357c17d3b37ff4652f79415d1001",
+   "bytes": 3359,
+   "git_state": "committed",
+   "mtime": "2026-10-17T07:44:03"
+  },
+  {
+   "copy": "RLM/scripts/bcp_confirm.py",
+   "source": "RLM:scripts/bcp_confirm.py",
+   "sha256": "7b09f558a76795ae37b5e50743ec87417d97a1c4ea4375197ea59f5d9032bec3",
+   "bytes": 3172,
+   "git_state": "committed",
+   "mtime": "2026-10-09T18:46:52"
+  },
+  {
+   "copy": "RLM/scripts/bcp_gepa_split.py",
+   "source": "RLM:scripts/bcp_gepa_split.py",
+   "sha256": "2c91a5b009e098d6b2eec529a0a12f5d380b2431e855e01fe6d49e1f1e45e772",
+   "bytes": 4823,
+   "git_state": "committed",
+   "mtime": "2026-10-06T11:11:31"
+  },
+  {
+   "copy": "RLM/scripts/bcp_enrich_split.py",
+   "source": "RLM:scripts/bcp_enrich_split.py",
+   "sha256": "c5194d7ef197fb87a7644873d0ef871a4d6e260c06ce4ed74db90e5f5614f8ee",
+   "bytes": 3010,
+   "git_state": "committed",
+   "mtime": "2026-10-08T15:21:35"
+  },
+  {
+   "copy": "RLM/scripts/validate_bcp.py",
+   "source": "RLM:scripts/validate_bcp.py",
+   "sha256": "063f376b57d2a54131f40ce0998140d49b754815bb7aef5c158167e88fdeb8d4",
+   "bytes": 3126,
+   "git_state": "committed",
+   "mtime": "2026-10-09T18:35:45"
+  },
+  {
+   "copy": "RLM/scripts/bcp_trace_health.py",
+   "source": "RLM:scripts/bcp_trace_health.py",
+   "sha256": "efc70f40fed25edf9a28f72c618913b4e87ef8b5048a1159359171aa9be09575",
+   "bytes": 6088,
+   "git_state": "committed",
+   "mtime": "2026-10-08T14:01:57"
+  },
+  {
+   "copy": "RLM/scripts/bcp_search_ndcg.py",
+   "source": "RLM:scripts/bcp_search_ndcg.py",
+   "sha256": "5052e4b7c1d4a0f141c6a6e36af6d0fe50513035710de0336cb6782b8d0bc129",
+   "bytes": 3017,
+   "git_state": "committed",
+   "mtime": "2026-10-08T10:11:03"
+  },
+  {
+   "copy": "RLM/scripts/bcp_recover_misfiled.py",
+   "source": "RLM:scripts/bcp_recover_misfiled.py",
+   "sha256": "f0016801b3108ac788a517a85afb5cc78c192e0acd561ae93e14309189c274b4",
+   "bytes": 1300,
+   "git_state": "committed",
+   "mtime": "2026-10-08T17:11:25"
+  },
+  {
+   "copy": "RLM/scripts/run_gepa_bcp.sh",
+   "source": "RLM:scripts/run_gepa_bcp.sh",
+   "sha256": "0d57c14a3c4cfbffecc59026e157a4406c1840d85cbaeb6332eb7721ee192968",
+   "bytes": 5768,
+   "git_state": "committed",
+   "mtime": "2026-10-07T11:34:49"
+  },
+  {
+   "copy": "RLM/scripts/run_gepa_bcp2.sh",
+   "source": "RLM:scripts/run_gepa_bcp2.sh",
+   "sha256": "0302c36bb37e743d42f7450c7972695d14c3c2eddadb8b50ba622ff96f060383",
+   "bytes": 2011,
+   "git_state": "committed",
+   "mtime": "2026-10-08T14:16:39"
+  },
+  {
+   "copy": "RLM/scripts/frames_gepa_chain.sh",
+   "source": "RLM:scripts/frames_gepa_chain.sh",
+   "sha256": "760e937b1ba83ec6ad3ad2691d0e77e39f62ccf815acd52ed7aa0acf10a1471f",
+   "bytes": 1732,
+   "git_state": "committed",
+   "mtime": "2026-10-15T09:41:16"
+  },
+  {
+   "copy": "RLM/scripts/frames_gepa_chain_1gpu.sh",
+   "source": "RLM:scripts/frames_gepa_chain_1gpu.sh",
+   "sha256": "81ef58649bf43c3ae0e698bdb37787491e8a787424fb29d301d4b91c148f8cba",
+   "bytes": 1379,
+   "git_state": "committed",
+   "mtime": "2026-10-15T15:25:11"
+  },
+  {
+   "copy": "RLM/logs/run_gepa_bcp_frozen.sh",
+   "source": "RLM:logs/run_gepa_bcp_frozen.sh",
+   "sha256": "bcad2224ec592af768d6e3d2fa6609452f87eb9a0d7078405f444e024067be4a",
+   "bytes": 5426,
+   "git_state": "committed",
+   "mtime": "2026-10-07T08:26:31"
+  },
+  {
+   "copy": "RLM/logs/run_gepa_bcp2_frozen.sh",
+   "source": "RLM:logs/run_gepa_bcp2_frozen.sh",
+   "sha256": "6d6cb91252f6e65521f5b94cc4ddd7ebc97448bf9b8ba8c159a2b467ffa05712",
+   "bytes": 1911,
+   "git_state": "committed",
+   "mtime": "2026-10-08T13:58:38"
+  },
+  {
+   "copy": "RLM/logs/gepa_bcp2/continue_after_fix.sh",
+   "source": "RLM:logs/gepa_bcp2/continue_after_fix.sh",
+   "sha256": "63fb5fc25efdac61cc89d4dd7dfe3f0e5913bbff5f66fcc33b4dac869c9f9c7f",
+   "bytes": 1535,
+   "git_state": "committed",
+   "mtime": "2026-10-08T17:11:25"
+  },
+  {
+   "copy": "RLM/logs/gepa_bcp/restart_after_c36.sh",
+   "source": "RLM:logs/gepa_bcp/restart_after_c36.sh",
+   "sha256": "95f598195be17277b86cb932881d46945ef097e39326c515d83268f587e084dc",
+   "bytes": 1251,
+   "git_state": "committed",
+   "mtime": "2026-10-08T10:18:54"
+  },
+  {
+   "copy": "RLM/scripts/gepa_official_obliq.py",
+   "source": "RLM:scripts/gepa_official_obliq.py",
+   "sha256": "cec517c9116645c325568b3f130a61e55b657755d4d0206798e23b5ed8d084ea",
+   "bytes": 11053,
+   "git_state": "committed",
+   "mtime": "2026-09-28T07:45:33"
+  },
+  {
+   "copy": "RLM/scripts/gepa_official_obliq_v2.py",
+   "source": "RLM:scripts/gepa_official_obliq_v2.py",
+   "sha256": "a3264478a136f040ee74c120dd4e47a0ba2913191a450cff3e9201b16fd0c792",
+   "bytes": 13848,
+   "git_state": "committed",
+   "mtime": "2026-09-29T08:13:08"
+  },
+  {
+   "copy": "RLM/scripts/gepa_paper.py",
+   "source": "RLM:scripts/gepa_paper.py",
+   "sha256": "d51ae6ec94abc344fa9ef39ef8e486a227d35a067217c7dcba51b16e9150830f",
+   "bytes": 20022,
+   "git_state": "committed",
+   "mtime": "2026-10-04T00:09:57"
+  },
+  {
+   "copy": "RLM/scripts/gepa_night.py",
+   "source": "RLM:scripts/gepa_night.py",
+   "sha256": "f1db08c454f44243dfa1a4fc57dc025101f73fe26bc38fb41b50a8885120a0db",
+   "bytes": 18866,
+   "git_state": "committed",
+   "mtime": "2026-10-03T06:28:05"
+  },
+  {
+   "copy": "RLM/scripts/gepa_night.py.bak-leak",
+   "source": "RLM:scripts/gepa_night.py.bak-leak",
+   "sha256": "371518fbe7ecc1c940c9e85cee43aadf7ecbf7aa3a6d951772dbf3a21cd6710d",
+   "bytes": 16381,
+   "git_state": "committed",
+   "mtime": "2026-10-02T20:04:24"
+  },
+  {
+   "copy": "RLM/scripts/gepa_wide.py",
+   "source": "RLM:scripts/gepa_wide.py",
+   "sha256": "567af5e1e6fffe017e98a8e00e2a9201ce536ca09cfae35f5654d657560611c9",
+   "bytes": 24878,
+   "git_state": "committed",
+   "mtime": "2026-10-04T20:38:39"
+  },
+  {
+   "copy": "RLM/scripts/validate_wide.py",
+   "source": "RLM:scripts/validate_wide.py",
+   "sha256": "910c9304ddbe19d7d6da3e86dbd9319747cf4836cfa064ca450b6b717e69949b",
+   "bytes": 3832,
+   "git_state": "committed",
+   "mtime": "2026-10-05T07:20:07"
+  },
+  {
+   "copy": "RLM/scripts/trace_check.py",
+   "source": "RLM:scripts/trace_check.py",
+   "sha256": "730c9ba5eac2f83cf75ed6022ed86c64eaf4c2997c08fc12cd086bae3c21dcc9",
+   "bytes": 8543,
+   "git_state": "committed",
+   "mtime": "2026-10-05T01:13:50"
+  },
+  {
+   "copy": "RLM/scripts/night_chain.sh",
+   "source": "RLM:scripts/night_chain.sh",
+   "sha256": "6499d66540ed2800f8565594f4b8d1787a3e39563304d4123583562eb4d125b4",
+   "bytes": 4489,
+   "git_state": "committed",
+   "mtime": "2026-10-02T20:33:44"
+  },
+  {
+   "copy": "RLM/scripts/overnight2.sh",
+   "source": "RLM:scripts/overnight2.sh",
+   "sha256": "d8048a9ae941924e40799afb352be35af08113f59aa3d1f217bdd9b1946f8461",
+   "bytes": 1782,
+   "git_state": "committed",
+   "mtime": "2026-10-04T00:08:59"
+  },
+  {
+   "copy": "RLM/scripts/overnight3.sh",
+   "source": "RLM:scripts/overnight3.sh",
+   "sha256": "7ef4f9f71904488e6668ec6468664071a97e35040fa16d9ff2d716d26e9cb7f8",
+   "bytes": 1955,
+   "git_state": "committed",
+   "mtime": "2026-10-04T08:16:22"
+  },
+  {
+   "copy": "RLM/scripts/night5.sh",
+   "source": "RLM:scripts/night5.sh",
+   "sha256": "bdb9e28323bc822d9c15ca0778106974cd13277c0f06da06f15a93a10c0b0041",
+   "bytes": 536,
+   "git_state": "committed",
+   "mtime": "2026-10-04T13:15:41"
+  },
+  {
+   "copy": "RLM/scripts/night6.sh",
+   "source": "RLM:scripts/night6.sh",
+   "sha256": "a48be9c07a7bd4f8f95428424d3c75cfd54ea9dd8075faa894046ee708492d28",
+   "bytes": 554,
+   "git_state": "committed",
+   "mtime": "2026-10-04T20:19:15"
+  },
+  {
+   "copy": "RLM/scripts/night7_newmodel.sh",
+   "source": "RLM:scripts/night7_newmodel.sh",
+   "sha256": "8c3559b746f89cbee66c42ed77a2b62a6121a412841614272cb6d13cbb22e7b4",
+   "bytes": 13189,
+   "git_state": "committed",
+   "mtime": "2026-10-04T21:53:18"
+  },
+  {
+   "copy": "RLM/scripts/night8_gepa27_finish.sh",
+   "source": "RLM:scripts/night8_gepa27_finish.sh",
+   "sha256": "c5f76443954e774d59147151ab1fb820fb3bbe94aee092b811bf64db04954d1f",
+   "bytes": 5092,
+   "git_state": "committed",
+   "mtime": "2026-10-04T22:36:57"
+  },
+  {
+   "copy": "RLM/scripts/on_gepa_finish.sh",
+   "source": "RLM:scripts/on_gepa_finish.sh",
+   "sha256": "2c024e8d193da9469226b282f1d01590749482c7594093cc222611025be90634",
+   "bytes": 2051,
+   "git_state": "committed",
+   "mtime": "2026-10-04T14:08:34"
+  },
+  {
+   "copy": "RLM/scripts/watchdog.sh",
+   "source": "RLM:scripts/watchdog.sh",
+   "sha256": "1b2d7394215ba25883a1ed50ac69ecc7d0a623631a6aa472a4a6853d71adff13",
+   "bytes": 5461,
+   "git_state": "committed",
+   "mtime": "2026-10-05T13:31:36"
+  },
+  {
+   "copy": "RLM/logs/night7/chain_frozen.sh",
+   "source": "RLM:logs/night7/chain_frozen.sh",
+   "sha256": "8c3559b746f89cbee66c42ed77a2b62a6121a412841614272cb6d13cbb22e7b4",
+   "bytes": 13189,
+   "git_state": "committed",
+   "mtime": "2026-10-04T21:53:29"
+  },
+  {
+   "copy": "RLM/logs/night7/watchdog_frozen.sh",
+   "source": "RLM:logs/night7/watchdog_frozen.sh",
+   "sha256": "94285043e0d4b5f5e470ed71ea15ab2d8ae01526bd9159708e653830419d07c5",
+   "bytes": 5460,
+   "git_state": "committed",
+   "mtime": "2026-10-05T01:12:35"
+  },
+  {
+   "copy": "RLM/logs/night8_frozen.sh",
+   "source": "RLM:logs/night8_frozen.sh",
+   "sha256": "c5f76443954e774d59147151ab1fb820fb3bbe94aee092b811bf64db04954d1f",
+   "bytes": 5092,
+   "git_state": "committed",
+   "mtime": "2026-10-05T01:12:02"
+  },
+  {
+   "copy": "RLM/scripts/hover_baseline.py",
+   "source": "RLM:scripts/hover_baseline.py",
+   "sha256": "cf3690b721044b4cf4510e3411605c8dc293b15808ea14343fc7a52b6e3ecde7",
+   "bytes": 1787,
+   "git_state": "committed",
+   "mtime": "2026-10-08T14:06:36"
+  },
+  {
+   "copy": "RLM/scripts/hover_build_index.py",
+   "source": "RLM:scripts/hover_build_index.py",
+   "sha256": "0ebb2e9ab8d4476cd26ae9841653806f75922fc77bb164afface060db4909e11",
+   "bytes": 1037,
+   "git_state": "committed",
+   "mtime": "2026-10-08T13:58:35"
+  },
+  {
+   "copy": "RLM/scripts/hover_gepa.py",
+   "source": "RLM:scripts/hover_gepa.py",
+   "sha256": "e0f0c8a1e5f4f244cc5be9c2f0058a7cb33ea932257126e97e73ff4ad0b6439f",
+   "bytes": 15231,
+   "git_state": "committed",
+   "mtime": "2026-10-10T06:51:46"
+  },
+  {
+   "copy": "RLM/scripts/hover_make_splits.py",
+   "source": "RLM:scripts/hover_make_splits.py",
+   "sha256": "0ff4831d92af68b82fa03d2711651aae662b478a6acaa803875135986fdd6c08",
+   "bytes": 3421,
+   "git_state": "committed",
+   "mtime": "2026-10-08T13:59:37"
+  },
+  {
+   "copy": "RLM/scripts/hover_retriever.py",
+   "source": "RLM:scripts/hover_retriever.py",
+   "sha256": "6b846a5bd0da5e1a5747a4b885cd3ab2fcdf45a23e50460eb75264b00b312ed3",
+   "bytes": 6193,
+   "git_state": "committed",
+   "mtime": "2026-10-10T06:51:46"
+  },
+  {
+   "copy": "RLM/scripts/run_hover_gepa.sh",
+   "source": "RLM:scripts/run_hover_gepa.sh",
+   "sha256": "d80d6262b4954b53e8f73a8a7eac75e4dc8ff3adee87245255b89386f55ebc44",
+   "bytes": 1542,
+   "git_state": "committed",
+   "mtime": "2026-10-10T06:44:03"
+  },
+  {
+   "copy": "RLM/logs/run_hover_gepa_frozen.sh",
+   "source": "RLM:logs/run_hover_gepa_frozen.sh",
+   "sha256": "d80d6262b4954b53e8f73a8a7eac75e4dc8ff3adee87245255b89386f55ebc44",
+   "bytes": 1542,
+   "git_state": "committed",
+   "mtime": "2026-10-10T06:52:04"
+  }
+ ],
+ "source_roots": {
+  "RLM": {
+   "git_head": "67f0fe2966c092a9df1c5466cd5d4281c625cb30",
+   "note": "working tree, including uncommitted changes"
+  },
+  "FULLDOC": {
+   "git_head": null,
+   "note": "not a git repository; files as on disk"
+  },
+  "TRANSCRIPT": {
+   "note": "Claude Code session transcripts (JSON lines), read only"
+  }
+ }
+}

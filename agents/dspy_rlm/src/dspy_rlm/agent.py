@@ -395,8 +395,11 @@ def build_rlm_agent(
         # printing a 90k-token outlier would blow the context that makes this work.
         cap = int(os.environ.get("GETDOC_INLINE_CHARS", "6000"))
         inline = len(text) <= cap
+        # DSPY_QUIET_GETDOC=1 (2026-10-31 ablation): no reading advice in this line, as in the snippet RLM, whose
+        # get_document prints nothing. Unset = unchanged.
+        _adv = "" if os.environ.get("DSPY_QUIET_GETDOC", "") == "1" else (", INLINE" if inline else ", too long — use llm_query")
         print(f"    [getdoc #{metrics.get_document_calls}] {doc_id}  "
-              f"({len(text)} chars, {'INLINE' if inline else 'too long — use llm_query'})"
+              f"({len(text)} chars{_adv})"
               f"  ({elapsed*1000:.0f}ms)")
         if inline and text:
             print(f"--- BEGIN {doc_id} ---\n{text}\n--- END {doc_id} ---")
@@ -529,6 +532,9 @@ def build_rlm_agent(
         verbose=verbose,
         sub_lm=base_sub_lm,
     )
+    # DSPY_MAX_LLM_CALLS lifts dspy.RLM's sub-LLM call cap (default 50); the snippet RLM has none. Unset = unchanged.
+    if os.environ.get("DSPY_MAX_LLM_CALLS", ""):
+        _rlm_kwargs["max_llm_calls"] = int(os.environ["DSPY_MAX_LLM_CALLS"])
     if _moc:
         _rlm_kwargs["max_output_chars"] = int(_moc)
         print(f"    [max_output_chars = {int(_moc):,} (dspy default is 10,000)]")

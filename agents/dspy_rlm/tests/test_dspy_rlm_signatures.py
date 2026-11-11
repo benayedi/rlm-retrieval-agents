@@ -39,8 +39,10 @@ def test_every_signature_is_constructible(name):
 
 def test_same_signature_set_and_instructions_as_original(original_rag):
     new, old = _signature_classes(S), _signature_classes(original_rag.signatures)
-    assert set(new) == set(old)
-    for name in new:
+    # src/ also carries v21 (BrowseCompSnippetPromptSignature), added 2026-10-31 for the DSPy ablation (DSA-3/5);
+    # it is compared with the second snapshot in test_dspy_rlm_second_snapshot.py.
+    assert set(new) == set(old) | {"BrowseCompSnippetPromptSignature"}
+    for name in old:
         assert new[name].instructions == old[name].instructions, name
         assert new[name].__name__ == old[name].__name__, name
         for fld in ("question", "answer"):

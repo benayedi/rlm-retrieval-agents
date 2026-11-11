@@ -1,0 +1,5 @@
+ALL 830   n=830  acc=0.794  gold_recall=0.708  median_wall=506s  strata={'error': 35, 'ok_r0': 16, 'ok_rfull': 422, 'ok_rpart': 221, 'wrong_r0': 91, 'wrong_rfull': 21, 'wrong_rpart': 24}
+pareto    n=100  acc=0.800  gold_recall=0.694  median_wall=499s  strata={'error': 4, 'ok_r0': 2, 'ok_rfull': 51, 'ok_rpart': 27, 'wrong_r0': 11, 'wrong_rfull': 2, 'wrong_rpart': 3}
+feedback  n=200  acc=0.795  gold_recall=0.718  median_wall=503s  strata={'error': 8, 'ok_r0': 4, 'ok_rfull': 102, 'ok_rpart': 53, 'wrong_r0': 22, 'wrong_rfull': 5, 'wrong_rpart': 6}
+test200   n=200  acc=0.790  gold_recall=0.696  median_wall=502s  strata={'error': 9, 'ok_r0': 4, 'ok_rfull': 101, 'ok_rpart': 53, 'wrong_r0': 22, 'wrong_rfull': 5, 'wrong_rpart': 6}
+test_rest n=330  acc=0.794  gold_recall=0.714  median_wall=508s  strata={'error': 14, 'ok_r0': 6, 'ok_rfull': 168, 'ok_rpart': 88, 'wrong_r0': 36, 'wrong_rfull': 9, 'wrong_rpart': 9}

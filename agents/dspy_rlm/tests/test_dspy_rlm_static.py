@@ -16,6 +16,7 @@ import pytest
 ALGO = Path(__file__).resolve().parents[1]
 SRC = ALGO / "src"
 ORIG = ALGO / "original" / "RLM"
+ORIG2 = ALGO / "original" / "RLM_2026-11-11" / "RLM"   # second snapshot: the files the DSA-3/5 ablation ran
 
 
 @pytest.mark.parametrize("path", sorted(SRC.rglob("*.py")), ids=lambda p: str(p.relative_to(ALGO)))
@@ -40,10 +41,19 @@ def _ast_without_module_docstring(path: Path) -> str:
     return ast.dump(tree, include_attributes=False)
 
 
-@pytest.mark.parametrize("name", ["__init__.py", "agent.py", "signatures.py", "tools.py"])
+@pytest.mark.parametrize("name", ["__init__.py", "tools.py"])
 def test_package_code_identical_to_original(name):
+    # unchanged between the two snapshots
     assert _ast_without_module_docstring(SRC / "dspy_rlm" / name) == \
-        _ast_without_module_docstring(ORIG / "rag" / name)
+        _ast_without_module_docstring(ORIG / "rag" / name) == _ast_without_module_docstring(ORIG2 / "rag" / name)
+
+
+@pytest.mark.parametrize("name", ["agent.py", "signatures.py"])
+def test_package_code_identical_to_second_snapshot(name):
+    # agent.py / signatures.py gained the opt-in switches DSPY_QUIET_GETDOC, DSPY_MAX_LLM_CALLS and signature v21
+    # on 2026-10-31 (defaults unchanged); src/ carries exactly those additions.
+    assert _ast_without_module_docstring(SRC / "dspy_rlm" / name) == \
+        _ast_without_module_docstring(ORIG2 / "rag" / name)
 
 
 def _normalised_driver_ast(path: Path, is_original: bool) -> str:
@@ -51,8 +61,27 @@ def _normalised_driver_ast(path: Path, is_original: bool) -> str:
 
 
 def test_run_browsecomp_differs_only_in_import_wiring():
-    assert _normalised_driver_ast(SRC / "run_browsecomp.py", False) == \
+    # src/ = the 2026-10-30 driver + the two v21 entries of 2026-10-31 (signature table, --sig choices). The
+    # 2026-10-31 result-queue fix (read before join) is NOT in src/: it is a bug fix, kept in the second snapshot only.
+    new = (SRC / "run_browsecomp.py").read_text(encoding="utf-8")
+    v21 = '    "v21": __import__("dspy_rlm.signatures", fromlist=["x"]).BrowseCompSnippetPromptSignature,\n'
+    assert new.count(v21) == 1 and new.count('"v20", "v21"], default="v1"') == 1
+    new = new.replace(v21, "").replace('"v20", "v21"], default="v1"', '"v20"], default="v1"')
+    assert _normalised_from_source(new, False) == \
         _normalised_driver_ast(ORIG / "examples" / "browsecomp_eval_dspy_rlm.py", True)
+
+
+def test_second_snapshot_driver_adds_v21_and_the_queue_fix_only():
+    """What the DSA launchers run (original/RLM_2026-11-11) vs the 2026-10-30 driver: v21 and the result-queue fix."""
+    import difflib
+    a = (ORIG / "examples" / "browsecomp_eval_dspy_rlm.py").read_text(encoding="utf-8").splitlines()
+    b = (ORIG2 / "examples" / "browsecomp_eval_dspy_rlm.py").read_text(encoding="utf-8").splitlines()
+    added = [l[1:] for l in difflib.unified_diff(a, b, lineterm="", n=0) if l.startswith("+") and not l.startswith("+++")]
+    removed = [l[1:] for l in difflib.unified_diff(a, b, lineterm="", n=0) if l.startswith("-") and not l.startswith("---")]
+    assert removed == ["        p.join(timeout)", "            status, *rest = q.get()",
+                       [l for l in a if "--sig" in l and "choices" in l][0]]
+    assert any("BrowseCompSnippetPromptSignature" in l for l in added)
+    assert any("msg = q.get(timeout=5)" in l for l in added)
 
 
 def test_run_obliq_differs_only_in_wiring_and_obliq_root():

@@ -1,0 +1,528 @@
+{
+ "seed": 20261031,
+ "population": 775,
+ "strata": {
+  "S4 no cap, both right": {
+   "pop": 474,
+   "n": 20
+  },
+  "S3 no cap, DSPy and snippet disagree": {
+   "pop": 77,
+   "n": 20
+  },
+  "S1 DSPy hit turn cap, snippet right": {
+   "pop": 106,
+   "n": 35
+  },
+  "S2 DSPy hit turn cap, snippet wrong": {
+   "pop": 83,
+   "n": 15
+  },
+  "S5 no cap, both wrong": {
+   "pop": 35,
+   "n": 10
+  }
+ },
+ "questions": [
+  {
+   "qid": "853",
+   "q_idx": 58,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "856",
+   "q_idx": 60,
+   "stratum": "S2 DSPy hit turn cap, snippet wrong"
+  },
+  {
+   "qid": "863",
+   "q_idx": 62,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "864",
+   "q_idx": 63,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "869",
+   "q_idx": 66,
+   "stratum": "S2 DSPy hit turn cap, snippet wrong"
+  },
+  {
+   "qid": "870",
+   "q_idx": 67,
+   "stratum": "S5 no cap, both wrong"
+  },
+  {
+   "qid": "239",
+   "q_idx": 90,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "244",
+   "q_idx": 94,
+   "stratum": "S2 DSPy hit turn cap, snippet wrong"
+  },
+  {
+   "qid": "249",
+   "q_idx": 98,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "1039",
+   "q_idx": 147,
+   "stratum": "S2 DSPy hit turn cap, snippet wrong"
+  },
+  {
+   "qid": "1040",
+   "q_idx": 148,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "1043",
+   "q_idx": 151,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "1052",
+   "q_idx": 158,
+   "stratum": "S5 no cap, both wrong"
+  },
+  {
+   "qid": "1068",
+   "q_idx": 169,
+   "stratum": "S2 DSPy hit turn cap, snippet wrong"
+  },
+  {
+   "qid": "3",
+   "q_idx": 174,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "18",
+   "q_idx": 183,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "30",
+   "q_idx": 190,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "470",
+   "q_idx": 197,
+   "stratum": "S2 DSPy hit turn cap, snippet wrong"
+  },
+  {
+   "qid": "472",
+   "q_idx": 199,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "481",
+   "q_idx": 203,
+   "stratum": "S2 DSPy hit turn cap, snippet wrong"
+  },
+  {
+   "qid": "505",
+   "q_idx": 222,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "511",
+   "q_idx": 226,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "514",
+   "q_idx": 229,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "524",
+   "q_idx": 237,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "539",
+   "q_idx": 249,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "544",
+   "q_idx": 253,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "546",
+   "q_idx": 254,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "549",
+   "q_idx": 256,
+   "stratum": "S5 no cap, both wrong"
+  },
+  {
+   "qid": "550",
+   "q_idx": 257,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "552",
+   "q_idx": 259,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "561",
+   "q_idx": 265,
+   "stratum": "S2 DSPy hit turn cap, snippet wrong"
+  },
+  {
+   "qid": "266",
+   "q_idx": 273,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "268",
+   "q_idx": 275,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "276",
+   "q_idx": 278,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "283",
+   "q_idx": 283,
+   "stratum": "S5 no cap, both wrong"
+  },
+  {
+   "qid": "327",
+   "q_idx": 313,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "349",
+   "q_idx": 322,
+   "stratum": "S2 DSPy hit turn cap, snippet wrong"
+  },
+  {
+   "qid": "357",
+   "q_idx": 328,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "52",
+   "q_idx": 336,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "70",
+   "q_idx": 351,
+   "stratum": "S5 no cap, both wrong"
+  },
+  {
+   "qid": "74",
+   "q_idx": 354,
+   "stratum": "S5 no cap, both wrong"
+  },
+  {
+   "qid": "571",
+   "q_idx": 359,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "587",
+   "q_idx": 370,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "595",
+   "q_idx": 377,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "600",
+   "q_idx": 381,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "614",
+   "q_idx": 389,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "630",
+   "q_idx": 399,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "639",
+   "q_idx": 407,
+   "stratum": "S5 no cap, both wrong"
+  },
+  {
+   "qid": "1204",
+   "q_idx": 444,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "1207",
+   "q_idx": 446,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "1212",
+   "q_idx": 451,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "1219",
+   "q_idx": 458,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "1222",
+   "q_idx": 461,
+   "stratum": "S2 DSPy hit turn cap, snippet wrong"
+  },
+  {
+   "qid": "1226",
+   "q_idx": 465,
+   "stratum": "S5 no cap, both wrong"
+  },
+  {
+   "qid": "1228",
+   "q_idx": 467,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "1231",
+   "q_idx": 469,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "1233",
+   "q_idx": 471,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "1237",
+   "q_idx": 475,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "1238",
+   "q_idx": 476,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "904",
+   "q_idx": 512,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "905",
+   "q_idx": 513,
+   "stratum": "S2 DSPy hit turn cap, snippet wrong"
+  },
+  {
+   "qid": "915",
+   "q_idx": 519,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "942",
+   "q_idx": 535,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "962",
+   "q_idx": 547,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "672",
+   "q_idx": 559,
+   "stratum": "S2 DSPy hit turn cap, snippet wrong"
+  },
+  {
+   "qid": "689",
+   "q_idx": 571,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "713",
+   "q_idx": 587,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "725",
+   "q_idx": 598,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "728",
+   "q_idx": 600,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "734",
+   "q_idx": 605,
+   "stratum": "S5 no cap, both wrong"
+  },
+  {
+   "qid": "751",
+   "q_idx": 617,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "761",
+   "q_idx": 625,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "177",
+   "q_idx": 629,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "178",
+   "q_idx": 630,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "183",
+   "q_idx": 634,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "200",
+   "q_idx": 644,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "127",
+   "q_idx": 658,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "132",
+   "q_idx": 662,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "1077",
+   "q_idx": 667,
+   "stratum": "S5 no cap, both wrong"
+  },
+  {
+   "qid": "1092",
+   "q_idx": 677,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "1097",
+   "q_idx": 682,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "1105",
+   "q_idx": 687,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "1110",
+   "q_idx": 691,
+   "stratum": "S2 DSPy hit turn cap, snippet wrong"
+  },
+  {
+   "qid": "1121",
+   "q_idx": 697,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "1148",
+   "q_idx": 713,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "82",
+   "q_idx": 730,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "105",
+   "q_idx": 747,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "106",
+   "q_idx": 748,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "371",
+   "q_idx": 757,
+   "stratum": "S2 DSPy hit turn cap, snippet wrong"
+  },
+  {
+   "qid": "372",
+   "q_idx": 758,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "393",
+   "q_idx": 769,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "396",
+   "q_idx": 772,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  },
+  {
+   "qid": "406",
+   "q_idx": 778,
+   "stratum": "S2 DSPy hit turn cap, snippet wrong"
+  },
+  {
+   "qid": "418",
+   "q_idx": 787,
+   "stratum": "S4 no cap, both right"
+  },
+  {
+   "qid": "429",
+   "q_idx": 796,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "467",
+   "q_idx": 811,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "153",
+   "q_idx": 814,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "161",
+   "q_idx": 820,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "174",
+   "q_idx": 827,
+   "stratum": "S1 DSPy hit turn cap, snippet right"
+  },
+  {
+   "qid": "176",
+   "q_idx": 829,
+   "stratum": "S3 no cap, DSPy and snippet disagree"
+  }
+ ]
+}

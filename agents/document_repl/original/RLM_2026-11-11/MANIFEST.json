@@ -1,0 +1,50 @@
+{
+ "created": "2026-11-11T15:48:26+00:00",
+ "files": [
+  {
+   "copy": "RLM/logs/gepa_bcp.py.bak_1012",
+   "source": "RLM:logs/gepa_bcp.py.bak_1012",
+   "sha256": "a76eaf5c59750ba29d401f09ead9ab945d88b442533bcb44b461f833d0b9f3fb",
+   "bytes": 33965,
+   "git_state": "committed",
+   "mtime": "2026-10-12T20:28:45"
+  },
+  {
+   "copy": "RLM/scripts/frames_s25_full.sh",
+   "source": "RLM:scripts/frames_s25_full.sh",
+   "sha256": "3f56f3ec6fab9076880aef7a575fdd928dfeab5322aec49667fe3c13dddee836",
+   "bytes": 1031,
+   "git_state": "committed",
+   "mtime": "2026-10-19T06:37:01"
+  },
+  {
+   "copy": "RLM/scripts/frames_s25_chain.sh",
+   "source": "RLM:scripts/frames_s25_chain.sh",
+   "sha256": "663618f1d22e232a55ade7226a8ff2eafc3960c063720fb599ac9248218e2384",
+   "bytes": 693,
+   "git_state": "committed",
+   "mtime": "2026-10-18T16:10:15"
+  },
+  {
+   "copy": "RLM/scripts/frames_s25_full_report.py",
+   "source": "RLM:scripts/frames_s25_full_report.py",
+   "sha256": "d4e8fb691d5b48c55f17e2bc58f07092c76899aaa8864fe1e7e81dce90b5f2e3",
+   "bytes": 1481,
+   "git_state": "committed",
+   "mtime": "2026-10-19T06:37:01"
+  }
+ ],
+ "source_roots": {
+  "RLM": {
+   "git_head": "67f0fe2966c092a9df1c5466cd5d4281c625cb30",
+   "note": "working tree, including uncommitted changes"
+  },
+  "FULLDOC": {
+   "git_head": null,
+   "note": "not a git repository; files as on disk"
+  },
+  "TRANSCRIPT": {
+   "note": "Claude Code session transcripts (JSON lines), read only"
+  }
+ }
+}

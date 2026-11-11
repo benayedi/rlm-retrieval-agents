@@ -1,0 +1,178 @@
+{
+ "created": "2026-11-11T15:40:46+00:00",
+ "files": [
+  {
+   "copy": "RLM/scripts/bcp_rerank_proxy.py",
+   "source": "RLM:scripts/bcp_rerank_proxy.py",
+   "sha256": "4f49dc6f0f82cb6bea608b7ab58306ba469efeeedf3a9d2e61dba543063e2591",
+   "bytes": 12082,
+   "git_state": "committed",
+   "mtime": "2026-10-13T09:17:26"
+  },
+  {
+   "copy": "RLM/logs/restart_1013/bcp_rerank_proxy.v3.py",
+   "source": "RLM:logs/restart_1013/bcp_rerank_proxy.v3.py",
+   "sha256": "4af05ea3d0ddead147dbf87d7fa00edac8bb7c7a91d451ddfc0d8f3a8fe7ce45",
+   "bytes": 10870,
+   "git_state": "committed",
+   "mtime": "2026-10-13T09:17:21"
+  },
+  {
+   "copy": "RLM/scripts/bcp_policy_replay.py",
+   "source": "RLM:scripts/bcp_policy_replay.py",
+   "sha256": "03623d89ce4b0204048780916bda3b3a29a495fc7fa642b20443203a67cc5f5f",
+   "bytes": 3789,
+   "git_state": "committed",
+   "mtime": "2026-10-10T07:37:53"
+  },
+  {
+   "copy": "RLM/scripts/bcp_policy_cache.py",
+   "source": "RLM:scripts/bcp_policy_cache.py",
+   "sha256": "db85dfdfa60212f6242fb00698608f49de8537db554856a436c0803eb56208a3",
+   "bytes": 3252,
+   "git_state": "committed",
+   "mtime": "2026-10-10T07:57:29"
+  },
+  {
+   "copy": "RLM/scripts/bcp_policy_eval.py",
+   "source": "RLM:scripts/bcp_policy_eval.py",
+   "sha256": "e5bee7157bfbded4a7546eac3052fca0f7b97b2de80262e89256becfdf7b7416",
+   "bytes": 3309,
+   "git_state": "committed",
+   "mtime": "2026-10-10T07:59:23"
+  },
+  {
+   "copy": "RLM/scripts/bcp_novelty_eval.py",
+   "source": "RLM:scripts/bcp_novelty_eval.py",
+   "sha256": "1a2c768156482d4c42f220ecb3b5cecf5ee63ceddf14d26e391653334b4d55b0",
+   "bytes": 2736,
+   "git_state": "committed",
+   "mtime": "2026-10-10T08:35:32"
+  },
+  {
+   "copy": "RLM/scripts/bcp_rerank_eval.py",
+   "source": "RLM:scripts/bcp_rerank_eval.py",
+   "sha256": "beff5f599d5d586ebc41aa36daac509d88a1eeaa101d4f09ca883c0f0bd0d3f4",
+   "bytes": 5993,
+   "git_state": "committed",
+   "mtime": "2026-10-10T11:19:31"
+  },
+  {
+   "copy": "RLM/scripts/frames_rerank_eval.py",
+   "source": "RLM:scripts/frames_rerank_eval.py",
+   "sha256": "e8fe1db58bd655c998bafb42b657ddf4a2c9b8275d03d8fac51c069151010380",
+   "bytes": 7837,
+   "git_state": "committed",
+   "mtime": "2026-10-16T09:11:58"
+  },
+  {
+   "copy": "RLM/scripts/bcp_policy_compare.py",
+   "source": "RLM:scripts/bcp_policy_compare.py",
+   "sha256": "2a5a3da817904e8c281d92d68dae3bc3e56c2570e3e293e568612acbc8086a04",
+   "bytes": 2534,
+   "git_state": "committed",
+   "mtime": "2026-10-11T08:49:50"
+  },
+  {
+   "copy": "RLM/scripts/bcp_full830_compare.py",
+   "source": "RLM:scripts/bcp_full830_compare.py",
+   "sha256": "1129025df3acd9e742e07f78958c15c9786f9dacf7b7fffd2a6781a8514a38e4",
+   "bytes": 2519,
+   "git_state": "committed",
+   "mtime": "2026-10-14T14:48:17"
+  },
+  {
+   "copy": "RLM/scripts/frames_rr_compare.py",
+   "source": "RLM:scripts/frames_rr_compare.py",
+   "sha256": "00e0d255075028499c895b191648f1ca037a6caa37e22fec078a57a6e5228ca5",
+   "bytes": 1294,
+   "git_state": "committed",
+   "mtime": "2026-10-16T12:32:45"
+  },
+  {
+   "copy": "RLM/scripts/bcp_pilot_grade.py",
+   "source": "RLM:scripts/bcp_pilot_grade.py",
+   "sha256": "83a6b69092b7a530007762082f2b8f8440d568ae6e02ce713b25f2597c9cc136",
+   "bytes": 3828,
+   "git_state": "committed",
+   "mtime": "2026-10-27T11:37:34"
+  },
+  {
+   "copy": "RLM/scripts/obliq_rr_compare.py",
+   "source": "RLM:scripts/obliq_rr_compare.py",
+   "sha256": "af8116de192018efe40f9a6a45a70b92fe8c6626039c79a9f6875a9c5fb82c88",
+   "bytes": 3176,
+   "git_state": "committed",
+   "mtime": "2026-10-12T20:56:14"
+  },
+  {
+   "copy": "RLM/scripts/obliq_mine_rr_compare.py",
+   "source": "RLM:scripts/obliq_mine_rr_compare.py",
+   "sha256": "4006c97f1c255d15121029ad935de7efd767b4aed289bba81c4db050d09b3948",
+   "bytes": 2520,
+   "git_state": "committed",
+   "mtime": "2026-10-13T09:20:36"
+  },
+  {
+   "copy": "RLM/scripts/obliq_q36_next_report.py",
+   "source": "RLM:scripts/obliq_q36_next_report.py",
+   "sha256": "373689de3e58885811e41803f1c35d7141b49350714d5bdff31bfdc7a8d06820",
+   "bytes": 4141,
+   "git_state": "committed",
+   "mtime": "2026-10-21T18:31:39"
+  },
+  {
+   "copy": "RLM/scripts/frames_s25_rr_chain.sh",
+   "source": "RLM:scripts/frames_s25_rr_chain.sh",
+   "sha256": "5996e5c2ff1a3961c95919368a310332674fd697c7f3e2e4bcc410caeeaed4db",
+   "bytes": 2026,
+   "git_state": "committed",
+   "mtime": "2026-10-21T17:33:35"
+  },
+  {
+   "copy": "RLM/logs/restart_1013/restart_bcp_rr_servers.sh",
+   "source": "RLM:logs/restart_1013/restart_bcp_rr_servers.sh",
+   "sha256": "17f455be19e306d58b6152bc5db86b641d987f2b8797f74f2340c34b1cba9563",
+   "bytes": 618,
+   "git_state": "committed",
+   "mtime": "2026-10-14T20:11:19"
+  },
+  {
+   "copy": "RLM/logs/bcp_full830_watch.sh",
+   "source": "RLM:logs/bcp_full830_watch.sh",
+   "sha256": "76ecdad2787aa9c3e896ff2b978228134c61a8e91dfde9adb7062c95ffa49888",
+   "bytes": 667,
+   "git_state": "committed",
+   "mtime": "2026-10-14T14:47:56"
+  },
+  {
+   "copy": "RLM/logs/obliq_rr/overnight.sh",
+   "source": "RLM:logs/obliq_rr/overnight.sh",
+   "sha256": "27a37deb3a9c373d294f51bba6a154e12f1a325ee37d1b97aa9ec76ae6e29bd4",
+   "bytes": 1795,
+   "git_state": "committed",
+   "mtime": "2026-10-12T21:03:18"
+  },
+  {
+   "copy": "RLM/logs/obliq_mine_rr/watch.sh",
+   "source": "RLM:logs/obliq_mine_rr/watch.sh",
+   "sha256": "f049d6812e6d9b4b74a0395de1f0f36e2a08cbade9524ab7df9d6c9e8ebf23d2",
+   "bytes": 581,
+   "git_state": "committed",
+   "mtime": "2026-10-13T09:20:43"
+  }
+ ],
+ "source_roots": {
+  "RLM": {
+   "git_head": "67f0fe2966c092a9df1c5466cd5d4281c625cb30",
+   "note": "working tree, including uncommitted changes"
+  },
+  "FULLDOC": {
+   "git_head": null,
+   "note": "not a git repository; files as on disk"
+  },
+  "TRANSCRIPT": {
+   "note": "Claude Code session transcripts (JSON lines), read only"
+  }
+ }
+}
