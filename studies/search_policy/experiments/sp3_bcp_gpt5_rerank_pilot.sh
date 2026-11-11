@@ -17,7 +17,7 @@ set -u
 need_up http://127.0.0.1:8766/health "Reason-ModernColBERT 8192 (:8766)"
 CUDA_VISIBLE_DEVICES=0 POLICY=novelty+rerank UPSTREAM=http://127.0.0.1:8766 RERANK_MEM_FRACTION=0.5 RERANK_TOK_BUDGET=8000 \
   start_proxy 8772 "$RUNS_DIR/bcp_gpt5_rr_proxy8772.log"
-IDS_FILE=${IDS_FILE:-${RLM_DATA_DIR:?set RLM_DATA_DIR or IDS_FILE}/bcp_gpt5_rr/pilot100_ids.txt}
+IDS_FILE=${IDS_FILE:-$STUDY/experiments/inputs/pilot100_ids.txt}   # original: <RLM_DATA_DIR>/bcp_gpt5_rr/pilot100_ids.txt (byte-identical copy)
 SERVER=http://127.0.0.1:8772 IDS_FILE=$IDS_FILE OUT=$RUNS_DIR/bcp_gpt5_rr/rr W=${W:-6} \
   "$REPO/agents/document_repl/experiments/bcp_gpt5_colbert.sh"
 say "proxy stats: $(curl -s -m5 127.0.0.1:8772/stats)"

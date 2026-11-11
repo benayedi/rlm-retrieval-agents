@@ -33,9 +33,10 @@ run() {  # gpu-port ids-file out-dir
     "$REPO/agents/document_repl/experiments/frames_qwen.sh"
 }
 say "start: 412 q on GPU 0, 412 q on GPU 1"
-run 8030 $FRAMES_DATA_DIR/gepa_splits/all824_shuf_gpu0.txt $L/sup_q36_s25_rr_g0 > $L/s25_rr_g0.log 2>&1 & P0=$!
+FR_IDS=$REPO/agents/document_repl/configs/frames_ids   # original: <FRAMES_DATA_DIR>/gepa_splits (byte-identical copies)
+run 8030 $FR_IDS/all824_shuf_gpu0.txt $L/sup_q36_s25_rr_g0 > $L/s25_rr_g0.log 2>&1 & P0=$!
 sleep 120
-run 8031 $FRAMES_DATA_DIR/gepa_splits/all824_shuf_gpu1.txt $L/sup_q36_s25_rr_g1 > $L/s25_rr_g1.log 2>&1 & P1=$!
+run 8031 $FR_IDS/all824_shuf_gpu1.txt $L/sup_q36_s25_rr_g1 > $L/s25_rr_g1.log 2>&1 & P1=$!
 wait $P0 $P1
 say "proxy stats: $(curl -s 127.0.0.1:8042/stats)"
 if [ -n "${FRAMES_TITLE_COMPARE:-}" ]; then ARM=rr $PYV "$FRAMES_TITLE_COMPARE" --final   # original: ARM=rr $PYV scripts/frames_title_compare.py --final

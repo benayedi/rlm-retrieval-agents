@@ -17,7 +17,9 @@ def is_pointer(p):
 def test_manifest_consistent(m):
     x = json.loads(m.read_text())
     assert x["row"] == m.parent.name and x["members"] == len(x["files"]) > 0
-    assert x["encrypted"] == x["row"].startswith("BCP")            # every BrowseComp-Plus archive is encrypted
+    # every BrowseComp-Plus archive is encrypted: the results-table rows BCP-*, and the follow-up rows on BrowseComp-Plus
+    bcp_follow_up = {"SP-1", "SP-2", "SP-3", "DSA-3", "DSA-5", "GEPA-1", "GEPA-2", "VAR-2"}
+    assert x["encrypted"] == (x["row"].startswith("BCP") or x["row"] in bcp_follow_up)
     assert len({f["path"] for f in x["files"]}) == len(x["files"])   # no duplicate paths
     assert x["member_bytes"] == sum(f["bytes"] for f in x["files"])
     for part in x["archive_parts"]:

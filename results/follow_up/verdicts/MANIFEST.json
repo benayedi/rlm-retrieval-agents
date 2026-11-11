@@ -1,0 +1,131 @@
+{
+ "created": "2026-11-11T16:09:22+00:00",
+ "files": [
+  {
+   "copy": "bcp/16.json",
+   "source": "LOGS_ROOT:bcp_rejudge_gpt41/16.json",
+   "sha256": "bb7ea288831e6fd50ea0f78694fe3bd16efaeab8a86ae3c3c618b9217e01658b",
+   "bytes": 17219,
+   "mtime": "2026-10-27T12:58:53"
+  },
+  {
+   "copy": "bcp/17.json",
+   "source": "LOGS_ROOT:bcp_rejudge_gpt41/17.json",
+   "sha256": "f3d3a109989666e5221ad6b44ebebac2649fbfdbdfca17ffcca7da4a52f23148",
+   "bytes": 17140,
+   "mtime": "2026-10-27T12:59:59"
+  },
+  {
+   "copy": "bcp/rq4_rerank_only.json",
+   "source": "LOGS_ROOT:bcp_rejudge_gpt41/rq4_rerank_only.json",
+   "sha256": "55ab18b55e4f33695d856492dad97f5b49e97b73440dc382d7f979783e9be338",
+   "bytes": 3430,
+   "mtime": "2026-11-10T13:38:20"
+  },
+  {
+   "copy": "bcp/rq4_gepa_winner.json",
+   "source": "LOGS_ROOT:bcp_rejudge_gpt41/rq4_gepa_winner.json",
+   "sha256": "18de5018ad776030d87f8d7008901d0b19b4a66fa69e50bd2a0f11436b9c1958",
+   "bytes": 3464,
+   "mtime": "2026-11-10T13:39:34"
+  },
+  {
+   "copy": "bcp/rq4_summary.json",
+   "source": "LOGS_ROOT:bcp_rejudge_gpt41/rq4_summary.json",
+   "sha256": "50022bcae98bd8c347383e02e804f38267adf00dbdc21159a58e8c51c5262617",
+   "bytes": 708,
+   "mtime": "2026-11-10T13:39:34"
+  },
+  {
+   "copy": "bcp/pilot_rr.json",
+   "source": "LOGS_ROOT:bcp_rejudge_gpt41/pilot_rr.json",
+   "sha256": "056edf8f2cfb783ef67047569545a9168d116a484f7dffa578cf30bebeca171b",
+   "bytes": 2078,
+   "mtime": "2026-10-27T12:38:02"
+  },
+  {
+   "copy": "bcp/5.json",
+   "source": "LOGS_ROOT:bcp_rejudge_gpt41/5.json",
+   "sha256": "8cba1a74a8457b69b750da970aa7657d5099a002935b36ce7be196a05f5d7318",
+   "bytes": 16726,
+   "mtime": "2026-10-27T12:43:47"
+  },
+  {
+   "copy": "bcp/summary.json",
+   "source": "LOGS_ROOT:bcp_rejudge_gpt41/summary.json",
+   "sha256": "b465dfb91d631ee0f792c705ee111d267fa5dc9066da7c648c21f6844a5ea809",
+   "bytes": 6167,
+   "mtime": "2026-10-27T13:04:16"
+  },
+  {
+   "copy": "frames/sup_q36_bm25f/graded_gpt41.json",
+   "source": "LOGS_ROOT:frames/sup_q36_bm25f/graded_gpt41.json",
+   "sha256": "b338834928b2616bd90febc8baa10765727b9ce1cd4a1df1f65946e7d7e72567",
+   "bytes": 77890,
+   "mtime": "2026-10-28T09:35:23"
+  },
+  {
+   "copy": "frames/sup_q36_bm25f_s25/graded_gpt41.json",
+   "source": "LOGS_ROOT:frames/sup_q36_bm25f_s25/graded_gpt41.json",
+   "sha256": "dcc7279168202fc352bee756fd5d4a49e76f4f3d5f5ea62ad7d814f16fa2ca6c",
+   "bytes": 19047,
+   "mtime": "2026-11-10T13:40:55"
+  },
+  {
+   "copy": "frames/sup_q36_bm25f_s25_rest0/graded_gpt41.json",
+   "source": "LOGS_ROOT:frames/sup_q36_bm25f_s25_rest0/graded_gpt41.json",
+   "sha256": "430ecd344dc397b0340ab713b63d848dd64426789e4d8dbe7703de7fa4c5a403",
+   "bytes": 29516,
+   "mtime": "2026-11-10T13:42:42"
+  },
+  {
+   "copy": "frames/sup_q36_bm25f_s25_rest1/graded_gpt41.json",
+   "source": "LOGS_ROOT:frames/sup_q36_bm25f_s25_rest1/graded_gpt41.json",
+   "sha256": "616732fb2dfeffb26d4245575e60238a68a9574bd724c5a7c0f83cc27f789664",
+   "bytes": 29546,
+   "mtime": "2026-11-10T13:44:29"
+  },
+  {
+   "copy": "frames/sup_q36_s25_rr_g0/graded_gpt41.json",
+   "source": "LOGS_ROOT:frames/sup_q36_s25_rr_g0/graded_gpt41.json",
+   "sha256": "c75a9213b94421e928a7b5a6f11655c8c307be4749d8cf3ce1985d8a5c2d8e4d",
+   "bytes": 38267,
+   "mtime": "2026-11-10T13:46:56"
+  },
+  {
+   "copy": "frames/sup_q36_s25_rr_g1/graded_gpt41.json",
+   "source": "LOGS_ROOT:frames/sup_q36_s25_rr_g1/graded_gpt41.json",
+   "sha256": "7299369ff0f8b13a30b89f8e53ea97434d62e850b401e29c94354c2f560970e2",
+   "bytes": 38879,
+   "mtime": "2026-11-10T13:49:55"
+  },
+  {
+   "copy": "frames/gepa_frames_confirm_8ba345b481/graded_gpt41.json",
+   "source": "LOGS_ROOT:gepa_frames_confirm/rollouts/8ba345b481/graded_gpt41.json",
+   "sha256": "21f16c21b36b8eb4785d47826501f7a6568d496ca9913ef7ee61d71641eab398",
+   "bytes": 30660,
+   "mtime": "2026-11-10T13:51:18"
+  },
+  {
+   "copy": "frames/rejudge_gpt41_rq4_2026-11-10.log",
+   "source": "LOGS_ROOT:frames/rejudge_gpt41_rq4_2026-11-10.log",
+   "sha256": "06a9ea421416ccbdbea7de6599ddc994451d5d243fcde2363a089ae5f2dad77c",
+   "bytes": 1183,
+   "mtime": "2026-11-10T13:51:18"
+  },
+  {
+   "copy": "dspy_ablation/arm3_report.json",
+   "source": "LOGS_ROOT:dspy_ablation/arm3/report.json",
+   "sha256": "87df66431a7a7ca0d7e61a763439f271b60c52f41e172249d0db54dc86773ff9",
+   "bytes": 1432,
+   "mtime": "2026-10-31T19:51:22"
+  },
+  {
+   "copy": "dspy_ablation/arm5_report.json",
+   "source": "LOGS_ROOT:dspy_ablation/arm5/report.json",
+   "sha256": "0515f4ae5be6daa034ef13798c808bc7b3e1ce619eac57bb06d22a41786d909f",
+   "bytes": 1419,
+   "mtime": "2026-11-01T08:02:51"
+  }
+ ]
+}

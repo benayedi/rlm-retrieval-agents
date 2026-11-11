@@ -1,0 +1,1963 @@
+{
+"row": "GEPA-2",
+"agent": "prompt_optimisation",
+"created": "2026-11-11T16:11:32",
+"format": "tar (PAX) | zstd -19 --long=27 | openssl enc -aes-256-ctr -pbkdf2 -iter 200000 -salt, passphrase = BrowseComp canary string",
+"encrypted": true,
+"archive_parts": [
+{
+"file": "GEPA-2.tar.zst.enc",
+"bytes": 56113962,
+"sha256": "536352d49490f84de60f540a9b95c17a198a06e3c200c0104393d3994801b9e0"
+}
+],
+"members": 389,
+"member_bytes": 5232776762,
+"files": [
+{
+"path": "logs/bcp_rejudge_gpt41/rq4_gepa_winner.json",
+"bytes": 3464,
+"sha256": "18de5018ad776030d87f8d7008901d0b19b4a66fa69e50bd2a0f11436b9c1958"
+},
+{
+"path": "logs/gepa_bcp2/cache.json",
+"bytes": 2259430,
+"sha256": "909d3ea2d467865da0c789685c0277a57d366261555c97284c133743ba1cd0c4"
+},
+{
+"path": "logs/gepa_bcp2/candidate_tree.html",
+"bytes": 54744,
+"sha256": "426bac8711912b95a2f8f114dbc648c7ec5d18ff9d3ad148ee3b2bd821703ea8"
+},
+{
+"path": "logs/gepa_bcp2/candidates.json",
+"bytes": 46737,
+"sha256": "dbeeb29deb5423031175f8f1171bf2a2ef0363ae4fa900822f921bcaedcbccd1"
+},
+{
+"path": "logs/gepa_bcp2/chain.log",
+"bytes": 1254,
+"sha256": "9e5395a4796d6c6c5a0f15ee5bb37cd41572f801bde68aebcdf74a601b1c5b37"
+},
+{
+"path": "logs/gepa_bcp2/confirm_test200.log",
+"bytes": 792,
+"sha256": "768f0a3d66d9e3ab39c2df0b73a27888162b5c66e35f9e27bc034514d02d8a80"
+},
+{
+"path": "logs/gepa_bcp2/continue.out",
+"bytes": 0,
+"sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_0/iter_0_prog_0.json",
+"bytes": 6651,
+"sha256": "6c1a10755cb5fd1c222456a1f1e5b4d91d819d7e0539c97ee6704824e1182ea2"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_1/iter_0_prog_0.json",
+"bytes": 6952,
+"sha256": "d072ef451af14d87e7d0c2a6dbac2f15a73f72bf499f21b5a8733b349e625b3f"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_10/iter_0_prog_0.json",
+"bytes": 6566,
+"sha256": "f3ddc64863ac4e2d6aa27f61a2454acdb9dd0474eeb34b12aa08661496e52f6e"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_10/iter_5_prog_3.json",
+"bytes": 8029,
+"sha256": "1f09bef8ffb42c49361593d50899e457b473b82824070f400c9f0d11bbed91a5"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_11/iter_0_prog_0.json",
+"bytes": 6861,
+"sha256": "82b7afc80a5f18d4d5e0b8b27c6d2c0197c9c6609f9ac9a1a6914f0f5c267ae4"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_11/iter_3_prog_2.json",
+"bytes": 9715,
+"sha256": "b19f7ebb483176c1d73d5411b5978d8c25be02bcf907876def3d4555afd5be4f"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_12/iter_0_prog_0.json",
+"bytes": 6995,
+"sha256": "39719b450089df989e25994f4f43e893d71041f8dc8daea9dc67d1026d98d014"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_12/iter_5_prog_3.json",
+"bytes": 9296,
+"sha256": "6cf0360c839695595ab383f48e4272e4ebcf854501d74a5d2f977b0201d2c815"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_13/iter_0_prog_0.json",
+"bytes": 7056,
+"sha256": "c7a5e21813c625dd3b3ca23e545c044c4feeccf54312b361b4c4dfa70f4cdf97"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_13/iter_3_prog_2.json",
+"bytes": 9957,
+"sha256": "52f902ba99494bf3b8767b62a5ed9c192c1ee0f01cb4c67db9177753471cdb92"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_14/iter_0_prog_0.json",
+"bytes": 6516,
+"sha256": "c4c8c08968a2b7299beb441f5c3b1bc1c6cae4fe9ddda629d0c78cec328ae4eb"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_15/iter_0_prog_0.json",
+"bytes": 6939,
+"sha256": "5238184e36288ab47b738fd0ec9e8a08220310481309dfc03bfb0336dec326f8"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_15/iter_2_prog_1.json",
+"bytes": 8151,
+"sha256": "90fffdc864dc4de0cef9ba11b028f31717a981f2c317beb4390192b27bc2cebb"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_16/iter_0_prog_0.json",
+"bytes": 6930,
+"sha256": "2d08ad889b01d5fde11d71d6271b7efa14edb05ceb6f8634a040c68572ad4f75"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_16/iter_8_prog_5.json",
+"bytes": 11097,
+"sha256": "f41a5c967b2e0585cbbee880bcbadceebf87ad8cb9184b86f6c38798e9401b22"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_17/iter_0_prog_0.json",
+"bytes": 6679,
+"sha256": "2658f3150e6f36b752989f97ac50b1e726d9b6d0f27dd033f203aa6998bdb33f"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_18/iter_0_prog_0.json",
+"bytes": 6777,
+"sha256": "45f9cb6e2e5f5d01054aad9724c7d4d77c9e13f200172debf65a99d612d5199e"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_18/iter_2_prog_1.json",
+"bytes": 8123,
+"sha256": "3654346f610b7e2f2fc9469e2859c5a7b03d3bb273db707a21ec88905438b390"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_19/iter_0_prog_0.json",
+"bytes": 6859,
+"sha256": "d56a1a8b6640fe951584c699e0b484583c294579c9270280ac33a64ec1a4c501"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_19/iter_2_prog_1.json",
+"bytes": 7988,
+"sha256": "19d80ea4696b2ddf0808745fd148e1d9b25421d476c31bd19e001e6119dbb468"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_2/iter_0_prog_0.json",
+"bytes": 6616,
+"sha256": "d786ecf21a3aac1976147db27976492e07b70142dd845a3f24803e72dd7a8470"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_20/iter_0_prog_0.json",
+"bytes": 6833,
+"sha256": "60fa0bce9ac326714de51697c93ae6b2fbe3c56863ba591412529dc641fc4e3a"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_21/iter_0_prog_0.json",
+"bytes": 7075,
+"sha256": "a4365715624f3ab477314239ed414397340ac6571233a0e252156ec1918f451a"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_21/iter_2_prog_1.json",
+"bytes": 8430,
+"sha256": "474356129f7945a6bec34483d230671e8577d2aeeb3e3dbe62dddcfcc0d235ca"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_21/iter_3_prog_2.json",
+"bytes": 9373,
+"sha256": "c08553fdd4893f703a938a82dd05ca0ef9ccd1e66d053e8d50eb0457568ba572"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_22/iter_0_prog_0.json",
+"bytes": 6711,
+"sha256": "bef124430c9d218fe3db3c5ef214d60cb4fcb2150eb84fd23ef0d339d59da271"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_23/iter_0_prog_0.json",
+"bytes": 6842,
+"sha256": "a091f331d643d0690fbc4828c038647ab4dc1881ce7ebd09161a8fff413919a0"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_23/iter_3_prog_2.json",
+"bytes": 8244,
+"sha256": "0c3169c4f8808ea72bb900ba31175900065abeec9d9eb62f62ba72029e4fdda5"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_23/iter_6_prog_4.json",
+"bytes": 9802,
+"sha256": "2574fe4c0a36665f7164f6340238438b841b4553226ec3ac4ad500d0b1a19c86"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_23/iter_8_prog_5.json",
+"bytes": 9549,
+"sha256": "3f42f9ba3ef34270f645e21a54093f4cbd45f42657a9d52567d5a8d187505ab7"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_24/iter_0_prog_0.json",
+"bytes": 6378,
+"sha256": "1560ef5d9c3b2827f4b715e8a6f0a3261be59d8321a59e8d56f3cf88a0bb4d7b"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_25/iter_0_prog_0.json",
+"bytes": 6525,
+"sha256": "d1070cb80ef65d3690539894794479d3e8c2ffb8c8a711441e606a7a18f27901"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_25/iter_2_prog_1.json",
+"bytes": 8265,
+"sha256": "1b77f7da6adfb3e07b753fbb1c6b2f13b656e4f2f8adaf0299f49d290fdaa8d6"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_26/iter_0_prog_0.json",
+"bytes": 5445,
+"sha256": "e109083909575e724d0517365aabb1bde992a0a245b064468933f393fe0298ab"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_26/iter_2_prog_1.json",
+"bytes": 6757,
+"sha256": "b27f24356629aba4da82eb843ccaae149dbb347c887d45dbb77764f54b53303f"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_26/iter_3_prog_2.json",
+"bytes": 10083,
+"sha256": "46aa6a8722e1b82e26110826441338ecc8e2c350ffd080163b0d524faf0d3048"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_27/iter_0_prog_0.json",
+"bytes": 7090,
+"sha256": "fc01923dd402bbd85a9999c2164387926065ae8699d06f2fa9b3c503205008cb"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_27/iter_3_prog_2.json",
+"bytes": 8244,
+"sha256": "0c3169c4f8808ea72bb900ba31175900065abeec9d9eb62f62ba72029e4fdda5"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_28/iter_0_prog_0.json",
+"bytes": 6998,
+"sha256": "49376bd334442f226d85c7bac6f7715af42b68ccafee3e570ae21c9cef5949b5"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_28/iter_8_prog_5.json",
+"bytes": 11274,
+"sha256": "87230b369f5182c3488c0c1a0ea4ab1ed0e48252f82b8762e47ba0ce0ae239e4"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_29/iter_0_prog_0.json",
+"bytes": 7219,
+"sha256": "d600b84260cd94e23fe3bd6918db5537a97d692ca9606725b71d3acd65625f22"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_29/iter_2_prog_1.json",
+"bytes": 8841,
+"sha256": "780b34c0ea7d3f887c21fc24a55dfe6523df1e4f017b386d86a4483240d7e9e7"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_29/iter_8_prog_5.json",
+"bytes": 11066,
+"sha256": "15c580e245d2a8ce5dfcde8737db4265a3740798053b448d8a3febb7d36399db"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_3/iter_0_prog_0.json",
+"bytes": 6205,
+"sha256": "418c365396706beb8c7d4d3eeb50b42e519fb1ea3cb8d6938c7d6ec3654fbce9"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_30/iter_0_prog_0.json",
+"bytes": 7492,
+"sha256": "a08f9381fe648e02dc05c89106ca48345e80da9987af5859464d2af8337d543e"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_31/iter_0_prog_0.json",
+"bytes": 7260,
+"sha256": "38a296aafdb1329d425cc2f45168d55d24354d719a15bfaa22052fbf363d4bd0"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_31/iter_2_prog_1.json",
+"bytes": 8196,
+"sha256": "7f3d4e286a0bb3f64c9f659316684e2348bd630f64532bd2d9cdad0f778903ac"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_32/iter_0_prog_0.json",
+"bytes": 7151,
+"sha256": "c7d820214cbed7e01034e0f50f431f61ceec43c7f3c12165c71717bc7d3d12c3"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_32/iter_2_prog_1.json",
+"bytes": 8216,
+"sha256": "b71ebc4d772bfcd27249f88e229cb59498604f4ad19d48177ab79ecaac7c2640"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_33/iter_0_prog_0.json",
+"bytes": 6849,
+"sha256": "84aa16a901a4c2851c25d507ac38a7dfad7b703d669c109e928c46df4e596001"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_34/iter_0_prog_0.json",
+"bytes": 6797,
+"sha256": "71de0b119bc3ea419cb145ee96cf46e05a99e3061a153590dd0fa5542f98e4d2"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_35/iter_0_prog_0.json",
+"bytes": 6523,
+"sha256": "c3e3f8cfa83e4a7dc042ebfd30b9707c417bdde391ff40939c32b32c07fb19bb"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_36/iter_0_prog_0.json",
+"bytes": 6772,
+"sha256": "78533c37d089c9aff272f103f3ed32ffaed2044b5997eb565f3810e40949b689"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_36/iter_2_prog_1.json",
+"bytes": 7976,
+"sha256": "8ea69c87b8a97621361fd0caeb6b889404b50f74874aa151533a5f262ae319c5"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_36/iter_5_prog_3.json",
+"bytes": 9394,
+"sha256": "28899fc0b377a257d461f0d45e072ff91796dbcce5241ad0bfdd3781fae990e8"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_37/iter_0_prog_0.json",
+"bytes": 6948,
+"sha256": "e8d2f5d62820f7112ff5a9d1e40d7ba9e1cc4b953c81f6ff5c2be2e59801cf3d"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_38/iter_0_prog_0.json",
+"bytes": 6492,
+"sha256": "1fed3a12502fd3e436da95560cc0ad7a855d1a11ba051054672ab735e91f101a"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_38/iter_2_prog_1.json",
+"bytes": 7830,
+"sha256": "9993314a3afdc319eca746307ca98a958d1409ca8ad3830278be8eacd45bef92"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_38/iter_5_prog_3.json",
+"bytes": 9021,
+"sha256": "65622d0f2013ad5b7d83490ccd8902e482dadfac8239c5ebf3063cf73eae77a6"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_39/iter_0_prog_0.json",
+"bytes": 6926,
+"sha256": "ac4881129a74a05f6dfae8395318f63e5a104cc5711fa76cef38dc98223a0048"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_4/iter_0_prog_0.json",
+"bytes": 6572,
+"sha256": "1fb801a1666a9746abb378d1882ecd0395c564854b740d47a7dd62b30ffa9e26"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_40/iter_0_prog_0.json",
+"bytes": 6417,
+"sha256": "a82f185fdca5110d5b5855cadaf83cba0697e84d5188e5d0aaf2aa605a082a6e"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_41/iter_0_prog_0.json",
+"bytes": 6704,
+"sha256": "62f4e0f4b3936fde38b4ab70640b89f13aa245caf442746850253b873d3790da"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_42/iter_0_prog_0.json",
+"bytes": 6481,
+"sha256": "5f1dc431c6f07d89eb9a5e3ba6e5c4f5c0ec7816ee57480cd32f57239bd4aa2c"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_43/iter_0_prog_0.json",
+"bytes": 7031,
+"sha256": "b11fb82c72d86678183a3150b5767ed61182ade4734b7382f768318c6aaa7c86"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_43/iter_3_prog_2.json",
+"bytes": 9908,
+"sha256": "36bafda412adfda684f854cbdd3c0c1089dd85904130800d853b7c2e304c8b31"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_43/iter_8_prog_5.json",
+"bytes": 9549,
+"sha256": "3f42f9ba3ef34270f645e21a54093f4cbd45f42657a9d52567d5a8d187505ab7"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_44/iter_0_prog_0.json",
+"bytes": 6488,
+"sha256": "82d267ffcbf8ce48273174a52f4c71e6b08e46149436c2ec49fe4d51329ffc54"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_45/iter_0_prog_0.json",
+"bytes": 6209,
+"sha256": "733c3f61a835c40f1dc64023accd1a9ffd056ae356d46e37fc40bec9f7022515"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_46/iter_0_prog_0.json",
+"bytes": 7100,
+"sha256": "858f0913461af219a416be4da1d0006fbed33f44526c57b1a2dcffbfab8b83b2"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_46/iter_8_prog_5.json",
+"bytes": 9549,
+"sha256": "3f42f9ba3ef34270f645e21a54093f4cbd45f42657a9d52567d5a8d187505ab7"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_47/iter_0_prog_0.json",
+"bytes": 6781,
+"sha256": "dbc6e0aa2095193601608574982698d0f1538fc8e481c8009a097815969adc60"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_47/iter_2_prog_1.json",
+"bytes": 8231,
+"sha256": "24c63c011b41e7c7910122dc746f6934bafd5292332ea4e8d8bcf115417d6f93"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_47/iter_3_prog_2.json",
+"bytes": 9351,
+"sha256": "7bce93772c1e190fde80646184d374538efe0271c79d8b1df1f9f53582ee6526"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_48/iter_0_prog_0.json",
+"bytes": 6662,
+"sha256": "38853f976d3ec49124b0ca85ebc2d7f72434b4637f5cc35552cf2acb207d6af5"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_48/iter_2_prog_1.json",
+"bytes": 8354,
+"sha256": "963aab77ca805298d83155374e92c5281e728cdeb9053d770bb901476b080ba0"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_48/iter_6_prog_4.json",
+"bytes": 11204,
+"sha256": "fbaf7211436e6a75018bf45573648c6387966cc91d926c793993fe00ea66fc47"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_48/iter_8_prog_5.json",
+"bytes": 11026,
+"sha256": "d6f493c3701d3b311581a8cbb2d1f85e7e9811641205413644be76df3382fdb2"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_49/iter_0_prog_0.json",
+"bytes": 6843,
+"sha256": "6320cf6c3982363d5d8172f45aba4ff069a8099016413f0b67b42df688f0e98d"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_5/iter_0_prog_0.json",
+"bytes": 6921,
+"sha256": "c99ad49380426f66d6aa3d45aa7b181711090be8c064b39ec0f3011e42701a33"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_50/iter_0_prog_0.json",
+"bytes": 6638,
+"sha256": "2a22c06c60a897ea29754f17f448779ec3bda38c264c841a3dfc81bc9b1bd50d"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_51/iter_0_prog_0.json",
+"bytes": 6928,
+"sha256": "b0d346553f00a4598522d2836bfdbe248f7af8916c08a0acc0360f166efeb41c"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_52/iter_0_prog_0.json",
+"bytes": 6988,
+"sha256": "078d67429eff85207d7fd2f2cf852d0562d080105a9d25e8682f1b0a710d60d0"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_53/iter_0_prog_0.json",
+"bytes": 5445,
+"sha256": "e109083909575e724d0517365aabb1bde992a0a245b064468933f393fe0298ab"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_53/iter_2_prog_1.json",
+"bytes": 6757,
+"sha256": "b27f24356629aba4da82eb843ccaae149dbb347c887d45dbb77764f54b53303f"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_53/iter_5_prog_3.json",
+"bytes": 9400,
+"sha256": "05fcff59a9b8b4fa03b14770e6e136b4cdef1aaada9289178c35c2f114ffe0f8"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_54/iter_0_prog_0.json",
+"bytes": 5445,
+"sha256": "e109083909575e724d0517365aabb1bde992a0a245b064468933f393fe0298ab"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_54/iter_2_prog_1.json",
+"bytes": 8488,
+"sha256": "7026afc6f971dd112bc80f74fac4c22fc4002859a37dc33841de21f214c9f082"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_54/iter_3_prog_2.json",
+"bytes": 10232,
+"sha256": "bd819e8e1d1b145c0725f7576e5874c7aaab29f1f77a1a6d0ef0d975f0457d5a"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_55/iter_0_prog_0.json",
+"bytes": 6885,
+"sha256": "b120b4eceb1cd590d559d7ebcce997d739be11b0fcc1fd29a633dd8f741c7444"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_56/iter_0_prog_0.json",
+"bytes": 7050,
+"sha256": "808aca25645635a9a8a2511ce61c61428b514c7454015a50c780d835adda63dc"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_57/iter_0_prog_0.json",
+"bytes": 6659,
+"sha256": "37c73415e3dc63281cdc9b4058dedd64ee1c1f87aeb19132019ef42f7d340b85"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_58/iter_0_prog_0.json",
+"bytes": 6835,
+"sha256": "525e8d876d8f6d91e5f877e0f9b03f26e7ea4f341eb81c5e11ea03e517f0427d"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_59/iter_0_prog_0.json",
+"bytes": 6926,
+"sha256": "b762991658b66e8c9be90a62b23945974157320ddb163a943cd7387d7445ba0b"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_6/iter_0_prog_0.json",
+"bytes": 6757,
+"sha256": "60962edbfba212da174690bd333419da3650c99607b140c350fdfec679309ea7"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_60/iter_0_prog_0.json",
+"bytes": 6808,
+"sha256": "6c377d624f7aceae2bd82c4037ee4600a34a07c43b5521ac2c70f6734fd3356c"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_61/iter_0_prog_0.json",
+"bytes": 7190,
+"sha256": "049d8d1e91c511907dd21914871a7a8a7edbc8081ac42eb2adccd983585855fd"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_61/iter_8_prog_5.json",
+"bytes": 9549,
+"sha256": "3f42f9ba3ef34270f645e21a54093f4cbd45f42657a9d52567d5a8d187505ab7"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_62/iter_0_prog_0.json",
+"bytes": 7013,
+"sha256": "df0d781695662cb021e94db8e427f5afb96b3d328fa59728e2d5e47a13d5b449"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_62/iter_2_prog_1.json",
+"bytes": 6757,
+"sha256": "b27f24356629aba4da82eb843ccaae149dbb347c887d45dbb77764f54b53303f"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_63/iter_0_prog_0.json",
+"bytes": 6550,
+"sha256": "965f43ea0ae9d33650f977471090199d456cc2ae043c101c9bf2af83cf8a4551"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_64/iter_0_prog_0.json",
+"bytes": 6925,
+"sha256": "77ea68c888244b7d73de1fec9f50772d968ca6dbae01318f17672595af365c66"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_65/iter_0_prog_0.json",
+"bytes": 6820,
+"sha256": "4648364bb7e9f72746d0de48a9a5d3cc3feb934a75d25bf8ea7c9fabf4b4767f"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_66/iter_0_prog_0.json",
+"bytes": 6695,
+"sha256": "2092f3a432142344e7fc59245fc0a335c48f7b2a57af488265733e8ed3fddae1"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_66/iter_2_prog_1.json",
+"bytes": 8216,
+"sha256": "75aa48b9951c7e410d606d768f5e992c1814decec2da095d8a29fb398972e5bf"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_66/iter_6_prog_4.json",
+"bytes": 11274,
+"sha256": "f2425ee1c495722cb8c5dd94e4071ecc84d81bf52259ce5bcb66867d4d09713e"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_67/iter_0_prog_0.json",
+"bytes": 6285,
+"sha256": "a5f5475fef1083fe3290ea56febc868de4520de6f11aaa85c7adff9a5d093602"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_68/iter_0_prog_0.json",
+"bytes": 6881,
+"sha256": "77c159908d730dcd893bf591ee516edf19c87eaca6abf7d91a0499227d6edfab"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_68/iter_3_prog_2.json",
+"bytes": 9874,
+"sha256": "ef610379c9711e06bb677f1d04155e4033fa0fe6252b8aa49ffb9ef9f5d95347"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_68/iter_5_prog_3.json",
+"bytes": 9558,
+"sha256": "6257d6dd871d61a43864cf299d297418634f697f69a38ab40e35c181e857e297"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_68/iter_6_prog_4.json",
+"bytes": 11161,
+"sha256": "911f341892459ebb1971c0b5dfb2f2be63ea564362a04f65ff8436c7f90dfdd3"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_69/iter_0_prog_0.json",
+"bytes": 6527,
+"sha256": "cddd5a2676d608948f7d37333e5417d1917cb55881c5b3d107de136432bbcb14"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_7/iter_0_prog_0.json",
+"bytes": 7072,
+"sha256": "6d72d3f80eab5f03ab30e04dae2a4a1c3fbc21e950bed2bb4c9b39fc1b6261e1"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_7/iter_6_prog_4.json",
+"bytes": 9802,
+"sha256": "2574fe4c0a36665f7164f6340238438b841b4553226ec3ac4ad500d0b1a19c86"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_7/iter_8_prog_5.json",
+"bytes": 11257,
+"sha256": "c0bda03f07d459d29bea27fc495b607bc3540b8c545dfee17dad24385bf21ac2"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_70/iter_0_prog_0.json",
+"bytes": 6523,
+"sha256": "0acb29643f1649671a7abfe87719c82ced0d3912a537b8f246984288418abdbb"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_70/iter_3_prog_2.json",
+"bytes": 9229,
+"sha256": "bec7cbb1c1cb5dcb156b4817037084fc320d797d23cb7964cbd2b1893f1c48f1"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_71/iter_0_prog_0.json",
+"bytes": 7094,
+"sha256": "5afda958de18dae92c3b422a51654a7f7cabb9e98856af8c9c3e2dac5ef8f667"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_71/iter_3_prog_2.json",
+"bytes": 9569,
+"sha256": "1a68f91b1cfb45b1fded76a502722321d07252823ac8d8f561a0e21474f4fc86"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_72/iter_0_prog_0.json",
+"bytes": 7182,
+"sha256": "6bce3110e68d8e05d7d67c16dc3a3700dcbd07b8a6bba5e3c7d420e72ad99bfc"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_72/iter_5_prog_3.json",
+"bytes": 9842,
+"sha256": "45f44274f77ef17ae4e4b70aed5fe926812f4920ce412b370b10b37efdc96b9e"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_72/iter_8_prog_5.json",
+"bytes": 9549,
+"sha256": "3f42f9ba3ef34270f645e21a54093f4cbd45f42657a9d52567d5a8d187505ab7"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_73/iter_0_prog_0.json",
+"bytes": 6181,
+"sha256": "18d6e3b358ddcda9aa73ec5a1f6d3d4099755e71950df79a793423e17f8e29a6"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_74/iter_0_prog_0.json",
+"bytes": 7057,
+"sha256": "eadb0ee5371ae70b58ce9fef07ec90207ec12163399e31d715d16a90a9189291"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_74/iter_2_prog_1.json",
+"bytes": 8457,
+"sha256": "cf39edd76e56dcd623f2d34e04c5f770350d7d312bf63daf43824c544915ddaa"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_75/iter_0_prog_0.json",
+"bytes": 6611,
+"sha256": "c019035c24a3ee059f2157f87a29f96532b501c0a24075f83c451640294cde3d"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_75/iter_5_prog_3.json",
+"bytes": 9364,
+"sha256": "350e7b049b4902ff799693c4c97755796845435c8d041995bf5e53fa8024a5f1"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_76/iter_0_prog_0.json",
+"bytes": 6797,
+"sha256": "90b53a0c3ed9db45866a0fcba39d13420e314d7848d013737600ce411cf4629a"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_76/iter_2_prog_1.json",
+"bytes": 8242,
+"sha256": "b53c271329dec3acf19c935b89697087f036d9f2aac32ec2d829745cf206296b"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_77/iter_0_prog_0.json",
+"bytes": 6669,
+"sha256": "dfe18648a9b1a66bb6974396a9c413c752bf0d7c18f8d10127e5e695001fe8b2"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_78/iter_0_prog_0.json",
+"bytes": 7010,
+"sha256": "4b1f4178065ad109c1c590bc03dedc1d5136e8f09c142cd9cfe39c14b9245c10"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_78/iter_5_prog_3.json",
+"bytes": 9450,
+"sha256": "3850b0d74fa576cb50bd7fee835dc1e39d9afdc4da4e8e4eb3600991c13f99bb"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_79/iter_0_prog_0.json",
+"bytes": 6934,
+"sha256": "9935656f7820399ebccec497f4195b2c4a79aa212271b95f39885482e981c7be"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_79/iter_3_prog_2.json",
+"bytes": 9556,
+"sha256": "9d2dfe49cd59251f4cf92fcf951b9d58d2da1ae7f33cd34c0c90528b90c53247"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_8/iter_0_prog_0.json",
+"bytes": 6913,
+"sha256": "230bd96afffefb31062eee96f0e2ea635f9691843335bec1db2e115f997c38a1"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_8/iter_8_prog_5.json",
+"bytes": 9549,
+"sha256": "3f42f9ba3ef34270f645e21a54093f4cbd45f42657a9d52567d5a8d187505ab7"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_80/iter_0_prog_0.json",
+"bytes": 7164,
+"sha256": "a91e09eb42a58c3714462f3b8c1c30b6781237aa26e22193f8a9cbbb8848f662"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_80/iter_2_prog_1.json",
+"bytes": 8638,
+"sha256": "bd11a8f072eb8c7a07776a35ae27779d714d57505423b969b579f62f11d685f1"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_81/iter_0_prog_0.json",
+"bytes": 6756,
+"sha256": "6858652aba5815efa3b7eaee3e8d54d103ef78a1e5e9e73d8b8ae35a25a62da3"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_82/iter_0_prog_0.json",
+"bytes": 6657,
+"sha256": "0d9984119f7317986b61905017bfa005edc668c33af310bf14d6b18029c2ef92"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_82/iter_3_prog_2.json",
+"bytes": 9598,
+"sha256": "75a895fbbe05fb5dca51568694699e091e1d33852ce2ed4178b84b2ea49ddd31"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_83/iter_0_prog_0.json",
+"bytes": 6712,
+"sha256": "1de28a9fae6ae114ff435736b483e73358627bce1dff05320524d6f99757ecdf"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_84/iter_0_prog_0.json",
+"bytes": 6815,
+"sha256": "606d7a8f15aa1372b6e38328dc5e844e1ab8cd13fa84e93c099b75876f1ff154"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_84/iter_3_prog_2.json",
+"bytes": 9556,
+"sha256": "9a90d6b19c63187e456eadfb7da0c8c47187d6cf9fc505ad3c0b924675e3a031"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_85/iter_0_prog_0.json",
+"bytes": 6830,
+"sha256": "6f03c4349b5057829267dbc37a67c8029a8db873565b1765541064b0494485a9"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_86/iter_0_prog_0.json",
+"bytes": 7178,
+"sha256": "029ebad6c6e0130a7bdb3e72ba0d982ccd4f1499c6441d6a6b36168c8f90b937"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_86/iter_3_prog_2.json",
+"bytes": 10192,
+"sha256": "d65deecc642dfd72497e610ed2bfb5db11bdf06a94142b5095ef6e59271445fe"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_87/iter_0_prog_0.json",
+"bytes": 6547,
+"sha256": "44bb7dca176319ad04fc435fd22f2d62b29b4e87d3e08a72f6a61c73c011e660"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_87/iter_3_prog_2.json",
+"bytes": 9153,
+"sha256": "eb853daffe615eeb7cf9c5fbb8b8de6c1ae1b011407d9400eaac02d6ee136324"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_87/iter_8_prog_5.json",
+"bytes": 10559,
+"sha256": "3bd97c1953fc9aab757494ac9b2fb884d555201eb4ef931b482648cc13648f9b"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_88/iter_0_prog_0.json",
+"bytes": 6692,
+"sha256": "3c59779ee5a1251e206addf820985bd10d533d0b8d24d51860a59e9a226de106"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_88/iter_5_prog_3.json",
+"bytes": 9536,
+"sha256": "787b6143fdd95abb36eafb7abad87d1ef0b124d2c1e8965b288e32130ce92f1d"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_89/iter_0_prog_0.json",
+"bytes": 6898,
+"sha256": "84d348eff4af935f5833fa4a1eae5b46e9fb464ce49fd23d6c29f3346d2dcfc1"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_89/iter_2_prog_1.json",
+"bytes": 8514,
+"sha256": "0ccbdb22be4e69599e2662fb5c8a5468631ebb4fc18644c55cb347541a5fbee3"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_9/iter_0_prog_0.json",
+"bytes": 6838,
+"sha256": "86d80f0cae5c9cd980236ddc2fe38dc0653e7a310c8bf490f0bece7c2ce1736a"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_90/iter_0_prog_0.json",
+"bytes": 6759,
+"sha256": "09f3b0fb669d66fe4983c1a539a08bc623d8e4a967649e80b2a47b5eb139817d"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_90/iter_8_prog_5.json",
+"bytes": 11161,
+"sha256": "31613821fdd6c3dec73c12dd2928469b8769051a888b9ef2e27b9fc16e057c55"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_91/iter_0_prog_0.json",
+"bytes": 6961,
+"sha256": "2b5c29bed4e267c2a28008fba40302d0fe6c7a337a5d034880cf3e1c840e35e4"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_91/iter_5_prog_3.json",
+"bytes": 9276,
+"sha256": "215b6584950d08375f443f28655363c5f5858fe3c4285801430adfa570850449"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_92/iter_0_prog_0.json",
+"bytes": 7040,
+"sha256": "df58c8bbdd1037f878d965d560fe1953d6dc497c131cf80146f810dd3aec1a2d"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_92/iter_2_prog_1.json",
+"bytes": 8164,
+"sha256": "eb0e6a0f05e826c22b287720c1b2be62fca360c87d94d4746ce49a9346dee8c6"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_93/iter_0_prog_0.json",
+"bytes": 6904,
+"sha256": "f0b6534494d0227c0cc93f313d772740ab43fc4aa25c9f382a6de5b78d79da54"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_93/iter_5_prog_3.json",
+"bytes": 9591,
+"sha256": "0079bf8c1ce6a4721d6af3bb70da85be8a6d0aeb00377bb7200607ffb53cf0af"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_94/iter_0_prog_0.json",
+"bytes": 6931,
+"sha256": "d5398b18617915fc29f85500a68bfe3e98df22954b77d5bb5bc32f784e243535"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_94/iter_3_prog_2.json",
+"bytes": 9560,
+"sha256": "37639d0fe37dc119d8779de69d4634b3bbe55605e203d4a982781bdb439e9753"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_94/iter_5_prog_3.json",
+"bytes": 9317,
+"sha256": "4332d3f1741a36e26d39e78d8b03b978268a4cafc9e6a351c0f55be444632611"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_95/iter_0_prog_0.json",
+"bytes": 6671,
+"sha256": "4ace6b0f0d17b882b4a28c70fb79a381e1d85939ca6edf8222a365734d6d8a28"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_96/iter_0_prog_0.json",
+"bytes": 6897,
+"sha256": "bf159aadeab0a86007ba8533e1987b065279979137f8fea4674ab5533ebfbbfd"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_97/iter_0_prog_0.json",
+"bytes": 6524,
+"sha256": "5e4baf2c9b91affcf83e90a9eacfff39f6928c44897e51c6027fdb5d2aad0f19"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_97/iter_6_prog_4.json",
+"bytes": 11001,
+"sha256": "16351a949b23ca055f333e0b3fffe5c5fe480d4473572ed9eb1134784d04d614"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_98/iter_0_prog_0.json",
+"bytes": 6599,
+"sha256": "dd66034ac03066fd3993ffedd371d55f402496c25295e90ad61d1a44d25f7099"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_98/iter_8_prog_5.json",
+"bytes": 11363,
+"sha256": "644de15d9d645c94ab893477fc7b1a9e5f11df6ff9a4a8110cd4b50ed0a6478e"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_99/iter_0_prog_0.json",
+"bytes": 6565,
+"sha256": "30d36093adb8d57a93f7d52e557ff1a21321eca6a8663663dc57a370bfe26872"
+},
+{
+"path": "logs/gepa_bcp2/generated_best_outputs_valset/task_99/iter_2_prog_1.json",
+"bytes": 8429,
+"sha256": "289e94b4bf01773914d9ea3ae21d8807362c3629471f0e695b456c0ba2b95b27"
+},
+{
+"path": "logs/gepa_bcp2/gepa.log",
+"bytes": 57301,
+"sha256": "ff6f8906fab6ca4ec95ee0acd3ee0d4777ae8fdc48a748c1e6a482282dbee510"
+},
+{
+"path": "logs/gepa_bcp2/gepa_state.bin",
+"bytes": 475352,
+"sha256": "13ca81be30e342c3cc48fda6fb175bfba927ce1f222ef15f885fd490ce03bc8b"
+},
+{
+"path": "logs/gepa_bcp2/progress.txt",
+"bytes": 8082,
+"sha256": "9a5d58acbc50089bce0450247ef36f484ae658762e61fb93c2f2aad4c382a37c"
+},
+{
+"path": "logs/gepa_bcp2/reflection_log.jsonl",
+"bytes": 29089,
+"sha256": "fa5ce860a12606928b06dbbac9ea41abc4f9cde6802ba315c028a29efdb1f533"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1010.json",
+"bytes": 16059877,
+"sha256": "c772c4ab539f4db8bdc60421402fe93c6a72a2a8b56f7f70fa46851353eb8120"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1016.json",
+"bytes": 8672289,
+"sha256": "8cbd91a85bbfec781cf2e31d6331ff731c3acc23dca9f0d6e30d0ef961232236"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1019.json",
+"bytes": 14664810,
+"sha256": "5445a8d9aa27f21e270fc20422bf5e26544b548af783a201b3b7e790a5e14b02"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/102.json",
+"bytes": 1860763,
+"sha256": "4fcab024afccfb97f1740241019c6fcc913adf23ddcc135355b86db73d5eff2b"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1022.json",
+"bytes": 24872334,
+"sha256": "4c28761fe92a832b04d3d2d8713926474ac1948d2c85453da3b93122ae9d9ee9"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1026.json",
+"bytes": 166489802,
+"sha256": "4c5248ad84d1ba940497a2d4be30a07bd5be6171beba3ac5227c36fcaf272b27"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1032.json",
+"bytes": 10820202,
+"sha256": "7db1be4e3cf213a677f376ff08b19301d3724543aed25a90aad3d58af1933108"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1034.json",
+"bytes": 28982709,
+"sha256": "d990acf130efc57ba4adadf396f4816b07e54e9ac9bf7b2cc7f807395ffbfff5"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1035.json",
+"bytes": 45787624,
+"sha256": "bd71428db850a6b499e7272040e52905a5acf9d4edd1d378f7b16cce09f76ac0"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1039.json",
+"bytes": 33378425,
+"sha256": "2ac3c367ee81eae1ed525950df6abf08bf0d4a488f6022a140361d4a765157ff"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1040.json",
+"bytes": 86034577,
+"sha256": "5a9e00a734be74ad873c6cf766c846214bc067a62767b533b0ab113600ae14a6"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1043.json",
+"bytes": 45031812,
+"sha256": "129b42771c640a5b093dec8f1482110c1de4e9ff6bd180a2222af97e0b5c3d54"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1044.json",
+"bytes": 45304689,
+"sha256": "a8ae683d8d081587b00c26a97faaeca0d0a42ee4bd3e63a4cad3d9558320c32e"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1049.json",
+"bytes": 26281303,
+"sha256": "3d1f84c7c2db87dd8fdd36302030ec632fa546a0dd96edf7b15b76a3cf240c27"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/105.json",
+"bytes": 22093088,
+"sha256": "fdb51bc1bf5f4f5dc56b3772b64b751338e6f3ea450e6fceb19bdf16911a9987"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1058.json",
+"bytes": 8829627,
+"sha256": "0b6dd7854f8e7f8b9ca13e004ec4502ca1067b4f8cce958879fb7a366f2b5c8b"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1063.json",
+"bytes": 6576010,
+"sha256": "f299648234d42fa517b88287dc8db369a1dab37acd8a835febbc1eef660dd27c"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1065.json",
+"bytes": 29820848,
+"sha256": "f60feb5bd5d5d6083f692072bbaef114d7ee74486155614f0d902e76db921ab2"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/107.json",
+"bytes": 38301360,
+"sha256": "e3294e6f9113cd7a71871c494e91b8c80c6110f642e12c4a940477778ded8866"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1071.json",
+"bytes": 7581110,
+"sha256": "c41556596fe155768a27a4bc5da3c683c60e7694cb224fa332ce8d8cb3bebeb4"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1077.json",
+"bytes": 33601533,
+"sha256": "00fd8f7aad43c7307f3799082cea09c8768ec482857add85a9b33be82dec95d3"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1079.json",
+"bytes": 10451339,
+"sha256": "f9d0e8c8ec77e990df369c09c75825ac63a759da9ecb2e2f82adb4151ca18363"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1085.json",
+"bytes": 10301287,
+"sha256": "05883889333dbce76744a90a329c985d1debbfbdaa37c4eae3a2166e95d27a15"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/109.json",
+"bytes": 22027724,
+"sha256": "c798c0c4f1511d5709a596190271e2725a414375c02bfc8a2bf3c3fb032eee56"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1092.json",
+"bytes": 5902826,
+"sha256": "86cda07372cbea0ad1660ac347db1d0a9152553f23b0c3a97580432924877097"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1094.json",
+"bytes": 34900581,
+"sha256": "033bf8db652b99861ab513e7633e0f85f6a5a6453c02572c6ac9d5f3194da6c5"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1096.json",
+"bytes": 36432496,
+"sha256": "0462de2507923c7821679da6f7eb7e99e2c5539bf97f2e311f6962c1f9888fd7"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1099.json",
+"bytes": 5279686,
+"sha256": "fbb54e9144bc22145b02bc289c8b52a6479f634399b88dfc7519a68037da9f14"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1119.json",
+"bytes": 18930815,
+"sha256": "d9066ea56280a22e92929c3760daae497466e288f9d7b0c6299f058936c9f83d"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1121.json",
+"bytes": 12331323,
+"sha256": "baff4d7e9b284c9eea50fcbb29650c7ac1f1620eadbd5f9448d4657d1e2876e7"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1127.json",
+"bytes": 56187457,
+"sha256": "cdca10eb5fd853053b4b85c514d90ac1d604ceea3b25378ce85f68b2a21a0646"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1128.json",
+"bytes": 2862276,
+"sha256": "1e5b38c5e3575f568f468150f544a7d5a6a486f7b4240d3233af4ba1656ae1c3"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/113.json",
+"bytes": 20178790,
+"sha256": "761b6a2c9b913525a6f49ce929f7342e519ad64cdc03f6af73dca550583e9d6b"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1131.json",
+"bytes": 160723830,
+"sha256": "52501a9375e00043503f931548c7cffb39ec74fddea5b906ae1e1075110df6ec"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1133.json",
+"bytes": 5748822,
+"sha256": "d5eb4b8ae30afabb221a95f4c4b58c8856b9363086b05c29cf6773eda6854b86"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1135.json",
+"bytes": 1667030,
+"sha256": "0909ded4e40f85eaf98420336562253a088bb6c4781be7e40118bf6e82a24267"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1138.json",
+"bytes": 15644386,
+"sha256": "36f98766d4f30258f9cb5382c6767f962148598bfd1223cfa1ef514a931ab173"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1139.json",
+"bytes": 12687780,
+"sha256": "32acc4747ea7d09735ec74a9e165594282d55b94d781bd62b93eef15d59e7c0a"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1158.json",
+"bytes": 10298867,
+"sha256": "828d53d3aad4bcf6c44e54d4fed923d015514be1f9f7209911f6bde11468b026"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1162.json",
+"bytes": 7854672,
+"sha256": "d0bdca9915c1e67c40822cf858a5d15cb70376e7509fee768224b1b72bed2052"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1172.json",
+"bytes": 14100116,
+"sha256": "b84e174ace70c93efc559c19bf13728e9618f25b974b452399c117d58f7458d7"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1190.json",
+"bytes": 40857147,
+"sha256": "ba0ecdf37e51b39df66a2da8b39d3b73f5917028e4c8377d42d123e5e62c6da8"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1192.json",
+"bytes": 33109988,
+"sha256": "28eb3721608e2d64eed54c3cf422fb42946c421ed0c0de0c48d4012838da38f2"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/12.json",
+"bytes": 11096323,
+"sha256": "7f8ec6f4f42beaba4124e49c4baaa19529db5c5b539050dd36980e88eda87311"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1206.json",
+"bytes": 5954212,
+"sha256": "20e80e3ed4e2c012b91ef6004a6fb83bbcfa4aeef556774c0218c482f6536b9d"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1214.json",
+"bytes": 9700957,
+"sha256": "5014a7f4932d18df55e07dfe2aca26937277ed1da6164cf1592becb5780f02c8"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1216.json",
+"bytes": 47159771,
+"sha256": "9fded48bb84526bd86b473a41ac168d37b32c45235aed4f3168e7951ae10c36b"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1226.json",
+"bytes": 41908435,
+"sha256": "af0770740499d313b351df8883eba2c726b58268278406fb7ac8f168892d781e"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1227.json",
+"bytes": 9434423,
+"sha256": "206ca264328b79a239e1b9c9a25a1c0581271e4c85c17819d411a34600e2323d"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1239.json",
+"bytes": 1171070,
+"sha256": "ba7941dffc387ed02ad38052228d8a798eadb81055e946cf1c0f9449020c7aa1"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1242.json",
+"bytes": 28848385,
+"sha256": "afe68b5dd73996e50fb9f2da5c3e9b10ceeb31f16c4d640e310a5ca84f18188a"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1247.json",
+"bytes": 40854848,
+"sha256": "9a39120dae1bf3e151d6d8a7583c93c374cdf47420d3de3f7a9755ed6bcb453f"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/125.json",
+"bytes": 1408357,
+"sha256": "47c56e3b08610c254770cffc8913b2bfc21354b47d9b862477f9ca9463b29e42"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1252.json",
+"bytes": 16764427,
+"sha256": "b028725b175106adc5aa1e71e3e838e1a558efed4c7835c0876616ca7f84b089"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1262.json",
+"bytes": 62626938,
+"sha256": "8a03ec71b057ed53b6b3ff9f98e7530348ab4cf36c40aac8bc28ce9abf1dc6bf"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/1266.json",
+"bytes": 9315404,
+"sha256": "50fc899db145ace389261e0cba1d1c44ee19d8395b938996331c41f0dde07e93"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/131.json",
+"bytes": 86003495,
+"sha256": "97eee72355ca5259255142867a086ead7ae7591802877bb04c8285ff6e97eb3a"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/134.json",
+"bytes": 36289561,
+"sha256": "68d23985b669133b0e4f87567ac08e9cd946680e29810d31916463b5ef4b6beb"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/140.json",
+"bytes": 9188927,
+"sha256": "117e20e5c812bad865b8de5d7124760e60cb601fcb22dcd3690d3eb4dfbcde2d"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/15.json",
+"bytes": 15274070,
+"sha256": "49ae86899c21e653a78e1024a0b9fae1ff973f9c30ebd83a1483d2f8fcb38c12"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/160.json",
+"bytes": 35570062,
+"sha256": "d2c67663be81b4f9706c96ed8e4bf12a7979be8db5ffc0556c7cfc553cd7856e"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/161.json",
+"bytes": 56413940,
+"sha256": "1d2b43cf59a48919892487e23d37d9be3861cf2f2ac2dcfeccc37d5028b2cc44"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/165.json",
+"bytes": 8455675,
+"sha256": "f89c135d8a84ed5808363927b6396091353f2c7aef990e8099b6a12ae34336af"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/169.json",
+"bytes": 21278963,
+"sha256": "a9cfd3dbc51643e38928d3d6bdf22576c518fc7944c3505d1dc18f79045cbee9"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/171.json",
+"bytes": 2983705,
+"sha256": "5d3280059e690c4f3934cccf4989acc3a046f2b5132ae04ec46dece475b17de1"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/174.json",
+"bytes": 18051507,
+"sha256": "d2bac66a8bc1506067d3618b481c8053c0dffe82c21c518d574c739d3a57e817"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/177.json",
+"bytes": 41791818,
+"sha256": "831b9be5525870c70c0349de80a816e406c2724bb94d73a13d1c5e64968613a3"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/191.json",
+"bytes": 4153275,
+"sha256": "541f8fda9d93b6b67f29102d1a0e760b33bb50619853e12a1a5866f0c36e4ae8"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/196.json",
+"bytes": 17282484,
+"sha256": "6ae4611676a443aed9dfbb7885a0ecf9aea66a63bcccb436683255322d1328f7"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/199.json",
+"bytes": 26416203,
+"sha256": "f61bcaa63b4acae8995bdd52aac944cd47584f84c6b3cedad7257de606dd5c92"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/200.json",
+"bytes": 38910875,
+"sha256": "bbf1561c96cabe00c8ad1ca8f94cef4299ea5631f1f24c94e98ce55ba03f0ecc"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/203.json",
+"bytes": 95828541,
+"sha256": "02647a61dcac39dddfa5abdacba0061ee41921c02240d5e44b75ca9e8212832c"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/210.json",
+"bytes": 33798734,
+"sha256": "215efd630617b9dfc0702a83c62ef4ec8208e7d75504d440712d0f962ff1d64c"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/221.json",
+"bytes": 8496940,
+"sha256": "52a85e7ac17d9a1d87fa2997704753dec8756e90062c6e349ac01a1b57ae4384"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/223.json",
+"bytes": 23792803,
+"sha256": "51ed819fb52ee96e7e5dcd38cc461b429db09e458cd02cf881779a2e4d51c0b4"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/226.json",
+"bytes": 222049239,
+"sha256": "9d666a3715eb70470e55885e4cc3dbf6e264ebc1596e688203d39aa4d82930ef"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/234.json",
+"bytes": 10724850,
+"sha256": "004dee4b8874a682600b76731234b257d453a7f739c2cbf70b5135cc40a15aee"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/242.json",
+"bytes": 8494721,
+"sha256": "7cf94097c38ab5f28fec850f7a8db5a413ea879e763a25f21d89fad2fb6ee0bd"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/245.json",
+"bytes": 38795442,
+"sha256": "f8ca48d05e8e65f15a5ee55eb9ef007b51e5077c6eb3272a1cc99a2b6bff09cb"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/263.json",
+"bytes": 36231940,
+"sha256": "2963bb5d360a594b4a48acb4c5d029c5438b753968bd709fe6b7ac0ae0f2d84f"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/267.json",
+"bytes": 30192890,
+"sha256": "153c64b8c1919d6c5c980313f51edb6b6f354363c14a843f6845582e41bb3bc7"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/268.json",
+"bytes": 12849329,
+"sha256": "49e8ffe3c32b109cdd07e21a7ed193c2cb52b0771051f562ace427ca25d921b2"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/27.json",
+"bytes": 599391,
+"sha256": "5267524a91e9fe25ead20e3ddfcdae4dcdc6471424fe8d0d822ece851a401bab"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/279.json",
+"bytes": 3046341,
+"sha256": "3705bb6aa6301766f9ccab7ecb848be76eb5f62eb574aa4934fdbba418774598"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/286.json",
+"bytes": 16849158,
+"sha256": "fe21425222a07a559da6134748371d798e32231b641fbf727873348da37e0300"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/289.json",
+"bytes": 4108543,
+"sha256": "57f73532118ce0f13ca55f565a845e7b4cfe652296b13d98480879c1f19cb943"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/291.json",
+"bytes": 15150648,
+"sha256": "74f02a542b7ed4e90d9abef81d9671aa9eae5cb48857207e430e54d9c27a3ec3"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/303.json",
+"bytes": 18470612,
+"sha256": "19d0a1a5212b74e0eb85e60e2603f55a9cb118360984ac81ec5aa39d2e971ede"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/317.json",
+"bytes": 44260793,
+"sha256": "16114c9aa455497d598684c45ff3a1b0c4d72f7146d736e4a64eeb7d5f97ab41"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/330.json",
+"bytes": 12189886,
+"sha256": "edff2746177af6462e4219df5237ded896cd7a8c5980b6a78217d369e8c252af"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/331.json",
+"bytes": 6647427,
+"sha256": "90967f18dd9d4c55600c3df4ab6f4c048fc5c5969d74ff9a87780aae39da12a4"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/335.json",
+"bytes": 85993227,
+"sha256": "fb4c52e096272c00b35c2421d7c27e0aa819d0ae6abec644452373fa1378343c"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/337.json",
+"bytes": 1890428,
+"sha256": "b7311bbb9739e6b5d9be59574096f18e3b2800863c31c669f845312812ab2d60"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/347.json",
+"bytes": 23404442,
+"sha256": "83958613ca5251f9f87d045b43fed4c7d0fb576035886558a13880281561d150"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/349.json",
+"bytes": 36082391,
+"sha256": "92df2e1d747a740c023d9d2e5cbbaacf1f27a57271a9440266a5edd05550e7ac"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/350.json",
+"bytes": 134139910,
+"sha256": "76019d158c9ed6f5805a8cf5707a164655f092adfff3352c34622112fed9883f"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/356.json",
+"bytes": 117072036,
+"sha256": "28ea04ec5ef3098f448e4af7d4ad4810e6dd6344beed9710aca4ace8d7367141"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/370.json",
+"bytes": 69793436,
+"sha256": "d28fb553bf0e8c16bb6da23e937cd86781407f75b9e693f8c47d57e4db083e21"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/371.json",
+"bytes": 53849165,
+"sha256": "fb95bf2481a57122d5e9847edb9dec7eddd8aa49a950863cded31714ddee4fa2"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/372.json",
+"bytes": 42710983,
+"sha256": "5b4a4d059efaf4277e79217647b5233db0c838020d3f21d1e274353b8816d7ea"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/376.json",
+"bytes": 14549377,
+"sha256": "de90feaf4e702594108b5c6690d64ac31626b29a9ecadddbd3925c523de20244"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/380.json",
+"bytes": 8171475,
+"sha256": "8c1c7971c17cddf2499cf7e1667f54ec5aa3452557822650c0f0a6800f895e06"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/383.json",
+"bytes": 23153271,
+"sha256": "0823ebc556740a49374aefba0bfc9e535a341fc12873698bc5daf86b53bcb047"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/393.json",
+"bytes": 4486465,
+"sha256": "f5370f4b91c0a8f5284c16a5b1fa761749a3e0aa0360e6dc02fdf1ba3908bc18"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/394.json",
+"bytes": 987252,
+"sha256": "4267761a489a25659a474662e45c796e01da92e8a61cdd82ee6eec2b84af950a"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/402.json",
+"bytes": 22925726,
+"sha256": "349ee1bf4721f6368901aae9c6fefdd8d72e138c17d2e3f4844852b0f3de1cbf"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/418.json",
+"bytes": 33574999,
+"sha256": "e66f942c113eda990467b67b8c1dc964c12a773cceb8de79b187fbbdfadcf46a"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/422.json",
+"bytes": 27025301,
+"sha256": "507f20905c88e81d1184cff7b465a253758db9ef3fcaa682b797052dd592a724"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/429.json",
+"bytes": 31001529,
+"sha256": "26418f394d6eecf2ba1f862fa532f127473d280029336bedf3ace7682cf49e8e"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/433.json",
+"bytes": 2540643,
+"sha256": "560fc18cf29530695b4d500590199efaafea69f96098f1307145eb15ec1f615f"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/434.json",
+"bytes": 28551245,
+"sha256": "fcb4419ff1cb3f39890b211459cb9e856f26075194e02bbe2c4950f6bdc172dc"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/436.json",
+"bytes": 30467649,
+"sha256": "e864ba8743a55eddcf93f6f50b0699b9c15ab07201dcdc89b13721f19c645649"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/464.json",
+"bytes": 4570932,
+"sha256": "c1dbc5bd30217cbcdaed437171ca19c138b585b2b442d04b3b017a1d01233c75"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/481.json",
+"bytes": 12812678,
+"sha256": "6fbc9bfdce492135008f11562982f345c2865094e36e501a59827dc0079df692"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/491.json",
+"bytes": 6994306,
+"sha256": "5b9984d6737822bae5bef5c7f11104d7426dc88ce7ede5a624c363574926f3b4"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/494.json",
+"bytes": 31128906,
+"sha256": "1e36d006c6703409954ad4e292d5254409af4f069228fb7b07e4bd6728ad6d05"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/495.json",
+"bytes": 3108540,
+"sha256": "de6a41cef6f0f7e5db0c12ff1c32089caa7f4f93b07508747c9d453ef34d801d"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/496.json",
+"bytes": 9863461,
+"sha256": "f0311ad3515ca0120534ddf35eee144c1b03569e3d41327b903a967508f90e8c"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/5.json",
+"bytes": 7031688,
+"sha256": "ac4e1d874cee6a09361e6c533e3afbe65b370cf925e87749a0199e06f315ea6d"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/503.json",
+"bytes": 8722863,
+"sha256": "76726edac2c1553358f8ad13a0f572af56b2d3e97dc5251e6b45f6d22c64179a"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/505.json",
+"bytes": 22047823,
+"sha256": "430995b82ebad1077943f91385581ac12256b9840895b43ede5d0e4e2a37ebd6"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/507.json",
+"bytes": 29728569,
+"sha256": "8341c435aae2158bbe9fd8b1f88c474d5e9c631b9426929088caac67b881bc4a"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/511.json",
+"bytes": 26078630,
+"sha256": "13c85e12096e6dfe948ef7ef9922a4d66face0650c3f33b2ab71b8346cf06b0c"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/517.json",
+"bytes": 3438428,
+"sha256": "eea9fca7bc930fbab057cd7587ab457f57cfbba95a39de4aa049d2e99a550cab"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/519.json",
+"bytes": 7740676,
+"sha256": "b197f00c0228cf2a706fdeafc11faf8da14799dc7385e43bd81f048469f4a424"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/525.json",
+"bytes": 23040678,
+"sha256": "ad69c726fc5689d39cd0cc617747f7e8c6a8ddc509b7b356f96a48a7fc5f6a71"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/529.json",
+"bytes": 8880610,
+"sha256": "6f4862b27d82e5d26addcca97dc42731727c5f91b7ff35e1eeacb9d371ece938"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/53.json",
+"bytes": 31070130,
+"sha256": "1d6ce6739edb419bfdc6baed01e375a9f1ebec630b6e46b4d7e1b336cda27d8d"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/530.json",
+"bytes": 2959810,
+"sha256": "50ac8805aa8d0624257f685d3604e7a134554a37cca8f42a9e7c8e471c8fd556"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/537.json",
+"bytes": 19436999,
+"sha256": "4d29147f79b7ec4e2d84cfe02eddec5419e58cb2405f2ba06f916e834eba6ac3"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/546.json",
+"bytes": 17112013,
+"sha256": "9c4148fe887bf1efc5d8344437a55dbe0a267ad8cc9ce76ea358bfe02886db2b"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/560.json",
+"bytes": 29095208,
+"sha256": "f5d4e239ad4d4831722fda2eff7708eebbba365a772bcc61c47d94a68d5b8e41"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/580.json",
+"bytes": 2145681,
+"sha256": "e82bb9ce80da78eb2badb86253378364a94795467db8f2b7558b280c080a37ee"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/582.json",
+"bytes": 5184734,
+"sha256": "de34874f90dca9d7f0a8eba235ce32cb587cccec6f422dbf496e7856f4d96ff5"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/592.json",
+"bytes": 27586385,
+"sha256": "761f3ace0525fc028ef5450cd06b8e219fc4f060a0d3856598b4cf6130362b54"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/594.json",
+"bytes": 246707,
+"sha256": "a0daa1d43f5f2188d706d6b837d6d1ad0c00c5f0ddddbf721a0e78d4da411781"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/598.json",
+"bytes": 2725609,
+"sha256": "6366df37393af48fdb069b1db80e8dd3b87eaea1939cae966a90ad7767b3f846"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/599.json",
+"bytes": 22404981,
+"sha256": "4593578354cf7df028839479de82db07a8043bab3ebacc7f1b64ed0badbbe1ec"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/600.json",
+"bytes": 4464527,
+"sha256": "9dda37ec01aa0dcdf46d51af1d1376f4c974459989169d23a2c0ce848143a7bc"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/607.json",
+"bytes": 4722230,
+"sha256": "6818c855d7dd567a614e077004a8786651c8fd6f4e31b65b9db67c4ec8ceaf87"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/630.json",
+"bytes": 19814817,
+"sha256": "f5be098ef0e14b81f373bae8da98bc7e36da35b764e43313e241ef83b47443d6"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/645.json",
+"bytes": 30266340,
+"sha256": "bfedb573cc5366f5e323d45fc1938af268e549ab47a573ee8072b1bb25f2e4e1"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/661.json",
+"bytes": 3625290,
+"sha256": "1c8a4c9efe08799d82310c12e796f2c0380b6b1dd70b44cbdfa09ec0cb2a3bbc"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/662.json",
+"bytes": 26805899,
+"sha256": "62cac0d9f419d02bc252c4aaaeb55643822fe4391f30b1b28ff512a99a1285e9"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/674.json",
+"bytes": 20571876,
+"sha256": "d035cb937ec0670488d1ea0d2faf78ad1d0b4d78fa341feac06d5a3c688ca563"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/7.json",
+"bytes": 54227207,
+"sha256": "d6d86fed0848542de11a44f10c090e4eda7278d24727fcf3deacda8dbf2a17c9"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/700.json",
+"bytes": 22113606,
+"sha256": "c41610782accac71cf8d49aab7139245392f8b450ab74675e3ef8ee5d8c65881"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/702.json",
+"bytes": 22070587,
+"sha256": "bc94c8865869b16c4d88a98d14a3181892e8a09769ed9b8ebb8ee4000ef5be85"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/703.json",
+"bytes": 33629974,
+"sha256": "935aa4d47ad1c3b73f853acb1ecd09688d4a9e839995168c5ca31c2f587b50b3"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/708.json",
+"bytes": 962400,
+"sha256": "56e6ead7bbd8525d8f3b3c3503097b0bfa968acb998febe1d5556174f6785284"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/710.json",
+"bytes": 49627138,
+"sha256": "9fdec5395c119564da365a0eda2386399a7379880e599d3050df5684e12e2cfc"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/720.json",
+"bytes": 3273721,
+"sha256": "95619857116fce4a25e3a383987661d897bba4b70d04d34bb9cc44a54b691cd7"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/722.json",
+"bytes": 3340217,
+"sha256": "21e0c6fb3153132340491c6ee969fa89314cd5278365e98220136cb1efa1a617"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/735.json",
+"bytes": 7171880,
+"sha256": "3487953fb0f12cc5b48076f28ebbfc30ea7efc6986dd0f3a2af171e060b7ce99"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/737.json",
+"bytes": 6910812,
+"sha256": "de0c06fe6c12892f8cc23bf22b4cf76cdaba59ce54460f7d46b1d1bb364d8313"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/744.json",
+"bytes": 11173509,
+"sha256": "6f934cc3799700775a90859a8ed99dbac483444f0541fc284c6899d8998f5bcb"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/745.json",
+"bytes": 38070476,
+"sha256": "066ff2647c46a5ee932882ba208afbe5b051ef7f0287d5e23e29a4fcba4f041f"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/747.json",
+"bytes": 37387224,
+"sha256": "8c183f3926855d18f1f56d292e9d73975036f8d033e5922f30b10a25b78c49ab"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/749.json",
+"bytes": 36284561,
+"sha256": "b64fd50b67b05a50227db8f6fd5fb84be65b799ae1a2d5f667f90a90c9f0dc5a"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/768.json",
+"bytes": 64227889,
+"sha256": "bde237531c8085e5481fea66668b919c56c0bb3e5a1dcb1a476c0f09e00b9b84"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/770.json",
+"bytes": 16024203,
+"sha256": "13f568e439f555468c9015d18de444b5520644ecbe45debcd558494dbbaa0221"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/773.json",
+"bytes": 17233208,
+"sha256": "74c51f750e1ff13c3e2f4f00dcc84b37e8de8b14f44aac9fd604f5204eadc547"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/774.json",
+"bytes": 25509078,
+"sha256": "7a866f9c79c36c1208fe0c70e6b2b9c4e6baafd7b82b46c93159f0562af5a4e8"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/783.json",
+"bytes": 11712590,
+"sha256": "6d055408dd274070f65692bc6df41c6d8229908dc601948f3ba68e043148697a"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/784.json",
+"bytes": 1999818,
+"sha256": "cea92b5e41f7b9528862edec6c0dfd01572ef1d9ee435202ee9e7f5b525eb10a"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/790.json",
+"bytes": 17142583,
+"sha256": "487efd550b818edcb2f37e50ab8edbe7aced73b3e629645e0c74424522ca4a3d"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/791.json",
+"bytes": 4605169,
+"sha256": "8ff57b4318f79644cf14d860dfd5f9a2dc3fb3565622c5658e7e3482f40b5d0b"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/793.json",
+"bytes": 13156675,
+"sha256": "c71585bff14032d1f3655173151e6d540ddd46dafdee9fbe07e00d6a90fe6e47"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/794.json",
+"bytes": 12793703,
+"sha256": "03ed59266511990aa51421bef3ed2154eda3b111ff15fbb7cea0548edfef4168"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/804.json",
+"bytes": 4664075,
+"sha256": "c7a799f999bbcc36479d93f998d9fb1dcbb9e0c6c44d52888318b6fbdfc206e6"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/81.json",
+"bytes": 164036394,
+"sha256": "cef427e907b4266d0c4e2abec5f9393bd3c06d0ccc195853be3a032672ee9a62"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/810.json",
+"bytes": 4899939,
+"sha256": "9888f6c32cd872f6fce3051b82fa5272fab8a758569a3bdced9392cfa19dd830"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/820.json",
+"bytes": 16329835,
+"sha256": "1235a29a0f9775096060507f7db1a5ae121a8d65eec23c20854f9811a43df88e"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/821.json",
+"bytes": 6271868,
+"sha256": "e806616f9793a20a3c0fea3fde708cef815e93359ccc61c2ec0e48f81cf01ce3"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/823.json",
+"bytes": 13282109,
+"sha256": "2b7921e6f2239da1d07838512f3e64efa8d55358852924c53a5e6805045e571b"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/83.json",
+"bytes": 37135327,
+"sha256": "7f028bafad9bda46ac6654ca88fb168c0f227cecca02af66f272b8fc68628d09"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/830.json",
+"bytes": 33949238,
+"sha256": "eb481f2973ae3012bb089f495b45f66ba7dfeb36635c505cd3748135ed949c6b"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/843.json",
+"bytes": 42125008,
+"sha256": "0575575a26b07ec1a202cd6fcb28fe33b5031c70da0103877d253bcd6e726b4f"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/85.json",
+"bytes": 37424335,
+"sha256": "53dfedecdc8150ee180ac08206ffd1ed061d5f373c7a88763eb050635a787729"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/850.json",
+"bytes": 8595440,
+"sha256": "9cb2ec26a6aec3f14c9dfe11198a454c82d030f2f96e039504ce96d5b5478ca1"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/852.json",
+"bytes": 21255879,
+"sha256": "4f00203e8970cf0ed7942283e860e536f3e1a8c7f1b91464d037f536e5664df0"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/867.json",
+"bytes": 54327655,
+"sha256": "2178a2e999a4f45ff494b315660f28aa8350e94d9c23e1a858706797677e1d3e"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/869.json",
+"bytes": 11500798,
+"sha256": "888400e40fe9cddd9a10d6cc2782f8b0d9930f167a65c00ce80c7dbe6aa28bd6"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/895.json",
+"bytes": 23665078,
+"sha256": "1727d56efa89abb3542ff1b295d9fa9725bffdb031e20cfe89bf2ca2c79f17b3"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/905.json",
+"bytes": 20429206,
+"sha256": "c8cff9554181bc82996303ef01cd7f7c345ee920460de5a55c3c8e4704d91a3b"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/922.json",
+"bytes": 59986574,
+"sha256": "7233c920a63440954aeae7783928155de8a1c81b021b42dced19a37383bd9206"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/923.json",
+"bytes": 1374721,
+"sha256": "b6995ba0f70de269e5fdef827727ca2f23601501890815f55a83d63f285eb5c0"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/928.json",
+"bytes": 41004401,
+"sha256": "895ea387a8b207b96d8a3ec74eac06981c5ed169374126f2e4752d4e2153e6f0"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/932.json",
+"bytes": 9196666,
+"sha256": "95d78a8ee2fc61ad7a18583c6c5df67a8e1dec3716985584677981a71faeec90"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/943.json",
+"bytes": 45515183,
+"sha256": "dea4e15bdc3e54b8b929e54b8be0ab4c79b35ee4ee677c396d607595d0fe04f0"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/946.json",
+"bytes": 8122062,
+"sha256": "a4221223e03dc361d88e1fb21e612a9c2ab2b661e63c762d453deea108b28580"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/952.json",
+"bytes": 10767332,
+"sha256": "40d647d919208cd8aee6b0a0627e6b7b12f8660899553ba2588fdb42fdb0dc8e"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/959.json",
+"bytes": 76459180,
+"sha256": "7d3374578366428f4096de181043ac6a6eee715612b96ad8c5df23d6dbe9c95c"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/962.json",
+"bytes": 10184751,
+"sha256": "ffe7a90ce9619a2f66dfc3bebbbba3cdc29c4c2719f17f1596e91ce369847416"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/971.json",
+"bytes": 22152266,
+"sha256": "03d5f9c394acfdd9c0f7ba5bb5231fba2992e6f53bea25a1bd12e9f9c179d890"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/978.json",
+"bytes": 24131435,
+"sha256": "0c98b385ee45cbf8e4fe5fd040be1c20a45fc57c93d72ea713a8b16c2409d49d"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/979.json",
+"bytes": 9933201,
+"sha256": "3a4d3c29c2e11310c6f77cd7696de86a2dcb41800710b5b10491116ecadd3e09"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/984.json",
+"bytes": 15526357,
+"sha256": "b36c5ef9bff1fc342df4dc2bb5bd79441768f5d4ae0875f24cf54ffa83bfaed5"
+},
+{
+"path": "logs/gepa_bcp2/rollouts/d911ebbe23/987.json",
+"bytes": 29346504,
+"sha256": "46c28df21c651af9697d711e064a9f69021af5284a68946cbd1e621a8324fd10"
+},
+{
+"path": "logs/gepa_bcp2/run1_validate.log",
+"bytes": 776,
+"sha256": "351a89e35ce4b4b6ae6ec4b36ab6fe3e9bdaa2953936169798e37aba53830ff4"
+},
+{
+"path": "logs/gepa_bcp2/run_log.json",
+"bytes": 13671,
+"sha256": "44dc9947dc1515cd2ca35afa42f7d058f167e55ba772875fa13219d2b095a2d5"
+},
+{
+"path": "logs/gepa_bcp2/verdict_pareto.json",
+"bytes": 87,
+"sha256": "cbcdd3296aa974f23fca3f7cd25053fd002ac44031dd4d9e9bc3efe1b9bde704"
+},
+{
+"path": "logs/gepa_bcp2/winner.json",
+"bytes": 9349,
+"sha256": "06af96adbcd9cfaaade3fead9ad7c8fe77fbc5414ad4121f987aab75a884a8ed"
+},
+{
+"path": "logs/gepa_bcp2_chain.out",
+"bytes": 1050,
+"sha256": "429e7b64f05fe22ed545f7698d7c9937feb7b1198aa331f7eeb6d2c818b56917"
+}
+]
+}

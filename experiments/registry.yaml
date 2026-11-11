@@ -323,3 +323,421 @@ experiments:
 - {id: MAT-11, sheet: "OBLIQ - Math", row: 11, agent: document_repl, benchmark: "OBLIQ-Bench Math analogues (151 queries)", model: "gpt-5.2 (Azure)", effort_requested: high, effort_sent: "as requested (run5d hook loaded)", retriever: "Gemini-Embedding-2 (Vertex AI), raw query", budgets: {turns: "30 + forced ranking (cap_ranking hook)", searches: 10, results_per_search: "fixed k 20", documents: "whole passages into DOCS", timeout: "3,600 s"}, run_name: obliq_fd_math, dates: "2026-10-27", original_outputs: ["<FULLDOC_ROOT>/runs/obliq_fd_math/q*.json"], launcher: agents/document_repl/experiments/obliq_fd.sh, config: agents/document_repl/configs/MAT-11.env, question: "Document REPL agent on the Math ranking task: the counterpart of MAT-9.", status: complete}
 - {id: TWI-11, sheet: "OBLIQ - Twitter", row: 11, agent: document_repl, benchmark: "OBLIQ-Bench Twitter conflict, descriptive (281 queries)", model: "gpt-5.2 (Azure)", effort_requested: high, effort_sent: "as requested (run5d hook loaded)", retriever: "Gemini-Embedding-2 (Vertex AI), raw query", budgets: {turns: "30 + forced ranking (cap_ranking hook)", searches: 10, results_per_search: "fixed k 20", documents: "whole passages into DOCS", timeout: "3,600 s"}, run_name: obliq_fd_twitter, dates: "2026-10-27", original_outputs: ["<FULLDOC_ROOT>/runs/obliq_fd_twitter/q*.json"], launcher: agents/document_repl/experiments/obliq_fd.sh, config: agents/document_repl/configs/TWI-11.env, question: "Document REPL agent on the Twitter ranking task: the counterpart of TWI-9.", status: complete, notes: [The sub-LLM functions remained installed; the model called them on 17 questions despite the prompt.]}
 - {id: CON-11, sheet: "OBLIQ - Congress", row: 11, agent: document_repl, benchmark: "OBLIQ-Bench Congress hearings, tip-of-the-tongue (254 queries)", model: "gpt-5.2 (Azure)", effort_requested: high, effort_sent: "as requested (run5d hook loaded)", retriever: "Gemini-Embedding-2 (Vertex AI), raw query", budgets: {turns: "30 + forced ranking (cap_ranking hook)", searches: 10, results_per_search: "fixed k 20", documents: "whole passages into DOCS", timeout: "3,600 s"}, run_name: obliq_fd_congress, dates: "2026-10-27", original_outputs: ["<FULLDOC_ROOT>/runs/obliq_fd_congress/q*.json"], launcher: agents/document_repl/experiments/obliq_fd.sh, config: agents/document_repl/configs/CON-11.env, question: "Document REPL agent on the Congress task: the counterpart of CON-9.", status: complete, notes: [The sub-LLM functions remained installed; the model called them on 37 questions despite the prompt.]}
+
+# ═════════════════════════════ Follow-up studies (migrated 2026-11-11) ═════════════════════════════
+# Work that changes something around an agent (what each search returns, its prompt) or one of its settings, after
+# the results table. Same fields as above, plus:
+#   study            the folder under studies/ (or the agent, for runs that only change an agent's setting)
+#   control          the ID of the run it is compared with (paired, same questions)
+#   judge            the judge of the reported numbers (gpt-4.1, the paper's judge, with the date of the re-judge)
+#   superseded_judge an earlier judge whose verdicts are kept in the records but not reported
+#   verdicts         where the reported verdicts are (results/follow_up/verdicts/)
+#   trajectories     the archive of the per-question records
+# Numbers are not stored here: results/follow_up/studies.md copies them from their sources, naming each.
+follow_up_defaults:
+  judge_qa_gpt41: "gpt-4.1 (Azure deployment gpt-4.1), OFFICIAL_TEMPLATE, 3 votes, majority; unfinished or empty answers wrong; agents/shared/rlm_shared/grading/"
+  model_qwen36: "Qwen3.6-35B-A3B-FP8, vLLM on :8030/:8031 (benchmarks/models/serve_qwen36.sh: 262,144 context, 16,384-token output cap), medium effort, SUP_FENCE_TOLERANT=1 SUP_MAX_BLOCKS=5 SUP_PRESENCE_PENALTY=1.5"
+  search_policy: "studies/search_policy/src/rerank_proxy.py in front of the retriever: top DEPTH hits, POLICY=novelty drops documents this run already received, POLICY=rerank scores the rest with Qwen3-Reranker-4B against '<full question> / Current search: <query>', returns the agent's k"
+
+follow_up_studies:
+
+# ───────────────────────────── Search policy (studies/search_policy) ─────────────────────────────
+- id: SP-1
+  study: search_policy
+  agent: document_repl
+  benchmark: BrowseComp-Plus (830 questions, 100,195 documents)
+  model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
+  effort_requested: medium
+  effort_sent: "as requested"
+  retriever: "Reason-ModernColBERT PLAID 8192 (:8766) behind the search-policy proxy: POLICY=novelty+rerank, DEPTH 30, Qwen3-Reranker-4B"
+  budgets: {turns: "30 + forced final answer", searches: 10, results_per_search: "model-chosen k (≤ 50)", documents: "whole documents into DOCS", timeout: "5,400 s"}
+  run_name: "cache keys 4512373504 (test200, proxy :8768) and 08b583387f (test_rest, pareto, feedback, rest300; proxy :8772)"
+  dates: "2026-10-10 to 2026-10-20"
+  original_outputs: ["logs/{bcp_policy_e2e,bcp_testrest_rr,bcp_pareto_rr,bcp_feedback_rr,bcp_rest300_rr}/ (cache.json, rollouts/)", "logs/bcp_rejudge_gpt41/17.json", "data/bcp_policy/ (offline replay)"]
+  launcher: studies/search_policy/experiments/sp1_bcp_qwen36_rerank.sh
+  config: agents/document_repl/configs/SP-1.env
+  control: BCP-29
+  judge: "gpt-4.1, re-judged 2026-10-27 (row 17 of the re-judge)"
+  superseded_judge: "Qwen3.6 (the served model; GEPA_BROWSECOMP_PLAN.md §7d, HANDOFF.md §D)"
+  verdicts: results/follow_up/verdicts/bcp/17.json
+  trajectories: trajectories/search_policy/SP-1/
+  question: "RQ4: does changing what each search returns (drop seen documents, rerank against the full question) raise accuracy without changing the agent?"
+  status: complete
+  reported: true
+  notes: ['The proxy changed during the runs: the version that served the test200 slice (2026-10-10) predates cross-request batching and is not preserved (studies/search_policy/CHANGES_FROM_ORIGINAL.md SP-I1).', 'Slices ran on different days and loads; 2026-10-14 12:22-14:25 a FRAMES run shared vLLM :8030.', 'Launcher reconstructed from the session transcripts (no original wrapper).']
+
+- id: SP-2
+  study: search_policy
+  agent: document_repl
+  benchmark: "BrowseComp-Plus, test200 (197 paired questions)"
+  model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
+  effort_requested: medium
+  effort_sent: "as requested"
+  retriever: "Reason-ModernColBERT PLAID 8192 behind the proxy with POLICY=rerank (no novelty filter), DEPTH 30, :8769"
+  budgets: {turns: "30 + forced final answer", searches: 10, results_per_search: "model-chosen k (≤ 50)", documents: "whole documents into DOCS", timeout: "5,400 s"}
+  run_name: "cache key 108e3760dc"
+  dates: "2026-10-10 to 2026-10-11"
+  original_outputs: ["logs/bcp_policy_e2e_rerankonly/", "logs/bcp_rejudge_gpt41/rq4_rerank_only.json"]
+  launcher: studies/search_policy/experiments/sp2_bcp_qwen36_rerank_only.sh
+  config: agents/document_repl/configs/SP-2.env
+  control: "BCP-29 (its test200 questions)"
+  judge: "gpt-4.1, re-judged 2026-11-10"
+  superseded_judge: "Qwen3.6"
+  verdicts: results/follow_up/verdicts/bcp/rq4_rerank_only.json
+  trajectories: trajectories/search_policy/SP-2/
+  question: "RQ4 ablation: is the gain the reranker's or the novelty filter's?"
+  status: complete
+  reported: true
+  notes: ['Same pre-batching proxy version as SP-1 test200 (not preserved).']
+
+- id: SP-3
+  study: search_policy
+  agent: document_repl
+  benchmark: "BrowseComp-Plus, 100 questions: 50 the stored GPT-5 run (BCP-23) got wrong, 50 it got right (data/bcp_gpt5_rr/pilot100.json)"
+  model: gpt-5 (Azure)
+  effort_requested: high
+  effort_sent: "deployment default: the launcher loads only the retry429 hook, so rlm's Azure client drops reasoning_effort (KNOWN_ISSUES K3); BCP-23 may have run at high"
+  retriever: "Reason-ModernColBERT 8192 behind the proxy, POLICY=novelty+rerank, model-chosen k"
+  budgets: "as BCP-23 (original/RLM/scripts/bcp_gpt5_sup.sh of agents/document_repl); see agents/document_repl/configs/SP-3.env"
+  run_name: "logs/bcp_gpt5_rr/rr"
+  dates: "2026-10-26 to 2026-10-27"
+  original_outputs: ["logs/bcp_gpt5_rr/rr/", "logs/bcp_rejudge_gpt41/pilot_rr.json"]
+  launcher: studies/search_policy/experiments/sp3_bcp_gpt5_rerank_pilot.sh
+  config: agents/document_repl/configs/SP-3.env
+  control: "BCP-23 (its stored answers; no fresh control run, by decision)"
+  judge: "gpt-4.1, 2026-10-27"
+  superseded_judge: "gpt-4o (logs/bcp_gpt5_rr/pilot_report.json)"
+  verdicts: results/follow_up/verdicts/bcp/pilot_rr.json
+  trajectories: trajectories/search_policy/SP-3/
+  question: "RQ4: does the search policy help a frontier model? Read against the re-run variation of VAR-2."
+  status: complete
+  reported: true
+  notes: ['A fresh 10-question control (logs/bcp_gpt5_rr/ctrl) was started and abandoned; not migrated.', 'The first proxy start ran out of GPU memory and was discarded (SP-I14).']
+
+- id: SP-4
+  study: search_policy
+  agent: document_repl
+  benchmark: FRAMES (824 questions, Wikipedia 20230601.en)
+  model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
+  effort_requested: medium
+  effort_sent: "as requested"
+  retriever: "BM25 (bm25s, k1 0.9, b 0.4) on :8041 behind the proxy (:8042): POLICY=novelty+rerank, DEPTH 30, QUERIES_FILE = the FRAMES questions"
+  budgets: {turns: "50 + forced final answer", searches: 25, results_per_search: "model-chosen k (≤ 50)", documents: "whole articles into DOCS", timeout: "5,400 s"}
+  run_name: "sup_q36_s25_rr_g0, sup_q36_s25_rr_g1"
+  dates: "2026-10-21 to 2026-10-22"
+  original_outputs: ["logs/frames/sup_q36_s25_rr_g{0,1}/ (graded.json, graded_gpt41.json)"]
+  launcher: studies/search_policy/experiments/sp4_frames_qwen36_cap25_rerank.sh
+  config: agents/document_repl/configs/SP-4.env
+  control: FRC-1
+  judge: "gpt-4.1, re-judged 2026-11-10/11"
+  superseded_judge: "Qwen3.6 (graded.json)"
+  verdicts: results/follow_up/verdicts/frames/sup_q36_s25_rr_g{0,1}/graded_gpt41.json
+  trajectories: trajectories/search_policy/SP-4/
+  question: "RQ4 transfer: does the search policy help where reasoning after retrieval, not finding, limits accuracy?"
+  status: complete
+  reported: true
+  notes: ['The reranker shared GPU 1; wall times are not comparable with FRC-1.', 'Two content-filtered judge prompts (q304, q813) count wrong.']
+
+- id: SP-6
+  study: search_policy
+  agent: snippet_repl
+  benchmark: "OBLIQ-Bench Twitter conflict, descriptive (281 queries)"
+  model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
+  effort_requested: medium
+  effort_sent: "as requested"
+  retriever: "Qwen3-Embedding-8B, exact FAISS flat (:8010), behind the proxy (:8775, WIRE=mine): POLICY=novelty+rerank, DEPTH 100, tweet instruction"
+  budgets: {turns: 12, searches: "no cap", results_per_search: 20}
+  run_name: "obliq_mine_rr rr_dev100 (dev100) + rr_rest181_g0/g1 (rest181)"
+  dates: "2026-10-13 (dev100), 2026-10-21 (rest181)"
+  original_outputs: ["logs/obliq_mine_rr/rr_dev100*.json, rr_rest181_g*.json, traj_rr*/"]
+  launcher: studies/search_policy/experiments/sp6_obliq_snippet_qwen36_rerank.sh
+  config: agents/snippet_repl/configs/SP-6.env
+  control: TWQ-1
+  judge: "none (NDCG@10 against the gold qrels)"
+  verdicts: "per-question NDCG in the records (studies/search_policy/analysis/compare_obliq_snippet_281.py)"
+  trajectories: trajectories/search_policy/SP-6/
+  question: "RQ4 transfer: does the search policy help on a ranking task with implied relevance?"
+  status: complete
+  reported: true
+  notes: ['dev100 and rest181 ran eight days apart (SP-I15).']
+
+- id: SP-7
+  study: search_policy
+  agent: document_repl
+  benchmark: "OBLIQ-Bench Twitter conflict, descriptive (281 queries)"
+  model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
+  effort_requested: medium
+  effort_sent: "as requested"
+  retriever: "Qwen3-Embedding-8B, exact FAISS flat (:8010), behind the proxy (:8774): POLICY=novelty+rerank, DEPTH 100, tweet instruction"
+  budgets: {turns: 12, searches: 8, results_per_search: "fixed k 30", timeout: "3,600 s"}
+  run_name: obliq_q36_rr
+  dates: "2026-10-12 to 2026-10-13"
+  original_outputs: ["<FULLDOC_ROOT>/runs/obliq_q36_rr/"]
+  launcher: studies/search_policy/experiments/sp7_obliq_document_qwen36_rerank.sh
+  config: agents/document_repl/configs/SP-7.env
+  control: TWQ-2
+  judge: "none (NDCG@10)"
+  verdicts: "per-question NDCG in the records (studies/search_policy/analysis/compare_obliq_document_repl.py)"
+  trajectories: trajectories/search_policy/SP-7/
+  question: "RQ4 transfer on OBLIQ-Twitter, document REPL agent."
+  status: complete
+  reported: true
+
+# ───────────────────────────── Controls and agent-setting runs ─────────────────────────────
+- id: TWQ-1
+  study: snippet_repl
+  agent: snippet_repl
+  benchmark: "OBLIQ-Bench Twitter conflict, descriptive (281 queries)"
+  model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
+  effort_requested: medium
+  effort_sent: "as requested"
+  retriever: "Qwen3-Embedding-8B, exact FAISS flat (:8010)"
+  budgets: {turns: 12, searches: "no cap", results_per_search: 20}
+  run_name: "obliq_mine_rr ctrl_dev100 (dev100) + snip_rest181_g0/g1 (rest181, picked on dev100 by obliq_best_chain.sh)"
+  dates: "2026-10-13 (dev100), 2026-10-20 to 2026-10-21 (rest181)"
+  original_outputs: ["logs/obliq_mine_rr/ctrl_dev100*.json, snip_rest181_g*.json, traj_ctrl/, traj_snip_rest181/"]
+  launcher: agents/snippet_repl/experiments/obliq_twitter_qwen36.sh
+  config: agents/snippet_repl/configs/TWQ-1.env
+  judge: "none (NDCG@10)"
+  trajectories: trajectories/snippet_repl/TWQ-1/
+  question: "Control of SP-6: the snippet REPL agent with Qwen3.6 and plain dense search on OBLIQ-Twitter."
+  status: complete
+  reported: true
+
+- id: TWQ-2
+  study: document_repl
+  agent: document_repl
+  benchmark: "OBLIQ-Bench Twitter conflict, descriptive (281 queries)"
+  model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
+  effort_requested: medium
+  effort_sent: "as requested"
+  retriever: "Qwen3-Embedding-8B, exact FAISS flat (:8010) through src/obliq_adapter.py (:8767)"
+  budgets: {turns: 12, searches: 8, results_per_search: "fixed k 30", timeout: "3,600 s"}
+  run_name: obliq_q36_ctrl
+  dates: "2026-10-12 to 2026-10-13"
+  original_outputs: ["<FULLDOC_ROOT>/runs/obliq_q36_ctrl/"]
+  launcher: agents/document_repl/experiments/obliq_twitter_qwen36.sh
+  config: agents/document_repl/configs/TWQ-2.env
+  judge: "none (NDCG@10)"
+  trajectories: trajectories/document_repl/TWQ-2/
+  question: "Control of SP-7: the document REPL agent with Qwen3.6 and plain dense search on OBLIQ-Twitter."
+  status: complete
+  reported: true
+
+- id: FRC-1
+  study: document_repl
+  agent: document_repl
+  benchmark: FRAMES (824 questions, Wikipedia 20230601.en)
+  model: Qwen3.6-35B-A3B-FP8 (vLLM, local)
+  effort_requested: medium
+  effort_sent: "as requested"
+  retriever: BM25 (bm25s, k1 0.9, b 0.4) over Wikipedia (:8041)
+  budgets: {turns: "50 + forced final answer", searches: 25, results_per_search: "model-chosen k (≤ 50)", documents: "whole articles into DOCS", timeout: "5,400 s"}
+  run_name: "sup_q36_bm25f_s25 (test200), sup_q36_bm25f_s25_rest0 / _rest1 (the other 624)"
+  dates: "2026-10-18 (test200), 2026-10-19 (rest)"
+  original_outputs: ["logs/frames/sup_q36_bm25f_s25{,_rest0,_rest1}/ (graded.json, graded_gpt41.json)"]
+  launcher: "agents/document_repl/experiments/frames_qwen_cap25_test200.sh, frames_qwen_cap25_rest.sh"
+  config: agents/document_repl/configs/FRC-1.env
+  control: FR-13
+  judge: "gpt-4.1, re-judged 2026-11-10/11"
+  superseded_judge: "Qwen3.6 (graded.json)"
+  verdicts: results/follow_up/verdicts/frames/sup_q36_bm25f_s25*/graded_gpt41.json
+  trajectories: trajectories/document_repl/FRC-1/
+  question: "RQ4: on FRAMES, is the search cap the limit? Search cap 25 / 50 turns instead of 10 / 30, everything else as FR-13."
+  status: complete
+  reported: true
+
+- id: DSA-3
+  study: dspy_rlm
+  agent: dspy_rlm
+  benchmark: "BrowseComp-Plus, 100 questions stratified on two earlier runs, reweighted to 775 (agents/dspy_rlm/experiments/dsa_sample100.json)"
+  model: "gpt-5 medium (Azure), sub-LM gpt-5.4-mini"
+  effort_requested: medium
+  effort_sent: "not verified (DSPy builds the LM through litellm; see KNOWN_ISSUES K3 for the rlm clients)"
+  retriever: "Qwen3-Embedding-8B dense (:8001, not preserved), top-10, 500-character snippets"
+  budgets: {turns: 100, searches: "no cap", sub_llm_calls: "no cap (DSPY_MAX_LLM_CALLS)", output: "60K characters", timeout: "3,600 s"}
+  run_name: logs/dspy_ablation/arm3
+  dates: "2026-10-31"
+  original_outputs: ["logs/dspy_ablation/arm3/ (report.json)"]
+  launcher: agents/dspy_rlm/experiments/dsa_arm3.sh
+  config: agents/dspy_rlm/configs/DSA-3.env
+  control: BCP-9
+  judge: "gpt-4.1, 2026-10-31 (agents/dspy_rlm/src/ablation_report.py)"
+  verdicts: results/follow_up/verdicts/dspy_ablation/arm3_report.json
+  trajectories: trajectories/dspy_rlm/DSA-3/
+  question: "Why the official library: with caps lifted and the snippet REPL agent's prompt (signature v21), does DSPy.RLM close the gap?"
+  status: complete
+  reported: true
+  notes: ['Runs the 2026-11-11 snapshot (result-queue fix), not src/.', 'The first attempt deadlocked (logs/dspy_ablation/arm3_deadlock/, in the archive).']
+
+- id: DSA-5
+  study: dspy_rlm
+  agent: dspy_rlm
+  benchmark: "BrowseComp-Plus, the same 100 questions as DSA-3"
+  model: "gpt-5 high (Azure), sub-LM gpt-5 medium"
+  effort_requested: "root high, sub-LLM medium"
+  effort_sent: "not verified (as DSA-3)"
+  retriever: "Qwen3-Embedding-8B dense (:8001, not preserved), top-5, snippets of 512 tokens"
+  budgets: {turns: 100, searches: "no cap", sub_llm_calls: "no cap", output: "60K characters", max_tokens: "32,000 root and sub", timeout: "3,600 s"}
+  run_name: logs/dspy_ablation/arm5
+  dates: "2026-10-31 to 2026-11-01"
+  original_outputs: ["logs/dspy_ablation/arm5/ (report.json)"]
+  launcher: agents/dspy_rlm/experiments/dsa_arm5.sh
+  config: agents/dspy_rlm/configs/DSA-5.env
+  control: BCP-9
+  judge: "gpt-4.1, 2026-11-01"
+  verdicts: results/follow_up/verdicts/dspy_ablation/arm5_report.json
+  trajectories: trajectories/dspy_rlm/DSA-5/
+  question: "Why the official library: with models and search output matched to BCP-9 as well, do DSPy.RLM and the snippet REPL agent tie?"
+  status: complete
+  reported: true
+  notes: ['Models and search output changed together; their shares are not separated (arm 4 was stopped after 7 questions and is not migrated).']
+
+# ───────────────────────────── Prompt optimisation (studies/prompt_optimisation) ─────────────────────────────
+- id: GEPA-1
+  study: prompt_optimisation
+  agent: document_repl
+  benchmark: "BrowseComp-Plus; D_pareto 100 (proportional), D_feedback 200 (splits/bcp_gepa_splits/split.json)"
+  model: "Qwen3.6-35B-A3B-FP8; critic Claude Opus 5.5 (claude -p)"
+  retriever: Reason-ModernColBERT PLAID 8192 (:8766)
+  budgets: {gepa_evaluations: 800, minibatch: 3, blocks: "SOLO_SYSTEM_PROMPT, USER_PROLOGUE, LEAN_CLAUSE, QUERY_TEMPLATE (round-robin)", objective: "correct + 0.5 x gold recall"}
+  run_name: logs/gepa_bcp
+  dates: "2026-10-07 to 2026-10-08"
+  original_outputs: ["logs/gepa_bcp/ (candidates.json, cache.json, reflection_log.jsonl, verdict_pareto.json)"]
+  launcher: studies/prompt_optimisation/experiments/gepa1_bcp_run1.sh
+  driver: agents/document_repl/src/split_runner.py
+  judge: "Qwen3.6 (optimisation-time scores on D_pareto; no held-out evaluation)"
+  candidates: studies/prompt_optimisation/candidates/GEPA-1/
+  trajectories: "trajectories/prompt_optimisation/GEPA-1/ (run metadata; the optimisation rollouts are not migrated)"
+  question: "RQ4: does GEPA with a Claude critic find a better prompt? Run 1, proportional selection set."
+  status: complete
+  reported: "yes (optimisation-time scores, Qwen3.6 judge)"
+  notes: ['Ran on gepa_bcp.py before its 2026-10-12 edit (F-B).', 'What ran differs from run_gepa_bcp.sh as it is now (PO-I2).']
+
+- id: GEPA-2
+  study: prompt_optimisation
+  agent: document_repl
+  benchmark: "BrowseComp-Plus; enriched D_pareto (70 failures + 30 easy, splits/bcp_gepa_splits/split_enriched_q36.json); confirmation on test200 (199 paired)"
+  model: "Qwen3.6-35B-A3B-FP8; critic Claude Opus 5.5"
+  retriever: Reason-ModernColBERT PLAID 8192 (:8766)
+  budgets: {gepa_evaluations: "1,200 (stopped at 728)", minibatch: 8, objective: "correct + 0.5 x gold recall"}
+  run_name: "logs/gepa_bcp2; winner d911ebbe23"
+  dates: "2026-10-08 to 2026-10-10 (confirmation 2026-10-09 18:46 to 2026-10-10 04:57)"
+  original_outputs: ["logs/gepa_bcp2/ (rollouts/d911ebbe23: test200 + GEPA's own evaluations)", "logs/bcp_rejudge_gpt41/rq4_gepa_winner.json"]
+  launcher: "studies/prompt_optimisation/experiments/gepa2_bcp_run2.sh, gepa2_confirm_test200.sh"
+  control: "BCP-29 (its test200 questions: the original prompt)"
+  judge: "gpt-4.1, re-judged 2026-11-10"
+  superseded_judge: "Qwen3.6 (GEPA_BROWSECOMP_PLAN.md §7b, n = 198)"
+  verdicts: results/follow_up/verdicts/bcp/rq4_gepa_winner.json
+  candidates: studies/prompt_optimisation/candidates/GEPA-2/
+  trajectories: "trajectories/prompt_optimisation/GEPA-2/ (run metadata and the 199 held-out test200 rollouts only)"
+  question: "RQ4: run 2 (failure-enriched selection set, 8-question gate): does its winner beat the original prompt on held-out questions?"
+  status: complete
+  reported: true
+  notes: ['rollouts/d911ebbe23 also holds GEPA evaluation rollouts; only the test200 ids are held out and migrated.', 'Ran on gepa_bcp.py before its 2026-10-12 edit (F-B).']
+
+- id: GEPA-3
+  study: prompt_optimisation
+  agent: document_repl
+  benchmark: "FRAMES; GEPA on 200 feedback / 100 pareto / 200 test (splits/frames/gepa_splits/split.json); confirmation on the 324 questions no split used"
+  model: "Qwen3.6-35B-A3B-FP8; critic Claude Opus 5.5"
+  retriever: BM25 over Wikipedia (:8041), search cap 10
+  budgets: {gepa_rollouts: 800, minibatch: 3}
+  run_name: "logs/gepa_frames (best 598a758e3a); confirmation logs/gepa_frames_confirm (8ba345b481 = 598a758e3a without the leaked 'counts toward your score' phrase)"
+  dates: "2026-10-15 to 2026-10-16 (GEPA), 2026-10-17 (confirmation)"
+  original_outputs: ["logs/gepa_frames/", "logs/gepa_frames_confirm/rollouts/8ba345b481/ (graded_gpt41.json)"]
+  launcher: "studies/prompt_optimisation/experiments/gepa3_frames_1gpu.sh, gepa3_frames_confirm.sh"
+  control: "FR-13 (the seed: no separate run; its answers are logs/frames/sup_q36_bm25f)"
+  judge: "gpt-4.1, re-judged 2026-11-10/11"
+  superseded_judge: "Qwen3.6 (DATASET_BENCHMARKS.md §9.4)"
+  verdicts: results/follow_up/verdicts/frames/gepa_frames_confirm_8ba345b481/graded_gpt41.json
+  candidates: studies/prompt_optimisation/candidates/GEPA-3/
+  trajectories: trajectories/prompt_optimisation/GEPA-3/
+  question: "RQ4: does GEPA help on FRAMES?"
+  status: complete
+  reported: true
+  notes: ['n: the script drops the killed question q529 from the pairing (323); under missing = wrong it would be 324 (PO-I3, KNOWN_ISSUES).']
+
+- id: GEPA-4
+  study: prompt_optimisation
+  agent: snippet_repl
+  benchmark: "OBLIQ-Bench Twitter (281); 100 feedback / 100 pareto / 81 test (splits/obliq_splits/)"
+  model: "Qwen3.8-27B (local vLLM); reflection by the same model"
+  retriever: "Qwen3-Embedding-8B (:8010)"
+  budgets: {runs: "4: gepa_official (run 1, 09-28), gepa_official_v2 (run 2), gepa_paper (run 3, 10-04), gepa_wide (run 4, 10-04 to 10-05)", mutable_blocks: "STRATEGY (runs 1-3); STRATEGY + TASK_SUFFIX (run 4)"}
+  run_name: "logs/gepa_official, gepa_official_v2, gepa_paper, gepa_wide"
+  dates: "2026-09-28 to 2026-10-05"
+  original_outputs: ["logs/gepa_*/ (candidates.json, cache.json, progress.txt)", "logs/night8/validate.log"]
+  launcher: "studies/prompt_optimisation/obliq_twitter/experiments/run1_gepa_official.sh, run2_gepa_official_v2.sh, run3a_gepa_night.sh, run3_gepa_paper.sh, run4_gepa_wide.sh, run4_validate.sh"
+  control: "the seed prompt (fef4457968 / de68174356)"
+  judge: "none (NDCG@10)"
+  candidates: studies/prompt_optimisation/candidates/GEPA-4_run*/
+  trajectories: trajectories/prompt_optimisation/GEPA-4/
+  question: "RQ4: does GEPA help on a ranking task (OBLIQ-Twitter), with another agent and model?"
+  status: complete
+  reported: "yes (NDCG@10 on D_pareto; no candidate beat the seed, so no held-out test was run)"
+  notes: ['Run 1 is void by its own successor (D_pareto 12, budget 200).', 'Drivers were edited while runs were going (PO-I6); the snippet REPL harness versions of Sept/Oct are not preserved (PO-I5).']
+
+- id: GEPA-5
+  study: prompt_optimisation
+  agent: "none (the GEPA paper's HoVer program, DSPy, 4 modules)"
+  benchmark: "HoVer (150 train / 300 val / 300 test, studies/prompt_optimisation/hover/src/make_splits.py)"
+  model: "Qwen3.6-35B-A3B-FP8; critic Claude Opus 5.5"
+  retriever: "BM25 over the HoVer Wikipedia abstracts (hover/src/hover_retriever.py, :8770)"
+  budgets: {gepa_evaluations: "stopped at ~3,800 of 7,051", minibatch: 3}
+  run_name: logs/hover_gepa
+  dates: "2026-10-10"
+  original_outputs: ["logs/hover_gepa/"]
+  launcher: studies/prompt_optimisation/hover/experiments/run_hover_gepa.sh
+  control: "the program's default DSPy instructions"
+  judge: "none (all gold documents retrieved, binary)"
+  candidates: studies/prompt_optimisation/candidates/GEPA-5/
+  trajectories: trajectories/prompt_optimisation/GEPA-5/
+  question: "Sanity check: does the same GEPA pipeline reproduce the GEPA paper's gains on its own task?"
+  status: complete
+  reported: true
+  notes: ['The records contain HoVer claims (CC BY-SA 4.0).']
+
+# ───────────────────────────── Run variation, error analysis, baselines ─────────────────────────────
+- id: VAR-2
+  study: run_variation
+  agent: document_repl
+  benchmark: BrowseComp-Plus (pairs of earlier GPT-5 document REPL runs, 50-350 common questions each)
+  model: gpt-5 (Azure), medium effort
+  run_name: "docs/supervisor_artifact.html (embedded per-question trace of 39 runs)"
+  dates: "computed 2026-10-27"
+  original_outputs: ["docs/supervisor_artifact.html", "the computation: Claude Code session 2a1318b5 (studies/run_variation/original/MANIFEST.json)"]
+  launcher: studies/run_variation/src/rerun_flip_rates.py
+  judge: "gpt-4.1 (the verdicts recorded with those runs)"
+  trajectories: trajectories/run_variation/VAR-2/
+  question: "How much does a plain re-run of the GPT-5 document REPL agent fix and break? The comparison point of SP-3."
+  status: complete
+  reported: true
+  notes: ['Pairs are matched on effort and served model only, not on the whole configuration (RV-I1); all medium effort, SP-3 high.']
+
+- id: ERR-1
+  study: error_analysis
+  agent: document_repl
+  benchmark: "FRAMES (824): search cap 10 (FR-13) and cap 25 (FRC-1)"
+  model: Qwen3.6-35B-A3B-FP8
+  original_outputs: ["logs/frames/failure_taxonomy.json, failure_taxonomy_s25.json"]
+  launcher: "studies/error_analysis/src/failure_taxonomy.py [--s25], failure_drill_s25.py"
+  judge: "Qwen3.6 only (graded.json of FR-13 / FRC-1 and of FB-1); not rebuilt from the gpt-4.1 verdicts"
+  results: studies/error_analysis/results/
+  question: "What do the FRAMES agents still get wrong (no answer, corpus gap, beyond the model, retrieval miss, found all gold)?"
+  status: complete
+  reported: "Qwen3.6 judge only (qualitative use)"
+
+- id: FB-1
+  study: frames_baselines
+  agent: "none (single model call)"
+  benchmark: FRAMES (824)
+  model: Qwen3.6-35B-A3B-FP8 (thinking)
+  retriever: "none / BM25 top 2 / BM25 top 4 / all gold articles in the prompt"
+  original_outputs: ["logs/frames/llm_{closed,bm25_2,bm25_4,oracle}.jsonl, llm_summary.json"]
+  launcher: studies/frames_baselines/src/single_shot.py
+  judge: "Qwen3.6 only (official BrowseComp grader prompt on the local model)"
+  results: "studies/frames_baselines/results/ (oracle, closed, bm25_4: the inputs of ERR-1; bm25_2 not migrated)"
+  question: "Single-shot reference points for FRAMES; the oracle defines ERR-1's 'beyond the model' bucket."
+  status: complete
+  reported: "Qwen3.6 judge only"

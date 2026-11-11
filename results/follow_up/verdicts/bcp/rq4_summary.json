@@ -1,0 +1,30 @@
+{
+ "rerank_only": {
+  "rollout_dir": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc",
+  "n": 197,
+  "empty_or_unfinished": 10,
+  "content_filtered_counted_wrong": [],
+  "correct": 138,
+  "acc": 0.7005,
+  "paired_n": 197,
+  "paired_acc_arm": 0.7005,
+  "paired_acc_control_row16": 0.5787,
+  "won": 37,
+  "lost": 13,
+  "paired_acc_full_policy_row17": 0.7157
+ },
+ "gepa_winner": {
+  "rollout_dir": "logs/gepa_bcp2/rollouts/d911ebbe23",
+  "n": 199,
+  "empty_or_unfinished": 10,
+  "content_filtered_counted_wrong": [],
+  "correct": 118,
+  "acc": 0.593,
+  "paired_n": 199,
+  "paired_acc_arm": 0.593,
+  "paired_acc_control_row16": 0.5729,
+  "won": 23,
+  "lost": 19,
+  "paired_acc_full_policy_row17": 0.7186
+ }
+}

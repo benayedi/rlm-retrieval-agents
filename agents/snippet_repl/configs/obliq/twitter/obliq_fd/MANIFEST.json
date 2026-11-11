@@ -1,0 +1,20 @@
+{
+ "created": "2026-11-11T16:17:53+00:00",
+ "note": "byte-exact copies of question-id files (ids only); RLM = the original research repository",
+ "files": [
+  {
+   "file": "rest181_g0.json",
+   "source": "RLM:data/obliq_fd/rest181_g0.json",
+   "sha256": "0e3fa91f652fe38e6483b8a21c43bd9a1b473e916cd1acbaff540f56f18836a0",
+   "bytes": 819,
+   "used_by": "TWQ-1, SP-6 rest181 (experiments/obliq_twitter_qwen36.sh)"
+  },
+  {
+   "file": "rest181_g1.json",
+   "source": "RLM:data/obliq_fd/rest181_g1.json",
+   "sha256": "8775c50d90781f60544f407b37e90fdd4fee8ae9120e8805ba0b0a8f24cd3c6e",
+   "bytes": 810,
+   "used_by": "TWQ-1, SP-6 rest181"
+  }
+ ]
+}

@@ -17,7 +17,7 @@
 #                  in transcript 1a0da3c7 (the same variables plus EMBEDDING_SERVER_URL=http://localhost:8775 and
 #                  RLM_TRAJ_DIR=logs/obliq_mine_rr/traj_rr_rest181).
 # Locations: experiments/obliq_shard.sh runs in $RUNS_DIR, so the original relative paths logs/obliq_mine_rr/... become
-# $RUNS_DIR/obliq_mine_rr/...; the id files are read from IDS_DIR (default $RLM_DATA_DIR: obliq_fd/rest181_g{0,1}.json)
+# $RUNS_DIR/obliq_mine_rr/...; the id files are read from IDS_DIR (default configs/obliq/twitter: obliq_fd/rest181_g{0,1}.json)
 # and the repository copy of twitter_dev.json. Needs OBLIQ_BENCH_ROOT, the :8010 search server and vLLM on :8030 (+ :8031).
 #   ARM=ctrl|rr SLICE=dev100|rest181 experiments/obliq_twitter_qwen36.sh
 set -u
@@ -33,7 +33,7 @@ if [ "$SLICE" = dev100 ]; then
     bash "$SHARD" "$ART/studies/prompt_optimisation/splits/obliq_splits/twitter_dev.json" obliq_mine_rr/${ARM}_dev100 20 12 10 \
     > "$RUNS_DIR/obliq_mine_rr/shard_$ARM.log" 2>&1
 elif [ "$SLICE" = rest181 ]; then
-  IDS_DIR=${IDS_DIR:-${RLM_DATA_DIR:?set RLM_DATA_DIR or IDS_DIR (directory holding obliq_fd/rest181_g0.json)}}
+  IDS_DIR=${IDS_DIR:-$ALG/configs/obliq/twitter}   # original: <RLM_DATA_DIR> (data/obliq_fd/rest181_g{0,1}.json; byte-identical copies)
   case "$ARM" in ctrl) NAME=snip_rest181; TRAJ=obliq_mine_rr/traj_snip_rest181 ;;
                  rr)   NAME=rr_rest181;   TRAJ=obliq_mine_rr/traj_rr_rest181 ;; esac
   for g in 0 1; do

@@ -58,8 +58,12 @@ def test_config_parses(row):
     assert f"--reasoning-effort {env['REASONING_EFFORT']}" in args
 
 
+# configs of the follow-up runs (studies/; tests/test_follow_up_configs.py checks them)
+FOLLOW_UP = ["FRC-1", "SP-1", "SP-2", "SP-3", "SP-4", "SP-7", "TWQ-2"]
+
+
 def test_config_set_is_complete():
-    assert sorted(p.stem for p in (ALG / "configs").glob("*.env")) == sorted(ROWS)
+    assert sorted(p.stem for p in (ALG / "configs").glob("*.env")) == sorted(ROWS + FOLLOW_UP)
 
 
 def _flags(path: Path) -> list[str]:

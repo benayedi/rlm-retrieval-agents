@@ -1,0 +1,41 @@
+{
+ "created": "2026-11-11T16:17:53+00:00",
+ "note": "byte-exact copies of question-id files (ids only); RLM = the original research repository",
+ "files": [
+  {
+   "file": "test_ids_shuffled.txt",
+   "source": "RLM:data/frames/gepa_splits/test_ids_shuffled.txt",
+   "sha256": "988b2b3d9b9de04100f9c4ac650b643a5c987aace07c19bcb48f2d38077d1e15",
+   "bytes": 800,
+   "used_by": "FRC-1 test200"
+  },
+  {
+   "file": "s25_rest_gpu0.txt",
+   "source": "RLM:data/frames/gepa_splits/s25_rest_gpu0.txt",
+   "sha256": "0a48cb188935a3e6d9086fdd3fef61e94ae0ba3a62897ca83ed3af82e000a45f",
+   "bytes": 1203,
+   "used_by": "FRC-1 rest (GPU 0)"
+  },
+  {
+   "file": "s25_rest_gpu1.txt",
+   "source": "RLM:data/frames/gepa_splits/s25_rest_gpu1.txt",
+   "sha256": "bf978bb7319b002fdbb1d7849a106fbbb3a4a7fa71f322c099bab70fcdba7a66",
+   "bytes": 1183,
+   "used_by": "FRC-1 rest (GPU 1)"
+  },
+  {
+   "file": "all824_shuf_gpu0.txt",
+   "source": "RLM:data/frames/gepa_splits/all824_shuf_gpu0.txt",
+   "sha256": "2ac2e0cadcffc7a0bd797547f00bbc96f79612b2933bce1a2c625c15856ef747",
+   "bytes": 1577,
+   "used_by": "SP-4 (GPU 0)"
+  },
+  {
+   "file": "all824_shuf_gpu1.txt",
+   "source": "RLM:data/frames/gepa_splits/all824_shuf_gpu1.txt",
+   "sha256": "4e2adbe0c14675dc8b1a5a8129e36a2b8c99dd6a11acb6395712901da95f1f73",
+   "bytes": 1609,
+   "used_by": "SP-4 (GPU 1)"
+  }
+ ]
+}

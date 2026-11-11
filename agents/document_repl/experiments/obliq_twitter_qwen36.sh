@@ -12,18 +12,19 @@
 #     http://127.0.0.1:$2 ...
 # The run_experiment.py arguments below are the launch_argv recorded in <FULLDOC_ROOT>/runs/obliq_q36_{ctrl,rr}/
 # _provenance.json (identical in both arms except --name and --server). The records' prompt_id 00a9b02c72d6 is the
-# one prompts.py computes with GEPA_PROMPTS = that prompts_obliq.json. The question ids are <LOGS_ROOT>/obliq_rr/ids281.json
+# one prompts.py computes with GEPA_PROMPTS = that prompts_obliq.json, read here from its byte-identical copy
+# configs/obliq/prompts_obliq.json (configs/obliq/README.md). The question ids are <LOGS_ROOT>/obliq_rr/ids281.json
 # (the same 281 ids as configs' all281.json, in another order). Results: $RUNS_DIR/obliq_q36_<arm>.
 #   ARM=ctrl|rr [IDS_FILE=<ids.json>] experiments/obliq_twitter_qwen36.sh
 set -u
 . "$(dirname "${BASH_SOURCE[0]}")/_common.sh"
 ARM=${ARM:?set ARM=ctrl or rr}
 case "$ARM" in ctrl) PORT=8767 ;; rr) PORT=8774 ;; *) echo "ARM must be ctrl or rr" >&2; exit 2 ;; esac
-IDS_FILE=${IDS_FILE:-${LOGS_ROOT:?set LOGS_ROOT or IDS_FILE}/obliq_rr/ids281.json}
+IDS_FILE=${IDS_FILE:-$ALG/configs/obliq_ids/ids281.json}   # original: <LOGS_ROOT>/obliq_rr/ids281.json (byte-identical copy)
 curl -s -m10 -o /dev/null http://127.0.0.1:$PORT/health || { echo "ABORT: retrieval :$PORT down" >&2; exit 1; }
 cd "$FULLDOC_ROOT"                           # original: cd <FULLDOC_ROOT> (the document REPL agent working directory)
 env PYTHONPATH=$RLMLIB_PATH HF_HOME=${HF_HOME:-$HOME/.cache/huggingface} ALIBABA_TOKEN=EMPTY \
-  QUERIES_FILE=$FULLDOC_ROOT/data/obliq_twitter/queries.jsonl GEPA_PROMPTS=$FULLDOC_ROOT/data/obliq_twitter/prompts_obliq.json \
+  QUERIES_FILE=$FULLDOC_ROOT/data/obliq_twitter/queries.jsonl GEPA_PROMPTS=$ALG/configs/obliq/prompts_obliq.json \
   SUP_FENCE_TOLERANT=1 SUP_MAX_BLOCKS=5 SUP_PRESENCE_PENALTY=1.5 \
   "$PYTHON" -u "$SRC/run_experiment.py" --name obliq_q36_$ARM --ids-file "$IDS_FILE" --workers 10 --stagger 0.3 \
     --design B --server http://127.0.0.1:$PORT --backend openai --base-url http://localhost:8030/v1 \
