@@ -153,8 +153,8 @@ Each finding below is measured, and cites the pair that shows it.
   - With BM25, the snippet REPL agent made 60.9 searches per question against document REPL's cap of 10.
   - With the dense retriever, the reasoning efforts differ in a way that is only partly known (BCP-9 ran at the
     default effort; BCP-21's effort is unverified).
-  - With Qwen3.6, the snippet REPL rows ran under a 1 h per-question time limit and the document REPL rows did not,
-    and unfinished questions are scored wrong ([K7](../verification/KNOWN_ISSUES.md)). With the dense retriever 190
+  - With Qwen3.6, the per-question time limits differ (1 h for the snippet REPL rows on BrowseComp-Plus, 5,400 s for
+    the document REPL rows; table above), and unfinished questions are scored wrong ([K7](../verification/KNOWN_ISSUES.md)). With the dense retriever 190
     snippet REPL questions and 121 document REPL questions were unfinished, so the gap in finding 4
     may partly reflect the difference in unfinished questions.
 

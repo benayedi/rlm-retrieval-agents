@@ -148,7 +148,9 @@ obtain and build them.
 - **BrowseComp-Plus.** Its questions and answers are distributed encrypted, with a canary asking that they never
   appear online in plain text. This repository contains none; `scripts/provenance/bcp_leak_scan.py` checks that.
 - **Third-party code.** The RLM library (MIT, Alex Zhang) is installed from its repository, not vendored.
-- **This repository's licence.** Not chosen yet; it needs to be decided before any public release.
+- **This repository's licence.** [Apache License 2.0](LICENSE) (chosen by the owner, 2026-11-22) for the code,
+  configurations and documentation written for this repository. Benchmark data, corpora and third-party code keep
+  their own licences.
 
 ## Known limitations
 

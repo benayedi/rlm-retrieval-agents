@@ -286,7 +286,8 @@ The full list is in [KNOWN_ISSUES.md](verification/KNOWN_ISSUES.md). The open it
    workbook, their trajectories and the audit were migrated (KNOWN_ISSUES K45).
 7. **Licences.** Benchmark redistribution licences are undetermined. No licence was chosen for this repository, and
    `CITATION.cff` was not created because author and publication metadata were not available. Both must be decided
-   before any public release.
+   before any public release. *Done 2026-11-22:* the repository is licensed under Apache-2.0 (`LICENSE`, owner's
+   decision); benchmark licences and `CITATION.cff` are still open.
 8. **Personal names in `original/`.** The verbatim originals still contain personal Azure deployment names and
    absolute home paths. Byte-identical preservation requires them; review them before making the repository public.
 
