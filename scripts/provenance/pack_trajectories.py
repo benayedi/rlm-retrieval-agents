@@ -36,6 +36,8 @@ ROWS = {
     "BCP-11": ("snippet_repl", True, [(L, f"rlmfix{n}_q*", "logs") for n in (24, 25, 29, 30, 31)] +
                [(OR, "scripts/workbook/tokmaps/root_tok_rlm_traj24.json", "repo"), (L, "bcp_rejudge_gpt41/9.json", "logs")]),
     "BCP-13": ("snippet_repl", True, [(L, "run5d/full/bcp_snip_gpt5_bm25/**", "logs"), (L, "run5d/full/bcp_snip_gpt5_bm25.*", "logs")]),
+    "BCP-15": ("snippet_repl", True, [(L, "run5d/full/bcp_snip_qwen_dense/**", "logs"), (L, "run5d/full/bcp_snip_qwen_dense.*", "logs")]),
+    "BCP-17": ("snippet_repl", True, [(L, "run5d/full/bcp_snip_qwen_colbert/**", "logs"), (L, "run5d/full/bcp_snip_qwen_colbert.*", "logs")]),
     "BCP-19": ("snippet_repl", True, [(L, "run5d/full/bcp_snip_qwen_bm25/**", "logs"), (L, "run5d/full/bcp_snip_qwen_bm25.*", "logs")]),
     "BCP-25": ("document_repl", True, [(L, "bcp_gpt5_bm25/**", "logs"), (L, "bcp_rejudge_gpt41/bm25_gpt5.json", "logs")]),
     "BCP-27": ("document_repl", True, [(L, "run5d/bcp_fd_qwen_dense/cache.json", "logs"), (L, "run5d/bcp_fd_qwen_dense/graded_gpt41.json", "logs"),
