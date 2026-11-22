@@ -95,5 +95,12 @@ optimisation, **RV-I**n run variation, **EA-I**n error analysis, **FB-I**n FRAME
 - **Rejected claim: Document REPL OBLIQ runs called the sub-LLM.** An agent's draft said model code called the sub-LLM
   functions in 37 CON-11 and 17 TWI-11 runs. A direct scan of every trajectory found no call (0/254, 0/281, 0/151).
   The claim was withdrawn, and F2 now records the correction.
+- **Corrected registry notes: TWI-11 and CON-11 (2026-11-22).** Their notes still said the model called the sub-LLM
+  functions on 17 / 37 questions. A scan of model-written code in every MAT-11, TWI-11 and CON-11 trajectory finds 0 calls
+  of `llm_query` / `rlm_query`; the 33 / 17 / 37 questions call the non-existent `read_docs` (K10). Notes corrected.
+- **Corrected time limit of the Qwen3.6 document REPL rows (2026-11-22).** `AGENT_COMPARISON.md` said "runaway kill
+  only". The configs pass `--max-timeout 5400`; rlm (`core/rlm.py`, `_check_timeout`) checks it at the start of each
+  turn, and the launchers kill the process at 6,300 s. In the archived runs with these settings (SP-1, SP-2, SP-4),
+  questions stopped by the limit ended between 5,400 and 6,300 s. Template and document corrected.
 - **Corrected registry entry: BCP-21's launcher.** The `final830_*` scripts were first listed as BCP-21's launcher.
   They belong to a different run (Design G, a different served model). BCP-21's launchers are not preserved.

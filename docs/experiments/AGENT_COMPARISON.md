@@ -36,7 +36,7 @@ reading alone.
 | Sub-LLM | `llm_query` is used for reading | the functions stay installed and only the prompt says not to use them (no call found in the OBLIQ trajectories) |
 | Reasoning effort actually sent | BCP-9, BCP-11: deployment default (≈ medium), see [K3](../verification/KNOWN_ISSUES.md); BCP-13, FRAMES, OBLIQ: as labelled | BCP-21, BCP-23: unverified (unpreserved patched build); BCP-25: default (≈ medium); FRAMES, OBLIQ: as labelled |
 | ColBERT index | 512-token documents | 8,192-token documents |
-| Per-question time limit (Qwen3.6) | 1 h (BrowseComp-Plus), 2 h (FRAMES) | runaway kill only |
+| Per-question time limit (Qwen3.6) | 1 h (BrowseComp-Plus), 2 h (FRAMES) | 5,400 s (`--max-timeout`, checked by rlm at the start of each turn), then a 6,300 s process kill |
 
 \* The "Recall" column uses five definitions across rows: gold vs evidence documents, and different denominators.
 It is comparable only within one definition; see [RESULT_INTEGRITY.md §R1](../verification/RESULT_INTEGRITY.md).
