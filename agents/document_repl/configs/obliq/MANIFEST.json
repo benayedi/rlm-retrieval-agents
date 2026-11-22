@@ -1,0 +1,38 @@
+{
+ "created": "2026-11-11T16:11:18+00:00",
+ "note": "byte-exact copies; RLM = the original research repository, FULLDOC = the document REPL agent working directory",
+ "files": [
+  {
+   "file": "prompts_congress.json",
+   "source": "RLM:data/obliq_fd_gemini/prompts_congress.json",
+   "sha256": "dba37e2546d561965a7e6daf64e46bf3623bea55879260f6010096e66069337b",
+   "bytes": 3867,
+   "mtime": "2026-10-27T17:32:58",
+   "prompt_id": "891e1319f80c"
+  },
+  {
+   "file": "prompts_math.json",
+   "source": "RLM:data/obliq_fd_gemini/prompts_math.json",
+   "sha256": "bb6358634ae4f1d0ae04c8641af7a743a5885a2f628fd07eaf9c2f3ad010fcd8",
+   "bytes": 4208,
+   "mtime": "2026-10-27T17:32:50",
+   "prompt_id": "f92043bfd120"
+  },
+  {
+   "file": "prompts_twitter.json",
+   "source": "RLM:data/obliq_fd_gemini/prompts_twitter.json",
+   "sha256": "0300d45cafe4da1593d404a19e595bc27c760e0eea480d78bded8768877b532c",
+   "bytes": 3728,
+   "mtime": "2026-10-27T17:32:58",
+   "prompt_id": "299e86ce3e1e"
+  },
+  {
+   "file": "prompts_obliq.json",
+   "source": "FULLDOC:data/obliq_twitter/prompts_obliq.json",
+   "sha256": "462684cd1aa45c71eb54786ee86a3342df654499dd607a93320882431ed32b05",
+   "bytes": 1976,
+   "mtime": "2026-09-26T21:14:10",
+   "prompt_id": "00a9b02c72d6"
+  }
+ ]
+}

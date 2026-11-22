@@ -1,0 +1,76 @@
+{
+ "created": "2026-11-11T15:47:40+00:00",
+ "note": "byte-exact copies of question-id split files from data/ of the original repository (RLM_DATA_DIR); ids and counts only",
+ "files": [
+  {
+   "copy": "bcp_gepa_splits/split.json",
+   "source": "RLM:data/bcp_gepa_splits/split.json",
+   "sha256": "60b30771a51096747ae802fb3b3372869c75121062cf2a09f8daca03d9fb5c36",
+   "bytes": 7744,
+   "mtime": "2026-10-06T11:11:34"
+  },
+  {
+   "copy": "bcp_gepa_splits/split_enriched_q36.json",
+   "source": "RLM:data/bcp_gepa_splits/split_enriched_q36.json",
+   "sha256": "d71500fb6402a7879e69731e6961b7413ff56f6a248d6dada42fc682981eeef3",
+   "bytes": 8870,
+   "mtime": "2026-10-08T19:00:16"
+  },
+  {
+   "copy": "bcp_gepa_splits/split_summary.txt",
+   "source": "RLM:data/bcp_gepa_splits/split_summary.txt",
+   "sha256": "7d8abe512b5149255a91aee45be83e4aeeee489e0ffc0daf85cd9189a2efd226",
+   "bytes": 915,
+   "mtime": "2026-10-06T11:11:34"
+  },
+  {
+   "copy": "bcp_full830/split_rest300.json",
+   "source": "RLM:data/bcp_full830/split_rest300.json",
+   "sha256": "3cd7378a5bd8adb5afbbfa259f60cfa2c3128d34b0ee968dfb1fbfb01f99b2d5",
+   "bytes": 8211,
+   "mtime": "2026-10-14T14:46:54"
+  },
+  {
+   "copy": "frames/gepa_splits/split.json",
+   "source": "RLM:data/frames/gepa_splits/split.json",
+   "sha256": "8d0ed92f714a1f29c930bedf92a088d989adbbd4ad76e0d76a909215603fe7f7",
+   "bytes": 4815,
+   "mtime": "2026-10-15T15:34:10"
+  },
+  {
+   "copy": "obliq_splits/twitter_dev.json",
+   "source": "RLM:data/obliq_splits/twitter_dev.json",
+   "sha256": "e63b92deeabc9e61d24fb55a10bf1f0b763725a39f525016d20490018e24107d",
+   "bytes": 900,
+   "mtime": "2026-09-26T07:36:55"
+  },
+  {
+   "copy": "obliq_splits/twitter_heldout.json",
+   "source": "RLM:data/obliq_splits/twitter_heldout.json",
+   "sha256": "4b531177fc7df74453fe297748e7424cea4d8f3a9596c119a2d720e21c263f73",
+   "bytes": 1629,
+   "mtime": "2026-09-26T07:36:55"
+  },
+  {
+   "copy": "obliq_splits/twitter_pareto100.json",
+   "source": "RLM:data/obliq_splits/twitter_pareto100.json",
+   "sha256": "b831df322f1287aa8697d299dab47c86330eb11b833dfb7042fd114f48415fa9",
+   "bytes": 1002,
+   "mtime": "2026-10-04T20:36:34"
+  },
+  {
+   "copy": "obliq_splits/twitter_pareto_gepa.json",
+   "source": "RLM:data/obliq_splits/twitter_pareto_gepa.json",
+   "sha256": "b831df322f1287aa8697d299dab47c86330eb11b833dfb7042fd114f48415fa9",
+   "bytes": 1002,
+   "mtime": "2026-10-05T12:18:19"
+  },
+  {
+   "copy": "obliq_splits/twitter_smoke3.json",
+   "source": "RLM:data/obliq_splits/twitter_smoke3.json",
+   "sha256": "f0fa0c80b6e3ab6ebe735d3427ff1806c48a4b5f248743e5520715b667c173cc",
+   "bytes": 27,
+   "mtime": "2026-09-26T07:40:38"
+  }
+ ]
+}

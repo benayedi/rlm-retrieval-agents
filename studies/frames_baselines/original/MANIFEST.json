@@ -1,0 +1,34 @@
+{
+ "created": "2026-11-11T15:48:26+00:00",
+ "files": [
+  {
+   "copy": "RLM/scripts/frames_eval.py",
+   "source": "RLM:scripts/frames_eval.py",
+   "sha256": "00ef331b3c216bb17eee57e8b3ab2141edfbe418c668e87973e48ada8f586216",
+   "bytes": 10350,
+   "git_state": "committed",
+   "mtime": "2026-10-14T05:57:56"
+  },
+  {
+   "copy": "RLM/logs/frames/run_rest.sh",
+   "source": "RLM:logs/frames/run_rest.sh",
+   "sha256": "a40b846bb680115c20226adbd7a34b116a98b56bd9e466b9cc71cdcdf39c20dd",
+   "bytes": 392,
+   "git_state": "committed",
+   "mtime": "2026-10-14T07:12:10"
+  }
+ ],
+ "source_roots": {
+  "RLM": {
+   "git_head": "67f0fe2966c092a9df1c5466cd5d4281c625cb30",
+   "note": "working tree, including uncommitted changes"
+  },
+  "FULLDOC": {
+   "git_head": null,
+   "note": "not a git repository; files as on disk"
+  },
+  "TRANSCRIPT": {
+   "note": "Claude Code session transcripts (JSON lines), read only"
+  }
+ }
+}

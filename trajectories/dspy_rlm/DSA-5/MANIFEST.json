@@ -1,0 +1,178 @@
+{
+"row": "DSA-5",
+"agent": "dspy_rlm",
+"created": "2026-11-11T16:08:18",
+"format": "tar (PAX) | zstd -19 --long=27 | openssl enc -aes-256-ctr -pbkdf2 -iter 200000 -salt, passphrase = BrowseComp canary string",
+"encrypted": true,
+"archive_parts": [
+{
+"file": "DSA-5.tar.zst.enc",
+"bytes": 256267,
+"sha256": "48e8faa47dce69d3b49dc5f3e1541f111a35f504758f7401001fe56329714eae"
+}
+],
+"members": 32,
+"member_bytes": 2063918,
+"files": [
+{
+"path": "logs/bcp_rejudge_gpt41/5.json",
+"bytes": 16726,
+"sha256": "8cba1a74a8457b69b750da970aa7657d5099a002935b36ce7be196a05f5d7318"
+},
+{
+"path": "logs/browsecomp_v2_medium_q148_q830.json",
+"bytes": 700143,
+"sha256": "8636687a12edb3fed77c999c7401a22f6c2b1871d2ece4c5b8c39835d57d8a88"
+},
+{
+"path": "logs/browsecomp_v2_medium_retry56.json",
+"bytes": 54930,
+"sha256": "985a13d95a7586126a59406933ed9999ec9fb5da15314d5436371b5ee0e92ff4"
+},
+{
+"path": "logs/browsecomp_v2medium_baseline_200.json",
+"bytes": 144227,
+"sha256": "54ef3907a42f1f7a52df0c2cf96e464d84045610ce31aa0edbc11961bc12d17a"
+},
+{
+"path": "logs/browsecomp_v2medium_baseline_first50.json",
+"bytes": 4237,
+"sha256": "981f400d666e9d5a2128c3805cace49ea0477f41e00b0c71a9a1bfcf455d39dc"
+},
+{
+"path": "logs/dspy_ablation/arm5.out",
+"bytes": 42,
+"sha256": "929546e93c13c96c6a4b296af1469dea747b2590d2bfac514faca585dfb7cd9d"
+},
+{
+"path": "logs/dspy_ablation/arm5/_judge_cache_gpt41.json",
+"bytes": 3435,
+"sha256": "42f3921ff157f70f65ec4b011482439b7927a997997ba0dbb94e15dc38fb208e"
+},
+{
+"path": "logs/dspy_ablation/arm5/report.json",
+"bytes": 1419,
+"sha256": "0515f4ae5be6daa034ef13798c808bc7b3e1ce619eac57bb06d22a41786d909f"
+},
+{
+"path": "logs/dspy_ablation/arm5/s0.json",
+"bytes": 25363,
+"sha256": "c4fe164e1e22831d8123b60a1e80afc4e73b6d457b9d3095ebf214d582a02d9a"
+},
+{
+"path": "logs/dspy_ablation/arm5/s0.log",
+"bytes": 30671,
+"sha256": "afa5ee35cc9966b3ef5affacfbd9f085d3e1af42e8c04995dbd20ed076897476"
+},
+{
+"path": "logs/dspy_ablation/arm5/s0.txt",
+"bytes": 7614,
+"sha256": "e87a43c40bdd967fcaae9ac3351e5d24c4093a5b76dd838ddee9415168211e1e"
+},
+{
+"path": "logs/dspy_ablation/arm5/s0_checkpoint.json",
+"bytes": 25363,
+"sha256": "c4fe164e1e22831d8123b60a1e80afc4e73b6d457b9d3095ebf214d582a02d9a"
+},
+{
+"path": "logs/dspy_ablation/arm5/s1.json",
+"bytes": 26099,
+"sha256": "4bbbc7ac6adbcdbdc732c753dbb9bcd3e48d9be9b838f2db87fc1b4b0c26dbda"
+},
+{
+"path": "logs/dspy_ablation/arm5/s1.log",
+"bytes": 25588,
+"sha256": "a36c194f3c605f37768cd5995763367fb252984b8508f04460935a9ea17e731b"
+},
+{
+"path": "logs/dspy_ablation/arm5/s1.txt",
+"bytes": 7504,
+"sha256": "e81a4d74abfa8f7e6e2705394e4fc4171e7ef13ca7402c57dbe6b1c77755d255"
+},
+{
+"path": "logs/dspy_ablation/arm5/s1_checkpoint.json",
+"bytes": 26099,
+"sha256": "4bbbc7ac6adbcdbdc732c753dbb9bcd3e48d9be9b838f2db87fc1b4b0c26dbda"
+},
+{
+"path": "logs/dspy_ablation/arm5/s2.json",
+"bytes": 25290,
+"sha256": "f4749a51fb4fa002d91df8dba833c646874bc467cb278f16a31e7b4cbb0c296f"
+},
+{
+"path": "logs/dspy_ablation/arm5/s2.log",
+"bytes": 25991,
+"sha256": "ae159cd508ba3b68df6a378128194f221755f2c8213255ceed6e5489297cd727"
+},
+{
+"path": "logs/dspy_ablation/arm5/s2.txt",
+"bytes": 7580,
+"sha256": "692ce8819770d5e1ea1d1130e3e5b2250a3bc291548d2d80b4182ea483ede87b"
+},
+{
+"path": "logs/dspy_ablation/arm5/s2_checkpoint.json",
+"bytes": 25290,
+"sha256": "f4749a51fb4fa002d91df8dba833c646874bc467cb278f16a31e7b4cbb0c296f"
+},
+{
+"path": "logs/dspy_ablation/arm5/s3.json",
+"bytes": 28657,
+"sha256": "ebd05a80ca825ee522a5118129cb7bc78abf2a45be5f0517542fff99ebb0fdf2"
+},
+{
+"path": "logs/dspy_ablation/arm5/s3.log",
+"bytes": 33805,
+"sha256": "8f44774595d3c124f7abfff06b3e04bdee26a5b4c83525779cddacb7fbdf24ac"
+},
+{
+"path": "logs/dspy_ablation/arm5/s3.txt",
+"bytes": 7614,
+"sha256": "a2c87776417a28952ca45141682c934ed4896877e73041718de2605df1e9d261"
+},
+{
+"path": "logs/dspy_ablation/arm5/s3_checkpoint.json",
+"bytes": 28657,
+"sha256": "ebd05a80ca825ee522a5118129cb7bc78abf2a45be5f0517542fff99ebb0fdf2"
+},
+{
+"path": "logs/dspy_ablation/arm5/s4.json",
+"bytes": 27732,
+"sha256": "26114b977aa7dcdb92071b4c0f311eb8d799012a21de624607108b80f06f8b19"
+},
+{
+"path": "logs/dspy_ablation/arm5/s4.log",
+"bytes": 29106,
+"sha256": "910f81fdfb176800a9c2a40e24d634b3115ca94bdfc820a4f61dc2255d60509b"
+},
+{
+"path": "logs/dspy_ablation/arm5/s4.txt",
+"bytes": 7539,
+"sha256": "5233bb2134fc2fbce91aebccc61b28a8067852145f2583c964412bd75e4eb78d"
+},
+{
+"path": "logs/dspy_ablation/arm5/s4_checkpoint.json",
+"bytes": 27732,
+"sha256": "26114b977aa7dcdb92071b4c0f311eb8d799012a21de624607108b80f06f8b19"
+},
+{
+"path": "logs/dspy_ablation/arm5_report.log",
+"bytes": 1558,
+"sha256": "21c592c7e104fb1ec137a35ac1277c61f459edee6519ff6195421e64d51ef9ce"
+},
+{
+"path": "logs/dspy_ablation/dspy_vs_snip.json",
+"bytes": 4478,
+"sha256": "f7be6495baf6aaa9430153e5678c0ba965cdd4ec1e2a2320af50efb80a866e59"
+},
+{
+"path": "logs/dspy_ablation/sample100.json",
+"bytes": 9522,
+"sha256": "2b7235ef7132a2158c3795962ce9aaac888fac5f8395cb0cfae5bd5fb3080896"
+},
+{
+"path": "logs/dspy_ablation/snippet_bcp9_per_question.json",
+"bytes": 673907,
+"sha256": "71b66361aad08d7c84bdc8ebe3cec994910340a716e7a5e35630f0d0fbeb21ac"
+}
+]
+}

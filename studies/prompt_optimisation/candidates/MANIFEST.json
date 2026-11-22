@@ -1,0 +1,113 @@
+{
+ "created": "2026-11-11T16:09:47+00:00",
+ "files": [
+  {
+   "copy": "GEPA-1/candidates.json",
+   "source": "LOGS_ROOT:gepa_bcp/candidates.json",
+   "sha256": "e37ed4e8fd87d5a73724d90cc29400c9b8d54a6d19a40e15c1acf3eb335b2605",
+   "bytes": 61400
+  },
+  {
+   "copy": "GEPA-1/best_candidate.json",
+   "source": "LOGS_ROOT:gepa_bcp/best_candidate.json",
+   "sha256": "551fb516fb859a5c03c9ff7234ff5d151fcdc00575d509ac2cf9ae565d7e2178",
+   "bytes": 5245
+  },
+  {
+   "copy": "GEPA-2/candidates.json",
+   "source": "LOGS_ROOT:gepa_bcp2/candidates.json",
+   "sha256": "dbeeb29deb5423031175f8f1171bf2a2ef0363ae4fa900822f921bcaedcbccd1",
+   "bytes": 46737
+  },
+  {
+   "copy": "GEPA-2/winner.json",
+   "source": "LOGS_ROOT:gepa_bcp2/winner.json",
+   "sha256": "06af96adbcd9cfaaade3fead9ad7c8fe77fbc5414ad4121f987aab75a884a8ed",
+   "bytes": 9349
+  },
+  {
+   "copy": "GEPA-3/candidates.json",
+   "source": "LOGS_ROOT:gepa_frames/candidates.json",
+   "sha256": "c37efc396174c5bd94bc01d50f9249225bd9a6ab25029308d3b33f73c1fc69f9",
+   "bytes": 62738
+  },
+  {
+   "copy": "GEPA-3/best_candidate.json",
+   "source": "LOGS_ROOT:gepa_frames/best_candidate.json",
+   "sha256": "5eb264bf54fa7a3f281e46af47443d1e98454e56575b8cdd24e9b87a250905ff",
+   "bytes": 7668
+  },
+  {
+   "copy": "GEPA-4_run1/candidates.json",
+   "source": "LOGS_ROOT:gepa_official/candidates.json",
+   "sha256": "7de1666e36784fdf0db02bf6a983a2b80a5695983d1d033a08999e3f2f259d25",
+   "bytes": 21092
+  },
+  {
+   "copy": "GEPA-4_run1/best_candidate.json",
+   "source": "LOGS_ROOT:gepa_official/best_candidate.json",
+   "sha256": "f1ee0b7fcf6429af8b7aae26b14aa51d8a143a7265310d6f73a6c57308781a26",
+   "bytes": 6401
+  },
+  {
+   "copy": "GEPA-4_run2/candidates.json",
+   "source": "LOGS_ROOT:gepa_official_v2/candidates.json",
+   "sha256": "ff40b817bcefa8246c598496936d421a8941cb6d06fd7ca647435d86541cbf5e",
+   "bytes": 23437
+  },
+  {
+   "copy": "GEPA-4_run2/best_candidate.json",
+   "source": "LOGS_ROOT:gepa_official_v2/best_candidate.json",
+   "sha256": "543268f7731559b44ec0882803d348663263340179d38d70ffb109d8eed888d9",
+   "bytes": 991
+  },
+  {
+   "copy": "GEPA-4_run3/candidates.json",
+   "source": "LOGS_ROOT:gepa_paper/candidates.json",
+   "sha256": "fe3004e758366f1b1a5af009dde4f6b8835344f117ef49d7db774d94af2515ec",
+   "bytes": 1002
+  },
+  {
+   "copy": "GEPA-4_run4/candidates.json",
+   "source": "LOGS_ROOT:gepa_wide/candidates.json",
+   "sha256": "3273b3d2b296b22f8811fe08ca935107ed285d0c1c20504eba763cd4a4be255e",
+   "bytes": 9360
+  },
+  {
+   "copy": "GEPA-4_run4/best_candidate_wide.json",
+   "source": "LOGS_ROOT:gepa_wide/best_candidate_wide.json",
+   "sha256": "90db37141b4ba153fbeed41aa6fadbc55b97bf7ba024816ad97f940a2fea7d68",
+   "bytes": 4401
+  },
+  {
+   "copy": "GEPA-4_run4/seed_strategy.txt",
+   "source": "LOGS_ROOT:gepa_wide/seed_strategy.txt",
+   "sha256": "f92b9dc5f88d5148950c67c49604aa5a15721c0cc45cb9d54e9257bda3916502",
+   "bytes": 970
+  },
+  {
+   "copy": "GEPA-4_run4/seed_task.txt",
+   "source": "LOGS_ROOT:gepa_wide/seed_task.txt",
+   "sha256": "98f4a20747bfc09a47dc4b1faa2cb705f6e64a1bfd1941db4e9b1eb35f9dddb5",
+   "bytes": 1101
+  },
+  {
+   "copy": "GEPA-4_run4/A_control.txt",
+   "source": "ORIGINAL_REPO_ROOT:experiments/rank_ab/A_control.txt",
+   "sha256": "98f4a20747bfc09a47dc4b1faa2cb705f6e64a1bfd1941db4e9b1eb35f9dddb5",
+   "bytes": 1101
+  },
+  {
+   "copy": "GEPA-5/candidates.json",
+   "source": "LOGS_ROOT:hover_gepa/candidates.json",
+   "sha256": "d1c9f35957f72140a525614cb6608ce139670b34932c66fb3baa3f619883ffff",
+   "bytes": 61059
+  },
+  {
+   "copy": "GEPA-5/best_candidate.json",
+   "source": "LOGS_ROOT:hover_gepa/best_candidate.json",
+   "sha256": "6846aa50dad241a204ea1010722055a1559e2c1a8ad9f5776a8ac1d1fa5bd944",
+   "bytes": 9283
+  }
+ ]
+}

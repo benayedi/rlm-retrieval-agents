@@ -1,0 +1,66 @@
+{
+ "n": 100,
+ "results": 100,
+ "arm3_raw": 0.65,
+ "old_dspy_raw": 0.43,
+ "snippet_raw": 0.62,
+ "arm3_weighted": 0.7914439324116743,
+ "old_dspy_weighted": 0.7152718894009217,
+ "snippet_weighted": 0.7831612903225805,
+ "strata": {
+  "S1 DSPy hit turn cap, snippet right": {
+   "n": 35,
+   "arm3": 0.6857142857142857,
+   "old_dspy": 0.2857142857142857,
+   "snippet": 1.0,
+   "arm3_turns": 11.4
+  },
+  "S2 DSPy hit turn cap, snippet wrong": {
+   "n": 15,
+   "arm3": 0.26666666666666666,
+   "old_dspy": 0.0,
+   "snippet": 0.0,
+   "arm3_turns": 16.666666666666668
+  },
+  "S3 no cap, DSPy and snippet disagree": {
+   "n": 20,
+   "arm3": 0.75,
+   "old_dspy": 0.65,
+   "snippet": 0.35,
+   "arm3_turns": 7.2
+  },
+  "S4 no cap, both right": {
+   "n": 20,
+   "arm3": 0.95,
+   "old_dspy": 1.0,
+   "snippet": 1.0,
+   "arm3_turns": 6.55
+  },
+  "S5 no cap, both wrong": {
+   "n": 10,
+   "arm3": 0.3,
+   "old_dspy": 0.0,
+   "snippet": 0.0,
+   "arm3_turns": 8.3
+  }
+ },
+ "vs_old_dspy": {
+  "arm3_only": 26,
+  "other_only": 4,
+  "p": 5.947612226009369e-05
+ },
+ "vs_snippet": {
+  "arm3_only": 18,
+  "other_only": 15,
+  "p": 0.7283324808813632
+ },
+ "arm3_mean_turns": 10.07,
+ "arm3_mean_searches": 9.35,
+ "arm3_searches_per_turn": 0.9285004965243296,
+ "old_mean_turns": 12.25,
+ "old_searches_per_turn": 1.2236734693877551,
+ "snip_mean_turns": 7.32,
+ "arm3_over_16_turns": 11,
+ "arm3_no_result": 0,
+ "arm3_mean_latency_s": 544.9033482336998
+}

@@ -16,7 +16,7 @@ from dspy_rlm import signatures as S
 
 def test_browsecomp_signature_map():
     assert set(RB._SIGNATURES) == {"v1", "v2", "v3", "v4", "v5", "v6", "v7", "v8", "v9", "v10", "v11", "v13",
-                                   "v14", "v15", "v16", "v17", "v20"}
+                                   "v14", "v15", "v16", "v17", "v20", "v21"}   # v21: 2026-10-31 (DSA-3/5)
     assert RB._SIGNATURES["v3"] is None                       # built per run from --max-iters/--max-search
     assert RB._SIGNATURES["v1"] is S.BrowseCompSignature
     assert RB._SIGNATURES["v20"] is S.BrowseCompDecompositionSignature

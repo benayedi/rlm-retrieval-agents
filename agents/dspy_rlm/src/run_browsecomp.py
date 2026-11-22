@@ -70,6 +70,7 @@ _SIGNATURES = {
     "v16": __import__("dspy_rlm.signatures", fromlist=["x"]).BrowseCompTitleTriageSignature,
     "v17": __import__("dspy_rlm.signatures", fromlist=["x"]).BrowseCompNoRulesSignature,
     "v20": __import__("dspy_rlm.signatures", fromlist=["x"]).BrowseCompDecompositionSignature,
+    "v21": __import__("dspy_rlm.signatures", fromlist=["x"]).BrowseCompSnippetPromptSignature,
     "v11": BrowseCompReadInContextSignature,
     "v13": BrowseCompMinimalCommitSignature,
     "v14": BrowseCompSearchOnlySignature,
@@ -430,7 +431,7 @@ if __name__ == "__main__":
                         help="Per-question timeout in seconds (0 = no limit, default from BROWSECOMP_TIMEOUT env)")
     parser.add_argument("--top-k", type=int, default=10,
                         help="Default number of results returned by search_index (default: 10)")
-    parser.add_argument("--sig", choices=["v1", "v2", "v3", "v4", "v5", "v6", "v7", "v8", "v9", "v10", "v11", "v13", "v14", "v15", "v16", "v17", "v20"], default="v1",
+    parser.add_argument("--sig", choices=["v1", "v2", "v3", "v4", "v5", "v6", "v7", "v8", "v9", "v10", "v11", "v13", "v14", "v15", "v16", "v17", "v20", "v21"], default="v1",
                         help="Signature version: v1=structured (default), v2=minimal free-form")
     args = parser.parse_args()
 

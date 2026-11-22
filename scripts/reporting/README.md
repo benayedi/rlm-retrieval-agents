@@ -5,6 +5,11 @@ These scripts produced the per-question failure analysis (`Failure_Analysis.xlsx
 scripts in the original repository. The logic is unchanged. Absolute paths became the variables below, and
 `examples.*` imports became `rlm_shared.*` (see `agents/shared/CHANGES_FROM_ORIGINAL.md`).
 
+The six `failure_analysis_{extract,build,findings,extras,turns_merge,turns_sheet}.py` follow the 2026-10-31 state of the
+original scripts (`agents/shared/original/RLM_2026-11-11/`), which adds the completed Qwen3.6 snippet REPL rows BCP-15 and
+BCP-17 and the Qwen3.6 pairs; `results/original_baselines/Failure_Analysis.xlsx` is the workbook they produced on
+2026-10-31 (sanitised). The 2026-10-30 versions are in `agents/shared/original/RLM/` (KNOWN_ISSUES K35).
+
 **They read run logs that exist only on the original machine.** Point the variables at a copy of those logs:
 
 | variable | what is read |

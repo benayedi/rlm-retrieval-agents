@@ -176,7 +176,7 @@ notes = ["Gold recall: share of the question's gold documents the agent retrieve
          "the full-doc GPT-5 dense and ColBERT rows (BCP-21, BCP-23) and BCP-25 only have evidence-doc recall (evidence ⊇ gold, so 0 and 1 mean the same, the partial band differs).",
          "Near miss: a wrong, non-abstained answer whose normalised text contains / is contained in the gold answer, or has string similarity ≥ 0.6 (difflib). Candidates for partial answers or judge strictness, not proven judge errors.",
          "Overconfident: a wrong, non-abstained answer whose 'Confidence:' line is ≥ 90%. Denominator: wrong answers that state a confidence.",
-         "BCP-19 (Qwen3.6 snippet, BM25) is still running: only attempted questions are counted (graded 2026-10-29 with gpt-4.1); a question whose log stopped for >10 min without a result is counted as killed at the 1 h limit (F1)."]
+         "BCP-15 / BCP-17 / BCP-19 (Qwen3.6 snippet: dense, ColBERT, BM25) cover all 830 questions (graded 2026-10-30/31 with gpt-4.1); a question with no result is counted as killed at the 1 h limit (F1)."]
 for k, t in enumerate(notes):
     c = qs.cell(n + 7 + k, 1, t); c.font = Font(name=FONT, size=9, italic=True)
 
@@ -273,7 +273,14 @@ PAIRS = [("Snippet vs full-doc, GPT-5, Qwen3-Embed-8B", "BCP-9", "BCP-21", "B"),
          ("Snippet vs full-doc, GPT-5, BM25 (FRAMES)", "FR-7", "FR-11", "F"),
          ("Snippet vs full-doc, Qwen3.6, BM25 (FRAMES)", "FR-9", "FR-13", "F"),
          ("GPT-5 vs Qwen3.6, full-doc (FRAMES)", "FR-11", "FR-13", "F"),
-         ("GPT-5 vs Qwen3.6, snippet (FRAMES)", "FR-7", "FR-9", "F")]
+         ("GPT-5 vs Qwen3.6, snippet (FRAMES)", "FR-7", "FR-9", "F"),
+         ("GPT-5 vs Qwen3.6, snippet, Qwen3-Embed-8B", "BCP-9", "BCP-15", "B"),
+         ("GPT-5 vs Qwen3.6, snippet, Reason-ModernColBERT", "BCP-11", "BCP-17", "B"),
+         ("GPT-5 vs Qwen3.6, snippet, BM25", "BCP-13", "BCP-19", "B"),
+         ("Snippet vs full-doc, Qwen3.6, Qwen3-Embed-8B", "BCP-15", "BCP-27", "B"),
+         ("Snippet vs full-doc, Qwen3.6, Reason-ModernColBERT", "BCP-17", "BCP-29", "B"),
+         ("Snippet vs full-doc, Qwen3.6, BM25", "BCP-19", "BCP-31", "B"),
+         ("ColBERT vs dense, snippet, Qwen3.6", "BCP-17", "BCP-15", "B")]
 H4 = ["Comparison", "A", "B", "Both right", "Only A right", "Only B right", "Both wrong", "Net A − B", "McNemar p (exact, two-sided)",
       "B's failure when only A right: F1", "F2", "F3", "F4", "F5",
       "A's failure when only B right: F1", "F2", "F3", "F4", "F5"]
@@ -291,7 +298,7 @@ for i, (lab, a, b, ds) in enumerate(PAIRS):
         pw.cell(r, j, v)
 body(pw, 5, 4 + len(PAIRS), 1, len(H4), {9: "0.0E+00"})
 widths(pw, [44, 7, 7, 8, 8, 8, 8, 8, 11] + [9] * 10); pw.row_dimensions[4].height = 58
-pw.cell(6 + len(PAIRS), 1, "BCP-19 (Qwen3.6 snippet) is left out: it is still running. Pairs only count questions present in both runs (all 830 / 824 for complete rows).").font = Font(name=FONT, size=9, italic=True)
+pw.cell(6 + len(PAIRS), 1, "Pairs only count questions present in both runs (all 830 / 824: every row is complete).").font = Font(name=FONT, size=9, italic=True)
 
 # ---------------------------------------------------------------- BCP Difficulty
 bd = wb.create_sheet("BCP Difficulty", 4)
@@ -405,7 +412,7 @@ lines = [
      "the trace in docs/supervisor_artifact.html for BCP-21/23). OBLIQ: NDCG@10 against gold qrels, ranking re-parsed with examples/obliq_data.py."),
     ("Sheets", "Key Findings · QA Summary (failure categories per row) · By Recall (accuracy given retrieved evidence) · By Searches · Pairwise (snippet vs full-doc, model and retriever swaps) · "
      "BCP Difficulty · FRAMES Types · OBLIQ Summary · Error Samples · BCP / FRAMES by Question (wide) · Detail QA · Detail OBLIQ · By Turns (when the answer was reached, turn-limit exhaustion)."),
-    ("Sources per row", "BCP-9 logs/rlmfix32_q*.json · BCP-11 logs/rlmfix{24,25,29,30,31}_q*.json · BCP-13 logs/run5d/full/bcp_snip_gpt5_bm25 · BCP-19 logs/run5d/full/bcp_snip_qwen_bm25 (running) · "
+    ("Sources per row", "BCP-9 logs/rlmfix32_q*.json · BCP-11 logs/rlmfix{24,25,29,30,31}_q*.json · BCP-13 logs/run5d/full/bcp_snip_gpt5_bm25 · BCP-15/17/19 logs/run5d/full/bcp_snip_qwen_{dense,colbert,bm25} · "
      "BCP-21/23 docs/supervisor_artifact.html · BCP-25 logs/bcp_gpt5_bm25/runs · BCP-27 logs/run5d/bcp_fd_qwen_dense · BCP-29 logs/{gepa_bcp2,bcp_testrest_ctrl,gepa_bcp}/cache.json · "
      "BCP-31 logs/bcp_bm25_{test200,rest_gpu0,rest_gpu1}/cache.json · FR-7/9 logs/run5d/full/frames_snip_{gpt5,qwen} · FR-11 logs/run5d/full/frames_fd_gpt5 · FR-13 logs/frames/sup_q36_bm25f · "
      "OBLIQ logs/run5d/full/obliq_snip_*/all.json and suprlm/runs/obliq_fd_*."),
@@ -413,8 +420,8 @@ lines = [
      "BCP-9 / BCP-11 from the September token maps (scripts/workbook/tokmaps; 3 questions each unmatched). Full-doc rows: n_iterations. Turn limits: full-doc 30; "
      "snippet BrowseComp+ GPT-5 100, Qwen3.6 50; snippet FRAMES 50; snippet OBLIQ 12. Built by scripts/failure_analysis_turns.py + failure_analysis_turns_merge.py."),
     ("Caveats", "Recall kind differs by row (see QA Summary notes). "
-     "Abstention detection is a regex on the 'Exact Answer' line. BCP-19 is partial (455 attempted at extraction time, 2026-10-29)."),
-    ("Built", "2026-10-29, by scratchpad scripts extract.py + build.py (Claude Code session)."),
+     "Abstention detection is a regex on the 'Exact Answer' line."),
+    ("Built", "2026-10-29, rebuilt 2026-10-31 with the complete Qwen3.6 snippet rows, by scratchpad scripts extract.py + build.py (Claude Code session)."),
 ]
 for k, (a, b) in enumerate(lines):
     rm.cell(3 + k, 1, a).font = Font(name=FONT, bold=True); c = rm.cell(3 + k, 2, b)

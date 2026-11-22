@@ -6,7 +6,9 @@ from pathlib import Path
 from naming import paper_names
 
 ROOT = Path(__file__).resolve().parents[2]
-NAME = {"snippet_repl": "Snippet REPL agent", "document_repl": "Document REPL agent"}
+NAME = {"snippet_repl": "Snippet REPL agent", "document_repl": "Document REPL agent", "dspy_rlm": "DSPy.RLM",
+        "search_policy": "Study: search policy", "prompt_optimisation": "Study: prompt optimisation",
+        "run_variation": "Study: run variation"}
 rows = []
 for m in sorted((ROOT / "trajectories").glob("*/*/MANIFEST.json"), key=lambda p: (p.parent.name.split("-")[0], int(p.parent.name.split("-")[1]))):
     x = json.loads(m.read_text())

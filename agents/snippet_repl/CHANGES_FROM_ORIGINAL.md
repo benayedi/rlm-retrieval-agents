@@ -196,3 +196,19 @@ conda env), `RLMLIB_PATH=/home/extstu_00/rlmrepo` (854e688, clean). No experimen
     `dspy_rlm.agent` tokenizer wiring of `_truncate` (mocked tokenizer).
 - Original logs read (head lines only) to fill the configs: `logs/run5d/full/*.out`, `*.watchdog.log`, `*.guard.log`,
   `night_finisher.log`, `obliq_snip_*/all_s0.log`, and the record keys of `logs/rlmfix{24,31,32}_q*.json`.
+
+## Second snapshot (2026-11-11): OBLIQ-Twitter with Qwen3.6 (TWQ-1, SP-6)
+
+`original/RLM_2026-11-11/` (own `MANIFEST.json`; `original/RLM/` is untouched) holds `scripts/obliq_best_chain.sh` and
+`scripts/obliq_best_full.py`, which picked the best OBLIQ-Twitter version on dev100 and ran it on the other 181
+questions (the snippet REPL agent was picked: TWQ-1's rest181 half).
+
+| Original | New |
+|---|---|
+| `original/RLM_2026-11-11/RLM/scripts/obliq_best_full.py` | `src/obliq_pick_best.py` |
+| `original/RLM_2026-11-11/RLM/scripts/obliq_best_chain.sh` (its snippet branch) and the dev100 / rest181 command lines recovered from the session transcripts | `experiments/obliq_twitter_qwen36.sh` (TWQ-1 plain search; SP-6 with the rerank proxy, `WIRE=mine`) |
+
+Rename rows, the per-file diff summary, the reconstructed parts of the launcher and the issues found are in
+`studies/search_policy/CHANGES_FROM_ORIGINAL.md`. GEPA-4 (OBLIQ-Twitter GEPA, Qwen3.8-27B) ran this agent through
+`run_obliq_mine.py` in versions between September and the 2026-10-30 snapshot that were not preserved (opt-in additions
+only; see `studies/prompt_optimisation/CHANGES_FROM_ORIGINAL.md`, PO-I5).

@@ -226,8 +226,9 @@ every number and formula is identical to the original.
 **Original experimental results were preserved and inspected. The refactored implementation was reviewed through
 source-level comparison, configuration inspection, and lightweight testing. Full experimental equivalence was not
 independently re-established because no new full experiments were executed.** Re-running would also not reproduce
-per-question outcomes exactly: sampling is unseeded, and an earlier repeat of a full run disagreed on 17.8% of
-questions.
+per-question outcomes exactly: sampling is unseeded. (An earlier version of this sentence said a repeat of a full run
+disagreed on 17.8 % of questions; that figure is an extrapolation from a 112-question replay of one DSPy.RLM run, not a
+repeat of a full run: KNOWN_ISSUES K36.)
 
 ## 12. Reproducibility
 
@@ -324,3 +325,24 @@ the GitHub notification.
 | Independently verified | every headline number of the 20 complete rows (recomputed); metric implementations (reference + hand-computed); source equivalence of the refactor (AST, prompts, keys, records); absence of BrowseComp-Plus plain text; absence of secrets |
 | Original evidence preserved | 104 source files with SHA-256 manifests; both workbooks (numbers identical to the originals); per-question records and trajectories of 17 rows as byte-exact archives (`trajectories/`, each member hash-verified after packing); the rest left on the original machine |
 | Not verified | behaviour with real models; judge correctness; benchmark-level equivalence of the refactored code; BCP-21/23 exact code; the two unfinished Qwen3.6 rows |
+
+## Addendum (2026-11-11): migration of the follow-up studies
+
+Migrated: the search-policy and GEPA studies, the FRAMES search-cap run, the DSPy.RLM ablation, the GPT-5 re-run
+variation, the FRAMES error analysis and baselines, and their controls (19 IDs; [studies/README.md](../studies/README.md),
+[FOLLOW_UP_STUDIES.md](experiments/FOLLOW_UP_STUDIES.md)). Same rules as the first migration:
+
+- **Preserved:** every file that ran, byte-exact with SHA-256 manifests (`studies/*/original/`, second snapshots
+  `agents/*/original/RLM_2026-11-11/`); `preserve_originals.py --check` covers all of them. VAR-2's code, which was only
+  run inline, is recovered from its session transcript.
+- **Refactored, not changed:** readable copies in `src/`/`analysis/`; no bug fixed (issues SP-I*, PO-I*, RV-I*, EA-I*,
+  FB-I* and K31-K44 in [KNOWN_ISSUES.md](verification/KNOWN_ISSUES.md)). Where a run had no launcher file, its
+  launcher is reconstructed and marked so.
+- **Tested offline:** each readable copy that can be exercised without models was run next to its original on synthetic
+  inputs and gives identical output; cache keys and prompt ids of the original runs are reproduced from the code.
+- **Records:** 17 archives in `trajectories/` (BrowseComp-Plus ones encrypted), each verified byte-identical to its
+  originals; GEPA optimisation-time rollouts are left out.
+- **Numbers:** not recomputed. Each is copied with its source into `results/follow_up/numbers.yaml`; accuracies are
+  gpt-4.1 verdicts, Qwen3.6-judged values are marked superseded or Qwen3.6-only.
+- **Not verified:** that re-running reproduces any number (no experiment was run); which proxy version served each
+  SP-1 slice; whether reasoning effort reached the model in DSA-3/5.

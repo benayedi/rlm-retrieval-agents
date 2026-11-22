@@ -113,6 +113,13 @@ recomputed for this repository.
 | Snippet REPL vs document REPL, Qwen3.6, BM25 (FRAMES) | FR-9 | FR-13 | 89 | 81 | 0.59 | no |
 | GPT-5 vs Qwen3.6, document REPL (FRAMES) | FR-11 | FR-13 | 184 | 22 | 4.9e-33 | yes |
 | GPT-5 vs Qwen3.6, snippet (FRAMES) | FR-7 | FR-9 | 168 | 50 | 4.1e-16 | yes |
+| GPT-5 vs Qwen3.6, snippet, Qwen3-Embed-8B | BCP-9 | BCP-15 | 372 | 18 | 3.8e-87 | yes |
+| GPT-5 vs Qwen3.6, snippet, Reason-ModernColBERT | BCP-11 | BCP-17 | 237 | 24 | 3.2e-45 | yes |
+| GPT-5 vs Qwen3.6, snippet, BM25 | BCP-13 | BCP-19 | 380 | 27 | 7.1e-81 | yes |
+| Snippet REPL vs document REPL, Qwen3.6, Qwen3-Embed-8B | BCP-15 | BCP-27 | 75 | 137 | 2.5e-05 | yes |
+| Snippet REPL vs document REPL, Qwen3.6, Reason-ModernColBERT | BCP-17 | BCP-29 | 121 | 103 | 0.26 | no |
+| Snippet REPL vs document REPL, Qwen3.6, BM25 | BCP-19 | BCP-31 | 82 | 61 | 0.094 | no |
+| ColBERT vs dense, snippet, Qwen3.6 | BCP-17 | BCP-15 | 255 | 61 | 2.4e-29 | yes |
 
 
 ## What the evidence establishes
@@ -149,8 +156,12 @@ Each finding below is measured, and cites the pair that shows it.
   Document REPL result changes sign with the retriever.
 - **Run-to-run stability.**
   - Each cell is a single run, and the agents sample without seeds.
-  - In the earlier campaign, two identical 830-question snippet REPL agent runs disagreed on 17.8% of questions. That is a
-    ±2.9-point no-change band on accuracy.
+  - Run-to-run variation was never measured with two full runs. The 17.8 % figure of earlier documents is an
+    extrapolation from a replay of 112 failed questions of one DSPy.RLM run (gpt-5 medium), assumed symmetric, and an
+    upper bound ([KNOWN_ISSUES.md](../verification/KNOWN_ISSUES.md) K36). The direct measurements are small: three
+    identical runs of 50 questions of a DSPy.RLM configuration (accuracy 0.76 / 0.90 / 0.82), and pairs of earlier GPT-5
+    document REPL runs that fix ~45 % of wrong and break ~8 % of right answers on a re-run (VAR-2, not identical
+    configurations; [FOLLOW_UP_STUDIES.md](FOLLOW_UP_STUDIES.md)).
   - Between unpaired rows, differences smaller than that should not be read as effects.
 - **The Qwen3.6 snippet REPL rows on BrowseComp-Plus with dense and ColBERT retrieval.** On 2026-10-30 they were still
   running or queued.

@@ -24,7 +24,7 @@ DESC = [
  ("F1 Run did not finish", "#2A78D6",
   "The question produced no answer the judge could grade. Causes: killed at the per-question time limit (Qwen3.6 runs: 1 h for BrowseComp+ snippet, 2 h for FRAMES snippet, runaway kill for full-doc), the $10 cost watchdog, an API error (Azure 429 rate limit, 400 content filter).",
   "Detected from the run logs: no result file, status != completed, or an error field.",
-  "Qwen3.6 only, in practice: BCP-27 (121 questions), BCP-19 (137 of 455 attempted), FR-9 (75), BCP-29 (53). GPT-5 rows have at most 9.",
+  "Qwen3.6 only, in practice: BCP-19 (243 questions), BCP-15 (190), BCP-27 (121), FR-9 (75), BCP-17 (68), BCP-29 (53). GPT-5 rows have at most 9.",
   "Long Qwen3.6 trajectories: many turns at 8k output tokens each, plus servers shared by 8-20 workers. The model rarely stops on its own when the evidence is missing.",
   "Cap turns / tokens and force a final answer at the cap instead of killing the process; give Qwen3.6 an explicit 'answer now' turn.",
   [("BCP-27", "F1"), ("FR-9", "F1")]),
@@ -129,22 +129,22 @@ def outcome_chart(r1, r2, ttl):
         s.tx = SeriesLabel(v=nm)
     c.set_categories(Reference(Q, min_col=1, min_row=r1, max_row=r2))
     color_series(c, [GREY] + PAL); c.x_axis.scaling.orientation = "maxMin"
-    c.legend.position = "b"; c.height = 9 + 0.5 * (r2 - r1); c.width = 22
+    c.legend.position = "b"; c.height = 11; c.width = 22
     return c
 
 
-ch.add_chart(outcome_chart(5, 14, "BrowseComp+: outcome of every question, per run"), "A4")
-ch.add_chart(outcome_chart(15, 18, "FRAMES: outcome of every question, per run"), "N4")
+ch.add_chart(outcome_chart(5, 4 + len(BEXPS), "BrowseComp+: outcome of every question, per run"), "A4")
+ch.add_chart(outcome_chart(5 + len(BEXPS), 4 + len(EXPS), "FRAMES: outcome of every question, per run"), "N4")
 
 c = BarChart(); c.type = "col"; c.title = "Accuracy given retrieved gold evidence"; c.y_axis.number_format = "0%"; c.y_axis.scaling.min = 0; c.y_axis.scaling.max = 1
-c.add_data(Reference(BRs, min_col=9, max_col=11, min_row=4, max_row=18), titles_from_data=True)
-c.set_categories(Reference(BRs, min_col=1, min_row=5, max_row=18)); color_series(c, [PAL[2], PAL[3], PAL[0]])
+c.add_data(Reference(BRs, min_col=9, max_col=11, min_row=4, max_row=4 + len(EXPS)), titles_from_data=True)
+c.set_categories(Reference(BRs, min_col=1, min_row=5, max_row=4 + len(EXPS))); color_series(c, [PAL[2], PAL[3], PAL[0]])
 c.legend.position = "b"; c.height = 9; c.width = 22
 ch.add_chart(c, "A26")
 
 c = BarChart(); c.type = "bar"; c.title = "Paired runs: questions only A / only B gets right"; c.gapWidth = 60
-c.add_data(Reference(PWs, min_col=5, max_col=6, min_row=4, max_row=17), titles_from_data=True)
-c.set_categories(Reference(PWs, min_col=1, min_row=5, max_row=17)); color_series(c, [PAL[0], PAL[1]])
+c.add_data(Reference(PWs, min_col=5, max_col=6, min_row=4, max_row=4 + len(PAIRS)), titles_from_data=True)
+c.set_categories(Reference(PWs, min_col=1, min_row=5, max_row=4 + len(PAIRS))); color_series(c, [PAL[0], PAL[1]])
 c.x_axis.scaling.orientation = "maxMin"; c.legend.position = "b"; c.height = 11; c.width = 22
 ch.add_chart(c, "N26")
 

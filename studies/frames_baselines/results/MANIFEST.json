@@ -1,0 +1,33 @@
+{
+ "created": "2026-11-11T16:09:22+00:00",
+ "files": [
+  {
+   "copy": "llm_oracle.jsonl",
+   "source": "LOGS_ROOT:frames/llm_oracle.jsonl",
+   "sha256": "0c824aec182bec0af59fe4deac9f18be32264c473e977ac8b7ae92d28d9a6db0",
+   "bytes": 225174,
+   "mtime": "2026-10-14T08:39:14"
+  },
+  {
+   "copy": "llm_closed.jsonl",
+   "source": "LOGS_ROOT:frames/llm_closed.jsonl",
+   "sha256": "c5f4ca5fe5660201bccf8ad73b5f6d97dd4ac0dc936f026bfea97a0a928efc8b",
+   "bytes": 224525,
+   "mtime": "2026-10-14T06:52:49"
+  },
+  {
+   "copy": "llm_bm25_4.jsonl",
+   "source": "LOGS_ROOT:frames/llm_bm25_4.jsonl",
+   "sha256": "2e1424f1fd048fd102b42ccbbba886cb0633ecd2a12dc269c9fc3db5e2558ee0",
+   "bytes": 246216,
+   "mtime": "2026-10-14T11:15:13"
+  },
+  {
+   "copy": "llm_summary.json",
+   "source": "LOGS_ROOT:frames/llm_summary.json",
+   "sha256": "e4e280cb68bba40025f37a078d7874ea39cc4880dbead6ea7cfe14744edb88df",
+   "bytes": 65,
+   "mtime": "2026-10-14T11:15:13"
+  }
+ ]
+}

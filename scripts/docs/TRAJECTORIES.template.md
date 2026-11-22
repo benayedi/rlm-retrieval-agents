@@ -2,7 +2,9 @@
 
 This folder holds the per-question run outputs of every Experiments.xlsx row that are still available: final records,
 full trajectories (every turn's prompt, response, code and REPL output), grades and run logs, exactly as the runs
-wrote them. There is one folder per row: `<agent>/<ID>/`. Each folder holds:
+wrote them, and of the follow-up studies ([FOLLOW_UP_STUDIES.md](../docs/experiments/FOLLOW_UP_STUDIES.md)). There is
+one folder per row or study ID: `<agent>/<ID>/` or `<study>/<ID>/`. For GEPA, only held-out evaluations and run metadata
+are archived, not the optimisation-time rollouts. Each folder holds:
 
 - `<ID>.tar.zst` (or `.tar.zst.enc`, possibly split into `.partNN`): the archive, stored with **Git LFS**;
 - `MANIFEST.json`: every file in the archive with its original path, size and SHA-256, plus the archive's own hashes.
@@ -25,7 +27,8 @@ download counts against the repository owner's LFS bandwidth.
 ## BrowseComp-Plus archives are encrypted
 
 BrowseComp-Plus distributes its questions and answers encrypted, with a canary asking that they never appear online
-in plain text. Its trajectories contain both in plain text, so the `BCP-*` archives are encrypted:
+in plain text. Its trajectories contain both in plain text, so the `BCP-*` archives and the BrowseComp-Plus follow-up archives (SP-1, SP-2, SP-3, DSA-3, DSA-5,
+GEPA-1, GEPA-2, VAR-2) are encrypted:
 - AES-256-CTR via `openssl enc`, PBKDF2 with 200,000 iterations and a random salt;
 - the passphrase is the benchmark's own public canary string.
 

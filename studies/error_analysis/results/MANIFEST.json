@@ -1,0 +1,19 @@
+{
+ "created": "2026-11-11T16:09:22+00:00",
+ "files": [
+  {
+   "copy": "failure_taxonomy.json",
+   "source": "LOGS_ROOT:frames/failure_taxonomy.json",
+   "sha256": "706933f67b7cb819a87c7698a1c90c19b83a5743aeffc2aa3aa04ae546d9e547",
+   "bytes": 140491,
+   "mtime": "2026-10-21T16:33:15"
+  },
+  {
+   "copy": "failure_taxonomy_s25.json",
+   "source": "LOGS_ROOT:frames/failure_taxonomy_s25.json",
+   "sha256": "e0323efa69b94da64f00c6639d268a746c39af50cff9cf9900e2aa0df42f84a0",
+   "bytes": 138911,
+   "mtime": "2026-10-21T16:31:57"
+  }
+ ]
+}

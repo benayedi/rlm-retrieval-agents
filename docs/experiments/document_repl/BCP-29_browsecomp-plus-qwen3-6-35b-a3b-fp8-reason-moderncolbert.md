@@ -98,7 +98,7 @@ Launcher: [agents/document_repl/src/split_runner.py](../../../agents/document_re
 
 ## 6. Implementation references
 
-- Agent source: [bcp_bm25_split.py](../../../agents/document_repl/src/bcp_bm25_split.py), [bcp_qwen_dense.py](../../../agents/document_repl/src/bcp_qwen_dense.py), [build_bm25.py](../../../agents/document_repl/src/build_bm25.py), [encoder.py](../../../agents/document_repl/src/encoder.py), [fence_tolerant.py](../../../agents/document_repl/src/fence_tolerant.py), [grade_local.py](../../../agents/document_repl/src/grade_local.py), [hybrid.py](../../../agents/document_repl/src/hybrid.py), [judge.py](../../../agents/document_repl/src/judge.py), [obliq_adapter.py](../../../agents/document_repl/src/obliq_adapter.py), [prepare_data.py](../../../agents/document_repl/src/prepare_data.py), [prompts.py](../../../agents/document_repl/src/prompts.py), [provenance.py](../../../agents/document_repl/src/provenance.py) …
+- Agent source: [bcp_bm25_split.py](../../../agents/document_repl/src/bcp_bm25_split.py), [bcp_qwen_dense.py](../../../agents/document_repl/src/bcp_qwen_dense.py), [build_bm25.py](../../../agents/document_repl/src/build_bm25.py), [encoder.py](../../../agents/document_repl/src/encoder.py), [fence_tolerant.py](../../../agents/document_repl/src/fence_tolerant.py), [frames_cap25_report.py](../../../agents/document_repl/src/frames_cap25_report.py), [grade_local.py](../../../agents/document_repl/src/grade_local.py), [hybrid.py](../../../agents/document_repl/src/hybrid.py), [judge.py](../../../agents/document_repl/src/judge.py), [obliq_adapter.py](../../../agents/document_repl/src/obliq_adapter.py), [prepare_data.py](../../../agents/document_repl/src/prepare_data.py), [prompts.py](../../../agents/document_repl/src/prompts.py) …
 - Original code that produced the result (verbatim, SHA-256 manifest): [agents/document_repl/original/](../../../agents/document_repl/original/MANIFEST.json)
 - Configuration: [agents/document_repl/configs/BCP-29.env](../../../agents/document_repl/configs/BCP-29.env) · Launcher: [agents/document_repl/src/split_runner.py](../../../agents/document_repl/src/split_runner.py)
 - Data loaders: [agents/shared/rlm_shared/](../../../agents/shared/rlm_shared/__init__.py) (`browsecomp_data.py`, `obliq_data.py`)
@@ -160,6 +160,7 @@ Workbook footnotes that apply to this row:
 | Comparison | Other row | Only BCP-29 right | Only other right | p | Reading |
 |---|---|---|---|---|---|
 | GPT-5 vs Qwen3.6, document REPL, Reason-ModernColBERT | BCP-23 | 17 | 262 | 1.4e-57 | significant at 0.05 |
+| Snippet REPL vs document REPL, Qwen3.6, Reason-ModernColBERT | BCP-17 | 103 | 121 | 0.26 | not significant |
 
 
 - **Largest failure mode:** never retrieving a gold document (203 of 349 failures, 58.2%). Retrieval-side failures (F3 + F4) are 72.8% of failures; reading-side (F5) 9.2%. *(Measured.)*

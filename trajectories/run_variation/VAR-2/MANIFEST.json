@@ -1,0 +1,23 @@
+{
+"row": "VAR-2",
+"agent": "run_variation",
+"created": "2026-11-11T16:08:20",
+"format": "tar (PAX) | zstd -19 --long=27 | openssl enc -aes-256-ctr -pbkdf2 -iter 200000 -salt, passphrase = BrowseComp canary string",
+"encrypted": true,
+"archive_parts": [
+{
+"file": "VAR-2.tar.zst.enc",
+"bytes": 1031103,
+"sha256": "eae41fb1abf8fb9a595aac7ab7be3bc873e37ffb1da17c540060b199c6c8ae27"
+}
+],
+"members": 1,
+"member_bytes": 6616589,
+"files": [
+{
+"path": "repo/docs/supervisor_artifact.html",
+"bytes": 6616589,
+"sha256": "504e2d4b02ab4e92dda27115b2223003ade7477c4a3e0ca933e09e74b03a83b0"
+}
+]
+}

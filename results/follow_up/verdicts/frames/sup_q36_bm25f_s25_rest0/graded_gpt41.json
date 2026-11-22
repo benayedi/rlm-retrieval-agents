@@ -1,0 +1,1868 @@
+{
+ "614": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.6,
+  "searches": 18
+ },
+ "575": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 8
+ },
+ "580": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "230": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.8333333333333334,
+  "searches": 25
+ },
+ "810": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.3333333333333333,
+  "searches": 25
+ },
+ "644": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 8
+ },
+ "462": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.75,
+  "searches": 25
+ },
+ "451": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "696": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.7142857142857143,
+  "searches": 25
+ },
+ "666": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.25,
+  "searches": 25
+ },
+ "321": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 25
+ },
+ "242": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.8,
+  "searches": 25
+ },
+ "515": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.3333333333333333,
+  "searches": 3
+ },
+ "749": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.3333333333333333,
+  "searches": 4
+ },
+ "767": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.7,
+  "searches": 25
+ },
+ "564": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 11
+ },
+ "682": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 10
+ },
+ "643": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 2
+ },
+ "147": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 1
+ },
+ "137": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.0,
+  "searches": 1
+ },
+ "621": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 25
+ },
+ "465": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 8
+ },
+ "765": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 3
+ },
+ "573": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 11
+ },
+ "437": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 25
+ },
+ "574": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 5
+ },
+ "615": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.15384615384615385,
+  "searches": 6
+ },
+ "170": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 2
+ },
+ "98": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 6
+ },
+ "762": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 25
+ },
+ "247": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 11
+ },
+ "719": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 4
+ },
+ "556": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 1
+ },
+ "51": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.3333333333333333,
+  "searches": 5
+ },
+ "264": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 5
+ },
+ "534": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "307": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 10
+ },
+ "325": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 3
+ },
+ "596": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.75,
+  "searches": 16
+ },
+ "678": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 8
+ },
+ "684": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "196": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 3
+ },
+ "205": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.75,
+  "searches": 25
+ },
+ "1": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.3333333333333333,
+  "searches": 25
+ },
+ "688": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 25
+ },
+ "722": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 2
+ },
+ "798": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.6666666666666666,
+  "searches": 25
+ },
+ "438": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.8571428571428571,
+  "searches": 25
+ },
+ "302": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.75,
+  "searches": 20
+ },
+ "308": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.9090909090909091,
+  "searches": 25
+ },
+ "390": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "546": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.4,
+  "searches": 3
+ },
+ "661": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 3
+ },
+ "214": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 14
+ },
+ "118": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.2857142857142857,
+  "searches": 24
+ },
+ "298": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "198": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 24
+ },
+ "568": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 24
+ },
+ "204": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 14
+ },
+ "2": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 9
+ },
+ "88": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.3333333333333333,
+  "searches": 3
+ },
+ "393": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 3
+ },
+ "650": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 8
+ },
+ "795": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 19
+ },
+ "570": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 3
+ },
+ "319": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 3
+ },
+ "154": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 4
+ },
+ "768": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.6666666666666666,
+  "searches": 25
+ },
+ "32": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 9
+ },
+ "748": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "538": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 23
+ },
+ "195": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 20
+ },
+ "735": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 3
+ },
+ "155": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 16
+ },
+ "477": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 20
+ },
+ "435": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 1
+ },
+ "76": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 25
+ },
+ "190": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 25
+ },
+ "728": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.0,
+  "searches": 25
+ },
+ "287": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 1
+ },
+ "326": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 7
+ },
+ "642": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 10
+ },
+ "193": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 8
+ },
+ "695": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 3
+ },
+ "52": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 2
+ },
+ "95": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 9
+ },
+ "54": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "763": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.3333333333333333,
+  "searches": 9
+ },
+ "156": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 4
+ },
+ "48": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.0,
+  "searches": 25
+ },
+ "485": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.0,
+  "searches": 25
+ },
+ "555": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 4
+ },
+ "530": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 18
+ },
+ "398": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 6
+ },
+ "430": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 25
+ },
+ "263": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 7
+ },
+ "579": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 3
+ },
+ "796": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 6
+ },
+ "18": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "773": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 1
+ },
+ "391": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 2
+ },
+ "197": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "528": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.0,
+  "searches": 25
+ },
+ "595": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.25,
+  "searches": 11
+ },
+ "94": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 6
+ },
+ "128": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "803": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 25
+ },
+ "526": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 14
+ },
+ "445": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "586": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 3
+ },
+ "447": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.8333333333333334,
+  "searches": 25
+ },
+ "529": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 14
+ },
+ "636": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.3333333333333333,
+  "searches": 25
+ },
+ "755": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 11
+ },
+ "339": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 5
+ },
+ "541": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.0,
+  "searches": 25
+ },
+ "284": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 13
+ },
+ "33": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 15
+ },
+ "690": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.6666666666666666,
+  "searches": 25
+ },
+ "611": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "135": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 1
+ },
+ "571": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 7
+ },
+ "686": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.6666666666666666,
+  "searches": 19
+ },
+ "494": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.0,
+  "searches": 12
+ },
+ "116": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 12
+ },
+ "91": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 6
+ },
+ "343": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.3333333333333333,
+  "searches": 25
+ },
+ "99": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.3333333333333333,
+  "searches": 25
+ },
+ "587": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 25
+ },
+ "578": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 14
+ },
+ "366": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 4
+ },
+ "143": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 23
+ },
+ "509": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 2
+ },
+ "323": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 4
+ },
+ "640": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 22
+ },
+ "514": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.6666666666666666,
+  "searches": 25
+ },
+ "211": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.3333333333333333,
+  "searches": 25
+ },
+ "171": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 5
+ },
+ "461": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 6
+ },
+ "329": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.3333333333333333,
+  "searches": 15
+ },
+ "370": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "625": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.8,
+  "searches": 25
+ },
+ "83": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 25
+ },
+ "760": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 3
+ },
+ "704": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 7
+ },
+ "77": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 25
+ },
+ "148": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 25
+ },
+ "28": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 13
+ },
+ "271": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.3333333333333333,
+  "searches": 25
+ },
+ "412": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 4
+ },
+ "333": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.0,
+  "searches": 3
+ },
+ "256": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 22
+ },
+ "291": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 3
+ },
+ "416": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.25,
+  "searches": 25
+ },
+ "525": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 6
+ },
+ "150": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.0,
+  "searches": 25
+ },
+ "320": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "761": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 20
+ },
+ "808": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 3
+ },
+ "544": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 11
+ },
+ "187": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "670": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 4
+ },
+ "245": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 19
+ },
+ "585": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 16
+ },
+ "449": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 2
+ },
+ "756": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 2
+ },
+ "334": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 2
+ },
+ "405": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 1
+ },
+ "184": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.75,
+  "searches": 25
+ },
+ "456": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 3
+ },
+ "27": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 25
+ },
+ "627": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 6
+ },
+ "632": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 11
+ },
+ "459": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.6666666666666666,
+  "searches": 25
+ },
+ "397": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 3
+ },
+ "421": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 8
+ },
+ "117": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 16
+ },
+ "382": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 6
+ },
+ "202": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.6666666666666666,
+  "searches": 22
+ },
+ "109": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "669": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.3333333333333333,
+  "searches": 4
+ },
+ "12": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 4
+ },
+ "56": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 2
+ },
+ "250": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.3333333333333333,
+  "searches": 6
+ },
+ "347": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 25
+ },
+ "144": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 21
+ },
+ "723": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 7
+ },
+ "484": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 2
+ },
+ "161": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.2,
+  "searches": 25
+ },
+ "288": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 21
+ },
+ "238": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.3333333333333333,
+  "searches": 25
+ },
+ "423": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 8
+ },
+ "140": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.6666666666666666,
+  "searches": 25
+ },
+ "63": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 4
+ },
+ "549": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 4
+ },
+ "265": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "468": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 12
+ },
+ "805": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 7
+ },
+ "676": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 25
+ },
+ "107": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 21
+ },
+ "266": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.75,
+  "searches": 3
+ },
+ "14": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 25
+ },
+ "381": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 14
+ },
+ "706": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 2
+ },
+ "123": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 10
+ },
+ "233": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 4
+ },
+ "306": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 3
+ },
+ "182": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 4
+ },
+ "166": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.8,
+  "searches": 4
+ },
+ "165": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 2
+ },
+ "399": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 3
+ },
+ "309": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 17
+ },
+ "738": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 2
+ },
+ "707": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.2,
+  "searches": 21
+ },
+ "3": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 25
+ },
+ "249": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.25,
+  "searches": 4
+ },
+ "653": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.3333333333333333,
+  "searches": 1
+ },
+ "547": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.3333333333333333,
+  "searches": 9
+ },
+ "16": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.3333333333333333,
+  "searches": 25
+ },
+ "162": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "620": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 2
+ },
+ "273": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 5
+ },
+ "260": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 7
+ },
+ "446": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.6666666666666666,
+  "searches": 7
+ },
+ "507": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 6
+ },
+ "84": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 6
+ },
+ "460": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 3
+ },
+ "386": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 5
+ },
+ "672": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 11
+ },
+ "341": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "114": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 2
+ },
+ "715": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 3
+ },
+ "188": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 3
+ },
+ "26": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.3333333333333333,
+  "searches": 6
+ },
+ "243": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 25
+ },
+ "82": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.18181818181818182,
+  "searches": 14
+ },
+ "550": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 4
+ },
+ "631": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.0,
+  "searches": 25
+ },
+ "630": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 7
+ },
+ "415": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.4,
+  "searches": 2
+ },
+ "516": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.3333333333333333,
+  "searches": 25
+ },
+ "804": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 4
+ },
+ "600": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.3333333333333333,
+  "searches": 5
+ },
+ "152": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 4
+ },
+ "505": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 9
+ },
+ "223": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 6
+ },
+ "624": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 11
+ },
+ "751": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "659": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 22
+ },
+ "610": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 17
+ },
+ "13": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.6666666666666666,
+  "searches": 5
+ },
+ "561": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.6666666666666666,
+  "searches": 25
+ },
+ "311": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 13
+ },
+ "215": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 3
+ },
+ "504": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.625,
+  "searches": 23
+ },
+ "345": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.3333333333333333,
+  "searches": 25
+ },
+ "62": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.25,
+  "searches": 8
+ },
+ "282": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.3333333333333333,
+  "searches": 4
+ },
+ "80": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 8
+ },
+ "201": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 25
+ },
+ "689": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 25
+ },
+ "739": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 10
+ },
+ "424": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 5
+ },
+ "800": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 20
+ },
+ "482": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 14
+ },
+ "639": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 11
+ },
+ "45": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 13
+ },
+ "346": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 2
+ },
+ "637": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 1
+ },
+ "802": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "720": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "58": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.3333333333333333,
+  "searches": 25
+ },
+ "324": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.2222222222222222,
+  "searches": 25
+ },
+ "443": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "467": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "299": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 6
+ },
+ "792": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.4,
+  "searches": 3
+ },
+ "554": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.3333333333333333,
+  "searches": 17
+ },
+ "354": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 16
+ },
+ "513": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 19
+ },
+ "31": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 4
+ },
+ "699": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 25
+ },
+ "232": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.25,
+  "searches": 25
+ },
+ "402": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.75,
+  "searches": 8
+ },
+ "21": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 3
+ },
+ "208": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.3333333333333333,
+  "searches": 2
+ },
+ "79": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.3333333333333333,
+  "searches": 2
+ },
+ "769": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 8
+ },
+ "407": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.0,
+  "searches": 16
+ },
+ "173": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 10
+ },
+ "453": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 5
+ },
+ "25": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "335": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 9
+ },
+ "50": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 9
+ },
+ "49": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.0,
+  "searches": 25
+ },
+ "685": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 24
+ },
+ "609": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "277": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.6666666666666666,
+  "searches": 9
+ },
+ "29": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 5
+ },
+ "497": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 13
+ },
+ "764": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 3
+ },
+ "168": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 1.0,
+  "searches": 25
+ },
+ "72": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.0,
+  "searches": 25
+ },
+ "499": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.75,
+  "searches": 2
+ },
+ "813": {
+  "correct": false,
+  "verdict": "filtered",
+  "gold_recall": 1.0,
+  "searches": 1
+ },
+ "604": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.6666666666666666,
+  "searches": 7
+ },
+ "785": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.3333333333333333,
+  "searches": 25
+ },
+ "160": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.5,
+  "searches": 6
+ },
+ "481": {
+  "correct": false,
+  "verdict": false,
+  "gold_recall": 0.5,
+  "searches": 20
+ },
+ "691": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 0.75,
+  "searches": 25
+ },
+ "815": {
+  "correct": true,
+  "verdict": true,
+  "gold_recall": 1.0,
+  "searches": 11
+ }
+}

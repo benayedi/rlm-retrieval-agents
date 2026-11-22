@@ -173,3 +173,45 @@ Paths are `src/` of this agent unless prefixed; `rlm/...` is `RLMLIB_PATH` (rlm 
   each run's `_provenance.json`; n_iterations / served_models / search counts from record heads and tails.
 - `scripts/provenance/preserve_originals.py --check`: all copies match their manifest. Nothing outside this folder
   was modified; no experiment, server, network or model call was run.
+
+## Second snapshot (2026-11-11): follow-up studies
+
+`original/RLM_2026-11-11/` (own `MANIFEST.json`; `original/RLM/` and `original/FULLDOC/` are untouched) holds files of
+the follow-up studies that belong to this agent.
+
+| Original | New | What |
+|---|---|---|
+| `logs/gepa_bcp.py.bak_1012` | not copied | `gepa_bcp.py` as it was before its 2026-10-12 20:28 edit (F-B below) |
+| `scripts/frames_s25_chain.sh` | `experiments/frames_qwen_cap25_test200.sh` | FRC-1 part 1: the 200 FRAMES test questions, search cap 25, 50 turns |
+| `scripts/frames_s25_full.sh` | `experiments/frames_qwen_cap25_rest.sh` | FRC-1 part 2: the other 624, two GPUs, then the report |
+| `scripts/frames_s25_full_report.py` | `src/frames_cap25_report.py` | FRC-1 vs FR-13 on all 824 from the Qwen3.6-judged `graded.json` (superseded by the gpt-4.1 re-judge) |
+| `data/frames/gepa_splits/{test_ids_shuffled,s25_rest_gpu0,s25_rest_gpu1}.txt` | `configs/frames_ids/` (byte-identical) | the FRAMES question-id lists of FRC-1 (200 + 312 + 312 = 824, disjoint) |
+
+Both launchers call the existing `experiments/frames_qwen.sh` (from `run_frames_sup.sh`) with
+`BM25_PROMPT=1 MAX_SEARCHES=25 MAX_ITERS=50 W=8`, as the originals did; locations come from `configs/paths.env`.
+`frames_s25_chain.sh` ended with `scripts/frames_arch_compare.py`, the test200 architecture comparison that includes
+the FRAMES multi-step pipeline re-implementation (not part of this repository); the launcher runs it only if
+`FRAMES_ARCH_COMPARE` names that script. `src/frames_cap25_report.py` reads the run directories from
+`FRAMES_RUNS_DIR` (set by the launcher), else `LOGS_ROOT/frames`.
+
+Added for the search-policy study (new files; originals, rename rows and reconstructed-launcher notes in
+`studies/search_policy/CHANGES_FROM_ORIGINAL.md`): `experiments/bcp_qwen36_split.sh` (the Qwen3.6 BrowseComp-Plus split
+runner with `GEPA_BCP_RETRIEVAL` pointing at a proxy; SP-1, SP-2) and `experiments/obliq_twitter_qwen36.sh` (OBLIQ-Twitter,
+Qwen3.6, 281 questions: TWQ-2 through `obliq_adapter.py`, SP-7 through the rerank proxy).
+
+The search-policy study (SP-1 to SP-4, SP-7) and the prompt-optimisation study (GEPA-1 to GEPA-3) run this agent
+through `src/split_runner.py`, `src/run_one.py` and `experiments/frames_qwen.sh`; their own code and launchers are in
+`studies/` (see `studies/README.md`).
+
+### Issues found, not fixed (second snapshot)
+- **F-B. `src/split_runner.py` is the version after the 2026-10-12 edit.** `gepa_bcp.py` (the original of
+  `split_runner.py`) was edited on 2026-10-12 at 20:28; `original/RLM_2026-11-11/RLM/logs/gepa_bcp.py.bak_1012` is
+  the copy taken just before. The edit changes two lines (`split_runner.py:264`, `:541`; bak lines 234, 507): the
+  `queries` field built from a record's `search_log` now also accepts entries that are plain strings, where the
+  earlier code called `.get("query")` on every entry (a string entry would have raised an error while grading). The
+  field is stored in each graded record of `cache.json` (`_grade`, and the seed preload) and shown to the critic; it
+  does not enter the agent, its prompt or the score. GEPA-1, GEPA-2 (with its test200 confirmation), SP-2 and the
+  test200 / test_rest arms of SP-1 ran on the earlier version; the rest300 / pareto / feedback arms of SP-1 and BCP-31
+  on the later one.
+- **F-FRC-1. Launch details not recorded.** The 200 test questions were run on GPU 0 only and the other 624 split over
+  :8030 / :8031 with 8 workers each, as the chains say; the exact server each question used is not recorded.

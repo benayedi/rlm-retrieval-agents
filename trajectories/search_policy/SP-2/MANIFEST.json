@@ -1,0 +1,1038 @@
+{
+"row": "SP-2",
+"agent": "search_policy",
+"created": "2026-11-11T16:10:37",
+"format": "tar (PAX) | zstd -19 --long=27 | openssl enc -aes-256-ctr -pbkdf2 -iter 200000 -salt, passphrase = BrowseComp canary string",
+"encrypted": true,
+"archive_parts": [
+{
+"file": "SP-2.tar.zst.enc",
+"bytes": 53544845,
+"sha256": "1c0ffbf2e8e4e63509c34317dd43e696386170f27b3f88358bed3498f20632d3"
+}
+],
+"members": 204,
+"member_bytes": 4693892038,
+"files": [
+{
+"path": "logs/bcp_policy_e2e_rerankonly/cache.json",
+"bytes": 180663,
+"sha256": "82b7d038fe5952536bdcf966574ebdc46398fcee46e3e55b3b88dad3eef9464a"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/progress.txt",
+"bytes": 298,
+"sha256": "f1e650ea4dc23916714636e904b36014c1beed115700f55864a9b609f97d2ed8"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1010.json",
+"bytes": 31963130,
+"sha256": "1527eef30ff6ef8f343548bcafd8ec836fc1de439fa865297d5a57cc9492cedf"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1016.json",
+"bytes": 6557170,
+"sha256": "479020a8e2594fde79de55f7f5725b9eab88c72b7758d383d98437c48498fc2f"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1019.json",
+"bytes": 15221843,
+"sha256": "b7f8682df35d1be22442ee73a4f65f852c9c222b313b090c31a88a130a12df20"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/102.json",
+"bytes": 12673197,
+"sha256": "9c567a0a760484d0c6716ab1e439bec96d7f14c3beb67435150b203483c36edf"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1022.json",
+"bytes": 18228036,
+"sha256": "97db6b079e0f2bf38d464daabdbe18c85fec1678b5618320f245eec583b67d8b"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1026.json",
+"bytes": 108481472,
+"sha256": "2bc0566a7a4aa2b4923945d5b5d7c76fc2c2da1ac6b50ddd9fcb629c462c37a4"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1032.json",
+"bytes": 76179788,
+"sha256": "1aaf66bb5b320a0270e74669a06f79f374c39da12b9af7f42977945e5b04cc48"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1034.json",
+"bytes": 49924432,
+"sha256": "4716dc1ee5d934315446082bfe6eebc824b53794c5463b3a9ab1c0ac28d12ed6"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1035.json",
+"bytes": 15633545,
+"sha256": "2704a4d76a493bde367388f691f7aecfd594c0a8c267e69da97c193e96265098"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1039.json",
+"bytes": 6392947,
+"sha256": "b69c12bfea8d81d0b765cf223d6777532496192be84146b855dbb916ade53762"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1040.json",
+"bytes": 141439667,
+"sha256": "0f9b6900f509a953ddd175348c0a23dcebf77e1dfb63fd973b4fb32283798ea7"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1043.json",
+"bytes": 62685709,
+"sha256": "1241600d18526c47ca46d6a9570ddaad20e1dc613f0e08fe5c01b36e060bc321"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1044.json",
+"bytes": 29670325,
+"sha256": "a31381a5a93263c47fe9e07796be39da8525d21be8fd0e8f95ab70b86e09e19c"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1049.json",
+"bytes": 24007328,
+"sha256": "0da90123c31d31483cfde409605bb8fe92a037b45275ae6c24f064396721b8e5"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/105.json",
+"bytes": 8479456,
+"sha256": "64aebd82f8b3830caaa1c05b81db2ced7ff74078e80ad213d614e1edc5a73580"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1058.json",
+"bytes": 1616384,
+"sha256": "6645d55a90ffa63864ed319a74c01d3916d5bf5ed0d5aabd32c5877ea7945639"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1063.json",
+"bytes": 44281443,
+"sha256": "3a82ea25d16f834bb47bf3fe874da2cd7ce37c8c47f4db8813ce34b238b1f8a2"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1065.json",
+"bytes": 1827067,
+"sha256": "36651f426dce56d7138c09c50f98a66c6c5f6423e1c37d930024040ac7e92cd6"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/107.json",
+"bytes": 58496503,
+"sha256": "00dcff4ae638affe8e7124ef7287de98d401c90995d742dd6b661a48739a02e3"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1071.json",
+"bytes": 5859455,
+"sha256": "33d472b337ec87f3c077ce9edc05304c3b475d1226bbd90d044ac9d86d75e36f"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1077.json",
+"bytes": 32325075,
+"sha256": "8be09095fc22c7ac506787ca0f45047e25dc516ed3257222cb9d258119486f14"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1079.json",
+"bytes": 13225865,
+"sha256": "067c4b23aa4f5dbc488c84821b69d67ccd096abb4b5f0f3687566f2f623db681"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1085.json",
+"bytes": 64644568,
+"sha256": "a98f4b024d9b566f0b37aa010c57fc26ae956783ce6234bf1c28b194e29605fa"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/109.json",
+"bytes": 89279223,
+"sha256": "dc48da7ce52d0bb0bfc999ac9ea6630f5f059ddf1f810cfb9efdfc60179e8648"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1092.json",
+"bytes": 2380250,
+"sha256": "c4cb58e7c85aec34e17a7838e0473c582d79c62aaba2fb879db1c78fa81d0d6a"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1094.json",
+"bytes": 75367772,
+"sha256": "3bd50070cccb4b40038706a4a4cbcb2e56af05ea33e06210eb81800e262096fa"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1096.json",
+"bytes": 68819271,
+"sha256": "d33933bc9e7e3383d69864a32df5992365291087f23134837a54a47e29c45f5a"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1099.json",
+"bytes": 8278065,
+"sha256": "e7dcb5b5fb4937c8a161216551f24caa2ad4237fbd75cde911631109a6c65418"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1119.json",
+"bytes": 6985901,
+"sha256": "186635c97f24f367a282de9c40706035c586e41aa80c546d1e087c97176a5fc2"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1121.json",
+"bytes": 8641631,
+"sha256": "3f845211bcf945f407ee14dcbc2c8fc93539f1268bbd49bad9dd726c7214a20d"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1127.json",
+"bytes": 83547597,
+"sha256": "a4d89772433d397ce5d34221064d57206e8f09c4d6d66f6364cc7ffa3db24480"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1128.json",
+"bytes": 1257992,
+"sha256": "1cdfca0dd37c16a8687264572221204c8973005ab2cec430471e695f0d45572e"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/113.json",
+"bytes": 266648720,
+"sha256": "89b626715f746e5220937da651f15dd5ea2d816642b79595302eddb77fef5d52"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1131.json",
+"bytes": 38304257,
+"sha256": "0027a74ea70e03bb4df3321283af197560605d89b783d8c20c15e97c23f29107"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1133.json",
+"bytes": 2147839,
+"sha256": "f9989858d7f7e4e342d7e34bb7f816ffbd8ee366e2215469d94b83ca7be9dd4d"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1135.json",
+"bytes": 2686652,
+"sha256": "29535a885912e2e7541dd129bb93d663757f6125b015c4543605b97e15e7a674"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1138.json",
+"bytes": 1746859,
+"sha256": "e147a7833cfffecce605ecca66f2683a59262c4aa710c79e1da9ee24ffa1221d"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1139.json",
+"bytes": 2640187,
+"sha256": "fc5591f10903cdfb8a2eb240a058ce7ce7388532a32db6bf54404e43e1f49bf7"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1158.json",
+"bytes": 7120819,
+"sha256": "bfbf1831b7e74df0d11e6dd774893e787c5e5277b1c38b4efa57bee889198821"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1162.json",
+"bytes": 18079708,
+"sha256": "03feed41e42787b20be620d70ac2db4a00616c31b1af02cc1fac6573753981ca"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1172.json",
+"bytes": 5276987,
+"sha256": "909fd77781bae073a5343d333dac8d5258bf41f1fedf4ec63bdee0f9b26f1364"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1190.json",
+"bytes": 28747735,
+"sha256": "da285599701287f1065b385c21437fb1309b67500c3402111bfabf81aae86ac9"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1192.json",
+"bytes": 31061525,
+"sha256": "6290940cb50f1c6eeb8f18422cdf59031ccdd80268b7bc08149bed6ecb4946e7"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/12.json",
+"bytes": 11424591,
+"sha256": "eac5c12103cadfaa8d29eb898ec8b619125b258615c94833ddd4ae3bce81015e"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1206.json",
+"bytes": 11159235,
+"sha256": "0d82e5672988a91493e44d8c068998f9f46899373c23f3bfb520c67cffd1bb6b"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1214.json",
+"bytes": 29346622,
+"sha256": "54e1aecddfe1daf8dd0ae4c79f173ca6d668fb4f5313e1ab549174dac7e2d6cd"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1216.json",
+"bytes": 5386113,
+"sha256": "13777a7b117084cf351f0955d35aac882f2c9e1bccc5752cb0325aae60e20832"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1226.json",
+"bytes": 11506163,
+"sha256": "56a323e898a4613dd0bb3b4ab3e44f534d3817bb8401645cad3553e961d2c14c"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1227.json",
+"bytes": 15413142,
+"sha256": "51ea2c18e3965ddd60fd9c48f16db31c2e856aa3f98537dedf0bb4677aa998d9"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1239.json",
+"bytes": 3047196,
+"sha256": "105d2c3734b7ed948a404e2a9834db6f4c7221fe3f11862d92959759746126d0"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1242.json",
+"bytes": 51308256,
+"sha256": "76e4aa3f45d00be8a949da81af5b23c64e1cf7e7a85d38fa6ba6ec73d6499564"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1247.json",
+"bytes": 30972760,
+"sha256": "5d9a004f904e0a25dc7243ad51f3574ec6048f5e5fcb793f1e2b5b68ebb53510"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/125.json",
+"bytes": 5210578,
+"sha256": "4b2de27e9a69dd5fcc64c5e6c4d6becef9b820ff91a081c97a3e9f906e158fe5"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1252.json",
+"bytes": 46668050,
+"sha256": "42321c34b079b9cbed7d359263690e4d98f91e82d8f872d4eb96133e08d7b1eb"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1262.json",
+"bytes": 41715589,
+"sha256": "ffb46a6ef86282c96d330b0173174ffe2a3e058358e9b5842f31c89eb102519f"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/1266.json",
+"bytes": 10193094,
+"sha256": "060ea5aac4e95d4d3803c6b6057e38c35fca2fa5811c573f6ed5f8eaace73c92"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/131.json",
+"bytes": 42312078,
+"sha256": "c2afd6c5a2590559d516898e5b38187d9461126492c70986788568e005efb35d"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/134.json",
+"bytes": 100460579,
+"sha256": "5ed1f619b71237c5060ec21917c88ababa58b551c258f49285f342f54d2c2d32"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/140.json",
+"bytes": 12958196,
+"sha256": "d7d166df71cdd1275a0197962e28d1d58fb0c60926fd4e96ed9d6de73c65690b"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/15.json",
+"bytes": 8950325,
+"sha256": "d1237911f3585b58bfde587cf1eea753272c3c666e6f4f2afa4f8240f167ad78"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/160.json",
+"bytes": 73420954,
+"sha256": "442d1faca10a2fef668480ebbb7fb2a597e1ddd040f0b11d6a86782fe0aa00d8"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/161.json",
+"bytes": 4172495,
+"sha256": "241190b0924293a871397d7d8cea7bc593587ef2bbe662f231b3ba0fa88e5820"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/165.json",
+"bytes": 13795337,
+"sha256": "857552e03e97276c73b2e78f3fb6bdfe630e063e95230a2085e4b70edcd5747a"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/169.json",
+"bytes": 18905163,
+"sha256": "2525c2d0e11b6878bdd96669babfd74dc6bcbd424d894bbc310762724ac1031e"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/171.json",
+"bytes": 3403589,
+"sha256": "e392f018ed159c96e756c911f35dc83d5c42065552b8a0b428a25542ed4396a2"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/174.json",
+"bytes": 7708792,
+"sha256": "b4dc1dd9a4a7b4ab6319260e2692efdc82c34580cfea9d04226392f8d1e5ab9a"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/177.json",
+"bytes": 25472588,
+"sha256": "3d5fb0fa2df9f29b9f195b54df9faa708a863ea4bc4fe4506cee81c8aa96b9e6"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/191.json",
+"bytes": 13416464,
+"sha256": "e91cde2ccc08c3709567f3b6b26d0b339ac77d1c92127022170770358f943d4f"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/196.json",
+"bytes": 19102013,
+"sha256": "8ca22ca29c5bfce86b7073d95a8eb7d638413e10807d3356115efaafc62e534f"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/199.json",
+"bytes": 6738101,
+"sha256": "cb46f31efad2a2b3001930d539396e48409401f6671a1cd7ee9ceac8de694616"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/200.json",
+"bytes": 20919979,
+"sha256": "0a0a30550d66fafef57b8d404c567c45093a42e5a1a49a96a5c705d398eea431"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/203.json",
+"bytes": 28830146,
+"sha256": "91c8ca93f73899f44126ab1eeaa8892ba5553359cd4a9e90ba7e307067c6135d"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/210.json",
+"bytes": 4012074,
+"sha256": "ae96c4844f57dfc5b3a5790d060f9dab92c2a150c8367e17cf28cb6c556287ec"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/221.json",
+"bytes": 18660268,
+"sha256": "2d48363d7c02f68cca857c7062740827bb35bfdbef18d72d2c809f4426c232e8"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/223.json",
+"bytes": 25470854,
+"sha256": "d44c997ef562f5a0cc948049dc44939606ea0e18b04fd1ebb60c478c8412a791"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/226.json",
+"bytes": 19112000,
+"sha256": "f0b155c491c3e1c7b9a0d60f2a54689ea61f038ef31f571be9a2682cedc03975"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/234.json",
+"bytes": 16866765,
+"sha256": "e8c8c9e2ded66122fc99cf685cb6614edee1447d51bb254cfcdd3a57d660db87"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/242.json",
+"bytes": 13958176,
+"sha256": "d8bfaf856c453a8e470ea60c30584e9216edb837a1b6c8aefe3cdfa13624bddd"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/245.json",
+"bytes": 47408268,
+"sha256": "ab5fbdadb743dc4925c35146d185b1e0f016496fe8fb8557b71987e4d0fe3391"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/263.json",
+"bytes": 20592617,
+"sha256": "7ede6d1027e9e826abd27a1deeeca8abff4e0a28adaf3d2cb846fa339b2697b7"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/267.json",
+"bytes": 8432212,
+"sha256": "c7ec173fa59947f6eecae39ef50ae7eae567623f57ef820cc33baef904123b94"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/268.json",
+"bytes": 5471809,
+"sha256": "746c54887555d7bfe9ba9cb9e1a281e917efab639877a08ed65241eab36611a2"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/27.json",
+"bytes": 3757521,
+"sha256": "e0db440b3508656145876b707ec3f5ac60d530268089d82889cd1b4b46b9482d"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/279.json",
+"bytes": 3604304,
+"sha256": "715c468a524f2bc444290eb206a99b093918fa9f12f58ea2f36f4ced485340d8"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/286.json",
+"bytes": 9129118,
+"sha256": "0c5a23873a3915e5593a2260d7219e720cfaec7084fa4d1c13706bdb53792fe4"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/289.json",
+"bytes": 5152026,
+"sha256": "7a9a28a1ae2d02788054d17babfddeccf3f798fa1736dfa363c8b66e65954835"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/291.json",
+"bytes": 7284567,
+"sha256": "3230122e9b2c9429adf8d5e8f9d266a5f80a653a69e574651897f3167ad39eb5"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/303.json",
+"bytes": 11325001,
+"sha256": "3271cc924d0d6c29ac446525751f8079ebb1b5b022f924f095a28a4602463686"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/317.json",
+"bytes": 3238464,
+"sha256": "04da76425b44e22508397ee887a9ae54a0f9b7432bc86bf13df9cf427fcf806f"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/330.json",
+"bytes": 8012853,
+"sha256": "7301b3773d716c435e8815d86ef81c90b81cef57ea29624ca1392aa13d20b102"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/331.json",
+"bytes": 6261924,
+"sha256": "0c5aeed3ab355ad0d6beab1df90d866d732fb85d3e52faee82fe9d33783dd33b"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/335.json",
+"bytes": 13742543,
+"sha256": "c5a65ee8d915d86c0e60ba6cfc55b4c0cd18efdd2af4c8220ad0ce498b7d5ead"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/337.json",
+"bytes": 12845867,
+"sha256": "98ff109305c626c262bb7c473f7f4439239bcc9a7d65bbeff5748eccdec1874f"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/347.json",
+"bytes": 46803413,
+"sha256": "d112f27dcfe87bc068e144804c7ae528a2f986e296a5fead902040dcf1e387da"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/349.json",
+"bytes": 22628952,
+"sha256": "5595e0fd11c7018e41b3278594655a1fac5598235183d02101dd07990a3f3ce7"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/350.json",
+"bytes": 36964354,
+"sha256": "a76b1f859c927ade5341f10925e60a35a5b3791dcdcc2f2a6fc7f42f301ef018"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/356.json",
+"bytes": 36183940,
+"sha256": "94a47689413a2485fdab55cf0436159e72ae5c6dcb9eaaf4786171d557329caf"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/371.json",
+"bytes": 57637323,
+"sha256": "c764b325f2d1ee365459600ff14d1e0ec72ba3474cf37c8df204048031d46ee5"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/372.json",
+"bytes": 9991318,
+"sha256": "0c4ba170c73bfefe546901f4add3d12f98a45a194f789d8163341646d63faa96"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/376.json",
+"bytes": 60834018,
+"sha256": "3df6ca3b6a4fe4b3589dd6663a0f4025bce93980df77d331ea8bb7c578503d31"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/380.json",
+"bytes": 8119984,
+"sha256": "f71f05625aa591ec5bf576689699c878db57aa7766b31cecf1ea372e6ac3cb2e"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/383.json",
+"bytes": 10481665,
+"sha256": "4be81d4205a0ba6807ba4ffd503c7cfcf0bd16c730c54b71d1d754e2040075e5"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/393.json",
+"bytes": 2433082,
+"sha256": "953bab078f60dfcf5a4ea05b0b1f75f1d5c70d8fad0a7d57af614b2db5d8fe77"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/394.json",
+"bytes": 2596306,
+"sha256": "df5273fa0b627301cb60bf1fed637958a20f52d60cbdb1de97295be5dc1c71b2"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/402.json",
+"bytes": 7836196,
+"sha256": "46b65e58f0262c4752f2cdb02cc341a974e24c6e434b0ee512489ea7bf6b1501"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/418.json",
+"bytes": 17824880,
+"sha256": "981432fc1bad06a4f6c2a211c1718f144878bb685a17b5585c08a56f15bc0b8f"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/422.json",
+"bytes": 41259861,
+"sha256": "30f82afa76efd53834edb95ff3482d357b2be162551079fba04c3c601ce84c58"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/429.json",
+"bytes": 6818175,
+"sha256": "6bb8da8ea104237fd7892160b8604a8601aaa71d93e58f0ed3d1a9b0d7a5a612"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/433.json",
+"bytes": 34324450,
+"sha256": "d49c717ab6685fe184abe70fcd0d0d8c873440d7ee3dd6582b69d53ddcd46f8e"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/434.json",
+"bytes": 7273071,
+"sha256": "756323e5eb72d7f33a2143c87c299be8f1404c7c93219047c153e0fee9658498"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/436.json",
+"bytes": 65516137,
+"sha256": "75345747114b0f789973cb3a25a13a5d788e4d866489bcd9083c611620371995"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/464.json",
+"bytes": 5015329,
+"sha256": "a08978483e9bd0b19ffe47de10f1f91e88d89388d17410b28488ba75c43a9fb7"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/481.json",
+"bytes": 36852881,
+"sha256": "7fa9a129616608a43169301fe14fb2326c8751e7cf36e693b30932a6baee9099"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/491.json",
+"bytes": 281975,
+"sha256": "2075bb0bf4ef2e58bbe289f41dba564091865ca7a59c256a0d48895b8b3d1e88"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/494.json",
+"bytes": 9942727,
+"sha256": "c37bc66c4149a9306ff670ba0db6e507a85fae5871e235d90a2751a2b35374a9"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/495.json",
+"bytes": 11099976,
+"sha256": "95128389be8490f2375e724a7cdfcbe6f6761d14b6979a1e03f22411eec24da0"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/496.json",
+"bytes": 1231249,
+"sha256": "56975dd27ff7eedaf759be0e988c90c5469a3f20b4b3537b79ef3f8d933fd07b"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/5.json",
+"bytes": 9175994,
+"sha256": "bea193ae69bdc78cb85ea9072f188a6c95bb559f44f3f8cb1b1a1a082b6d2783"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/503.json",
+"bytes": 20050364,
+"sha256": "235980db93e17befd0ea5e44433d4ff823c8769bf3b824a64a715827891cf467"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/505.json",
+"bytes": 5302396,
+"sha256": "1f5f898ef63f223d006c37de561fa340849acb0e267cc95b8fe19a4be45185e5"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/511.json",
+"bytes": 2171164,
+"sha256": "2d85ba009a7cdadc0131dd7ee910aa7508ba32791299bd21ef6c6df751ff8c9e"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/517.json",
+"bytes": 6058613,
+"sha256": "629ef1e236a0221a9bf53e98240f9ebfba8d9f2e29dba285e59b6441bcdebc8a"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/519.json",
+"bytes": 3094163,
+"sha256": "a4423884f4306f53a60f452c488570b2d6992a5ac2d2f33ec4a16dcec26f8b94"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/525.json",
+"bytes": 17964273,
+"sha256": "615fe2968d75419ee5b3224338382b045f9cbf38350a2dc6b4a3e1e473ff5678"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/529.json",
+"bytes": 6398159,
+"sha256": "5dcc645ba8246a621e8760ee933d10b27430209affb01fd0a6a23e6889441b0c"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/53.json",
+"bytes": 10365576,
+"sha256": "3242ac1ee6057dac5cad2b2cef2f0139f476c6c29f3ad69980d5ca2d3f5507c5"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/530.json",
+"bytes": 9431192,
+"sha256": "c4bc5bef2cef49c21c6b652c0bcf1c98b9ed248b543377981d9b95763e21b3d1"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/537.json",
+"bytes": 17983447,
+"sha256": "465b6f7550241a8384a2757a26cc7f43a510ea7998852fca39c6205c5adf9ca4"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/546.json",
+"bytes": 22427924,
+"sha256": "e6dc2fb24b0fb2caf3586da0618c7bed5034369eb261b846594c8f581d5dc8f4"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/560.json",
+"bytes": 652313,
+"sha256": "2024a9bcf292abde108a672c8648b2cfe970099cfba2b4f1dc488606ff7feaf5"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/580.json",
+"bytes": 4021924,
+"sha256": "9446383c318dc0e24370b96db3cce6075901e1f631b2940379f994a2f7f56582"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/582.json",
+"bytes": 2357298,
+"sha256": "5215af6423981c8274f94e5ee2b0a10a2a23d956adf003f9323e0fdaaaccb8d8"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/592.json",
+"bytes": 16388833,
+"sha256": "faf20489f53827c8be657ec60d401e9420c265309052b712c97b460c1c3dca24"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/594.json",
+"bytes": 1632541,
+"sha256": "c77f6559b7ebdc2cf96fb3c3c8566c741bdd8c22d0dad2bfc6d6d5f49f18f1ba"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/598.json",
+"bytes": 4584804,
+"sha256": "18be417c97d25ef789751aeadf40711610dcaad8deec4f58569025f62fad2c64"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/599.json",
+"bytes": 4882593,
+"sha256": "efe9bcfea02c69594c6ebe228e545b77076f75c120bc5600b891b38751e93708"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/600.json",
+"bytes": 79365564,
+"sha256": "e884b744ea7735d6491b0be4bafef460d36ad6fc409d06ec73ac1765a6c748d5"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/607.json",
+"bytes": 2089484,
+"sha256": "dad92b4eff1e64d9b16156630a509b79afa4fd9d7db7ef09bda85fb38b34ba57"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/630.json",
+"bytes": 29723022,
+"sha256": "e24166dfb3b0a04102383440ad4f81ca3203f74144262117e593f4b1198ea5b4"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/645.json",
+"bytes": 20545328,
+"sha256": "c107d593ba5e57f844144e45c7f117a5ecfd617f31d386507843e232d4f2dc44"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/661.json",
+"bytes": 669439,
+"sha256": "5a34cfc664aaf171236e59729a54bff157a163004e91de6062b0a284ea434d84"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/662.json",
+"bytes": 8141807,
+"sha256": "8b307b3a0879b4c46b08b4601a54bd3b0976b3a4cf753c27c2a0e0f5d326d099"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/674.json",
+"bytes": 9563465,
+"sha256": "877e0296e6f646a93c7eb9d6966b11f20deac5a35e79dbebd9443a83dca38e84"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/7.json",
+"bytes": 21462374,
+"sha256": "5fb9cad2aee7dc651b2a5553e8ac4777b26c81ca8f01bb21ff13f8d4f3719670"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/700.json",
+"bytes": 712542,
+"sha256": "37acedb08e5e0e7914c128ab8a1b008d9796ca0d861efdda45eb0694b467eeeb"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/702.json",
+"bytes": 119546950,
+"sha256": "3bebd0758084f34ad41da2a6dbe15284ac3cb692f5b64812798f02c1b559042c"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/703.json",
+"bytes": 11957782,
+"sha256": "9d9e7c5547f09c3ea0d613ab6b277c3fae4c1080b712d4c865a32eaa09c87f4b"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/708.json",
+"bytes": 162134,
+"sha256": "6e0ee15e6fbd4c62be5acfc75f6cb5afab3de7fc6684e641feab8452f1b2175d"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/710.json",
+"bytes": 80597786,
+"sha256": "2410725ceb259ec96a17bad8234a599a7ae0e3522e91d1049aa6571e8ed4476c"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/720.json",
+"bytes": 1228746,
+"sha256": "16f308d0ca713c24043f42ba88d34ebcca69428f64dc25e3e4695932a6c4da88"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/722.json",
+"bytes": 5572829,
+"sha256": "aea21fa8cc4ca8cc856c85b00e327c3712d2383af9c2024edb702d5729484e8d"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/735.json",
+"bytes": 371818,
+"sha256": "1bacfdb8b98dfefa22c3c3b907d394f57d50f71ab20599e367881c3ff3f8305a"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/737.json",
+"bytes": 8631148,
+"sha256": "4b2fa4b47a9d5dfea87e189c0035e78bf7bd0d3c073416f0f8d3e0904c613f00"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/744.json",
+"bytes": 9754950,
+"sha256": "f7a546f52bf67052d6271597e36d118fb12ac477c549e04617f9bceb7fa72af6"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/745.json",
+"bytes": 13053393,
+"sha256": "a1e257f50b1e5933c28d4266a995791c72a0bf2694a09bf7d6e88f1ff0c1d61d"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/747.json",
+"bytes": 31629380,
+"sha256": "76cfff1d1d9b48057125e87bbea76930cf37a546b4aa90d4842180c19b713523"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/749.json",
+"bytes": 60986517,
+"sha256": "9b13ae926467bae70bf84d3b3bd40e4250f3c806d245eae6d030e2600e0c9715"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/768.json",
+"bytes": 11350656,
+"sha256": "aa45572560efd67990c24cd49eb1a13914010be3382d64c6197bf7a91f83967c"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/770.json",
+"bytes": 35181902,
+"sha256": "bd9c1325cfe49ea310dea78fcf3385cd2ac60fcb00ab1922e41528407d99c228"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/773.json",
+"bytes": 8106714,
+"sha256": "4cf37d35783d492cc690e135336669e6f325bd1e60171cfadb0bee20f4a26634"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/774.json",
+"bytes": 38120061,
+"sha256": "28364ce2819aaab13cd57754ff3b56f6559405208825dda7139ff638d2ce4ca8"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/783.json",
+"bytes": 1873347,
+"sha256": "58178fded667b255ee572003ad794e329821d285f255589b0392a16cec3a49dc"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/784.json",
+"bytes": 1062710,
+"sha256": "44eb227e447c8979121c7c039a14a4a87a10e26a2dce0aecc56ed1f986597497"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/790.json",
+"bytes": 10457459,
+"sha256": "c53ac98d6e4b49a59f819555f28ac26afc9b37b30b955fa9db4b2e47dfd83060"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/791.json",
+"bytes": 3996182,
+"sha256": "c9aa0f19fc690b537cac7facdda754c11d0d411b361afbc45f711601cdefb7d7"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/793.json",
+"bytes": 11707990,
+"sha256": "9ccf87789cffa1f4c63679b361d98692be0e8dbdea347cfe58911d687724ae09"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/794.json",
+"bytes": 34329152,
+"sha256": "38fd117835c05fc84587a89617560ffef20854bf6d8d3a7bab7edc47f8ae14b3"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/804.json",
+"bytes": 13490803,
+"sha256": "1951589024cb6c9e07b80890ad9e5ca070cc6ed385a689f13c77380082477488"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/81.json",
+"bytes": 43176452,
+"sha256": "db101bdae76f6bed19e7f763daaec621b541bc005c1dc5ee1df9245fe7c7d4b3"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/810.json",
+"bytes": 20704647,
+"sha256": "f15c45673e4e16bced1c060de3dd1f00eda736ff931e11e9afb6f9b4648abb01"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/820.json",
+"bytes": 3077546,
+"sha256": "3c20cdb744712f7845c051ee3769b4908eafc6a11f1ea831aa0967f87870d172"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/821.json",
+"bytes": 30858217,
+"sha256": "15fdb607dfd958a985eae2d4a9eb9aecd4f68ffef095d0cad15e9a43e069ec0b"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/823.json",
+"bytes": 10715265,
+"sha256": "ee45823ad0791b334873623b3d7b110a3f8bdb066a616fc4a757904e800b8992"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/827.json",
+"bytes": 192277465,
+"sha256": "331b333d7abbacd6dc9c169f21ea82d0f3b5a45015827be507bc6747134289c8"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/83.json",
+"bytes": 60336328,
+"sha256": "f74ac8a75852cfc002c610b1203891e58c7c7ae994dcc7efade6bfb2e6380266"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/830.json",
+"bytes": 15824942,
+"sha256": "ff6fecfbec10420641490edc24b7ebe15c4bf2fad6657769e8dff5460bca75b4"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/843.json",
+"bytes": 41261581,
+"sha256": "e9c1306601a486b92b7bb2947500603664155caa6a7a2d98fbf7138a4adabcf7"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/85.json",
+"bytes": 20763217,
+"sha256": "0cfdda47c2aeaeaf46fdb28d94c919ab54a19767547518130fd2926527fafdd1"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/850.json",
+"bytes": 2621473,
+"sha256": "bcae8e048650f3acc51f1d58982e3711f9371a344ec05d5abc7d3804f126ce7e"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/852.json",
+"bytes": 26438391,
+"sha256": "9eaaafcc95e4cc158153d19c7e32318e2e8fa0de0db3ce99e66958ecb13f6ca0"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/867.json",
+"bytes": 11764811,
+"sha256": "7bf1048be5c5798c8d0dec0de5b114c5d558c8db450083d814b43ad7c33bdf86"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/869.json",
+"bytes": 20450544,
+"sha256": "3647018c6ab31df48226fcdd0caa9c5d081b62bff14326d23d3a7ad759cd2a24"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/895.json",
+"bytes": 46965730,
+"sha256": "89143bf59268de872f613dd81d1e13b438329a11ddef2bedccd185d61d28bd5a"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/905.json",
+"bytes": 41264323,
+"sha256": "eeab0df52042f7a1160b3e879f722bddba1bcb55bb690fcf162153f3f8ed5ad6"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/923.json",
+"bytes": 924411,
+"sha256": "30f69e276537c7af7e25865263d51f22edfa1d78eef5070f6fd97cf34ebdf81b"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/928.json",
+"bytes": 18637700,
+"sha256": "37cb0e96b3b59d8d334d3ac98a140c0da5aa5bf3753cbbd5ea27e559387f3230"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/932.json",
+"bytes": 10060943,
+"sha256": "c90e5d89142a67c437643de71a74d5e427b99e93cb4b08b52d7f2f5bde0a61d5"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/943.json",
+"bytes": 3440862,
+"sha256": "b6ff0adc083efd08b4f6c009bab809857140fb7672945e5349c0071d95f04d91"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/946.json",
+"bytes": 2677872,
+"sha256": "811651242f18765eb92a9f4ccd7ebe9ad664983003be501809676e47b0bd6d7e"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/952.json",
+"bytes": 11757179,
+"sha256": "fcc4a3b3bc8d96642b8363d558b1a66d4fcbf6cfed6ca991845d55ba88218ee1"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/959.json",
+"bytes": 16993986,
+"sha256": "366190862fe7d67aa66b74f4b3ffbcc7ad9a4ea705ec0f1ea0ac497f8888bcd8"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/962.json",
+"bytes": 70106876,
+"sha256": "c23a512f0cdeaaab2c74943cc914a03a0e7191af365d9aac19d01199ad1345ed"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/971.json",
+"bytes": 2690927,
+"sha256": "ebe85125c4788c46baad4ef888091d7bdc7ffda7390d7a1d8361e40bbcc54bf7"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/978.json",
+"bytes": 22897175,
+"sha256": "14b1837c4ae3e2cbd189ddafc5b996fcbcbb494f6d435cd78c72abe71d98029a"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/979.json",
+"bytes": 9726852,
+"sha256": "d7b1685ef807db280be51c6a10b22f67b7fdd366de8fdefc509b6c34d2ea3c14"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/984.json",
+"bytes": 7681640,
+"sha256": "87f47ebb9c386cdd8aa0c2f849eaa6c8a6b273f79343e0308671e8dccfb72ee9"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/rollouts/108e3760dc/987.json",
+"bytes": 20164059,
+"sha256": "6a92a718d148f2a5cea968830a2a3de8147bd342b445ecaa2352042ff679fd04"
+},
+{
+"path": "logs/bcp_policy_e2e_rerankonly/run.log",
+"bytes": 436,
+"sha256": "0d3b5240082b25375f2429bf7b354be37e720ff35e88633580827f86163b9723"
+},
+{
+"path": "logs/bcp_policy_proxy8769_rerankonly.log",
+"bytes": 856,
+"sha256": "d02d65ffafd22eaefa2e9af192a27f61d4e6c5e3bd92ac6299e35d1a882cc14e"
+},
+{
+"path": "logs/bcp_rejudge_gpt41/_cache_rq4.json",
+"bytes": 15152,
+"sha256": "e7c45c600ae7af71864c5581f54da2851f4958e879e20a609ebb018576e09a47"
+},
+{
+"path": "logs/bcp_rejudge_gpt41/rq4_rerank_only.json",
+"bytes": 3430,
+"sha256": "55ab18b55e4f33695d856492dad97f5b49e97b73440dc382d7f979783e9be338"
+},
+{
+"path": "logs/bcp_rejudge_gpt41/rq4_summary.json",
+"bytes": 708,
+"sha256": "50022bcae98bd8c347383e02e804f38267adf00dbdc21159a58e8c51c5262617"
+}
+]
+}

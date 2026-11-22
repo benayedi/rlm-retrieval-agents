@@ -32,7 +32,8 @@ TOK = lambda n: {k[:60]: dict(turns=v["iters"]) for k, v in json.load(open(f"{R}
 TJ = lambda n: json.load(open(f"{T}/{n}.json"))
 # (sheet, row) -> (turn source keyed by question prefix, normalised prefix length, budget)
 SNIP = {("BrowseComp+", 9): (TOK(32), 40, 100), ("BrowseComp+", 11): (TOK(24), 40, 100),
-        ("BrowseComp+", 13): (TJ("bcp_snip_gpt5_bm25"), 40, 100), ("BrowseComp+", 19): (TJ("bcp_snip_qwen_bm25"), 40, 50),
+        ("BrowseComp+", 13): (TJ("bcp_snip_gpt5_bm25"), 40, 100), ("BrowseComp+", 15): (TJ("bcp_snip_qwen_dense"), 40, 50),
+        ("BrowseComp+", 17): (TJ("bcp_snip_qwen_colbert"), 40, 50), ("BrowseComp+", 19): (TJ("bcp_snip_qwen_bm25"), 40, 50),
         ("FRAMES", 7): (TJ("frames_snip_gpt5"), 250, 50), ("FRAMES", 9): (TJ("frames_snip_qwen"), 250, 50)}
 SNIP = {k: ({norm(q, n): v for q, v in src.items()}, n, cap) for k, (src, n, cap) in SNIP.items()}
 

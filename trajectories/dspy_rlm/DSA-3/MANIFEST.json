@@ -1,0 +1,208 @@
+{
+"row": "DSA-3",
+"agent": "dspy_rlm",
+"created": "2026-11-11T16:08:17",
+"format": "tar (PAX) | zstd -19 --long=27 | openssl enc -aes-256-ctr -pbkdf2 -iter 200000 -salt, passphrase = BrowseComp canary string",
+"encrypted": true,
+"archive_parts": [
+{
+"file": "DSA-3.tar.zst.enc",
+"bytes": 268101,
+"sha256": "669f9f474683e1b28484f88ac9de430fc6c9308e10963ad59f2c4daeaa48d377"
+}
+],
+"members": 38,
+"member_bytes": 2174270,
+"files": [
+{
+"path": "logs/bcp_rejudge_gpt41/5.json",
+"bytes": 16726,
+"sha256": "8cba1a74a8457b69b750da970aa7657d5099a002935b36ce7be196a05f5d7318"
+},
+{
+"path": "logs/browsecomp_v2_medium_q148_q830.json",
+"bytes": 700143,
+"sha256": "8636687a12edb3fed77c999c7401a22f6c2b1871d2ece4c5b8c39835d57d8a88"
+},
+{
+"path": "logs/browsecomp_v2_medium_retry56.json",
+"bytes": 54930,
+"sha256": "985a13d95a7586126a59406933ed9999ec9fb5da15314d5436371b5ee0e92ff4"
+},
+{
+"path": "logs/browsecomp_v2medium_baseline_200.json",
+"bytes": 144227,
+"sha256": "54ef3907a42f1f7a52df0c2cf96e464d84045610ce31aa0edbc11961bc12d17a"
+},
+{
+"path": "logs/browsecomp_v2medium_baseline_first50.json",
+"bytes": 4237,
+"sha256": "981f400d666e9d5a2128c3805cace49ea0477f41e00b0c71a9a1bfcf455d39dc"
+},
+{
+"path": "logs/dspy_ablation/arm3.out",
+"bytes": 42,
+"sha256": "e4eb85d284bbc7bcdd3def8590202be8229910b25a58fecb107cb095881a2258"
+},
+{
+"path": "logs/dspy_ablation/arm3/_judge_cache_gpt41.json",
+"bytes": 3451,
+"sha256": "97b390c211b49ac230a59d7038a970b1cfa4cecbaa91458dde3efab70da0e085"
+},
+{
+"path": "logs/dspy_ablation/arm3/report.json",
+"bytes": 1432,
+"sha256": "87df66431a7a7ca0d7e61a763439f271b60c52f41e172249d0db54dc86773ff9"
+},
+{
+"path": "logs/dspy_ablation/arm3/s0.json",
+"bytes": 25254,
+"sha256": "5ea12a2bc9a297867a3256ba6ae90d12523d920bb0d93d38f9396db8134ee7c1"
+},
+{
+"path": "logs/dspy_ablation/arm3/s0.log",
+"bytes": 38247,
+"sha256": "6d8bddfbf50ab7e715136d37e9208fd24843787ea0956acb3552d6ffa4cdfc6f"
+},
+{
+"path": "logs/dspy_ablation/arm3/s0.txt",
+"bytes": 7586,
+"sha256": "6488c022ea65e4c765925d7af263a6d1ae02e8d97dbb2dd41025f1bc47786752"
+},
+{
+"path": "logs/dspy_ablation/arm3/s0_checkpoint.json",
+"bytes": 25254,
+"sha256": "5ea12a2bc9a297867a3256ba6ae90d12523d920bb0d93d38f9396db8134ee7c1"
+},
+{
+"path": "logs/dspy_ablation/arm3/s1.json",
+"bytes": 26949,
+"sha256": "87085fb55bbd860ebfa4989e01477d276234ce17ca88a25f116de3d429f97362"
+},
+{
+"path": "logs/dspy_ablation/arm3/s1.log",
+"bytes": 37539,
+"sha256": "ac600958472cbcdb02505766818b4315be24b9c60e5c34160751715d2b7fbd9b"
+},
+{
+"path": "logs/dspy_ablation/arm3/s1.txt",
+"bytes": 7492,
+"sha256": "df4ec2ead46c0426f74d9f6aa69069ad9c00e424c68f589137bfdc488897ab7d"
+},
+{
+"path": "logs/dspy_ablation/arm3/s1_checkpoint.json",
+"bytes": 26949,
+"sha256": "87085fb55bbd860ebfa4989e01477d276234ce17ca88a25f116de3d429f97362"
+},
+{
+"path": "logs/dspy_ablation/arm3/s2.json",
+"bytes": 25812,
+"sha256": "9eb1ea297bc3d81ecaf4bc37eef3a1e496d5cf2a9df4b01b7faa1bda740a3722"
+},
+{
+"path": "logs/dspy_ablation/arm3/s2.log",
+"bytes": 34308,
+"sha256": "00d9e2e06a5f2a2585f00722bdcbfccdf1d50312e20e52d9c2b0cdd780f35d42"
+},
+{
+"path": "logs/dspy_ablation/arm3/s2.txt",
+"bytes": 7533,
+"sha256": "34405ab0045b2b3c8f04655cc1069ebae36ddb1ad43de3b9ff22eace1105dc10"
+},
+{
+"path": "logs/dspy_ablation/arm3/s2_checkpoint.json",
+"bytes": 25812,
+"sha256": "9eb1ea297bc3d81ecaf4bc37eef3a1e496d5cf2a9df4b01b7faa1bda740a3722"
+},
+{
+"path": "logs/dspy_ablation/arm3/s3.json",
+"bytes": 28664,
+"sha256": "14e1fbf5d961d8cc80ae05c6340d1ac42aaac71db60b68f0478c5daae68a3b5f"
+},
+{
+"path": "logs/dspy_ablation/arm3/s3.log",
+"bytes": 50666,
+"sha256": "e6c50539dd682757b4715957ff574ef8f3a3c3ba96205f1c59ab2581d1f0a4de"
+},
+{
+"path": "logs/dspy_ablation/arm3/s3.txt",
+"bytes": 7570,
+"sha256": "fcd12bae91293672b88bb9cdd8a86f3cda451732402474d28d9a951415fe2d54"
+},
+{
+"path": "logs/dspy_ablation/arm3/s3_checkpoint.json",
+"bytes": 28664,
+"sha256": "14e1fbf5d961d8cc80ae05c6340d1ac42aaac71db60b68f0478c5daae68a3b5f"
+},
+{
+"path": "logs/dspy_ablation/arm3/s4.json",
+"bytes": 29551,
+"sha256": "02f2616a3be7c7ab4f160491b0dd581fb2c1388cea9c4aa26be3c0ca97e18d99"
+},
+{
+"path": "logs/dspy_ablation/arm3/s4.log",
+"bytes": 50924,
+"sha256": "8e307ae74fe5e6426a69953968b0066e0ef1d1d685f29c723ed46dcaad909a26"
+},
+{
+"path": "logs/dspy_ablation/arm3/s4.txt",
+"bytes": 7546,
+"sha256": "f54e1a6b945623278d723b0f171a9f537c5ffb61b922bf5c388a0124f5390857"
+},
+{
+"path": "logs/dspy_ablation/arm3/s4_checkpoint.json",
+"bytes": 29551,
+"sha256": "02f2616a3be7c7ab4f160491b0dd581fb2c1388cea9c4aa26be3c0ca97e18d99"
+},
+{
+"path": "logs/dspy_ablation/arm3_deadlock/arm3.out",
+"bytes": 0,
+"sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+},
+{
+"path": "logs/dspy_ablation/arm3_deadlock/s0.log",
+"bytes": 9808,
+"sha256": "5c9f57c2fb03bf3f5023c7377297713b70d9187f9d38538146819443a99fd784"
+},
+{
+"path": "logs/dspy_ablation/arm3_deadlock/s1.log",
+"bytes": 4371,
+"sha256": "0ce503e9b2a9934412a2a0b84dd341bc66eb5bb8594b229bcf0b34c6c1ae5404"
+},
+{
+"path": "logs/dspy_ablation/arm3_deadlock/s2.log",
+"bytes": 6597,
+"sha256": "7e97327439cc72c2e4add98a057145f3fe4d8cf4f329d66abc54c921001cb5a0"
+},
+{
+"path": "logs/dspy_ablation/arm3_deadlock/s3.log",
+"bytes": 10075,
+"sha256": "93359e5b9511c530db4a5afc323ff5efc46621c3f9d996703bc6fd20eb3834f0"
+},
+{
+"path": "logs/dspy_ablation/arm3_deadlock/s4.log",
+"bytes": 6882,
+"sha256": "160c856dc3285bca857eddf8ce822f0331c42351becba56a8465be0301c4d38f"
+},
+{
+"path": "logs/dspy_ablation/arm3_report.log",
+"bytes": 1571,
+"sha256": "6491c9a5149f9097b91fb620214afe5a757924201a9f9f9034dae5099c6e33e8"
+},
+{
+"path": "logs/dspy_ablation/dspy_vs_snip.json",
+"bytes": 4478,
+"sha256": "f7be6495baf6aaa9430153e5678c0ba965cdd4ec1e2a2320af50efb80a866e59"
+},
+{
+"path": "logs/dspy_ablation/sample100.json",
+"bytes": 9522,
+"sha256": "2b7235ef7132a2158c3795962ce9aaac888fac5f8395cb0cfae5bd5fb3080896"
+},
+{
+"path": "logs/dspy_ablation/snippet_bcp9_per_question.json",
+"bytes": 673907,
+"sha256": "71b66361aad08d7c84bdc8ebe3cec994910340a716e7a5e35630f0d0fbeb21ac"
+}
+]
+}

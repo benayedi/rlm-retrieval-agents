@@ -89,7 +89,7 @@ Launcher: [agents/snippet_repl/experiments/bcp_snip.sh](../../../agents/snippet_
 
 ## 6. Implementation references
 
-- Agent source: [harness.py](../../../agents/snippet_repl/src/harness.py), [sitecustomize.py](../../../agents/snippet_repl/src/hooks/azure_sampling/sitecustomize.py), [sitecustomize.py](../../../agents/snippet_repl/src/hooks/cap_ranking/sitecustomize.py), [sitecustomize.py](../../../agents/snippet_repl/src/hooks/retry429/sitecustomize.py), [sitecustomize.py](../../../agents/snippet_repl/src/hooks/retry429_cap_ranking/sitecustomize.py), [sitecustomize.py](../../../agents/snippet_repl/src/hooks/run5d/sitecustomize.py), [prompt_modules.py](../../../agents/snippet_repl/src/prompt_modules.py), [run_browsecomp.py](../../../agents/snippet_repl/src/run_browsecomp.py), [run_frames.py](../../../agents/snippet_repl/src/run_frames.py), [run_obliq.py](../../../agents/snippet_repl/src/run_obliq.py)
+- Agent source: [harness.py](../../../agents/snippet_repl/src/harness.py), [sitecustomize.py](../../../agents/snippet_repl/src/hooks/azure_sampling/sitecustomize.py), [sitecustomize.py](../../../agents/snippet_repl/src/hooks/cap_ranking/sitecustomize.py), [sitecustomize.py](../../../agents/snippet_repl/src/hooks/retry429/sitecustomize.py), [sitecustomize.py](../../../agents/snippet_repl/src/hooks/retry429_cap_ranking/sitecustomize.py), [sitecustomize.py](../../../agents/snippet_repl/src/hooks/run5d/sitecustomize.py), [obliq_pick_best.py](../../../agents/snippet_repl/src/obliq_pick_best.py), [prompt_modules.py](../../../agents/snippet_repl/src/prompt_modules.py), [run_browsecomp.py](../../../agents/snippet_repl/src/run_browsecomp.py), [run_frames.py](../../../agents/snippet_repl/src/run_frames.py), [run_obliq.py](../../../agents/snippet_repl/src/run_obliq.py)
 - Original code that produced the result (verbatim, SHA-256 manifest): [agents/snippet_repl/original/](../../../agents/snippet_repl/original/MANIFEST.json)
 - Configuration: [agents/snippet_repl/configs/BCP-13.env](../../../agents/snippet_repl/configs/BCP-13.env) · Launcher: [agents/snippet_repl/experiments/bcp_snip.sh](../../../agents/snippet_repl/experiments/bcp_snip.sh)
 - Data loaders: [agents/shared/rlm_shared/](../../../agents/shared/rlm_shared/__init__.py) (`browsecomp_data.py`, `obliq_data.py`)
@@ -154,6 +154,7 @@ Workbook footnotes that apply to this row:
 |---|---|---|---|---|---|
 | Snippet REPL vs document REPL, GPT-5, BM25 | BCP-25 | 136 | 74 | 2.3e-05 | significant at 0.05 |
 | ColBERT vs BM25, snippet, GPT-5 | BCP-11 | 44 | 196 | 4.4e-24 | significant at 0.05 |
+| GPT-5 vs Qwen3.6, snippet, BM25 | BCP-19 | 380 | 27 | 7.1e-81 | significant at 0.05 |
 
 
 - **Largest failure mode:** never retrieving a gold document (123 of 270 failures, 45.6%). Retrieval-side failures (F3 + F4) are 61.5% of failures; reading-side (F5) 14.1%. *(Measured.)*

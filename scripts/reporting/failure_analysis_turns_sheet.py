@@ -108,12 +108,12 @@ def turn_outcome_chart(r1, r2, ttl):
     for s, (_, nm, _) in zip(c.series, TOUT):
         s.tx = SeriesLabel(v=nm)
     c.set_categories(Reference(bt, min_col=1, min_row=r1, max_row=r2)); color_series(c, [t[2] for t in TOUT])
-    c.x_axis.scaling.orientation = "maxMin"; c.legend.position = "b"; c.height = 9 + 0.5 * (r2 - r1); c.width = 22
+    c.x_axis.scaling.orientation = "maxMin"; c.legend.position = "b"; c.height = 11; c.width = 22
     return c
 
 
-ch.add_chart(turn_outcome_chart(5, 14, "BrowseComp+: did the run answer before the turn limit?"), "A84")
-ch.add_chart(turn_outcome_chart(15, 18, "FRAMES: did the run answer before the turn limit?"), "N84")
+ch.add_chart(turn_outcome_chart(5, 4 + len(BEXPS), "BrowseComp+: did the run answer before the turn limit?"), "A84")
+ch.add_chart(turn_outcome_chart(5 + len(BEXPS), 4 + len(EXPS), "FRAMES: did the run answer before the turn limit?"), "N84")
 
 c = BarChart(); c.type = "bar"; c.title = "Mean turns: correct vs not-correct questions"; c.gapWidth = 50
 c.add_data(Reference(bt, min_col=10, max_col=11, min_row=4, max_row=rA), titles_from_data=True)

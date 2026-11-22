@@ -1,0 +1,7418 @@
+{
+"0": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 0.2,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"1": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 38,
+"oracle": false,
+"closed": false
+},
+"2": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.5,
+"searches": 9,
+"iters": 51,
+"oracle": false,
+"closed": true
+},
+"3": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.0,
+"searches": 25,
+"iters": 37,
+"oracle": true,
+"closed": true
+},
+"4": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 25,
+"iters": 32,
+"oracle": true,
+"closed": false
+},
+"5": {
+"bucket": "D1 retrieval miss: no gold found",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.0,
+"searches": 2,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"6": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.6,
+"searches": 14,
+"iters": 22,
+"oracle": true,
+"closed": true
+},
+"7": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"8": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 11,
+"iters": 16,
+"oracle": true,
+"closed": false
+},
+"9": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.5,
+"searches": 7,
+"iters": 15,
+"oracle": true,
+"closed": true
+},
+"10": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 1,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"11": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.42857142857142855,
+"searches": 17,
+"iters": 46,
+"oracle": true,
+"closed": true
+},
+"12": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 4,
+"iters": 7,
+"oracle": true,
+"closed": false
+},
+"13": {
+"bucket": "A4 no answer: submitted the template",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 5,
+"iters": 20,
+"oracle": true,
+"closed": true
+},
+"14": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 43,
+"oracle": true,
+"closed": false
+},
+"15": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 19,
+"iters": 37,
+"oracle": true,
+"closed": false
+},
+"16": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Post processing | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 39,
+"oracle": false,
+"closed": false
+},
+"17": {
+"bucket": "D1 retrieval miss: no gold found",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 27,
+"oracle": true,
+"closed": false
+},
+"18": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 13,
+"oracle": true,
+"closed": false
+},
+"19": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 22,
+"iters": 17,
+"oracle": true,
+"closed": true
+},
+"20": {
+"bucket": "solved",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 0.75,
+"searches": 25,
+"iters": 32,
+"oracle": true,
+"closed": false
+},
+"21": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 0.6666666666666666,
+"searches": 3,
+"iters": 4,
+"oracle": true,
+"closed": false
+},
+"22": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.6,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"23": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 22,
+"oracle": true,
+"closed": true
+},
+"24": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 5,
+"iters": 10,
+"oracle": true,
+"closed": false
+},
+"25": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Numerical reasoning | Post processing",
+"recall": 1.0,
+"searches": 25,
+"iters": 30,
+"oracle": false,
+"closed": false
+},
+"26": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 6,
+"iters": 21,
+"oracle": false,
+"closed": false
+},
+"27": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 34,
+"oracle": true,
+"closed": true
+},
+"28": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 0.6666666666666666,
+"searches": 13,
+"iters": 13,
+"oracle": true,
+"closed": false
+},
+"29": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.5,
+"searches": 5,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"30": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Post processing",
+"recall": 1.0,
+"searches": 25,
+"iters": 46,
+"oracle": true,
+"closed": false
+},
+"31": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 4,
+"iters": 18,
+"oracle": true,
+"closed": true
+},
+"32": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 0.0,
+"searches": 9,
+"iters": 7,
+"oracle": true,
+"closed": true
+},
+"33": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 15,
+"iters": 22,
+"oracle": true,
+"closed": false
+},
+"34": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Temporal reasoning",
+"recall": 0.75,
+"searches": 11,
+"iters": 16,
+"oracle": true,
+"closed": true
+},
+"35": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.8,
+"searches": 25,
+"iters": 18,
+"oracle": true,
+"closed": true
+},
+"36": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.75,
+"searches": 14,
+"iters": 26,
+"oracle": true,
+"closed": true
+},
+"37": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 23,
+"oracle": true,
+"closed": true
+},
+"38": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 9,
+"iters": 10,
+"oracle": true,
+"closed": false
+},
+"39": {
+"bucket": "solved",
+"types": "Post processing",
+"recall": 1.0,
+"searches": 16,
+"iters": 35,
+"oracle": false,
+"closed": true
+},
+"40": {
+"bucket": "A4 no answer: submitted the template",
+"types": "Tabular reasoning",
+"recall": 0.5,
+"searches": 1,
+"iters": 41,
+"oracle": false,
+"closed": false
+},
+"41": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 7,
+"iters": 11,
+"oracle": true,
+"closed": false
+},
+"42": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 28,
+"oracle": false,
+"closed": false
+},
+"43": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 25,
+"oracle": false,
+"closed": false
+},
+"44": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.8333333333333334,
+"searches": 11,
+"iters": 10,
+"oracle": true,
+"closed": false
+},
+"45": {
+"bucket": "E  found all gold, still wrong",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 13,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"46": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 21,
+"iters": 49,
+"oracle": true,
+"closed": true
+},
+"47": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 50,
+"oracle": false,
+"closed": false
+},
+"48": {
+"bucket": "D1 retrieval miss: no gold found",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 44,
+"oracle": true,
+"closed": false
+},
+"49": {
+"bucket": "D1 retrieval miss: no gold found",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 44,
+"oracle": true,
+"closed": false
+},
+"50": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 9,
+"iters": 19,
+"oracle": true,
+"closed": false
+},
+"51": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 5,
+"iters": 4,
+"oracle": true,
+"closed": false
+},
+"52": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.5,
+"searches": 2,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"53": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 5,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"54": {
+"bucket": "E  found all gold, still wrong",
+"types": "Tabular reasoning | Multiple constraints | Post processing",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": true
+},
+"55": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 25,
+"iters": 15,
+"oracle": true,
+"closed": false
+},
+"56": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 2,
+"iters": 17,
+"oracle": true,
+"closed": false
+},
+"57": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 6,
+"iters": 33,
+"oracle": true,
+"closed": true
+},
+"58": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 42,
+"oracle": false,
+"closed": false
+},
+"59": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.4,
+"searches": 6,
+"iters": 6,
+"oracle": true,
+"closed": true
+},
+"60": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.75,
+"searches": 25,
+"iters": 39,
+"oracle": false,
+"closed": false
+},
+"61": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 3,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"62": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.25,
+"searches": 8,
+"iters": 15,
+"oracle": true,
+"closed": false
+},
+"63": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 4,
+"iters": 44,
+"oracle": true,
+"closed": true
+},
+"64": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Post processing",
+"recall": 1.0,
+"searches": 7,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"65": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 6,
+"iters": 24,
+"oracle": false,
+"closed": false
+},
+"66": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 12,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"67": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.4,
+"searches": 21,
+"iters": 33,
+"oracle": true,
+"closed": false
+},
+"68": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 39,
+"oracle": true,
+"closed": false
+},
+"69": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 7,
+"iters": 22,
+"oracle": true,
+"closed": false
+},
+"70": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 1.0,
+"searches": 19,
+"iters": 25,
+"oracle": true,
+"closed": true
+},
+"71": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 5,
+"iters": 16,
+"oracle": true,
+"closed": true
+},
+"72": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 34,
+"oracle": true,
+"closed": false
+},
+"73": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 11,
+"iters": 13,
+"oracle": true,
+"closed": false
+},
+"74": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 41,
+"oracle": false,
+"closed": false
+},
+"75": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 21,
+"oracle": false,
+"closed": false
+},
+"76": {
+"bucket": "solved",
+"types": "Post processing | Temporal reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 40,
+"oracle": true,
+"closed": false
+},
+"77": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Post processing",
+"recall": 0.5,
+"searches": 25,
+"iters": 19,
+"oracle": false,
+"closed": false
+},
+"78": {
+"bucket": "A4 no answer: submitted the template",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 34,
+"oracle": false,
+"closed": false
+},
+"79": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Post processing",
+"recall": 0.3333333333333333,
+"searches": 2,
+"iters": 12,
+"oracle": true,
+"closed": false
+},
+"80": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 8,
+"iters": 32,
+"oracle": true,
+"closed": false
+},
+"81": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 43,
+"oracle": false,
+"closed": false
+},
+"82": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.18181818181818182,
+"searches": 14,
+"iters": 31,
+"oracle": true,
+"closed": true
+},
+"83": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 0.0,
+"searches": 25,
+"iters": 40,
+"oracle": true,
+"closed": true
+},
+"84": {
+"bucket": "E  found all gold, still wrong",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 6,
+"iters": 5,
+"oracle": true,
+"closed": true
+},
+"85": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 15,
+"iters": 24,
+"oracle": false,
+"closed": false
+},
+"86": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 42,
+"oracle": false,
+"closed": false
+},
+"87": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 1.0,
+"searches": 5,
+"iters": 4,
+"oracle": true,
+"closed": true
+},
+"88": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 3,
+"iters": 10,
+"oracle": false,
+"closed": false
+},
+"89": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 4,
+"iters": 21,
+"oracle": true,
+"closed": true
+},
+"90": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.75,
+"searches": 25,
+"iters": 43,
+"oracle": true,
+"closed": false
+},
+"91": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 6,
+"iters": 12,
+"oracle": true,
+"closed": false
+},
+"92": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 15,
+"iters": 23,
+"oracle": true,
+"closed": false
+},
+"93": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 18,
+"iters": 21,
+"oracle": true,
+"closed": false
+},
+"94": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 6,
+"iters": 19,
+"oracle": true,
+"closed": false
+},
+"95": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.0,
+"searches": 9,
+"iters": 16,
+"oracle": true,
+"closed": true
+},
+"96": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 21,
+"oracle": true,
+"closed": false
+},
+"97": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"98": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 0.6666666666666666,
+"searches": 6,
+"iters": 14,
+"oracle": true,
+"closed": true
+},
+"99": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 32,
+"oracle": true,
+"closed": false
+},
+"100": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 24,
+"iters": 29,
+"oracle": true,
+"closed": false
+},
+"101": {
+"bucket": "solved",
+"types": "Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 4,
+"iters": 7,
+"oracle": true,
+"closed": true
+},
+"102": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning | Multiple constraints | Post processing",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 32,
+"oracle": true,
+"closed": false
+},
+"103": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 4,
+"iters": 42,
+"oracle": false,
+"closed": false
+},
+"104": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.0,
+"searches": 8,
+"iters": 13,
+"oracle": true,
+"closed": true
+},
+"105": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 24,
+"iters": 47,
+"oracle": true,
+"closed": true
+},
+"106": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.75,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"107": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 21,
+"iters": 26,
+"oracle": true,
+"closed": true
+},
+"108": {
+"bucket": "solved",
+"types": "Numerical reasoning | Post processing",
+"recall": 0.6666666666666666,
+"searches": 1,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"109": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"110": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 7,
+"iters": 21,
+"oracle": true,
+"closed": false
+},
+"111": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 2,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"112": {
+"bucket": "A4 no answer: submitted the template",
+"types": "Tabular reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 40,
+"oracle": false,
+"closed": false
+},
+"113": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 2,
+"iters": 7,
+"oracle": true,
+"closed": false
+},
+"114": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 2,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"115": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.25,
+"searches": 25,
+"iters": 26,
+"oracle": true,
+"closed": false
+},
+"116": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 12,
+"iters": 26,
+"oracle": true,
+"closed": false
+},
+"117": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 16,
+"iters": 19,
+"oracle": true,
+"closed": false
+},
+"118": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.2857142857142857,
+"searches": 24,
+"iters": 19,
+"oracle": true,
+"closed": true
+},
+"119": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 11,
+"iters": 27,
+"oracle": true,
+"closed": true
+},
+"120": {
+"bucket": "E  found all gold, still wrong",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 7,
+"iters": 25,
+"oracle": true,
+"closed": false
+},
+"121": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 23,
+"iters": 18,
+"oracle": true,
+"closed": true
+},
+"122": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 30,
+"oracle": false,
+"closed": false
+},
+"123": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 0.5,
+"searches": 10,
+"iters": 23,
+"oracle": true,
+"closed": true
+},
+"124": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 6,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"125": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 13,
+"iters": 36,
+"oracle": true,
+"closed": false
+},
+"126": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 2,
+"iters": 11,
+"oracle": true,
+"closed": false
+},
+"127": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 31,
+"oracle": true,
+"closed": false
+},
+"128": {
+"bucket": "E  found all gold, still wrong",
+"types": "Post processing | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"129": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 11,
+"iters": 13,
+"oracle": true,
+"closed": false
+},
+"130": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 19,
+"iters": 50,
+"oracle": true,
+"closed": true
+},
+"131": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6,
+"searches": 6,
+"iters": 18,
+"oracle": true,
+"closed": false
+},
+"132": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 6,
+"iters": 28,
+"oracle": false,
+"closed": false
+},
+"133": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.4,
+"searches": 9,
+"iters": 23,
+"oracle": false,
+"closed": false
+},
+"134": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 26,
+"oracle": true,
+"closed": true
+},
+"135": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 1,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"136": {
+"bucket": "solved",
+"types": "Numerical reasoning | Post processing",
+"recall": 0.14285714285714285,
+"searches": 10,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"137": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.0,
+"searches": 1,
+"iters": 3,
+"oracle": false,
+"closed": false
+},
+"138": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 24,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"139": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.75,
+"searches": 25,
+"iters": 36,
+"oracle": true,
+"closed": false
+},
+"140": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"141": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 0.3333333333333333,
+"searches": 19,
+"iters": 26,
+"oracle": false,
+"closed": false
+},
+"142": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 21,
+"iters": 10,
+"oracle": true,
+"closed": false
+},
+"143": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning",
+"recall": 0.5,
+"searches": 23,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"144": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 21,
+"iters": 27,
+"oracle": true,
+"closed": false
+},
+"145": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning | Multiple constraints | Post processing",
+"recall": 0.4,
+"searches": 16,
+"iters": 19,
+"oracle": true,
+"closed": false
+},
+"146": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 39,
+"oracle": false,
+"closed": false
+},
+"147": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 1,
+"iters": 3,
+"oracle": true,
+"closed": true
+},
+"148": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 24,
+"oracle": true,
+"closed": true
+},
+"149": {
+"bucket": "solved",
+"types": "Numerical reasoning | Post processing",
+"recall": 0.16666666666666666,
+"searches": 25,
+"iters": 26,
+"oracle": false,
+"closed": false
+},
+"150": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 32,
+"oracle": false,
+"closed": false
+},
+"151": {
+"bucket": "solved",
+"types": "Numerical reasoning | Post processing",
+"recall": 1.0,
+"searches": 4,
+"iters": 16,
+"oracle": true,
+"closed": false
+},
+"152": {
+"bucket": "solved",
+"types": "Multiple constraints | Post processing",
+"recall": 0.5,
+"searches": 4,
+"iters": 4,
+"oracle": true,
+"closed": true
+},
+"153": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning",
+"recall": 0.14285714285714285,
+"searches": 25,
+"iters": 32,
+"oracle": false,
+"closed": false
+},
+"154": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 4,
+"iters": 16,
+"oracle": true,
+"closed": true
+},
+"155": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 16,
+"iters": 21,
+"oracle": true,
+"closed": true
+},
+"156": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.5,
+"searches": 4,
+"iters": 8,
+"oracle": true,
+"closed": true
+},
+"157": {
+"bucket": "solved",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 14,
+"iters": 25,
+"oracle": true,
+"closed": false
+},
+"158": {
+"bucket": "solved",
+"types": "Numerical reasoning | Post processing | Temporal reasoning",
+"recall": 1.0,
+"searches": 5,
+"iters": 12,
+"oracle": true,
+"closed": true
+},
+"159": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"160": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 0.5,
+"searches": 6,
+"iters": 6,
+"oracle": true,
+"closed": true
+},
+"161": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 0.2,
+"searches": 25,
+"iters": 21,
+"oracle": true,
+"closed": false
+},
+"162": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"163": {
+"bucket": "solved",
+"types": "Numerical reasoning | Post processing | Temporal reasoning",
+"recall": 0.5,
+"searches": 5,
+"iters": 14,
+"oracle": true,
+"closed": true
+},
+"164": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 23,
+"iters": 20,
+"oracle": true,
+"closed": true
+},
+"165": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 2,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"166": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.8,
+"searches": 4,
+"iters": 13,
+"oracle": true,
+"closed": false
+},
+"167": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"168": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"169": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 10,
+"iters": 28,
+"oracle": true,
+"closed": true
+},
+"170": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 2,
+"iters": 7,
+"oracle": true,
+"closed": true
+},
+"171": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 5,
+"iters": 51,
+"oracle": true,
+"closed": true
+},
+"172": {
+"bucket": "D1 retrieval miss: no gold found",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 45,
+"oracle": true,
+"closed": false
+},
+"173": {
+"bucket": "solved",
+"types": "Tabular reasoning | Post processing",
+"recall": 0.5,
+"searches": 10,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"174": {
+"bucket": "solved",
+"types": "Multiple constraints | Post processing",
+"recall": 1.0,
+"searches": 15,
+"iters": 15,
+"oracle": true,
+"closed": true
+},
+"175": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 2,
+"iters": 7,
+"oracle": false,
+"closed": false
+},
+"176": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 33,
+"oracle": false,
+"closed": false
+},
+"177": {
+"bucket": "solved",
+"types": "Numerical reasoning | Post processing",
+"recall": 0.5,
+"searches": 8,
+"iters": 17,
+"oracle": true,
+"closed": false
+},
+"178": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 4,
+"iters": 6,
+"oracle": true,
+"closed": true
+},
+"179": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 22,
+"iters": 13,
+"oracle": true,
+"closed": false
+},
+"180": {
+"bucket": "D1 retrieval miss: no gold found",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"181": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6,
+"searches": 25,
+"iters": 48,
+"oracle": true,
+"closed": false
+},
+"182": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 4,
+"iters": 21,
+"oracle": true,
+"closed": false
+},
+"183": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 2,
+"iters": 5,
+"oracle": false,
+"closed": false
+},
+"184": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.75,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"185": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 40,
+"oracle": false,
+"closed": false
+},
+"186": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"187": {
+"bucket": "E  found all gold, still wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 38,
+"oracle": true,
+"closed": false
+},
+"188": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 3,
+"iters": 5,
+"oracle": true,
+"closed": false
+},
+"189": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.5,
+"searches": 2,
+"iters": 5,
+"oracle": true,
+"closed": false
+},
+"190": {
+"bucket": "solved",
+"types": "Multiple constraints | Post processing",
+"recall": 0.5,
+"searches": 25,
+"iters": 36,
+"oracle": true,
+"closed": false
+},
+"191": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 22,
+"iters": 17,
+"oracle": true,
+"closed": false
+},
+"192": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 36,
+"oracle": false,
+"closed": false
+},
+"193": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 8,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"194": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 11,
+"iters": 31,
+"oracle": true,
+"closed": true
+},
+"195": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning",
+"recall": 0.5,
+"searches": 20,
+"iters": 46,
+"oracle": true,
+"closed": false
+},
+"196": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 3,
+"iters": 6,
+"oracle": true,
+"closed": false
+},
+"197": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": true
+},
+"198": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 24,
+"iters": 35,
+"oracle": true,
+"closed": true
+},
+"199": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3076923076923077,
+"searches": 2,
+"iters": 3,
+"oracle": true,
+"closed": true
+},
+"200": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 45,
+"oracle": true,
+"closed": false
+},
+"201": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Post processing",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 34,
+"oracle": true,
+"closed": false
+},
+"202": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 22,
+"iters": 34,
+"oracle": false,
+"closed": false
+},
+"203": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Post processing",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"204": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.5,
+"searches": 14,
+"iters": 13,
+"oracle": true,
+"closed": true
+},
+"205": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.75,
+"searches": 25,
+"iters": 26,
+"oracle": true,
+"closed": false
+},
+"206": {
+"bucket": "solved",
+"types": "Numerical reasoning | Post processing",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 39,
+"oracle": true,
+"closed": false
+},
+"207": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 0.0,
+"searches": 25,
+"iters": 47,
+"oracle": false,
+"closed": false
+},
+"208": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 2,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"209": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.6,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"210": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 34,
+"oracle": true,
+"closed": true
+},
+"211": {
+"bucket": "solved",
+"types": "Numerical reasoning | Post processing",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 32,
+"oracle": true,
+"closed": true
+},
+"212": {
+"bucket": "solved",
+"types": "Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.5,
+"searches": 9,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"213": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 1,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"214": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.5,
+"searches": 14,
+"iters": 16,
+"oracle": true,
+"closed": false
+},
+"215": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 3,
+"iters": 6,
+"oracle": true,
+"closed": false
+},
+"216": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"217": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 7,
+"iters": 7,
+"oracle": true,
+"closed": false
+},
+"218": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 0.5,
+"searches": 2,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"219": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 1,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"220": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 11,
+"iters": 20,
+"oracle": true,
+"closed": true
+},
+"221": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 40,
+"oracle": false,
+"closed": false
+},
+"222": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 6,
+"iters": 12,
+"oracle": true,
+"closed": false
+},
+"223": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 6,
+"iters": 27,
+"oracle": true,
+"closed": false
+},
+"224": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 39,
+"oracle": true,
+"closed": true
+},
+"225": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.16666666666666666,
+"searches": 25,
+"iters": 34,
+"oracle": true,
+"closed": false
+},
+"226": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 14,
+"iters": 18,
+"oracle": true,
+"closed": false
+},
+"227": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.3,
+"searches": 25,
+"iters": 30,
+"oracle": true,
+"closed": false
+},
+"228": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 6,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"229": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.75,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"230": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 0.8333333333333334,
+"searches": 25,
+"iters": 23,
+"oracle": true,
+"closed": false
+},
+"231": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 0.42105263157894735,
+"searches": 25,
+"iters": 44,
+"oracle": true,
+"closed": false
+},
+"232": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.25,
+"searches": 25,
+"iters": 47,
+"oracle": false,
+"closed": false
+},
+"233": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 4,
+"iters": 11,
+"oracle": true,
+"closed": false
+},
+"234": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.625,
+"searches": 25,
+"iters": 35,
+"oracle": true,
+"closed": false
+},
+"235": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Tabular reasoning | Multiple constraints | Post processing",
+"recall": 0.5,
+"searches": 25,
+"iters": 37,
+"oracle": true,
+"closed": false
+},
+"236": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 4,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"237": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 39,
+"oracle": true,
+"closed": true
+},
+"238": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 34,
+"oracle": false,
+"closed": false
+},
+"239": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 31,
+"oracle": true,
+"closed": false
+},
+"240": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 5,
+"iters": 19,
+"oracle": true,
+"closed": true
+},
+"241": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"242": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.8,
+"searches": 25,
+"iters": 36,
+"oracle": true,
+"closed": false
+},
+"243": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"244": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 20,
+"iters": 31,
+"oracle": true,
+"closed": false
+},
+"245": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 19,
+"iters": 34,
+"oracle": true,
+"closed": false
+},
+"246": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.5,
+"searches": 7,
+"iters": 5,
+"oracle": false,
+"closed": true
+},
+"247": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 11,
+"iters": 28,
+"oracle": true,
+"closed": false
+},
+"248": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.6,
+"searches": 25,
+"iters": 30,
+"oracle": true,
+"closed": true
+},
+"249": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.25,
+"searches": 4,
+"iters": 5,
+"oracle": true,
+"closed": true
+},
+"250": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 6,
+"iters": 16,
+"oracle": true,
+"closed": false
+},
+"251": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 14,
+"iters": 18,
+"oracle": true,
+"closed": true
+},
+"252": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 10,
+"iters": 39,
+"oracle": true,
+"closed": false
+},
+"253": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.5,
+"searches": 16,
+"iters": 17,
+"oracle": true,
+"closed": false
+},
+"254": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"255": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.6,
+"searches": 25,
+"iters": 47,
+"oracle": false,
+"closed": false
+},
+"256": {
+"bucket": "solved",
+"types": "Post processing",
+"recall": 1.0,
+"searches": 22,
+"iters": 43,
+"oracle": true,
+"closed": true
+},
+"257": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 2,
+"iters": 7,
+"oracle": true,
+"closed": false
+},
+"258": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 37,
+"oracle": false,
+"closed": false
+},
+"259": {
+"bucket": "solved",
+"types": "Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 32,
+"oracle": true,
+"closed": false
+},
+"260": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 7,
+"iters": 34,
+"oracle": true,
+"closed": false
+},
+"261": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.0,
+"searches": 25,
+"iters": 46,
+"oracle": true,
+"closed": true
+},
+"262": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 1.0,
+"searches": 4,
+"iters": 17,
+"oracle": true,
+"closed": false
+},
+"263": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 7,
+"iters": 12,
+"oracle": true,
+"closed": false
+},
+"264": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 5,
+"iters": 16,
+"oracle": true,
+"closed": false
+},
+"265": {
+"bucket": "E  found all gold, still wrong",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 26,
+"oracle": true,
+"closed": true
+},
+"266": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.75,
+"searches": 3,
+"iters": 12,
+"oracle": true,
+"closed": true
+},
+"267": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 18,
+"iters": 21,
+"oracle": true,
+"closed": true
+},
+"268": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.14285714285714285,
+"searches": 5,
+"iters": 26,
+"oracle": true,
+"closed": true
+},
+"269": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 1,
+"iters": 5,
+"oracle": true,
+"closed": true
+},
+"270": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.5,
+"searches": 12,
+"iters": 28,
+"oracle": true,
+"closed": true
+},
+"271": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 28,
+"oracle": true,
+"closed": true
+},
+"272": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": true
+},
+"273": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 5,
+"iters": 11,
+"oracle": true,
+"closed": false
+},
+"274": {
+"bucket": "E  found all gold, still wrong",
+"types": "Post processing",
+"recall": 1.0,
+"searches": 4,
+"iters": 48,
+"oracle": true,
+"closed": true
+},
+"275": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 13,
+"iters": 40,
+"oracle": true,
+"closed": false
+},
+"276": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 37,
+"oracle": true,
+"closed": true
+},
+"277": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 9,
+"iters": 22,
+"oracle": true,
+"closed": false
+},
+"278": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 3,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"279": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 7,
+"iters": 24,
+"oracle": true,
+"closed": true
+},
+"280": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"281": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 16,
+"iters": 35,
+"oracle": true,
+"closed": false
+},
+"282": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 4,
+"iters": 7,
+"oracle": true,
+"closed": false
+},
+"283": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 40,
+"oracle": true,
+"closed": false
+},
+"284": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Post processing | Temporal reasoning",
+"recall": 0.5,
+"searches": 13,
+"iters": 14,
+"oracle": true,
+"closed": false
+},
+"285": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.75,
+"searches": 16,
+"iters": 16,
+"oracle": true,
+"closed": false
+},
+"286": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.16666666666666666,
+"searches": 25,
+"iters": 22,
+"oracle": true,
+"closed": true
+},
+"287": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 1,
+"iters": 38,
+"oracle": true,
+"closed": false
+},
+"288": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 1.0,
+"searches": 21,
+"iters": 40,
+"oracle": true,
+"closed": true
+},
+"289": {
+"bucket": "solved",
+"types": "Post processing | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 15,
+"iters": 35,
+"oracle": true,
+"closed": true
+},
+"290": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.75,
+"searches": 18,
+"iters": 36,
+"oracle": true,
+"closed": false
+},
+"291": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 3,
+"iters": 20,
+"oracle": true,
+"closed": true
+},
+"292": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.0,
+"searches": 15,
+"iters": 14,
+"oracle": true,
+"closed": true
+},
+"293": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 5,
+"iters": 10,
+"oracle": true,
+"closed": false
+},
+"294": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.0,
+"searches": 13,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"295": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 5,
+"iters": 8,
+"oracle": true,
+"closed": true
+},
+"296": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 15,
+"iters": 16,
+"oracle": true,
+"closed": true
+},
+"297": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 34,
+"oracle": false,
+"closed": false
+},
+"298": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"299": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 6,
+"iters": 13,
+"oracle": true,
+"closed": false
+},
+"300": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 3,
+"iters": 14,
+"oracle": true,
+"closed": true
+},
+"301": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 11,
+"iters": 19,
+"oracle": true,
+"closed": true
+},
+"302": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.75,
+"searches": 20,
+"iters": 18,
+"oracle": false,
+"closed": false
+},
+"303": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.25,
+"searches": 25,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"304": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 17,
+"iters": 19,
+"oracle": true,
+"closed": false
+},
+"305": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": true
+},
+"306": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 1.0,
+"searches": 3,
+"iters": 17,
+"oracle": true,
+"closed": false
+},
+"307": {
+"bucket": "solved",
+"types": "Post processing",
+"recall": 1.0,
+"searches": 10,
+"iters": 27,
+"oracle": true,
+"closed": false
+},
+"308": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.9090909090909091,
+"searches": 25,
+"iters": 33,
+"oracle": false,
+"closed": false
+},
+"309": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 17,
+"iters": 23,
+"oracle": false,
+"closed": false
+},
+"310": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.25,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"311": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 13,
+"iters": 12,
+"oracle": true,
+"closed": false
+},
+"312": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 4,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"313": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.25,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"314": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Post processing",
+"recall": 0.6666666666666666,
+"searches": 17,
+"iters": 11,
+"oracle": true,
+"closed": false
+},
+"315": {
+"bucket": "solved",
+"types": "Post processing | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 1,
+"iters": 5,
+"oracle": false,
+"closed": false
+},
+"316": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 32,
+"oracle": false,
+"closed": false
+},
+"317": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 10,
+"iters": 23,
+"oracle": true,
+"closed": false
+},
+"318": {
+"bucket": "E  found all gold, still wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 9,
+"iters": 44,
+"oracle": true,
+"closed": false
+},
+"319": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.5,
+"searches": 3,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"320": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 44,
+"oracle": true,
+"closed": false
+},
+"321": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Post processing | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 23,
+"oracle": true,
+"closed": false
+},
+"322": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 43,
+"oracle": true,
+"closed": false
+},
+"323": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 4,
+"iters": 5,
+"oracle": true,
+"closed": false
+},
+"324": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Numerical reasoning | Multiple constraints | Post processing",
+"recall": 0.2222222222222222,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"325": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning",
+"recall": 0.5,
+"searches": 3,
+"iters": 5,
+"oracle": false,
+"closed": false
+},
+"326": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 7,
+"iters": 7,
+"oracle": true,
+"closed": false
+},
+"327": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 1.0,
+"searches": 17,
+"iters": 43,
+"oracle": true,
+"closed": true
+},
+"328": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"329": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 15,
+"iters": 34,
+"oracle": true,
+"closed": true
+},
+"330": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.5,
+"searches": 22,
+"iters": 23,
+"oracle": false,
+"closed": false
+},
+"331": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.2,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"332": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 1,
+"iters": 4,
+"oracle": true,
+"closed": true
+},
+"333": {
+"bucket": "A4 no answer: submitted the template",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 0.0,
+"searches": 3,
+"iters": 8,
+"oracle": false,
+"closed": false
+},
+"334": {
+"bucket": "solved",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 0.5,
+"searches": 2,
+"iters": 4,
+"oracle": true,
+"closed": true
+},
+"335": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 9,
+"iters": 10,
+"oracle": false,
+"closed": true
+},
+"336": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.75,
+"searches": 18,
+"iters": 28,
+"oracle": false,
+"closed": false
+},
+"337": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 5,
+"iters": 40,
+"oracle": true,
+"closed": false
+},
+"338": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"339": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 5,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"340": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 43,
+"oracle": false,
+"closed": false
+},
+"341": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 22,
+"oracle": true,
+"closed": true
+},
+"342": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.5,
+"searches": 3,
+"iters": 12,
+"oracle": true,
+"closed": true
+},
+"343": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 44,
+"oracle": true,
+"closed": true
+},
+"344": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 22,
+"oracle": true,
+"closed": false
+},
+"345": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"346": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 2,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"347": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Temporal reasoning",
+"recall": 0.0,
+"searches": 25,
+"iters": 41,
+"oracle": false,
+"closed": false
+},
+"348": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 5,
+"iters": 18,
+"oracle": true,
+"closed": true
+},
+"349": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 11,
+"iters": 6,
+"oracle": true,
+"closed": true
+},
+"350": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 21,
+"iters": 31,
+"oracle": true,
+"closed": false
+},
+"351": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 5,
+"iters": 12,
+"oracle": true,
+"closed": true
+},
+"352": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Post processing | Temporal reasoning",
+"recall": 0.5,
+"searches": 1,
+"iters": 8,
+"oracle": true,
+"closed": false
+},
+"353": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.0,
+"searches": 3,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"354": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.0,
+"searches": 16,
+"iters": 23,
+"oracle": true,
+"closed": true
+},
+"355": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 23,
+"oracle": null,
+"closed": false
+},
+"356": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"357": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 0.25,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"358": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 45,
+"oracle": false,
+"closed": false
+},
+"359": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 7,
+"iters": 11,
+"oracle": true,
+"closed": false
+},
+"360": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 49,
+"oracle": false,
+"closed": false
+},
+"361": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 2,
+"iters": 10,
+"oracle": true,
+"closed": false
+},
+"362": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.0,
+"searches": 3,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"363": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 29,
+"oracle": false,
+"closed": false
+},
+"364": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning",
+"recall": 1.0,
+"searches": 17,
+"iters": 30,
+"oracle": false,
+"closed": false
+},
+"365": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 1,
+"iters": 3,
+"oracle": true,
+"closed": false
+},
+"366": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 4,
+"iters": 16,
+"oracle": true,
+"closed": true
+},
+"367": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 24,
+"iters": 38,
+"oracle": true,
+"closed": false
+},
+"368": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"369": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 5,
+"iters": 12,
+"oracle": true,
+"closed": false
+},
+"370": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"371": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 8,
+"iters": 22,
+"oracle": false,
+"closed": false
+},
+"372": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 0.5,
+"searches": 6,
+"iters": 7,
+"oracle": true,
+"closed": true
+},
+"373": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.75,
+"searches": 6,
+"iters": 8,
+"oracle": true,
+"closed": false
+},
+"374": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 4,
+"iters": 12,
+"oracle": true,
+"closed": false
+},
+"375": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 1.0,
+"searches": 6,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"376": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 1,
+"iters": 5,
+"oracle": false,
+"closed": true
+},
+"377": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 12,
+"iters": 25,
+"oracle": true,
+"closed": false
+},
+"378": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.0,
+"searches": 6,
+"iters": 25,
+"oracle": false,
+"closed": false
+},
+"379": {
+"bucket": "solved",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 0.5,
+"searches": 3,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"380": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 2,
+"iters": 6,
+"oracle": true,
+"closed": true
+},
+"381": {
+"bucket": "solved",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 14,
+"iters": 17,
+"oracle": true,
+"closed": true
+},
+"382": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 6,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"383": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 25,
+"iters": 40,
+"oracle": true,
+"closed": false
+},
+"384": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 19,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"385": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 0.3333333333333333,
+"searches": 24,
+"iters": 20,
+"oracle": true,
+"closed": true
+},
+"386": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 5,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"387": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 16,
+"iters": 13,
+"oracle": true,
+"closed": true
+},
+"388": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"389": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 7,
+"iters": 19,
+"oracle": true,
+"closed": false
+},
+"390": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"391": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 2,
+"iters": 8,
+"oracle": true,
+"closed": true
+},
+"392": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 7,
+"iters": 13,
+"oracle": true,
+"closed": true
+},
+"393": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 3,
+"iters": 8,
+"oracle": true,
+"closed": true
+},
+"394": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"395": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.5,
+"searches": 1,
+"iters": 30,
+"oracle": false,
+"closed": false
+},
+"396": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 6,
+"iters": 12,
+"oracle": true,
+"closed": true
+},
+"397": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning",
+"recall": 0.5,
+"searches": 3,
+"iters": 15,
+"oracle": true,
+"closed": false
+},
+"398": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 6,
+"iters": 20,
+"oracle": true,
+"closed": false
+},
+"399": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 3,
+"iters": 20,
+"oracle": true,
+"closed": false
+},
+"400": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 10,
+"iters": 37,
+"oracle": false,
+"closed": false
+},
+"401": {
+"bucket": "solved",
+"types": "Numerical reasoning | Post processing",
+"recall": 1.0,
+"searches": 25,
+"iters": 31,
+"oracle": true,
+"closed": false
+},
+"402": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.75,
+"searches": 8,
+"iters": 10,
+"oracle": true,
+"closed": false
+},
+"403": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 8,
+"iters": 11,
+"oracle": true,
+"closed": false
+},
+"404": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 8,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"405": {
+"bucket": "solved",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 0.5,
+"searches": 1,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"406": {
+"bucket": "E  found all gold, still wrong",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"407": {
+"bucket": "D1 retrieval miss: no gold found",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 0.0,
+"searches": 16,
+"iters": 41,
+"oracle": true,
+"closed": false
+},
+"408": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 12,
+"iters": 27,
+"oracle": true,
+"closed": true
+},
+"409": {
+"bucket": "solved",
+"types": "Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.5,
+"searches": 1,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"410": {
+"bucket": "D1 retrieval miss: no gold found",
+"types": "Temporal reasoning",
+"recall": 0.0,
+"searches": 25,
+"iters": 43,
+"oracle": true,
+"closed": false
+},
+"411": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 5,
+"iters": 15,
+"oracle": true,
+"closed": false
+},
+"412": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 4,
+"iters": 20,
+"oracle": false,
+"closed": false
+},
+"413": {
+"bucket": "solved",
+"types": "Post processing | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 29,
+"oracle": true,
+"closed": false
+},
+"414": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 21,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"415": {
+"bucket": "solved",
+"types": "Post processing | Temporal reasoning",
+"recall": 0.4,
+"searches": 2,
+"iters": 5,
+"oracle": true,
+"closed": false
+},
+"416": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.25,
+"searches": 25,
+"iters": 16,
+"oracle": false,
+"closed": false
+},
+"417": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.25,
+"searches": 18,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"418": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 6,
+"iters": 11,
+"oracle": true,
+"closed": false
+},
+"419": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 8,
+"iters": 20,
+"oracle": true,
+"closed": false
+},
+"420": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 4,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"421": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 8,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"422": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 1,
+"iters": 9,
+"oracle": false,
+"closed": false
+},
+"423": {
+"bucket": "solved",
+"types": "Numerical reasoning | Post processing",
+"recall": 0.5,
+"searches": 8,
+"iters": 19,
+"oracle": true,
+"closed": false
+},
+"424": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 5,
+"iters": 21,
+"oracle": true,
+"closed": true
+},
+"425": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 13,
+"iters": 29,
+"oracle": true,
+"closed": true
+},
+"426": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 3,
+"iters": 11,
+"oracle": true,
+"closed": false
+},
+"427": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 21,
+"oracle": true,
+"closed": false
+},
+"428": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 23,
+"iters": 35,
+"oracle": true,
+"closed": false
+},
+"429": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 44,
+"oracle": false,
+"closed": false
+},
+"430": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 30,
+"oracle": true,
+"closed": false
+},
+"431": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 5,
+"iters": 3,
+"oracle": true,
+"closed": true
+},
+"432": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 2,
+"iters": 8,
+"oracle": true,
+"closed": true
+},
+"433": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 27,
+"oracle": true,
+"closed": true
+},
+"434": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"435": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.5,
+"searches": 1,
+"iters": 3,
+"oracle": true,
+"closed": true
+},
+"436": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 9,
+"iters": 12,
+"oracle": true,
+"closed": false
+},
+"437": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": true
+},
+"438": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 0.8571428571428571,
+"searches": 25,
+"iters": 23,
+"oracle": true,
+"closed": true
+},
+"439": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 35,
+"oracle": false,
+"closed": false
+},
+"440": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 3,
+"iters": 6,
+"oracle": true,
+"closed": false
+},
+"441": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.4,
+"searches": 25,
+"iters": 18,
+"oracle": true,
+"closed": true
+},
+"442": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 32,
+"oracle": true,
+"closed": true
+},
+"443": {
+"bucket": "E  found all gold, still wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"444": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.8260869565217391,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"445": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": true
+},
+"446": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 7,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"447": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.8333333333333334,
+"searches": 25,
+"iters": 11,
+"oracle": true,
+"closed": false
+},
+"448": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 3,
+"iters": 5,
+"oracle": true,
+"closed": false
+},
+"449": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 0.5,
+"searches": 2,
+"iters": 8,
+"oracle": true,
+"closed": true
+},
+"450": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 10,
+"iters": 23,
+"oracle": true,
+"closed": true
+},
+"451": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 36,
+"oracle": false,
+"closed": false
+},
+"452": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 21,
+"oracle": true,
+"closed": false
+},
+"453": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 1.0,
+"searches": 5,
+"iters": 28,
+"oracle": true,
+"closed": false
+},
+"454": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 5,
+"iters": 12,
+"oracle": true,
+"closed": true
+},
+"455": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"456": {
+"bucket": "solved",
+"types": "Numerical reasoning | Post processing | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 3,
+"iters": 10,
+"oracle": false,
+"closed": true
+},
+"457": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 20,
+"iters": 24,
+"oracle": true,
+"closed": false
+},
+"458": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 23,
+"iters": 43,
+"oracle": false,
+"closed": true
+},
+"459": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Tabular reasoning | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 26,
+"oracle": true,
+"closed": false
+},
+"460": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 3,
+"iters": 7,
+"oracle": true,
+"closed": false
+},
+"461": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 1.0,
+"searches": 6,
+"iters": 14,
+"oracle": true,
+"closed": false
+},
+"462": {
+"bucket": "A4 no answer: submitted the template",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.75,
+"searches": 25,
+"iters": 41,
+"oracle": true,
+"closed": false
+},
+"463": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 16,
+"iters": 36,
+"oracle": true,
+"closed": false
+},
+"464": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 36,
+"oracle": false,
+"closed": false
+},
+"465": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 8,
+"iters": 19,
+"oracle": true,
+"closed": false
+},
+"466": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 1,
+"iters": 3,
+"oracle": true,
+"closed": true
+},
+"467": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 33,
+"oracle": false,
+"closed": false
+},
+"468": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 12,
+"iters": 34,
+"oracle": true,
+"closed": true
+},
+"469": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 46,
+"oracle": true,
+"closed": true
+},
+"470": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 3,
+"iters": 8,
+"oracle": true,
+"closed": true
+},
+"471": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 5,
+"iters": 23,
+"oracle": true,
+"closed": true
+},
+"472": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 10,
+"iters": 29,
+"oracle": true,
+"closed": false
+},
+"473": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 9,
+"iters": 23,
+"oracle": true,
+"closed": false
+},
+"474": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 5,
+"iters": 21,
+"oracle": true,
+"closed": false
+},
+"475": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 13,
+"iters": 28,
+"oracle": true,
+"closed": false
+},
+"476": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 12,
+"iters": 32,
+"oracle": true,
+"closed": true
+},
+"477": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 20,
+"iters": 25,
+"oracle": true,
+"closed": false
+},
+"478": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"479": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 7,
+"iters": 18,
+"oracle": false,
+"closed": false
+},
+"480": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 0.0,
+"searches": 7,
+"iters": 20,
+"oracle": true,
+"closed": true
+},
+"481": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.5,
+"searches": 20,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"482": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 1.0,
+"searches": 14,
+"iters": 24,
+"oracle": false,
+"closed": false
+},
+"483": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning",
+"recall": 0.18181818181818182,
+"searches": 25,
+"iters": 23,
+"oracle": true,
+"closed": false
+},
+"484": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 2,
+"iters": 4,
+"oracle": true,
+"closed": true
+},
+"485": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning",
+"recall": 0.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"486": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 10,
+"iters": 16,
+"oracle": true,
+"closed": false
+},
+"487": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 6,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"488": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 2,
+"iters": 5,
+"oracle": true,
+"closed": true
+},
+"489": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 1,
+"iters": 8,
+"oracle": true,
+"closed": false
+},
+"490": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 9,
+"iters": 22,
+"oracle": true,
+"closed": true
+},
+"491": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 5,
+"iters": 17,
+"oracle": true,
+"closed": true
+},
+"492": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 11,
+"iters": 21,
+"oracle": true,
+"closed": true
+},
+"493": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 4,
+"iters": 20,
+"oracle": true,
+"closed": false
+},
+"494": {
+"bucket": "D1 retrieval miss: no gold found",
+"types": "Post processing",
+"recall": 0.0,
+"searches": 12,
+"iters": 37,
+"oracle": true,
+"closed": false
+},
+"495": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 43,
+"oracle": true,
+"closed": false
+},
+"496": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.25,
+"searches": 24,
+"iters": 27,
+"oracle": false,
+"closed": false
+},
+"497": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 13,
+"iters": 22,
+"oracle": true,
+"closed": true
+},
+"498": {
+"bucket": "E  found all gold, still wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 46,
+"oracle": true,
+"closed": false
+},
+"499": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 2,
+"iters": 8,
+"oracle": true,
+"closed": true
+},
+"500": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 3,
+"iters": 16,
+"oracle": true,
+"closed": true
+},
+"501": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 0.6666666666666666,
+"searches": 3,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"502": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 35,
+"oracle": true,
+"closed": false
+},
+"503": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Post processing",
+"recall": 0.25,
+"searches": 5,
+"iters": 12,
+"oracle": true,
+"closed": true
+},
+"504": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.625,
+"searches": 23,
+"iters": 27,
+"oracle": true,
+"closed": true
+},
+"505": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.0,
+"searches": 9,
+"iters": 27,
+"oracle": true,
+"closed": true
+},
+"506": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 2,
+"iters": 8,
+"oracle": true,
+"closed": true
+},
+"507": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 6,
+"iters": 25,
+"oracle": true,
+"closed": false
+},
+"508": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 10,
+"iters": 16,
+"oracle": true,
+"closed": false
+},
+"509": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 2,
+"iters": 4,
+"oracle": true,
+"closed": false
+},
+"510": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 28,
+"oracle": true,
+"closed": false
+},
+"511": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.0,
+"searches": 15,
+"iters": 33,
+"oracle": true,
+"closed": true
+},
+"512": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 9,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"513": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.0,
+"searches": 19,
+"iters": 15,
+"oracle": true,
+"closed": true
+},
+"514": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 25,
+"oracle": true,
+"closed": false
+},
+"515": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 3,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"516": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 26,
+"oracle": false,
+"closed": false
+},
+"517": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 2,
+"iters": 8,
+"oracle": true,
+"closed": true
+},
+"518": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.5,
+"searches": 9,
+"iters": 25,
+"oracle": true,
+"closed": true
+},
+"519": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 43,
+"oracle": true,
+"closed": true
+},
+"520": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 29,
+"oracle": true,
+"closed": true
+},
+"521": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Post processing",
+"recall": 1.0,
+"searches": 2,
+"iters": 7,
+"oracle": true,
+"closed": false
+},
+"522": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 4,
+"iters": 8,
+"oracle": false,
+"closed": true
+},
+"523": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 0.6666666666666666,
+"searches": 5,
+"iters": 6,
+"oracle": true,
+"closed": false
+},
+"524": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Post processing",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"525": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 6,
+"iters": 15,
+"oracle": true,
+"closed": true
+},
+"526": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 14,
+"iters": 15,
+"oracle": false,
+"closed": true
+},
+"527": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 1.0,
+"searches": 7,
+"iters": 18,
+"oracle": false,
+"closed": false
+},
+"528": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Numerical reasoning | Post processing | Temporal reasoning",
+"recall": 0.0,
+"searches": 25,
+"iters": 41,
+"oracle": true,
+"closed": false
+},
+"529": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 14,
+"iters": 50,
+"oracle": true,
+"closed": true
+},
+"530": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 18,
+"iters": 42,
+"oracle": true,
+"closed": true
+},
+"531": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 33,
+"oracle": true,
+"closed": false
+},
+"532": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints | Post processing",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"533": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 19,
+"oracle": true,
+"closed": false
+},
+"534": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Post processing",
+"recall": 1.0,
+"searches": 25,
+"iters": 31,
+"oracle": false,
+"closed": true
+},
+"535": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.8,
+"searches": 21,
+"iters": 18,
+"oracle": true,
+"closed": true
+},
+"536": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 14,
+"oracle": true,
+"closed": false
+},
+"537": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 0.11764705882352941,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"538": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 0.0,
+"searches": 23,
+"iters": 51,
+"oracle": true,
+"closed": true
+},
+"539": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.5,
+"searches": 5,
+"iters": 13,
+"oracle": true,
+"closed": true
+},
+"540": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"541": {
+"bucket": "D1 retrieval miss: no gold found",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 41,
+"oracle": true,
+"closed": true
+},
+"542": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.75,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"543": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 2,
+"iters": 11,
+"oracle": false,
+"closed": true
+},
+"544": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 11,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"545": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Temporal reasoning",
+"recall": 0.5,
+"searches": 24,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"546": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.4,
+"searches": 3,
+"iters": 10,
+"oracle": true,
+"closed": false
+},
+"547": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 9,
+"iters": 20,
+"oracle": true,
+"closed": true
+},
+"548": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 9,
+"iters": 10,
+"oracle": true,
+"closed": false
+},
+"549": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 4,
+"iters": 3,
+"oracle": true,
+"closed": true
+},
+"550": {
+"bucket": "solved",
+"types": "Multiple constraints | Post processing",
+"recall": 1.0,
+"searches": 4,
+"iters": 3,
+"oracle": true,
+"closed": false
+},
+"551": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 4,
+"iters": 17,
+"oracle": true,
+"closed": true
+},
+"552": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 9,
+"iters": 12,
+"oracle": true,
+"closed": true
+},
+"553": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5714285714285714,
+"searches": 10,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"554": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 17,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"555": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 4,
+"iters": 13,
+"oracle": true,
+"closed": true
+},
+"556": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 1,
+"iters": 7,
+"oracle": true,
+"closed": true
+},
+"557": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 35,
+"oracle": true,
+"closed": false
+},
+"558": {
+"bucket": "solved",
+"types": "Multiple constraints | Post processing",
+"recall": 0.75,
+"searches": 10,
+"iters": 14,
+"oracle": true,
+"closed": false
+},
+"559": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 13,
+"iters": 31,
+"oracle": true,
+"closed": true
+},
+"560": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 4,
+"iters": 12,
+"oracle": true,
+"closed": true
+},
+"561": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints | Post processing",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 38,
+"oracle": false,
+"closed": false
+},
+"562": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 22,
+"iters": 49,
+"oracle": true,
+"closed": true
+},
+"563": {
+"bucket": "solved",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 4,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"564": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 11,
+"iters": 17,
+"oracle": true,
+"closed": false
+},
+"565": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.4,
+"searches": 9,
+"iters": 13,
+"oracle": true,
+"closed": false
+},
+"566": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 1,
+"iters": 8,
+"oracle": false,
+"closed": false
+},
+"567": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 6,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"568": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 24,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"569": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 6,
+"iters": 13,
+"oracle": true,
+"closed": false
+},
+"570": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 3,
+"iters": 14,
+"oracle": true,
+"closed": true
+},
+"571": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 7,
+"iters": 22,
+"oracle": true,
+"closed": false
+},
+"572": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"573": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 11,
+"iters": 14,
+"oracle": true,
+"closed": false
+},
+"574": {
+"bucket": "E  found all gold, still wrong",
+"types": "Numerical reasoning | Post processing",
+"recall": 1.0,
+"searches": 5,
+"iters": 14,
+"oracle": true,
+"closed": false
+},
+"575": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 0.0,
+"searches": 8,
+"iters": 17,
+"oracle": true,
+"closed": true
+},
+"576": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 3,
+"iters": 4,
+"oracle": false,
+"closed": false
+},
+"577": {
+"bucket": "solved",
+"types": "Numerical reasoning | Post processing",
+"recall": 1.0,
+"searches": 4,
+"iters": 19,
+"oracle": false,
+"closed": true
+},
+"578": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 14,
+"iters": 17,
+"oracle": true,
+"closed": false
+},
+"579": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 1.0,
+"searches": 3,
+"iters": 27,
+"oracle": true,
+"closed": true
+},
+"580": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 34,
+"oracle": false,
+"closed": false
+},
+"581": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.75,
+"searches": 4,
+"iters": 19,
+"oracle": true,
+"closed": true
+},
+"582": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 2,
+"iters": 6,
+"oracle": true,
+"closed": false
+},
+"583": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"584": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 1.0,
+"searches": 6,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"585": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 16,
+"iters": 25,
+"oracle": true,
+"closed": false
+},
+"586": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 3,
+"iters": 5,
+"oracle": true,
+"closed": false
+},
+"587": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.0,
+"searches": 25,
+"iters": 32,
+"oracle": true,
+"closed": false
+},
+"588": {
+"bucket": "solved",
+"types": "Post processing",
+"recall": 1.0,
+"searches": 4,
+"iters": 11,
+"oracle": true,
+"closed": false
+},
+"589": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.0,
+"searches": 14,
+"iters": 15,
+"oracle": true,
+"closed": false
+},
+"590": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 10,
+"iters": 18,
+"oracle": false,
+"closed": false
+},
+"591": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"592": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 1.0,
+"searches": 22,
+"iters": 34,
+"oracle": true,
+"closed": true
+},
+"593": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 4,
+"iters": 4,
+"oracle": true,
+"closed": false
+},
+"594": {
+"bucket": "solved",
+"types": "Multiple constraints | Post processing",
+"recall": 0.5,
+"searches": 25,
+"iters": 34,
+"oracle": true,
+"closed": true
+},
+"595": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning",
+"recall": 0.25,
+"searches": 11,
+"iters": 37,
+"oracle": true,
+"closed": false
+},
+"596": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.75,
+"searches": 16,
+"iters": 20,
+"oracle": true,
+"closed": false
+},
+"597": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 35,
+"oracle": true,
+"closed": false
+},
+"598": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 12,
+"iters": 12,
+"oracle": false,
+"closed": false
+},
+"599": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 0.0,
+"searches": 25,
+"iters": 24,
+"oracle": true,
+"closed": true
+},
+"600": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 5,
+"iters": 8,
+"oracle": true,
+"closed": false
+},
+"601": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 32,
+"oracle": true,
+"closed": false
+},
+"602": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 10,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"603": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 2,
+"iters": 8,
+"oracle": true,
+"closed": false
+},
+"604": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 7,
+"iters": 9,
+"oracle": false,
+"closed": true
+},
+"605": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 1.0,
+"searches": 4,
+"iters": 6,
+"oracle": true,
+"closed": true
+},
+"606": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 1.0,
+"searches": 3,
+"iters": 17,
+"oracle": true,
+"closed": true
+},
+"607": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 5,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"608": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 5,
+"iters": 12,
+"oracle": true,
+"closed": false
+},
+"609": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"610": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 17,
+"iters": 32,
+"oracle": true,
+"closed": false
+},
+"611": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 29,
+"oracle": false,
+"closed": false
+},
+"612": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.25,
+"searches": 1,
+"iters": 7,
+"oracle": true,
+"closed": false
+},
+"613": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 6,
+"iters": 17,
+"oracle": true,
+"closed": true
+},
+"614": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.6,
+"searches": 18,
+"iters": 30,
+"oracle": true,
+"closed": false
+},
+"615": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.15384615384615385,
+"searches": 6,
+"iters": 7,
+"oracle": true,
+"closed": true
+},
+"616": {
+"bucket": "solved",
+"types": "Numerical reasoning | Post processing",
+"recall": 0.5,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": true
+},
+"617": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"618": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Post processing | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"619": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 5,
+"iters": 10,
+"oracle": true,
+"closed": false
+},
+"620": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 2,
+"iters": 17,
+"oracle": true,
+"closed": true
+},
+"621": {
+"bucket": "solved",
+"types": "Multiple constraints | Post processing",
+"recall": 0.5,
+"searches": 25,
+"iters": 46,
+"oracle": true,
+"closed": true
+},
+"622": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 15,
+"iters": 13,
+"oracle": true,
+"closed": true
+},
+"623": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.25,
+"searches": 7,
+"iters": 5,
+"oracle": false,
+"closed": false
+},
+"624": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 11,
+"iters": 25,
+"oracle": false,
+"closed": false
+},
+"625": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning",
+"recall": 0.8,
+"searches": 25,
+"iters": 32,
+"oracle": false,
+"closed": false
+},
+"626": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 1.0,
+"searches": 11,
+"iters": 23,
+"oracle": true,
+"closed": true
+},
+"627": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Post processing",
+"recall": 0.5,
+"searches": 6,
+"iters": 14,
+"oracle": true,
+"closed": true
+},
+"628": {
+"bucket": "E  found all gold, still wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 41,
+"oracle": true,
+"closed": false
+},
+"629": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 45,
+"oracle": false,
+"closed": false
+},
+"630": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.5,
+"searches": 7,
+"iters": 13,
+"oracle": true,
+"closed": false
+},
+"631": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 35,
+"oracle": true,
+"closed": false
+},
+"632": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 11,
+"iters": 32,
+"oracle": false,
+"closed": false
+},
+"633": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints | Post processing",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"634": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 3,
+"iters": 15,
+"oracle": true,
+"closed": false
+},
+"635": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 6,
+"iters": 23,
+"oracle": true,
+"closed": true
+},
+"636": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 40,
+"oracle": false,
+"closed": false
+},
+"637": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 1.0,
+"searches": 1,
+"iters": 6,
+"oracle": false,
+"closed": false
+},
+"638": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.0,
+"searches": 18,
+"iters": 17,
+"oracle": true,
+"closed": true
+},
+"639": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 11,
+"iters": 11,
+"oracle": false,
+"closed": false
+},
+"640": {
+"bucket": "solved",
+"types": "Tabular reasoning | Post processing",
+"recall": 1.0,
+"searches": 22,
+"iters": 35,
+"oracle": false,
+"closed": false
+},
+"641": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 18,
+"iters": 36,
+"oracle": true,
+"closed": false
+},
+"642": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 10,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"643": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 2,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"644": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 8,
+"iters": 13,
+"oracle": true,
+"closed": true
+},
+"645": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 10,
+"iters": 22,
+"oracle": true,
+"closed": false
+},
+"646": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Numerical reasoning | Tabular reasoning | Post processing",
+"recall": 0.0,
+"searches": 25,
+"iters": 33,
+"oracle": false,
+"closed": false
+},
+"647": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.0,
+"searches": 4,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"648": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"649": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 2,
+"iters": 7,
+"oracle": true,
+"closed": true
+},
+"650": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.5,
+"searches": 8,
+"iters": 14,
+"oracle": true,
+"closed": false
+},
+"651": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"652": {
+"bucket": "D1 retrieval miss: no gold found",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 3,
+"iters": 16,
+"oracle": true,
+"closed": false
+},
+"653": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 1,
+"iters": 4,
+"oracle": true,
+"closed": false
+},
+"654": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.75,
+"searches": 23,
+"iters": 15,
+"oracle": true,
+"closed": false
+},
+"655": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 4,
+"iters": 6,
+"oracle": true,
+"closed": false
+},
+"656": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 40,
+"oracle": false,
+"closed": false
+},
+"657": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"658": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 16,
+"iters": 49,
+"oracle": true,
+"closed": false
+},
+"659": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.5,
+"searches": 22,
+"iters": 22,
+"oracle": true,
+"closed": false
+},
+"660": {
+"bucket": "E  found all gold, still wrong",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"661": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 3,
+"iters": 9,
+"oracle": true,
+"closed": false
+},
+"662": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 0.25,
+"searches": 25,
+"iters": 42,
+"oracle": true,
+"closed": false
+},
+"663": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 3,
+"iters": 8,
+"oracle": true,
+"closed": false
+},
+"664": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.5,
+"searches": 9,
+"iters": 25,
+"oracle": true,
+"closed": true
+},
+"665": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 13,
+"oracle": true,
+"closed": true
+},
+"666": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.25,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"667": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 45,
+"oracle": false,
+"closed": false
+},
+"668": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 2,
+"iters": 7,
+"oracle": true,
+"closed": true
+},
+"669": {
+"bucket": "solved",
+"types": "Multiple constraints | Post processing",
+"recall": 0.3333333333333333,
+"searches": 4,
+"iters": 8,
+"oracle": true,
+"closed": true
+},
+"670": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 4,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"671": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 25,
+"oracle": true,
+"closed": true
+},
+"672": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 0.5,
+"searches": 11,
+"iters": 17,
+"oracle": true,
+"closed": true
+},
+"673": {
+"bucket": "solved",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 0.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"674": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 6,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"675": {
+"bucket": "A4 no answer: submitted the template",
+"types": "Tabular reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 1.0,
+"searches": 4,
+"iters": 17,
+"oracle": true,
+"closed": false
+},
+"676": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Tabular reasoning | Post processing | Temporal reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"677": {
+"bucket": "solved",
+"types": "Post processing",
+"recall": 1.0,
+"searches": 17,
+"iters": 43,
+"oracle": true,
+"closed": false
+},
+"678": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 0.0,
+"searches": 8,
+"iters": 23,
+"oracle": true,
+"closed": true
+},
+"679": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.4,
+"searches": 2,
+"iters": 19,
+"oracle": false,
+"closed": false
+},
+"680": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 1.0,
+"searches": 14,
+"iters": 23,
+"oracle": true,
+"closed": true
+},
+"681": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 8,
+"iters": 6,
+"oracle": true,
+"closed": true
+},
+"682": {
+"bucket": "E  found all gold, still wrong",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 10,
+"iters": 23,
+"oracle": true,
+"closed": false
+},
+"683": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.8333333333333334,
+"searches": 21,
+"iters": 13,
+"oracle": true,
+"closed": false
+},
+"684": {
+"bucket": "A3 no answer: empty submission",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 34,
+"oracle": true,
+"closed": false
+},
+"685": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning",
+"recall": 0.5,
+"searches": 24,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"686": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 19,
+"iters": 36,
+"oracle": true,
+"closed": false
+},
+"687": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 4,
+"iters": 16,
+"oracle": true,
+"closed": true
+},
+"688": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 24,
+"oracle": true,
+"closed": false
+},
+"689": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"690": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 23,
+"oracle": false,
+"closed": false
+},
+"691": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.75,
+"searches": 25,
+"iters": 24,
+"oracle": true,
+"closed": false
+},
+"692": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Post processing",
+"recall": 1.0,
+"searches": 25,
+"iters": 49,
+"oracle": false,
+"closed": false
+},
+"693": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 20,
+"iters": 30,
+"oracle": true,
+"closed": false
+},
+"694": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.2857142857142857,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"695": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 3,
+"iters": 8,
+"oracle": false,
+"closed": false
+},
+"696": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.7142857142857143,
+"searches": 25,
+"iters": 22,
+"oracle": true,
+"closed": false
+},
+"697": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 3,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"698": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 3,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"699": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 31,
+"oracle": true,
+"closed": false
+},
+"700": {
+"bucket": "A1 no answer: killed at time cap",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": null,
+"searches": null,
+"iters": null,
+"oracle": false,
+"closed": false
+},
+"701": {
+"bucket": "solved",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": true
+},
+"702": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 35,
+"oracle": false,
+"closed": false
+},
+"703": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.5,
+"searches": 11,
+"iters": 16,
+"oracle": true,
+"closed": true
+},
+"704": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 7,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"705": {
+"bucket": "E  found all gold, still wrong",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 21,
+"iters": 41,
+"oracle": true,
+"closed": false
+},
+"706": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 1.0,
+"searches": 2,
+"iters": 6,
+"oracle": true,
+"closed": true
+},
+"707": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.2,
+"searches": 21,
+"iters": 29,
+"oracle": true,
+"closed": false
+},
+"708": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 12,
+"iters": 18,
+"oracle": true,
+"closed": true
+},
+"709": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 1,
+"iters": 5,
+"oracle": true,
+"closed": true
+},
+"710": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 34,
+"oracle": true,
+"closed": false
+},
+"711": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 7,
+"iters": 7,
+"oracle": true,
+"closed": false
+},
+"712": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 1,
+"iters": 21,
+"oracle": false,
+"closed": false
+},
+"713": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 1,
+"iters": 14,
+"oracle": true,
+"closed": true
+},
+"714": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 10,
+"iters": 38,
+"oracle": true,
+"closed": false
+},
+"715": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 3,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"716": {
+"bucket": "A1 no answer: killed at time cap",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": null,
+"searches": null,
+"iters": null,
+"oracle": false,
+"closed": false
+},
+"717": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 6,
+"iters": 16,
+"oracle": true,
+"closed": false
+},
+"718": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Temporal reasoning",
+"recall": 0.0,
+"searches": 9,
+"iters": 28,
+"oracle": false,
+"closed": false
+},
+"719": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 4,
+"iters": 17,
+"oracle": true,
+"closed": false
+},
+"720": {
+"bucket": "E  found all gold, still wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 41,
+"oracle": true,
+"closed": true
+},
+"721": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 8,
+"iters": 16,
+"oracle": true,
+"closed": true
+},
+"722": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 2,
+"iters": 12,
+"oracle": true,
+"closed": false
+},
+"723": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 7,
+"iters": 11,
+"oracle": true,
+"closed": false
+},
+"724": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 21,
+"iters": 25,
+"oracle": true,
+"closed": true
+},
+"725": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 3,
+"iters": 13,
+"oracle": true,
+"closed": true
+},
+"726": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 2,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"727": {
+"bucket": "solved",
+"types": "Tabular reasoning | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 24,
+"iters": 24,
+"oracle": false,
+"closed": false
+},
+"728": {
+"bucket": "D1 retrieval miss: no gold found",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"729": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 1,
+"iters": 5,
+"oracle": true,
+"closed": false
+},
+"730": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 0.0,
+"searches": 5,
+"iters": 17,
+"oracle": true,
+"closed": true
+},
+"731": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 3,
+"iters": 10,
+"oracle": true,
+"closed": false
+},
+"732": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 6,
+"iters": 6,
+"oracle": true,
+"closed": true
+},
+"733": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.6,
+"searches": 24,
+"iters": 51,
+"oracle": true,
+"closed": true
+},
+"734": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 5,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"735": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 3,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"736": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 11,
+"iters": 12,
+"oracle": true,
+"closed": true
+},
+"737": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 30,
+"oracle": true,
+"closed": false
+},
+"738": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 2,
+"iters": 7,
+"oracle": true,
+"closed": false
+},
+"739": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 10,
+"iters": 27,
+"oracle": true,
+"closed": false
+},
+"740": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 1.0,
+"searches": 7,
+"iters": 16,
+"oracle": true,
+"closed": true
+},
+"741": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.75,
+"searches": 13,
+"iters": 17,
+"oracle": true,
+"closed": true
+},
+"742": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Tabular reasoning",
+"recall": 0.0,
+"searches": 25,
+"iters": 49,
+"oracle": null,
+"closed": false
+},
+"743": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 1.0,
+"searches": 4,
+"iters": 12,
+"oracle": true,
+"closed": true
+},
+"744": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.16666666666666666,
+"searches": 6,
+"iters": 14,
+"oracle": true,
+"closed": true
+},
+"745": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.4444444444444444,
+"searches": 25,
+"iters": 34,
+"oracle": true,
+"closed": true
+},
+"746": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 10,
+"iters": 12,
+"oracle": true,
+"closed": false
+},
+"747": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 3,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"748": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 39,
+"oracle": false,
+"closed": false
+},
+"749": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 4,
+"iters": 19,
+"oracle": false,
+"closed": false
+},
+"750": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Temporal reasoning",
+"recall": 0.75,
+"searches": 25,
+"iters": 50,
+"oracle": false,
+"closed": false
+},
+"751": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 27,
+"oracle": true,
+"closed": false
+},
+"752": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 24,
+"iters": 45,
+"oracle": false,
+"closed": false
+},
+"753": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 4,
+"iters": 10,
+"oracle": true,
+"closed": false
+},
+"754": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Post processing | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 19,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"755": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.0,
+"searches": 11,
+"iters": 25,
+"oracle": true,
+"closed": true
+},
+"756": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.5,
+"searches": 2,
+"iters": 4,
+"oracle": true,
+"closed": false
+},
+"757": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 3,
+"iters": 8,
+"oracle": true,
+"closed": false
+},
+"758": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"759": {
+"bucket": "D1 retrieval miss: no gold found",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"760": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 3,
+"iters": 15,
+"oracle": true,
+"closed": false
+},
+"761": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 20,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"762": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 32,
+"oracle": false,
+"closed": true
+},
+"763": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 9,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"764": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 0.5,
+"searches": 3,
+"iters": 4,
+"oracle": true,
+"closed": true
+},
+"765": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 3,
+"iters": 3,
+"oracle": true,
+"closed": true
+},
+"766": {
+"bucket": "A3 no answer: empty submission",
+"types": "Numerical reasoning | Tabular reasoning | Temporal reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 49,
+"oracle": false,
+"closed": false
+},
+"767": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 0.7,
+"searches": 25,
+"iters": 28,
+"oracle": true,
+"closed": false
+},
+"768": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 34,
+"oracle": false,
+"closed": false
+},
+"769": {
+"bucket": "E  found all gold, still wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 8,
+"iters": 48,
+"oracle": true,
+"closed": false
+},
+"770": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints | Post processing",
+"recall": 0.5,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"771": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 42,
+"oracle": true,
+"closed": true
+},
+"772": {
+"bucket": "B  corpus gap: gold article not in dump",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 8,
+"iters": 36,
+"oracle": true,
+"closed": false
+},
+"773": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 1,
+"iters": 7,
+"oracle": true,
+"closed": false
+},
+"774": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 25,
+"iters": 40,
+"oracle": true,
+"closed": true
+},
+"775": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 25,
+"iters": 33,
+"oracle": true,
+"closed": false
+},
+"776": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 4,
+"iters": 7,
+"oracle": true,
+"closed": false
+},
+"777": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 19,
+"iters": 22,
+"oracle": true,
+"closed": false
+},
+"778": {
+"bucket": "D1 retrieval miss: no gold found",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"779": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.0,
+"searches": 24,
+"iters": 23,
+"oracle": false,
+"closed": false
+},
+"780": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.75,
+"searches": 5,
+"iters": 6,
+"oracle": true,
+"closed": false
+},
+"781": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"782": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 46,
+"oracle": true,
+"closed": true
+},
+"783": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Temporal reasoning",
+"recall": 0.14285714285714285,
+"searches": 20,
+"iters": 31,
+"oracle": false,
+"closed": true
+},
+"784": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Tabular reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 31,
+"oracle": true,
+"closed": true
+},
+"785": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"786": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.3333333333333333,
+"searches": 15,
+"iters": 17,
+"oracle": true,
+"closed": true
+},
+"787": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 8,
+"iters": 16,
+"oracle": true,
+"closed": false
+},
+"788": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.5,
+"searches": 4,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"789": {
+"bucket": "solved",
+"types": "Multiple constraints | Post processing",
+"recall": 0.3333333333333333,
+"searches": 4,
+"iters": 13,
+"oracle": true,
+"closed": true
+},
+"790": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 33,
+"oracle": true,
+"closed": false
+},
+"791": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.25,
+"searches": 25,
+"iters": 42,
+"oracle": false,
+"closed": false
+},
+"792": {
+"bucket": "solved",
+"types": "Multiple constraints | Post processing",
+"recall": 0.4,
+"searches": 3,
+"iters": 9,
+"oracle": true,
+"closed": true
+},
+"793": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 5,
+"iters": 12,
+"oracle": true,
+"closed": false
+},
+"794": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 1,
+"iters": 14,
+"oracle": true,
+"closed": false
+},
+"795": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 19,
+"iters": 23,
+"oracle": true,
+"closed": false
+},
+"796": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.0,
+"searches": 6,
+"iters": 12,
+"oracle": true,
+"closed": true
+},
+"797": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 46,
+"oracle": false,
+"closed": false
+},
+"798": {
+"bucket": "D2 retrieval miss: some gold found",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": true
+},
+"799": {
+"bucket": "solved",
+"types": "Numerical reasoning | Post processing",
+"recall": 1.0,
+"searches": 16,
+"iters": 22,
+"oracle": true,
+"closed": true
+},
+"800": {
+"bucket": "solved",
+"types": "Tabular reasoning",
+"recall": 0.6666666666666666,
+"searches": 20,
+"iters": 24,
+"oracle": true,
+"closed": true
+},
+"801": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 13,
+"iters": 17,
+"oracle": true,
+"closed": false
+},
+"802": {
+"bucket": "E  found all gold, still wrong",
+"types": "Numerical reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 25,
+"iters": 43,
+"oracle": true,
+"closed": false
+},
+"803": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 25,
+"iters": 32,
+"oracle": false,
+"closed": false
+},
+"804": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Post processing | Temporal reasoning",
+"recall": 0.6666666666666666,
+"searches": 4,
+"iters": 8,
+"oracle": true,
+"closed": true
+},
+"805": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 7,
+"iters": 13,
+"oracle": true,
+"closed": false
+},
+"806": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 0.8,
+"searches": 25,
+"iters": 46,
+"oracle": true,
+"closed": true
+},
+"807": {
+"bucket": "solved",
+"types": "Numerical reasoning",
+"recall": 1.0,
+"searches": 6,
+"iters": 10,
+"oracle": true,
+"closed": false
+},
+"808": {
+"bucket": "solved",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.0,
+"searches": 3,
+"iters": 11,
+"oracle": true,
+"closed": true
+},
+"809": {
+"bucket": "solved",
+"types": "Tabular reasoning | Post processing",
+"recall": 0.5,
+"searches": 1,
+"iters": 3,
+"oracle": true,
+"closed": false
+},
+"810": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 51,
+"oracle": false,
+"closed": false
+},
+"811": {
+"bucket": "solved",
+"types": "Numerical reasoning | Tabular reasoning | Multiple constraints | Temporal reasoning",
+"recall": 0.5,
+"searches": 6,
+"iters": 16,
+"oracle": false,
+"closed": false
+},
+"812": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 4,
+"iters": 11,
+"oracle": true,
+"closed": false
+},
+"813": {
+"bucket": "C  beyond the model: oracle also wrong",
+"types": "Multiple constraints",
+"recall": 1.0,
+"searches": 1,
+"iters": 12,
+"oracle": false,
+"closed": false
+},
+"814": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.5,
+"searches": 10,
+"iters": 33,
+"oracle": true,
+"closed": true
+},
+"815": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 1.0,
+"searches": 11,
+"iters": 15,
+"oracle": true,
+"closed": false
+},
+"816": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 5,
+"iters": 12,
+"oracle": true,
+"closed": false
+},
+"817": {
+"bucket": "solved",
+"types": "Multiple constraints",
+"recall": 0.0,
+"searches": 25,
+"iters": 51,
+"oracle": true,
+"closed": false
+},
+"818": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.5,
+"searches": 10,
+"iters": 15,
+"oracle": true,
+"closed": true
+},
+"819": {
+"bucket": "E  found all gold, still wrong",
+"types": "Numerical reasoning | Multiple constraints | Temporal reasoning",
+"recall": 1.0,
+"searches": 4,
+"iters": 20,
+"oracle": true,
+"closed": false
+},
+"820": {
+"bucket": "solved",
+"types": "Numerical reasoning | Temporal reasoning",
+"recall": 0.5,
+"searches": 25,
+"iters": 42,
+"oracle": true,
+"closed": false
+},
+"821": {
+"bucket": "solved",
+"types": "Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 2,
+"iters": 10,
+"oracle": true,
+"closed": true
+},
+"822": {
+"bucket": "solved",
+"types": "Multiple constraints | Temporal reasoning",
+"recall": 0.3333333333333333,
+"searches": 25,
+"iters": 38,
+"oracle": true,
+"closed": true
+},
+"823": {
+"bucket": "solved",
+"types": "Tabular reasoning | Multiple constraints",
+"recall": 0.6666666666666666,
+"searches": 11,
+"iters": 15,
+"oracle": true,
+"closed": false
+}
+}

@@ -1,0 +1,13 @@
+{
+ "created": "2026-11-11T16:17:53+00:00",
+ "note": "byte-exact copies of question-id files (ids only); RLM = the original research repository",
+ "files": [
+  {
+   "file": "pilot100_ids.txt",
+   "source": "RLM:data/bcp_gpt5_rr/pilot100_ids.txt",
+   "sha256": "b8b3c10304af13b297c69609df7f573e7a9bb210a1684a1188f322af1b5d7a17",
+   "bytes": 408,
+   "used_by": "SP-3 (sp3_bcp_gpt5_rerank_pilot.sh)"
+  }
+ ]
+}

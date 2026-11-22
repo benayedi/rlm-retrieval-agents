@@ -1,0 +1,1078 @@
+{
+"row": "SP-3",
+"agent": "search_policy",
+"created": "2026-11-11T16:08:16",
+"format": "tar (PAX) | zstd -19 --long=27 | openssl enc -aes-256-ctr -pbkdf2 -iter 200000 -salt, passphrase = BrowseComp canary string",
+"encrypted": true,
+"archive_parts": [
+{
+"file": "SP-3.tar.zst.enc",
+"bytes": 473783,
+"sha256": "00ddaa3e0f77d9b2dca9f120227a1270ff9c8d70d5724ebe1889ef929169f85f"
+}
+],
+"members": 212,
+"member_bytes": 1882516,
+"files": [
+{
+"path": "logs/bcp_gpt5_rr/_judge_cache_gpt4o.json",
+"bytes": 30470,
+"sha256": "9d100d34a6e105c6ac2666d4441fa5c166d4d5da998abf308e545ce09caaf19c"
+},
+{
+"path": "logs/bcp_gpt5_rr/colbert8766.log",
+"bytes": 5068,
+"sha256": "59798b60d5b14267455b9ed9f63bc8d55f2620038d2d33a74ca4452026a26877"
+},
+{
+"path": "logs/bcp_gpt5_rr/pilot_report.json",
+"bytes": 4636,
+"sha256": "38fe26ad49676445dbfc1b6f1f2df361713ae371f55e07010e579a838d14adea"
+},
+{
+"path": "logs/bcp_gpt5_rr/proxy8772.log",
+"bytes": 5186,
+"sha256": "d1a948a409285bb7e3c55bde23cfa071d9b131c8557eccf63d831bb3c58143e2"
+},
+{
+"path": "logs/bcp_gpt5_rr/proxy8772_oom.log",
+"bytes": 11788,
+"sha256": "8cf4b765a58dacd9ffe331c5692bff0dd7fb94006a671dd668fe68086f5b5179"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1003.json",
+"bytes": 10343,
+"sha256": "a246982d0caacad41eddf0dddfbaa3cf31b750eb1d1b16ef535afd238bdbedfd"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1003.log",
+"bytes": 141,
+"sha256": "ca807c77e950f7325d5e31702ae7982be51dd05e57edb6cd84cbb1597a4e81c6"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1004.json",
+"bytes": 13346,
+"sha256": "603531545ba584ae3f1f9d1739244d2142b06d975c191cbc8737d135f8c672dd"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1004.log",
+"bytes": 141,
+"sha256": "2e9c9a76ebbded22cd04a2b087292b8780453f7b42681a5508caee112e270595"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1040.json",
+"bytes": 8567,
+"sha256": "f03064ab5388a37d6a84357a160560dc26e9b3d365c1fc555c298a9d79eb6c5a"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1040.log",
+"bytes": 141,
+"sha256": "790af13ec40daa0d6f28a584730fc4468d95f32fd34d27c190b2ca4df8aa2cde"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1055.json",
+"bytes": 12619,
+"sha256": "01b4cf189997ccc6d3584f12709c3cd79a9d363beedb23e966451b1f19e0b016"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1055.log",
+"bytes": 141,
+"sha256": "c16555e2e631851ed7eb92d0fa80fdd38d8e11b5dfffb211b4109d7e0bcfc861"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1077.json",
+"bytes": 9949,
+"sha256": "a090b92a13d29fae8efc765c7f76d39d9733d5d144c00b5f4bb072ad0e0095d1"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1077.log",
+"bytes": 141,
+"sha256": "752a7e92d02c07b09a3fde521275ca5978644d2439ed493b63f472a54d442b79"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/109.json",
+"bytes": 11917,
+"sha256": "92c63f6dd1524ea933ccd1f17b00bbe33775081fcdaef8bb7517464120b40765"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/109.log",
+"bytes": 140,
+"sha256": "e87c50a99c21a1a8f208206017b52a75729218c813e43863c4bfa964902b97d9"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1091.json",
+"bytes": 8476,
+"sha256": "6fdde898251f1645d5af29c04deaf9516d252fd0c877d2ae31a08043d53e2bf8"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1091.log",
+"bytes": 140,
+"sha256": "2187e2f598f531d6c3f398530f8d7baf9eb37b45219829971de68357fd47beec"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1094.json",
+"bytes": 8447,
+"sha256": "dfd2e231e9723d5035d846930aff44b16afa24e1e2fa6aed5a98885676db19a7"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1094.log",
+"bytes": 140,
+"sha256": "9f635bdfa4847580bd77cf11344319460ed17f8be5f5731104cf0883ca54b4b7"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1096.json",
+"bytes": 12032,
+"sha256": "3c695c1ac29fcb74682abfdd7d25ea5fd2d27a8630170ac10020e4d57e573168"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1096.log",
+"bytes": 141,
+"sha256": "8421be91abb39e23f0aecccc0c7bba8df4dcfc023cbf72ffed733a7dc902e2aa"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/11.json",
+"bytes": 11908,
+"sha256": "b1c0ae2192969bc2c22d43fe07aa8e56d2ab4a6a629ba1ea372d1b5a035c365b"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/11.log",
+"bytes": 139,
+"sha256": "5caa6eb76a58006ae95e76b718c2fe5057f0aaa63df9ff6e62c4a20465aaa7c8"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1118.json",
+"bytes": 2991,
+"sha256": "8ca2ac0754ec463b709db506060228cfc601362834e51339efdab46358da616a"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1118.log",
+"bytes": 137,
+"sha256": "40fda9dbbb192fa941a2391c537c4d569b12825e2e24e9436c362900c1ab4580"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1133.json",
+"bytes": 3574,
+"sha256": "ecaa016ccfaacba673a1b234bd12dd17e3ad8e3315958a72177e7158e3aa2dbf"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1133.log",
+"bytes": 136,
+"sha256": "06920b089ddcca8b5c757b0425183ae0b168a8ad87f344598f1299cddea34419"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1135.json",
+"bytes": 6208,
+"sha256": "cb1f7b0df112a56e89b057a20492734a9059f3c4281207bcce5c48a6449e7aad"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1135.log",
+"bytes": 140,
+"sha256": "089c7338cb56a73661764bb178fc097fc315e53fd703e2dcd50f440773189225"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1141.json",
+"bytes": 6673,
+"sha256": "e309b064a25902cf3504ce10b1e4d95427914dff8a8c544067ddf294f0d253af"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1141.log",
+"bytes": 137,
+"sha256": "17e359d9b62859d3e261021dad0c555e0c836ffc8226feb2f25646fed0da63e2"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1150.json",
+"bytes": 11465,
+"sha256": "9b9aea87264786f0cc84dde5225f3643598d7922eeec40f16827c3349fc74e5f"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1150.json.failed429",
+"bytes": 13259,
+"sha256": "ad4c610862bf320116ebf96de430fc06a69fb4efd97788aa6526be6b2cd98563"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1150.log",
+"bytes": 141,
+"sha256": "51d84db740d7e69c83d57d6b702a1722ac22842671492b0f1ba71e16637f54e3"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1174.json",
+"bytes": 8604,
+"sha256": "5e3796111bcdaecd3f025ca8ac7822cdac52852b382622930f6fbce35e9e9dcf"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1174.log",
+"bytes": 141,
+"sha256": "9e0ccc3e5df5b7e76c34fec3f0f3958fb9d3cbf39b7978ac533bb7a2197ffbef"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/12.json",
+"bytes": 11132,
+"sha256": "877ecaacf29a553334fda48976f90585484ad11e3b15ab513183640f47457149"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/12.log",
+"bytes": 139,
+"sha256": "79166dc13614c919f8aafc5da2f897e0add484eb82ac7113160953fc9202d54e"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1218.json",
+"bytes": 6821,
+"sha256": "90be8b6d3f9a59a1ba3392fe5cde78d432a40988599a322334a7c3843577f473"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1218.log",
+"bytes": 140,
+"sha256": "9d08df97758d4b98910b4967b46931cdc6de31c805d6bf15b2374d5bc14dae20"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1220.json",
+"bytes": 12269,
+"sha256": "b4220269971e0a89decb02de9e767864a50bb81ece26cfa6b9108a4edb116631"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1220.log",
+"bytes": 141,
+"sha256": "3a42223760070600168c94790a8a8f4375c8a774e65db8c8f540a1d619c87168"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1222.json",
+"bytes": 9916,
+"sha256": "fb6a1e2a195a0001e2eb3a214c6452fc088c84debc71acdc4f0a71791d39de29"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1222.log",
+"bytes": 141,
+"sha256": "d996338ef7e5404499150d2fcd67c05de6759217cfdfa03ef587195be054b725"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1236.json",
+"bytes": 8768,
+"sha256": "0920ee3cad7d9e236b9fe3c22c54abd64e00bf7e46f49769f69049318351221a"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/1236.log",
+"bytes": 140,
+"sha256": "386c944b4bddbd36140b3a79741477819223fffe898d5d152f2a2891eab54191"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/140.json",
+"bytes": 8074,
+"sha256": "60e5bb5fb7434ba3c60f28962d4e91fec685c97358daef55c707e2c5853d93c9"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/140.log",
+"bytes": 139,
+"sha256": "8ad13f4a1b50d4edcd061f430e71e2a8d203f253ab7f5dfddc591bd8d808e7ed"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/149.json",
+"bytes": 12558,
+"sha256": "ef7a98566dd75beac1f3489274772148b7658e7cca776bf3e8c8a73060cee8d1"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/149.log",
+"bytes": 140,
+"sha256": "40cd68307ec57c1da091b0840cfa89c29d2cb27d9d8b129b920a9ce98d1e4f5d"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/153.json",
+"bytes": 7937,
+"sha256": "ab3cc4626cdd2d65cc7abd0e4db66a877fc11e33e9621b9e7dbeac04e4e2e7f6"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/153.log",
+"bytes": 138,
+"sha256": "bcf326e263091a1f726a33e6a173d0530422423c99ac6a7be71533666fbb0879"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/155.json",
+"bytes": 7602,
+"sha256": "e738770d005b89cde94c1593cf9c736ea6fcc0029371b5441bb641c85144ad0d"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/155.log",
+"bytes": 138,
+"sha256": "84650f60ca7ca4e34a19cc75f967fd3da79235a5cf5c29f479c5135563efe597"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/156.json",
+"bytes": 13123,
+"sha256": "3130dc3e8d377b8392536c8448b3cb2205a1bef93534fab9efb8e1e6823be722"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/156.log",
+"bytes": 140,
+"sha256": "33187c85bc25f09610e222fd7ff3e7c553cf15e8f096086cee694a6b3f75b44f"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/161.json",
+"bytes": 11469,
+"sha256": "5efc917dbbe9ea553305e9d552e18a799ef886a03362cb745d67f71262b478a2"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/161.log",
+"bytes": 140,
+"sha256": "d324d4e9b718be2a9842246328cad0204d2b1352a0773cc64e7f2bceaf4a7c90"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/178.json",
+"bytes": 11281,
+"sha256": "73568a30e82a4ed7f03e31afa80c2af881ae8d940349b0568fce36ea0799f656"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/178.log",
+"bytes": 140,
+"sha256": "b0f18bc8520590ffea8125b8e4c33c6842b9725bc07a7003fcbd2a075ba988df"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/181.json",
+"bytes": 7786,
+"sha256": "b4046ea04f1611325e966716bc6510fb956d4a8169b837ffd28b4ffb8b816d3a"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/181.log",
+"bytes": 140,
+"sha256": "2b396539039324525607453bd1b5a1e63959d8d21d2646a3cb9c15abd371f5bc"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/203.json",
+"bytes": 14117,
+"sha256": "427d80a4a5631d4ae89a9e464c874e5f6d223e5b4d7944e42d03b0eee0ef6813"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/203.log",
+"bytes": 140,
+"sha256": "417aeaaad17195049c90b1e7d46ab0cf05d97c0040d079b8c40c95d4657ce9f0"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/215.json",
+"bytes": 5595,
+"sha256": "3347051121fc638fc862db00a27cff66ab0a4d4b59032b217ae5db958996dfb9"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/215.log",
+"bytes": 136,
+"sha256": "d8794e18f89c5382fd7880ed355a24c4e1b6c028bb481ccd86113b9aa1fe61ec"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/219.json",
+"bytes": 8298,
+"sha256": "62ba9a703bd09e3dc80c8911185bc0ca8f9bfb5d8841fcbca230bb0d7db7538f"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/219.log",
+"bytes": 141,
+"sha256": "27082939f4b299c72ad0bba6050a3d4b5968afd71e87439874a1bbbea131b92f"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/221.json",
+"bytes": 9228,
+"sha256": "f7a849e9fa29b1efecb1d88c1255c32a6efe9076beb542ddf7f425dec635d09b"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/221.log",
+"bytes": 139,
+"sha256": "82d83a06a6c82ff68abf732414f9253fc895d2e7a78dc7cfcae2d287c951fb7a"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/242.json",
+"bytes": 2931,
+"sha256": "cfa79d3e28fb318195614e04ff07cb73b37b50f74aab9566cd406e1729fd05a0"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/242.log",
+"bytes": 136,
+"sha256": "18a05c69ea74fb9f4cb7437b86d19233e3d29d83d35074f442036b3866f61d59"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/244.json",
+"bytes": 11247,
+"sha256": "0af506a346f1944d891b6310a4b91c58aa9b816f424ee70a940fce33dbf4cd51"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/244.log",
+"bytes": 140,
+"sha256": "642e007d98787847ba32f3e1c153988e42d281d0cb8445aefc13b00c50234cef"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/248.json",
+"bytes": 11444,
+"sha256": "300fa6397bafde91660bed0a3ce33ca138aa76c33b47c6de59dadd2774137974"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/248.log",
+"bytes": 140,
+"sha256": "a9ed7f5232513c69a4dd1657853de65d6c0095942aa63847362e5df8c35a3f2f"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/25.json",
+"bytes": 6099,
+"sha256": "6f57f354acbb98a20cbe5303c64c2f430b8879d8f06aa03594d6efe7dd7928dc"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/25.log",
+"bytes": 135,
+"sha256": "43fd9a91593eefc3c6808ff8f6442a9674b19da937f9b1c90aaa4f4246e03c4f"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/254.json",
+"bytes": 11323,
+"sha256": "62ba5b586127b64cf39138da65f916aa3c6ec13ef1f4001b96029ded59cce986"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/254.log",
+"bytes": 141,
+"sha256": "34d84fc6fe752fda2ce0246f64413243eed4b216e0da446f4038aef25869981d"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/264.json",
+"bytes": 11440,
+"sha256": "a7cf25301bb09dc417caf3de836ad62b35996281c46435585d6535e813ae31f3"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/264.log",
+"bytes": 140,
+"sha256": "f8a450ae9811639f189b46f6945284ada4557edda8cddb72f62783d58fc9db76"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/279.json",
+"bytes": 6050,
+"sha256": "ac4c570e5a396bcd5e833c18c41df69e91d5ce8214494395657451c3b7f79d72"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/279.log",
+"bytes": 136,
+"sha256": "a003828bf6f715271d162276f79f922cc5673b50a44695cf3482e88262d3b0b2"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/317.json",
+"bytes": 2715,
+"sha256": "7dfb7edd596ddcdcde5e657ed4909ea581d0131ac483d426049c3cb6c4985660"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/317.log",
+"bytes": 133,
+"sha256": "8fc7c2e7ba86b32be109f005147f70a490c9203e15cf34a3f4e5d5d2ff56a660"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/322.json",
+"bytes": 4266,
+"sha256": "85c9a8a95a223013fe85bec96fa38d25c57f2f61007466ce66b5f8ddd250a894"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/322.log",
+"bytes": 134,
+"sha256": "5b86c51028c784408b9285fd5c83a4e861f3438719e46c30eb48f30ec6b4c58b"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/323.json",
+"bytes": 8642,
+"sha256": "55d58eab1ff0653b2e829d26c5053f060374a50ecd196657ee3b81c1609664fd"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/323.log",
+"bytes": 139,
+"sha256": "0f2a74c53413aab2d03d5304daf7c213f2f4517ae4164eddb52b8e914c0f13f1"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/330.json",
+"bytes": 5601,
+"sha256": "2550f4c8749d58e785cc5fc3ac62aad43acb8682124b1ab05b4d596669bcd551"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/330.log",
+"bytes": 138,
+"sha256": "119165f55619e18d4c18454fc808782c3995f6321ac4cadbdff3cbb4356ba316"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/347.json",
+"bytes": 8417,
+"sha256": "a5f7c2322da15dc834246984c34c7fb69b2117d11debaa8c2b3e054eef4f20a7"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/347.log",
+"bytes": 137,
+"sha256": "1a3679b3376dcc75e81794bd7f0c40b6fb492d88f84cf7b795f122a3d100a052"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/349.json",
+"bytes": 10278,
+"sha256": "44eb826bf7e45e053d520fdcbf390e5143d22cfcfde8b584bfeb577125639474"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/349.log",
+"bytes": 140,
+"sha256": "d75b1854143f5f13eb0a822113ad68adc78efc6f7a432da8d29a27bbfc2049a6"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/350.json",
+"bytes": 10460,
+"sha256": "87655133cf200528b1a0f164218d195c56d2f1119b6694c8959cefe41b7e5c20"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/350.log",
+"bytes": 140,
+"sha256": "e1fb1c4066445cc86ca8e687da77c50f2243b649b9ed8f3e1e162cbf28510f5c"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/37.json",
+"bytes": 9698,
+"sha256": "0d0b390e2257c84adb48090b1f08151f6efdff67a710d3fa8ddcf59d63d62eb6"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/37.log",
+"bytes": 139,
+"sha256": "4446d503b1eca53400e08b08b1c7688c895c452898c2b2cd2786ec4313922743"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/380.json",
+"bytes": 7228,
+"sha256": "c4a5be7a2e37dc9bbe3fb780921bf635527b8d5aa497713fac7a2b80df760c1a"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/380.log",
+"bytes": 137,
+"sha256": "b8ee4e4db5355593904760a926cee990f64215154fc0a31cc1256793f7e764d7"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/387.json",
+"bytes": 8872,
+"sha256": "e36892aaa499d6dd4f79a273735f0774f0db9ace06586298f9f70d2fc1ea8984"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/387.log",
+"bytes": 140,
+"sha256": "95702d4bc01195259de19b5731873a3a674c74cef106a488a839f7f1a4af0935"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/393.json",
+"bytes": 3040,
+"sha256": "733e8749c4a2bab64ea1339bd9b863d530bcffc339724d520440bd7a02c44f3e"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/393.log",
+"bytes": 134,
+"sha256": "ff05961b7bffbfc32f1380b3e43f1a1013f3ef32da4d47c78eea42653a3ef160"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/395.json",
+"bytes": 9082,
+"sha256": "d50601691477c109b3fbfb2bb9bdc135153fdae4a3714c564e13472aceb1bbb5"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/395.log",
+"bytes": 137,
+"sha256": "fd061b5a9ce07034cd6ba1fbe0354192fd1bab23f747a599a974f136408cb2ae"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/405.json",
+"bytes": 6037,
+"sha256": "13eb84635a10008a82d18285fef82efebfd126d0bf9a6131aab8a5e4649358dd"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/405.log",
+"bytes": 137,
+"sha256": "6ba717dff8ee0eba5098d8380de8e8dff172d50c154096554b723accbbe7ddd3"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/408.json",
+"bytes": 6857,
+"sha256": "e2cc3efacd3f76e13bcee9a2449c87dfc4b141cebc85da0ade15f92f49b4ec27"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/408.log",
+"bytes": 137,
+"sha256": "ba9f1459b04ad3d6982d16cabace3a4c792e79f70349d5412a397b0626884852"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/409.json",
+"bytes": 5941,
+"sha256": "0545ef56825f767039542af5c81ae38f29089ecf41a64067ddde1ae914f8a4d4"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/409.log",
+"bytes": 137,
+"sha256": "df1b6bda373a7db761522516efc0815579dbab9a6c4af9d0e3f29c84790f0ac8"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/417.json",
+"bytes": 7241,
+"sha256": "2781a3f0e82d6b58985120bed25d93b0c81108de52f63b0df980eb9f070fb1aa"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/417.log",
+"bytes": 138,
+"sha256": "d21126d68fb406ee90f82ceab77226bec3c403a3507d802087f0cd78b0a66af1"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/484.json",
+"bytes": 10255,
+"sha256": "2bfe627dd3aea086267bca0cb6367dd9b5d14035b719567a4f759acf5e0fa58e"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/484.log",
+"bytes": 140,
+"sha256": "7087c92df3c1a83f12b9e2ca86531c1ea8fd33d6e2e548d120f74de43dfe761c"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/490.json",
+"bytes": 12083,
+"sha256": "36250bdd634a098bc136891a5d31868ba90b9daa507bf1adb054943fd7666478"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/490.log",
+"bytes": 140,
+"sha256": "957eacd9ef716b347613b657660c7317e1e9b3b0818e96b3cc7ac16bd2158d9c"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/497.json",
+"bytes": 10264,
+"sha256": "6519af8e642af394209b75494bed52afe9eed42056d38c989e142241999e2331"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/497.log",
+"bytes": 141,
+"sha256": "17368e34d52ee4642c1bf67b9f51454b6a09cc67c78e85fbcdd3e291a92d5952"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/500.json",
+"bytes": 2613,
+"sha256": "35c4951eb78e8a3e346fd33d358eb907ba36340ecdfdefd8ab4d5e26cab9358b"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/500.log",
+"bytes": 135,
+"sha256": "7b6cf6cb903472f7f2a40e986825e209ac3b8a6a93240e087eb832aec11c5b70"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/525.json",
+"bytes": 12065,
+"sha256": "7ebbc41975662d9ab264ae9321495b521083c65b751d26bba080ead20717e617"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/525.log",
+"bytes": 140,
+"sha256": "f8e5cb1695aadb6b22673d8a487ba9592dfe0a2247bf516ff6362ee93f64142c"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/561.json",
+"bytes": 10517,
+"sha256": "6fd35516d008c30b59a2368c46926adb0a109b48e1187b25299021db4b6c5090"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/561.log",
+"bytes": 140,
+"sha256": "0fa3667ab751d3eb200f6edb083846fbe62e525d53cd05beaece19a982188650"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/579.json",
+"bytes": 8479,
+"sha256": "709756cb3dd5818e08566050b60e1431c061bb3bdde7392c7fa5c47a5d9fdc0d"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/579.log",
+"bytes": 137,
+"sha256": "9094e95672d9d689970e4684640861f626108aabcca548099520a61991449f14"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/581.json",
+"bytes": 4845,
+"sha256": "d500a9f0f6cab0924d8f01c15d08d1cd39a825d172f9fbed5c8e4b6b75ad589c"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/581.log",
+"bytes": 137,
+"sha256": "8d3fb543b2701958d1f1e805188017285847b9bb2bff99e87784973f722a93f6"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/596.json",
+"bytes": 11953,
+"sha256": "b65c17570ff83d79487b5a9fb5bcf8d22a88bdb6924e8baef0ff329dfb767f2a"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/596.log",
+"bytes": 140,
+"sha256": "6eeba87f31dfc6dfa02fce06c2c7c20e0f1b4112b8b0142075cc26a57f79db2f"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/62.json",
+"bytes": 8142,
+"sha256": "b25b6c8821038519136d786d35f1c7642dd8318a67aa9e4724dc285a238702b4"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/62.log",
+"bytes": 139,
+"sha256": "df326854e7294afc0c0d415d5abc986a7dcdfab6896f783120063fd45b1d07b3"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/637.json",
+"bytes": 3366,
+"sha256": "00e4c33b049892775392abc140c1ea78bdb323745672bba2a56c6a62f9bbce77"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/637.log",
+"bytes": 133,
+"sha256": "32da3da7f65245e133a8b90f715be9423c003631e33130493c352152a5d2382d"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/638.json",
+"bytes": 6601,
+"sha256": "a561d0fd4018551692b421f36b154ae9fe84a6407ea0199a3a5d173990827891"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/638.log",
+"bytes": 136,
+"sha256": "159bb9614358d7a2be4e922c98e2130578ad8de9eb380aabc94c75ea75e66da3"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/644.json",
+"bytes": 4858,
+"sha256": "33e48614bf8a745436e4e6f5434b28fbf2ede7153aa0ad9d1f43b123d149875a"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/644.log",
+"bytes": 135,
+"sha256": "68003b4583dde58bc48c2d97b0e51755219981ab7b0553e888bdb4f29dfb64b3"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/672.json",
+"bytes": 9370,
+"sha256": "6c9a2dbb14ef8a378970c8fad4fe8e8a537eda64ba1d2297c2a55b13967c271c"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/672.log",
+"bytes": 140,
+"sha256": "b7d18121c395e6ef4d4a7e529d22a476008aea0dbba1e90e6afb8821116d6100"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/679.json",
+"bytes": 9153,
+"sha256": "d5a1bf653324037f650a2c11eaee3bb107533faa536937d1073e0996c34c3081"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/679.log",
+"bytes": 140,
+"sha256": "ca241ed612628a9746ce43f7e662b0679deaae621cfca11a55ff5fc588b10517"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/7.json",
+"bytes": 11542,
+"sha256": "31a0586e2a52f6a4d1ecaf7743e4fb2456327d8ac90765e735bab7baf41f5f8b"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/7.log",
+"bytes": 138,
+"sha256": "f295f54b80ddd040c3f2617d8bab9ddba0d92056121569d2a7580ba8fa25c839"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/70.json",
+"bytes": 6654,
+"sha256": "d490a42f15e71f2a64c7761c740441e2c558218c356e176b75a180d3a5095835"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/70.log",
+"bytes": 135,
+"sha256": "b011da2c4002e99ca32080d9e06a655be7cc511e82c86a5c01ec23abd96390af"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/710.json",
+"bytes": 13519,
+"sha256": "641a1883068b6edea71fd7dc42ad2f1552065cf7765c0552c38fa7b620d30975"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/710.log",
+"bytes": 140,
+"sha256": "a38bb85f3bcb2c619e7d31a89ed0c5861a5c40dcb77f87b949f8b6e224b8822a"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/716.json",
+"bytes": 12413,
+"sha256": "f695edad26267fcd8e4a10494788990c4547c13b73a2d06d0be99a7bc83f650b"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/716.log",
+"bytes": 140,
+"sha256": "def95fc1828ebd5f4965a70fef908d1d30747e57ad6d551e31366e65f138649d"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/720.json",
+"bytes": 3059,
+"sha256": "67b157238a1f708287c79215e7aa70aafcd7b21a1e4f572f96f3fb52798a8b8e"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/720.log",
+"bytes": 134,
+"sha256": "194307fe486207ff48c2af9b082398c7971fb052476681c0ea7d8ee24be16a0e"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/724.json",
+"bytes": 3995,
+"sha256": "71a18b0256317ab765eebbc71fa8add89640190637729abda5d9d9e7d4846238"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/724.log",
+"bytes": 135,
+"sha256": "982e83efdd30b7a3e0896d71d7b2206ae2a796ad3db81cbd3f83ac1d97ec86a5"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/729.json",
+"bytes": 9776,
+"sha256": "78e5b6ca1b5dca3e529d1dad8792b57b076c5e1944f81e3c4fc86fac303c793e"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/729.log",
+"bytes": 140,
+"sha256": "cb66facd9594ad817bfee83fb355d51068f2f76db8317197d856cddc95c7407f"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/734.json",
+"bytes": 6085,
+"sha256": "53c4ed4424abb8fb5bf8017dc9126d1fa52576c0aed2ff6616aaecc344d10bea"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/734.log",
+"bytes": 137,
+"sha256": "434a0db574d28f393f96dfec0f2f3ba042da36ce7427b67d60120c6286603389"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/739.json",
+"bytes": 8839,
+"sha256": "e157febb2c00cd33f9f7ca19793f9d1f56d0da3e801a155bf071ae61ea774132"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/739.log",
+"bytes": 140,
+"sha256": "e6459a7b54efab433e7ccb6f8d3b5e4b1bf53e7a4ff5b27401ed89bc82a9d74b"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/754.json",
+"bytes": 11796,
+"sha256": "d9839cbc4d7721e0a7ebcee73587462ffe439f6a1cd0b6e590cc14004f019b7b"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/754.log",
+"bytes": 140,
+"sha256": "ca354e2d5902d46825ed7ac8ea842aa6ae55b6e9dd6a7b1eaa932fd7cc89a49a"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/763.json",
+"bytes": 9840,
+"sha256": "d9e4701927a43f7ee4a4fd1bcaafc15b3f581a157c8a4f279a1f67b261e0ddd9"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/763.log",
+"bytes": 140,
+"sha256": "c23ef25c1faef895762c98443578486dfde23e26770cc7a7bfde61a90cffca42"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/774.json",
+"bytes": 6470,
+"sha256": "26c46cee81a6c41ff11a67f685be35c089274eaa9ad371ac8deaa2de6fd27da6"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/774.log",
+"bytes": 138,
+"sha256": "2e6b4492ddf611fb19b8ca8a0cf5f4df5acc32a075537b7ac3ed299a36099dc1"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/79.json",
+"bytes": 11267,
+"sha256": "0c78244e65361a3a9f46e3a5575ba14370723a657f63b254d1bd41b9737db767"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/79.log",
+"bytes": 139,
+"sha256": "ad29aad806f139bbfe8237bc74df2b5c39269e40c3d36a3383d0f575de6c76a9"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/791.json",
+"bytes": 4991,
+"sha256": "b3dd315256bfe1e90fa3e5d70015cad85dd4e332c73eaecdab25b86175745afe"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/791.log",
+"bytes": 135,
+"sha256": "60ce68fe56fd62566d80636e34fc75ea6251cfef1f376ded9ac1d4414308120a"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/794.json",
+"bytes": 9617,
+"sha256": "1124b480a79965b6942d07b77a1b994f31378b28886c9bfe75df492c6fd65c8b"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/794.log",
+"bytes": 140,
+"sha256": "a4b1c5d66bde4267e50ae4f9416e56fc849329af8973c2bde7373f905ce40915"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/802.json",
+"bytes": 12847,
+"sha256": "5f3a23d716368e0fbf508e944b0432bbe42423122dd086d2f7e6dc7b85c73620"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/802.log",
+"bytes": 140,
+"sha256": "0f2b7f5d7fa0cad5b6148463a77099fd290a2d9a301c82309521887c3811718a"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/814.json",
+"bytes": 10423,
+"sha256": "0a6dbe39648556ece501e32f3ff2b35d0eb05e29f2ba3f6f29b52c8088e62f3c"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/814.log",
+"bytes": 140,
+"sha256": "9e3daf03d403fc3b9aecf9d741a5594e30c9f036d860f5216e5db70a91dd4b56"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/827.json",
+"bytes": 11533,
+"sha256": "94478796e495c7df9d41b994b4fffe37a1aa9bfc403fdafdf4c9ad0ec2769ca7"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/827.log",
+"bytes": 140,
+"sha256": "d28843ef57612a348ac97e04a756c4918a1decd625d3fc3cf6c153a89b5d169a"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/828.json",
+"bytes": 14606,
+"sha256": "210257d4820d38b6fee3ddcfee8e815ff6f014723264b2baca9b3751e3412447"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/828.log",
+"bytes": 140,
+"sha256": "96438652aa7f046979c35310cff1b22d6f4024268fc8a26a5e57ffaa081940ee"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/83.json",
+"bytes": 7478,
+"sha256": "c06b67d8273c7373bc89cc68ba23b2276c1fb503ad80019132eb58258ee60770"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/83.log",
+"bytes": 136,
+"sha256": "92909d09a829675d680e4b4a578f17ba7afcef2aeb9886cdb2dea6b5e88fa6b1"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/869.json",
+"bytes": 10009,
+"sha256": "71b4501f5b6f3569466b034733568853460f024c78929326109d134794432904"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/869.log",
+"bytes": 139,
+"sha256": "b6ab0996e5980f1e0ec63a130b7de0919e7cf1e9ee4c89447311c23ccc2f685d"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/872.json",
+"bytes": 12414,
+"sha256": "7799db8b438a91b248c4b1805a6f9f1e29fe2e379edbabb62b6e7f35355b7f50"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/872.log",
+"bytes": 140,
+"sha256": "c1fdb3cef7989e5fc0a159ddd4d45e533f9f93be557072c26c70a44b16a9d157"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/905.json",
+"bytes": 9583,
+"sha256": "137be122d7f20e3101a7a6b237b8b09ddec6224b57cf4daaa3fb925047c5650d"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/905.log",
+"bytes": 139,
+"sha256": "6ac0222c6b107a629618dc198aba8e5d1884aed3685e094984b5bf47cf1588ab"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/910.json",
+"bytes": 6996,
+"sha256": "05c00068e8e73709a9a51f5e420c8d0330c2e15e7b2dbb3b92d333b31e4a628f"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/910.log",
+"bytes": 136,
+"sha256": "3834740e7d9d9584bbc2d3b705c7fe14e88630179bd0de3f21d714415bf20d83"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/930.json",
+"bytes": 13347,
+"sha256": "4e4a1bdef7244166ad85d62fd2042133af900c5612d1e54d84c37625f42a9eca"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/930.log",
+"bytes": 140,
+"sha256": "152cd7db353e4f55c267d5d50ad47e5f4a7eb771e94847cf9642bb80f3f2d16e"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/948.json",
+"bytes": 6850,
+"sha256": "1cc082cb861bf57a82fbd344c5bebf8c8a53c3e47e2ddfe5ad29c36e19cb1957"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/948.log",
+"bytes": 139,
+"sha256": "8c9462322ad3c6d42c0c7b60fcfe5f2c1198505d142704123e9343face63dad5"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/960.json",
+"bytes": 12334,
+"sha256": "043146e3ded9553a4ef20b850b73cc281198ef9388a8155623624797d9553cf0"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/960.log",
+"bytes": 140,
+"sha256": "ed41b741818cf4b780bc6fa2ccbb2fcf7657a66d014a216a401aa0aafa5e2f15"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/986.json",
+"bytes": 13745,
+"sha256": "45ffcf465ccd1af9951b1dfbbde4409af51c345f16653082f539666f2f5b4257"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/986.log",
+"bytes": 139,
+"sha256": "3714f9616f65b180947bb4713aba49d76201e2c6c54b193caf26ffc89d17367b"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/992.json",
+"bytes": 12568,
+"sha256": "952bb50906c44724b1d49ba61fa2baa42a2c4b2954c08412a359942219bac0af"
+},
+{
+"path": "logs/bcp_gpt5_rr/rr/992.log",
+"bytes": 140,
+"sha256": "2c16e12f6ff95dc361a54a69cdc5f022fe0497a64af58558850cc19c6ea6fabb"
+},
+{
+"path": "logs/bcp_gpt5_rr/run_rr.log",
+"bytes": 399,
+"sha256": "0264409c6cfb6929e787fe4d402a6b479359dfafb17eb6fda8e48cdd73f15e12"
+},
+{
+"path": "logs/bcp_rejudge_gpt41/pilot_rr.json",
+"bytes": 2078,
+"sha256": "056edf8f2cfb783ef67047569545a9168d116a484f7dffa578cf30bebeca171b"
+},
+{
+"path": "repo/data/bcp_gpt5_rr/control_gpt5_colbert8192_high.json",
+"bytes": 854227,
+"sha256": "fb6f32a2014ef7a3768705f8be1336f1a39110e378532099dfcaf8d28b6f93c7"
+},
+{
+"path": "repo/data/bcp_gpt5_rr/control_gpt5_colbert8192_medium.json",
+"bytes": 42938,
+"sha256": "ef3fbc3c09d213c6ebbf1be6dfdc6252314f0bb664ae9dc37d7c17a73b3f6701"
+},
+{
+"path": "repo/data/bcp_gpt5_rr/pilot100.json",
+"bytes": 1031,
+"sha256": "18316137243ab5547539a47d67893937055db74c58810a1201fd79d2ee4edec1"
+},
+{
+"path": "repo/data/bcp_gpt5_rr/pilot100_ids.txt",
+"bytes": 408,
+"sha256": "b8b3c10304af13b297c69609df7f573e7a9bb210a1684a1188f322af1b5d7a17"
+}
+]
+}

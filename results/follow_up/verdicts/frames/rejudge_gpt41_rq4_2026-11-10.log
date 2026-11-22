@@ -1,0 +1,7 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+logs/frames/sup_q36_bm25f_s25: 199/824 results | accuracy 135/824 = 0.1638 (missing = wrong) | gold recall 0.1587 | searches 14.24 | no vote 0 | content-filtered 0 []
+logs/frames/sup_q36_bm25f_s25_rest0: 311/824 results | accuracy 207/824 = 0.2512 (missing = wrong) | gold recall 0.2445 | searches 13.44 | no vote 0 | content-filtered 1 ['813']
+logs/frames/sup_q36_bm25f_s25_rest1: 312/824 results | accuracy 217/824 = 0.2633 (missing = wrong) | gold recall 0.2469 | searches 14.78 | no vote 0 | content-filtered 0 []
+logs/frames/sup_q36_s25_rr_g0: 409/824 results | accuracy 298/824 = 0.3617 (missing = wrong) | gold recall 0.3828 | searches 12.45 | no vote 0 | content-filtered 0 []
+logs/frames/sup_q36_s25_rr_g1: 412/824 results | accuracy 261/824 = 0.3167 (missing = wrong) | gold recall 0.3843 | searches 14.01 | no vote 0 | content-filtered 2 ['304', '813']
+logs/gepa_frames_confirm/rollouts/8ba345b481: 323/824 results | accuracy 204/824 = 0.2476 (missing = wrong) | gold recall 0.2331 | searches 7.48 | no vote 0 | content-filtered 0 []

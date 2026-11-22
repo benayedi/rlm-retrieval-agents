@@ -95,8 +95,11 @@ ALLOWED_UNKNOWN = re.compile(r"^(LAUNCHER_RLMFIX\d+|NOORCH_QUESTION_LIST|AZURE_O
                              r"AZURE_OPENAI_JUDGE_MODEL_ORIGINAL|OTHER_DOTENV_VARIABLES)=UNKNOWN\b")
 
 
+FOLLOW_UP = ["TWQ-1", "SP-6"]   # configs of the follow-up runs (tests/test_follow_up_configs_snippet.py checks them)
+
+
 def test_every_row_has_a_config():
-    assert sorted(p.stem for p in (ALG / "configs").glob("*.env")) == sorted(ROWS)
+    assert sorted(p.stem for p in (ALG / "configs").glob("*.env")) == sorted(ROWS + FOLLOW_UP)
 
 
 @pytest.mark.parametrize("row", ROWS)

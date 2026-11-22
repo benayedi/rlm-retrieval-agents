@@ -32,6 +32,11 @@ VARIABLES = {
     "RETRIEVAL_EVAL_ROOT": "checkout holding scripts/retrieval_eval.py (the PLAID build-and-evaluate script, not part "
                            "of this repository); benchmarks/retrieval/build_bc_rmcb_dl8192.sh runs there and writes "
                            "logs/ and .pylate_idx/ into it",
+    "RLM_DATA_DIR": "data/ of the original research repository (OBLIQ question-id files, BrowseComp-Plus policy replay "
+                    "data, FRAMES and HoVer working files); the split files themselves are in "
+                    "studies/prompt_optimisation/splits/",
+    "HOVER_DATA_DIR": "HoVer working directory of the GEPA sanity check (dataset copy and its BM25 index; built by "
+                      "studies/prompt_optimisation/hover/src/build_index.py; not part of this repository)",
     "GCP_VERTEX_ENV": "file in .env format holding NNEXT_PROVIDERS_GCP_VERTEX_SERVICE_ACCOUNT_JSON=<service-account "
                       "JSON> for Gemini-Embedding-2 on Vertex AI; read only when that variable is not already in the "
                       "environment; never committed",

@@ -1,0 +1,125 @@
+# Numbers of the follow-up studies, copied from their sources (not recomputed; owner's policy of 2026-11-10).
+# One entry per reported value or comparison. `source` names where the number was copied from:
+#   EVIDENCE      the thesis evidence ledger, section "RQ4: GPT-4.1 re-judge" (it cites the verdict files listed with it)
+#   STATUS        docs/EXPERIMENTS_STATUS.md of the original repository
+#   GEPA_PLAN     docs/GEPA_BROWSECOMP_PLAN.md of the original repository
+#   BENCHMARKS    docs/DATASET_BENCHMARKS.md of the original repository
+#   HANDOFF       docs/HANDOFF.md of the original repository
+#   SUMMARY_XLSX  docs/rlm_results_summary.xlsx of the original repository (sheet, row)
+#   VERDICTS      results/follow_up/verdicts/ of this repository (the file named)
+# `judge` is the judge of that number. Only gpt-4.1 numbers are reported for accuracy; Qwen3.6-judged ones are kept
+# with judge "Qwen3.6 (superseded)" or "Qwen3.6 only". scripts/docs/make_follow_up_docs.py renders this file into
+# results/follow_up/studies.md and the per-ID documents in docs/experiments/.
+
+SP-1:
+  title: "Search policy (novelty + reranker), BrowseComp-Plus, Qwen3.6, all 830"
+  rows:
+    - {measure: "accuracy, all 830", arm: "67.5 % (0.6747)", control: "58.0 % (0.5795), BCP-29", n: 830, test: "won/lost 147/68, McNemar p 7.1e-8", judge: "gpt-4.1 (re-judged 2026-10-27)", source: "EVIDENCE (67.5 vs 58.0); STATUS §5 (rows 16 -> 17: 0.5795 -> 0.6747, won/lost 147/68, p 7.1e-8); VERDICTS bcp/16.json, bcp/17.json"}
+    - {measure: "accuracy, all 830", arm: "0.694", control: "0.610", n: 830, test: "+8.4 points, t 5.05, won/lost 134/64; gold recall 0.51 -> 0.64", judge: "Qwen3.6 (superseded)", source: "HANDOFF §D"}
+
+SP-2:
+  title: "Reranker only (no novelty filter), BrowseComp-Plus test200, Qwen3.6"
+  rows:
+    - {measure: "accuracy, test200", arm: "70.1 % (0.7005)", control: "57.9 % (0.5787), BCP-29 on the same questions", n: 197, test: "won/lost 37/13, McNemar p 0.00094; the full policy (SP-1) on the same questions 71.6 % (0.7157)", judge: "gpt-4.1 (re-judged 2026-11-10)", source: "EVIDENCE; VERDICTS bcp/rq4_rerank_only.json, bcp/rq4_summary.json"}
+    - {measure: "accuracy, test200", arm: "0.719", control: "0.607", n: 196, test: "+0.112, t 3.33, won/lost 34/12; gold recall 0.496 -> 0.584; novelty + rerank vs rerank only (n 194): +0.010, t 0.33", judge: "Qwen3.6 (superseded)", source: "GEPA_PLAN §7d"}
+
+SP-3:
+  title: "Search policy with GPT-5, 100-question pilot (50 previously wrong, 50 previously right)"
+  rows:
+    - {measure: "previously wrong (50): fixed", arm: "19 (38 %)", control: "re-runs of the GPT-5 document REPL agent fix ~45 % (25-64 %), VAR-2", n: 50, test: "", judge: "gpt-4.1 (2026-10-27)", source: "STATUS §1"}
+    - {measure: "previously right (50): broken", arm: "5 (10 %)", control: "re-runs break ~8 % (3-14 %), VAR-2", n: 50, test: "", judge: "gpt-4.1 (2026-10-27)", source: "STATUS §1"}
+    - {measure: "re-weighted to all 830 if every flip came from the reranker", arm: "≈ 0.835", control: "0.8747 (the stored run, BCP-23)", n: 100, test: "no better than a re-run", judge: "gpt-4.1", source: "STATUS §1"}
+    - {measure: "previously wrong fixed / previously right broken", arm: "18 / 7", control: "", n: 100, test: "", judge: "gpt-4o (superseded)", source: "STATUS §1"}
+
+SP-4:
+  title: "Search policy on FRAMES, search cap 25, Qwen3.6, all 824"
+  rows:
+    - {measure: "accuracy, all 824", arm: "67.8 %", control: "67.8 %, FRC-1", n: 824, test: "won/lost 69/69, McNemar p 1", judge: "gpt-4.1 (re-judged 2026-11-10/11)", source: "EVIDENCE; VERDICTS frames/sup_q36_s25_rr_g{0,1}/graded_gpt41.json"}
+    - {measure: "accuracy, all 824", arm: "0.694", control: "0.692", n: 824, test: "won/lost 75/73, p 0.93; gold recall 0.650 -> 0.767", judge: "Qwen3.6 (superseded)", source: "BENCHMARKS §9.7"}
+
+SP-6:
+  title: "Search policy on OBLIQ-Twitter, snippet REPL agent, Qwen3.6, all 281"
+  rows:
+    - {measure: "NDCG@10, all 281", arm: "0.0847", control: "0.0759, TWQ-1", n: 281, test: "+0.009, paired t +1.08, won/lost 58/43 (n.s.); gold recall 0.188 -> 0.258; searches 14.7 -> 12.1", judge: "none (NDCG@10)", source: "BENCHMARKS §9.8 (all-281 table); SUMMARY_XLSX Experiments rows 54-55"}
+
+SP-7:
+  title: "Search policy on OBLIQ-Twitter, document REPL agent, Qwen3.6, all 281"
+  rows:
+    - {measure: "NDCG@10, all 281", arm: "0.0613", control: "0.0498, TWQ-2", n: 281, test: "+0.012, not significant", judge: "none (NDCG@10)", source: "SUMMARY_XLSX Experiments rows 52-53; STATUS (OBLIQ Twitter table); BENCHMARKS §9.8 (+0.012 n.s.)"}
+
+TWQ-1:
+  title: "Control: snippet REPL agent, Qwen3.6, plain dense search, OBLIQ-Twitter"
+  rows:
+    - {measure: "NDCG@10", arm: "0.0759 (all 281)", control: "dev100 0.0749, rest181 0.0765", n: 281, test: "", judge: "none (NDCG@10)", source: "BENCHMARKS §9.8; SUMMARY_XLSX Experiments row 54"}
+
+TWQ-2:
+  title: "Control: document REPL agent, Qwen3.6, plain dense search, OBLIQ-Twitter"
+  rows:
+    - {measure: "NDCG@10", arm: "0.0498 (all 281)", control: "", n: 281, test: "", judge: "none (NDCG@10)", source: "SUMMARY_XLSX Experiments row 52; BENCHMARKS §9.8"}
+
+FRC-1:
+  title: "Search cap 25 / 50 turns on FRAMES, document REPL agent, Qwen3.6, all 824"
+  rows:
+    - {measure: "accuracy, all 824", arm: "67.8 %", control: "61.0 %, FR-13 (search cap 10)", n: 824, test: "won/lost 105/49, McNemar p 7.5e-6", judge: "gpt-4.1 (re-judged 2026-11-10/11; FR-13 2026-10-27)", source: "EVIDENCE; VERDICTS frames/sup_q36_bm25f_s25*/graded_gpt41.json, frames/sup_q36_bm25f/graded_gpt41.json"}
+    - {measure: "accuracy, all 824", arm: "0.692", control: "0.627", n: 824, test: "+6.4 points, won/lost 104/51, McNemar p < 0.0001; +11 % wall time, +56 % tokens, 14.1 searches", judge: "Qwen3.6 (superseded)", source: "BENCHMARKS §9.7"}
+
+GEPA-1:
+  title: "GEPA on BrowseComp-Plus, run 1 (proportional selection set), Qwen3.6, Claude critic"
+  rows:
+    - {measure: "original prompt on D_pareto (100)", arm: "accuracy 0.660, gold recall 0.605", control: "", n: 100, test: "99/100 completed", judge: "Qwen3.6 (optimisation-time)", source: "GEPA_PLAN §6"}
+    - {measure: "7 candidates vs the original, paired on D_pareto", arm: "Δ accuracy from -0.062 to +0.010 (best 11c76d5d5e, t +0.26)", control: "", n: 100, test: "no candidate beat the original prompt; 14 critic calls, $0.66", judge: "Qwen3.6 (optimisation-time)", source: "GEPA_PLAN §6"}
+    - {measure: "searches per question (candidates vs original)", arm: "7.2-7.7", control: "8.1", n: 100, test: "each query sharper (per-search nDCG@10 +0.006 to +0.031), fewer searches, less gold found", judge: "none", source: "GEPA_PLAN §6"}
+
+GEPA-2:
+  title: "GEPA on BrowseComp-Plus, run 2 (failure-enriched selection set), winner d911ebbe23 on test200"
+  rows:
+    - {measure: "accuracy, test200", arm: "59.3 % (0.593)", control: "57.3 % (0.5729), the original prompt (BCP-29)", n: 199, test: "won/lost 23/19, McNemar p 0.64", judge: "gpt-4.1 (re-judged 2026-11-10)", source: "EVIDENCE; VERDICTS bcp/rq4_gepa_winner.json"}
+    - {measure: "accuracy, test200", arm: "0.601", control: "0.601", n: 198, test: "won/lost 22/22; gold recall 0.515 vs 0.492 (+0.023, t +0.93); timeouts + kills 10 vs 8", judge: "Qwen3.6 (superseded)", source: "GEPA_PLAN §7b"}
+    - {measure: "lead on the enriched selection set", arm: "+7.0 points", control: "", n: 100, test: "selection-biased; not a benchmark estimate", judge: "Qwen3.6 (optimisation-time)", source: "GEPA_PLAN status and §7b"}
+
+GEPA-3:
+  title: "GEPA on FRAMES, candidate 8ba345b481 on the questions no split used, Qwen3.6"
+  rows:
+    - {measure: "accuracy, unused questions", arm: "63.2 %", control: "61.6 %, the seed (FR-13's answers)", n: 323, test: "won/lost 30/25, McNemar p 0.59", judge: "gpt-4.1 (re-judged 2026-11-10/11)", source: "EVIDENCE; VERDICTS frames/gepa_frames_confirm_8ba345b481/graded_gpt41.json"}
+    - {measure: "accuracy, unused questions", arm: "0.619", control: "0.628", n: 324, test: "-0.9 points, p 0.80", judge: "Qwen3.6 (superseded)", source: "BENCHMARKS §9.4"}
+    - {measure: "accuracy, test (200) / pareto (100)", arm: "0.670 / 0.636 (598a758e3a)", control: "0.625 / 0.640", n: 300, test: "test: +4.5, McNemar p 0.20; test + unused (523): 0.639 vs 0.627, +1.1 n.s.", judge: "Qwen3.6 only", source: "BENCHMARKS §9.4"}
+
+GEPA-4:
+  title: "GEPA on OBLIQ-Twitter, four runs, snippet REPL agent, Qwen3.8-27B"
+  rows:
+    - {measure: "run 4 (gepa_wide): NDCG@10 on D_pareto (100)", arm: "candidates 0.0625, 0.0739", control: "seed 0.0847", n: 100, test: "paired t -1.46 and -0.71; no candidate beat the seed, so no held-out test was run", judge: "none (NDCG@10)", source: "HANDOFF §E; logs/night8/validate.log (in the GEPA-4 archive)"}
+    - {measure: "run 1 (gepa_official): best minibatch", arm: "0.2474", control: "0.1302 (dev100 baseline)", n: 6, test: "void: selected on 6-question minibatches; the unchanged seed reaches such maxima by chance (P = 0.94)", judge: "none (NDCG@10)", source: "docstring of studies/prompt_optimisation/obliq_twitter/src/gepa_official_obliq_v2.py"}
+
+GEPA-5:
+  title: "GEPA sanity check on HoVer (the GEPA paper's program), Qwen3.6, Claude critic"
+  rows:
+    - {measure: "all gold documents found, test (300)", arm: "67.3 %", control: "38.3 % (DSPy default instructions)", n: 300, test: "+29.0 points; GEPA paper, Qwen3-8B: 35.3 % -> 52.3 %", judge: "none (exact metric)", source: "GEPA_PLAN §7c"}
+    - {measure: "all gold documents found, val (300)", arm: "62.7 %", control: "40.3 %", n: 300, test: "stopped at ~3,800 of 7,051 evaluations", judge: "none (exact metric)", source: "GEPA_PLAN §7c"}
+
+DSA-3:
+  title: "DSPy.RLM ablation arm 3: caps lifted, snippet REPL agent's prompt (v21); models unchanged"
+  rows:
+    - {measure: "accuracy, reweighted to 775", arm: "0.688 ± 0.09", control: "snippet REPL agent (BCP-9) 0.783; original DSPy run 0.715", n: 100, test: "vs snippet: arm only 12 / snippet only 25, p 0.047", judge: "gpt-4.1", source: "STATUS, section DSPy RLM ablation"}
+
+DSA-5:
+  title: "DSPy.RLM ablation arm 5: as arm 3, plus the snippet REPL agent's models and search output"
+  rows:
+    - {measure: "accuracy, reweighted to 775", arm: "0.791 ± 0.07", control: "snippet REPL agent (BCP-9) 0.783; original DSPy run 0.715", n: 100, test: "vs snippet: 18 / 15, p 0.73; vs original DSPy: 26 / 4, p 6e-5", judge: "gpt-4.1", source: "STATUS, section DSPy RLM ablation"}
+    - {measure: "time per question, mean (median), same 100 questions", arm: "545 s (387 s)", control: "254 s (164 s), snippet REPL agent", n: 100, test: "runs at different times and concurrency: indicative only", judge: "none", source: "STATUS, section DSPy RLM ablation"}
+
+VAR-2:
+  title: "Re-run variation of the GPT-5 document REPL agent (eight pairs of earlier runs)"
+  rows:
+    - {measure: "previously wrong answers fixed by a re-run", arm: "~45 % (25-64 %)", control: "", n: "eight pairs, 50-350 common questions each", test: "pairs matched on effort (medium) and served model only (RV-I1)", judge: "gpt-4.1 (verdicts recorded with the runs)", source: "STATUS §1; studies/run_variation/src/rerun_flip_rates.py output (Claude Code session 2a1318b5, 2026-10-27)"}
+    - {measure: "previously right answers broken by a re-run", arm: "~8 % (3-14 %)", control: "", n: "eight pairs", test: "", judge: "gpt-4.1", source: "STATUS §1"}
+
+ERR-1:
+  title: "FRAMES failure taxonomy of the document REPL agent, Qwen3.6"
+  rows:
+    - {measure: "search cap 25, all 824: share of the 254 wrong", arm: "beyond the model 47 %, retrieval miss 31 %, corpus gap 9 %, found all gold but wrong 8 %, no answer 4 %", control: "", n: 254, test: "missed gold articles are long (median 16.6k vs 8.3k characters found)", judge: "Qwen3.6 only", source: "BENCHMARKS §9.7"}
+    - {measure: "search cap 25, test200: the 63 wrong", arm: "28 beyond the model, 22 retrieval misses, 5 broken answers, 4 corpus gaps, 4 found all gold but wrong", control: "", n: 63, test: "37 % of missed gold articles had their exact title in the agent's own queries", judge: "Qwen3.6 only", source: "HANDOFF §C.5"}
+
+FB-1:
+  title: "FRAMES single-shot baselines, Qwen3.6"
+  rows:
+    - {measure: "accuracy, 824", arm: "no retrieval 0.369; BM25 top-4 articles 0.477; all gold articles (oracle, 822) 0.774", control: "FRAMES paper (Gemini-Pro-1.5): 0.408 / 0.474 / 0.729", n: 824, test: "", judge: "Qwen3.6 only", source: "HANDOFF §C; STATUS (FRAMES table: 0.3689, 0.4769, 0.7737)"}

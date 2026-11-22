@@ -1,0 +1,13 @@
+{
+ "created": "2026-11-11T16:17:53+00:00",
+ "note": "byte-exact copies of question-id files (ids only); RLM = the original research repository",
+ "files": [
+  {
+   "file": "ids281.json",
+   "source": "RLM:logs/obliq_rr/ids281.json",
+   "sha256": "419a53502aecb68b93e54bdc0797233b599855f18f22330f065b6374cf33fcc4",
+   "bytes": 2529,
+   "used_by": "TWQ-2, SP-7 (experiments/obliq_twitter_qwen36.sh)"
+  }
+ ]
+}

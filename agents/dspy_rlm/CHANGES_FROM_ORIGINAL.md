@@ -174,3 +174,49 @@ Line numbers are `src/…` (original in parentheses).
 - `src/run_obliq.py`: the `--model` help text named a personal Azure deployment; it now reads "an Azure deployment
   name" (rule 4, documentation; not seen by the model). `tests/test_dspy_rlm_static.py` blanks that one help string on
   both sides before comparing the AST, so every other line is still checked against the original.
+
+## Second snapshot (2026-11-11): the DSA-3 / DSA-5 ablation
+
+The DSPy.RLM ablation of 2026-10-31 (arms 3 and 5, docs/experiments/dspy_rlm/DSA-*.md) ran on files changed after the
+first snapshot. They are preserved in `original/RLM_2026-11-11/` (own `MANIFEST.json`); `original/RLM/` is untouched.
+
+| File (original repository) | 2026-10-30 → 2026-10-31 | In `src/` |
+|---|---|---|
+| `rag/signatures.py` | signature v21 `BrowseCompSnippetPromptSignature` (the snippet REPL agent's task text) appended | yes, verbatim (`src/dspy_rlm/signatures.py`, end of file) |
+| `rag/agent.py` | `DSPY_QUIET_GETDOC=1` (no reading advice in the get_document line) and `DSPY_MAX_LLM_CALLS` (lifts dspy.RLM's 50-call sub-LLM cap); both opt-in, defaults unchanged | yes, verbatim (`src/dspy_rlm/agent.py:398-403, 535-537`) |
+| `examples/browsecomp_eval_dspy_rlm.py` | `v21` in the signature table and `--sig` choices; **fix of the result-queue deadlock** in `run_one` (read the queue before `join`; a result larger than the 64 KB pipe buffer otherwise blocked until the timeout and was recorded as TIMEOUT) | v21 only (`src/run_browsecomp.py:73, 434`). The fix is a behaviour change of the default path (`--timeout > 0`), so `src/` keeps the 2026-10-30 behaviour (rule: no bug fixes in `src/`) |
+| `rag/__init__.py`, `rag/tools.py`, `examples/browsecomp_data.py` | unchanged | copied so the snapshot runs on its own |
+| `scripts/run5d/dspy_ablation_arm{3,5}.sh` | new | `experiments/dsa_arm{3,5}.sh` |
+| `scripts/run5d/dspy_ablation_report.py` | new | `src/ablation_report.py` |
+| `scripts/run5d/dspy_ablation_strata.py`, `dspy_vs_snip.py` | new (drew `sample100.json`) | not copied: their input is lost (below) |
+| `logs/dspy_ablation/sample100.json` | the 100 questions (qid, index, stratum; no text) | `experiments/dsa_sample100.json` (byte-identical) |
+
+Arm 4 (`dspy_ablation_arm4.sh`, stopped after 7 questions) is not migrated.
+
+**The DSA launchers run the snapshot, not `src/`.** `experiments/dsa_arm{3,5}.sh` start
+`original/RLM_2026-11-11/RLM/examples/browsecomp_eval_dspy_rlm.py`, because only that file has the queue fix the arms
+ran with. Their arguments and environment are those of the original arm scripts; changed only: locations from
+`configs/paths.env`, the root deployment from `AZURE_DEPLOYMENT_GPT5` (original: a personal deployment name), `AZ_ENV`
+required (original default: a Claude Code scratchpad file), outputs under `$RUNS_DIR/dspy_ablation/arm{3,5}`.
+`rag/agent.py` calls `load_dotenv()`, which searches upwards from the snapshot directory; the original found the
+original repository's `.env` (KNOWN_ISSUES K15). Only the in-run `correct` field depends on it.
+
+`src/ablation_report.py`: docstring (rule 4), the judge import from `agents/shared/rlm_shared/grading/bcp_judge.py`
+(rule 2), `LOGS_ROOT` for the original machine's paths (rule 3). Nothing else.
+
+### Issues found, not fixed (second snapshot)
+16. **(F-F) The result-queue deadlock remains in `src/`.** `src/run_browsecomp.py:175` `run_one` (orig. 2026-10-30
+    `examples/browsecomp_eval_dspy_rlm.py:157`) joins the worker before reading its queue. Fixed in the
+    2026-10-31 file (`original/RLM_2026-11-11/RLM/examples/browsecomp_eval_dspy_rlm.py:158-188`), which is what DSA-3/5 ran.
+17. **(F-G) The sample cannot be redrawn.** `original/RLM_2026-11-11/RLM/scripts/run5d/dspy_vs_snip.py:8` reads
+    `per_question.json` from a Claude Code scratchpad that no longer exists; `dspy_ablation_strata.py:4` `exec`s that
+    file. The sample is preserved (`experiments/dsa_sample100.json`), the code to redraw it is not runnable.
+18. **The report names every arm `arm3_*`.** `src/ablation_report.py:74-92` (orig. 56-74): the keys of `report.json`
+    say `arm3` also for arm 5 (the file was written for arm 3 and reused).
+19. **The arm-5 header says "NOT YET RUN".** `original/RLM_2026-11-11/RLM/scripts/run5d/dspy_ablation_arm5.sh:2`; the
+    arm was run on 2026-10-31/11-01 (`logs/dspy_ablation/arm5/`). Kept in the launcher's quoted header.
+
+Verified: `tests/test_dspy_rlm_static.py` (agent.py and signatures.py are AST-identical to the second snapshot;
+run_browsecomp.py equals the 2026-10-30 driver plus the two v21 lines; the second snapshot's driver differs from the
+first only by v21 and the queue fix), `tests/test_dspy_rlm_second_snapshot.py` (v21 text, both switches on and off,
+the launchers), `tests/test_ablation_report.py` (identical `report.json` on synthetic records).
