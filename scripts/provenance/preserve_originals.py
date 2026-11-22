@@ -29,8 +29,8 @@ import argparse, datetime, glob, hashlib, json, os, re, shutil, subprocess, sys
 from pathlib import Path
 
 ART = Path(__file__).resolve().parents[2]
-RLM = Path(os.environ.get("RLM_SRC_ROOT", "/home/extstu_00/RLM"))
-FD = Path(os.environ.get("FULLDOC_SRC_ROOT", "/home/extstu_00/suprlm"))
+RLM = Path(os.environ.get("RLM_SRC_ROOT") or Path.home() / "RLM")
+FD = Path(os.environ.get("FULLDOC_SRC_ROOT") or Path.home() / "suprlm")
 TRX = Path(os.environ.get("CLAUDE_TRANSCRIPTS_ROOT") or Path.home() / ".claude" / "projects")
 ROOTS = {"RLM": RLM, "FULLDOC": FD, "TRANSCRIPT": TRX}
 
