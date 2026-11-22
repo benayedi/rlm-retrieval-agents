@@ -568,7 +568,7 @@ follow_up_studies:
   question: "Why the official library: with caps lifted and the snippet REPL agent's prompt (signature v21), does DSPy.RLM close the gap?"
   status: complete
   reported: true
-  notes: ['Runs the 2026-11-11 snapshot (result-queue fix), not src/.', 'The first attempt deadlocked (logs/dspy_ablation/arm3_deadlock/, in the archive).']
+  notes: ['Runs the 2026-10-31 code as preserved on 2026-11-11 (original/RLM_2026-11-11/, with the result-queue fix), not src/.', 'The first attempt deadlocked (logs/dspy_ablation/arm3_deadlock/, in the archive).']
 
 - id: DSA-5
   study: dspy_rlm
@@ -713,7 +713,7 @@ follow_up_studies:
   question: "How much does a plain re-run of the GPT-5 document REPL agent fix and break? The comparison point of SP-3."
   status: complete
   reported: true
-  notes: ['Pairs are matched on effort and served model only, not on the whole configuration (RV-I1); all medium effort, SP-3 high.']
+  notes: ['Pairs are matched on effort and served model only, not on the whole configuration (RV-I1); the pairs ran at medium effort; SP-3 sent no reasoning effort (deployment default, KNOWN_ISSUES K32).']
 
 - id: ERR-1
   study: error_analysis

@@ -220,7 +220,8 @@ DSPy.RLM (`dspy.RLM`) trailed the snippet REPL agent in the earlier campaign. Tw
 
 **Reading.** Lifting the caps and matching the prompt (arm 3) is not enough; matching the models and the search
 output as well (arm 5) closes the gap. Arm 5 changed both together, so their shares are not separated. Both arms ran
-the 2026-10-31 code (a second snapshot with a fix of a result-queue deadlock; see agents/dspy_rlm/CHANGES_FROM_ORIGINAL.md).
+the 2026-10-31 code, preserved on 2026-11-11 as a second snapshot (`agents/dspy_rlm/original/RLM_2026-11-11/`) with a fix of a
+result-queue deadlock; see agents/dspy_rlm/CHANGES_FROM_ORIGINAL.md.
 
 ## Run-to-run variation
 

@@ -275,7 +275,8 @@ campaign's launcher for running the OBLIQ harness on a local model (§11). Neith
 Two arms on 100 stratified BrowseComp-Plus questions (2026-10-31/11-01, gpt-4.1 judge) ask whether DSPy.RLM's earlier
 gap to the snippet REPL agent was the library or its configuration: with the models and the search output matched as
 well (DSA-5), the two tie. Launchers `experiments/dsa_arm3.sh`, `dsa_arm5.sh` (they run the second snapshot
-`original/RLM_2026-11-11/`, which carries a result-queue fix that `src/` does not); configs `configs/DSA-{3,5}.env`;
+`original/RLM_2026-11-11/`: the 2026-10-31 code, preserved on 2026-11-11, which carries a result-queue fix that `src/`
+does not); configs `configs/DSA-{3,5}.env`;
 documents [DSA-3](../../docs/experiments/dspy_rlm/DSA-3.md), [DSA-5](../../docs/experiments/dspy_rlm/DSA-5.md). `src/`
 gained the opt-in switches the arms use (signature v21, `DSPY_MAX_LLM_CALLS`, `DSPY_QUIET_GETDOC`; defaults unchanged).
 

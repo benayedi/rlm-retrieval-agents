@@ -146,7 +146,7 @@ run(q):
 | `run_one.py` | per-question harness: argument parsing, sandbox, grounding gate, RLM construction, run record |
 | `tools.py` | `ToolBox`: search (cap, k handling, DOCS merge), `search_many`, `grep_docs`, `unread_docs`, tool descriptions |
 | `prompts.py` | query template, context note, prologue clauses, solo system prompt, `prologue_id()`, `GEPA_PROMPTS` override hook |
-| `fence_tolerant.py`, `rep_guard.py` | opt-in Qwen switches: run mislabelled code fences, cap blocks per turn; stop repetition loops (unused by the rows) |
+| `fence_tolerant.py`, `rep_guard.py` | opt-in Qwen switches. `fence_tolerant.py` runs mislabelled code fences and caps the blocks per turn: on in every Qwen3.6 row (`SUP_FENCE_TOLERANT=1`, `SUP_MAX_BLOCKS=5`). `rep_guard.py` stops repetition loops: off in every row (no config sets `SUP_REP_GUARD`) |
 | `run_bm25.py` | runs `run_one.py` with the retriever sentences rewritten for BM25 (FRAMES or BrowseComp-Plus) |
 | `run_experiment.py` | batch driver: sample/ids, one worker per question, resume, provenance, timeout stubs |
 | `split_runner.py` | GEPA prompt optimiser; its `--seed-split` mode and `run_batch()` ran the Qwen3.6 BrowseComp-Plus rows with a result cache |

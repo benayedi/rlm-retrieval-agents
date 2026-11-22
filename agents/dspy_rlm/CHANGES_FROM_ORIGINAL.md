@@ -175,10 +175,12 @@ Line numbers are `src/…` (original in parentheses).
   name" (rule 4, documentation; not seen by the model). `tests/test_dspy_rlm_static.py` blanks that one help string on
   both sides before comparing the AST, so every other line is still checked against the original.
 
-## Second snapshot (2026-11-11): the DSA-3 / DSA-5 ablation
+## Second snapshot (preserved 2026-11-11; code of 2026-10-31): the DSA-3 / DSA-5 ablation
 
 The DSPy.RLM ablation of 2026-10-31 (arms 3 and 5, docs/experiments/dspy_rlm/DSA-*.md) ran on files changed after the
-first snapshot. They are preserved in `original/RLM_2026-11-11/` (own `MANIFEST.json`); `original/RLM/` is untouched.
+first snapshot. The code the arms ran dates from 2026-10-31 (file times in the manifest; the report and sampling
+scripts are from 2026-11-01). It was preserved on 2026-11-11 in `original/RLM_2026-11-11/` (own `MANIFEST.json`,
+`created` 2026-11-11); `original/RLM/` is untouched.
 
 | File (original repository) | 2026-10-30 → 2026-10-31 | In `src/` |
 |---|---|---|
