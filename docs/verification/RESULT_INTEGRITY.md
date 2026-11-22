@@ -1,6 +1,6 @@
 # Result integrity report
 
-Date: 2026-10-30. Scope: every row of [`results/original_baselines/Experiments.xlsx`](../../results/original_baselines/Experiments.xlsx).
+Date: 2026-10-30; BCP-15 and BCP-17 added 2026-11-22 from the 2026-10-31 workbook (KNOWN_ISSUES K45). Scope: every row of [`results/original_baselines/Experiments.xlsx`](../../results/original_baselines/Experiments.xlsx).
 
 **What was done.** The headline numbers were recomputed from the per-question records the runs wrote, using code
 written for this audit:
@@ -27,8 +27,8 @@ definitions.
 | BCP-9 | Snippet REPL | 0.794 | 0.7940 | 0.804 | 0.8040 (over results) | 29.5 | 29.46 | match |
 | BCP-11 | Snippet REPL | 0.8578 | 0.8578 | 0.824 | 0.8239 (over results) | 22.3 | 22.33 | match |
 | BCP-13 | Snippet REPL | 0.6747 | 0.6747 | 0.6815 | 0.6815 (over the 828 results) | 60.87 | 60.87 | match |
-| BCP-15 | Snippet REPL | 0.380 † (276 done) | — | 0.4979 | — | 19.23 | — | still running, not audited |
-| BCP-17 | Snippet REPL | — | — | — | — | — | — | not run yet |
+| BCP-15 | Snippet REPL | 0.3675 | 0.3675 | 0.4806 | 0.4806 (over the 640 results) | 18.99 | 18.99 | match |
+| BCP-17 | Snippet REPL | 0.6012 | 0.6012 | 0.647 | 0.6470 (over the 762 results) | 15.59 | 15.59 | match |
 | BCP-19 | Snippet REPL | 0.2494 | 0.2494 | 0.3571 | 0.3571 (over the 587 results) | 20.15 | 20.15 | match |
 | BCP-21 | Document REPL | 0.8313 | 0.8313 | 0.7619 | 0.7619 (**evidence** recall) | 7.9 | 7.90 | match |
 | BCP-23 | Document REPL | 0.8747 | 0.8747 | 0.7875 | 0.7875 (**evidence** recall) | 8.12 | 8.12 | match |
@@ -47,7 +47,7 @@ definitions.
 | CON-9 | Snippet REPL | 0.1876 | 0.1876 | 0.2008 | 0.2008 | — | 54.54 | match |
 | CON-11 | Document REPL | 0.1332 | 0.1332 | 0.1496 | 0.1496 | — | 10.00 | match |
 
-All 20 complete rows reproduce every audited number.
+All 22 rows reproduce every audited number (20 audited on 2026-10-30; BCP-15 and BCP-17 on 2026-11-22, after they finished).
 
 - Accuracy is correct answers over all questions; a missing result counts as wrong. This holds for every BrowseComp+
   and FRAMES row.
@@ -60,7 +60,7 @@ All 20 complete rows reproduce every audited number.
 
 | Definition | Rows |
 |---|---|
-| Gold-document recall, mean over questions with a result | BCP-9, -11, -13, -19, FR-7, FR-11 |
+| Gold-document recall, mean over questions with a result | BCP-9, -11, -13, -15, -17, -19, FR-7, FR-11 |
 | Gold-document recall, mean over all questions (missing = 0) | FR-9, FR-13 |
 | Gold-document recall, mean over the records that exist (killed runs wrote none) | BCP-27 |
 | Gold-document recall, mean over all records, including errored or killed runs with partial retrieval | BCP-25, -29, -31 |
@@ -79,7 +79,8 @@ records allow.
 `"filtered"` when Azure's content filter blocks the prompt, so a filtered question would be counted correct.
 
 Checked offline: filtered verdicts are never cached, so every answered question missing from `_judge_cache_gpt41.json`
-would be one. **0** questions match in BCP-13, BCP-19 and the partial BCP-15. The re-judged rows (BCP-9, -11, -25, -29,
+would be one. **0** questions match in BCP-13, BCP-19 and the partial BCP-15 (this check was not repeated for the
+final BCP-15 or for BCP-17, migrated 2026-11-22). The re-judged rows (BCP-9, -11, -25, -29,
 -31) hold only booleans. No reported number is affected. The bug is recorded with a proposed fix in [KNOWN_ISSUES.md](KNOWN_ISSUES.md);
 the refactored grader keeps the original behaviour, like all refactored code.
 
@@ -91,6 +92,8 @@ the records:
 | Row | Questions without a completed answer | Breakdown |
 |---|---|---|
 | BCP-19 | 243 of 830 | no record (1 h limit) |
+| BCP-15 | 190 of 830 | no record (1 h limit) |
+| BCP-17 | 68 of 830 | no record (1 h limit) |
 | BCP-27 | 121 | 108 error + 13 killed |
 | FR-9 | 73 of 824 | no record (2 h limit) |
 | BCP-29 | 53 | errored, killed or empty |

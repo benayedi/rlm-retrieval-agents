@@ -110,8 +110,8 @@ original output paths are in each document and in [registry.yaml](../experiments
 | BCP-9 | Snippet REPL | BrowseComp-Plus | GPT-5 | Qwen3-Embed-8B | complete | recomputed ✓; effort correction (K3); harness version not preserved (K8) |
 | BCP-11 | Snippet REPL | BrowseComp-Plus | GPT-5 | Reason-ModernColBERT | complete | recomputed ✓; K3, K8 |
 | BCP-13 | Snippet REPL | BrowseComp-Plus | GPT-5 | BM25 | complete | recomputed ✓; dense-retriever sentence in the prompt (K26) |
-| BCP-15 | Snippet REPL | BrowseComp-Plus | Qwen3.6 | Qwen3-Embed-8B | running | not audited |
-| BCP-17 | Snippet REPL | BrowseComp-Plus | Qwen3.6 | Reason-ModernColBERT | queued | not run |
+| BCP-15 | Snippet REPL | BrowseComp-Plus | Qwen3.6 | Qwen3-Embed-8B | complete (running on 2026-10-30; migrated 2026-11-22, K45) | recomputed ✓ (2026-11-22); 190 timeouts (K7) |
+| BCP-17 | Snippet REPL | BrowseComp-Plus | Qwen3.6 | Reason-ModernColBERT | complete (queued on 2026-10-30; migrated 2026-11-22, K45) | recomputed ✓ (2026-11-22); 68 timeouts (K7) |
 | BCP-19 | Snippet REPL | BrowseComp-Plus | Qwen3.6 | BM25 | complete | recomputed ✓; 243 timeouts (K7); K26 |
 | BCP-21 | Document REPL | BrowseComp-Plus | GPT-5 | Qwen3-Embed-8B | complete | recomputed from the trace ✓; launchers lost, library build unpreserved (K5) |
 | BCP-23 | Document REPL | BrowseComp-Plus | GPT-5 | Reason-ModernColBERT (8,192) | complete | recomputed from the trace ✓; K5 (up to 19 searches logged) |
@@ -282,7 +282,8 @@ The full list is in [KNOWN_ISSUES.md](verification/KNOWN_ISSUES.md). The open it
 4. **Recall column.** Footnote the column, or restate it under one definition (K4).
 5. **OBLIQ snippet REPL re-run.** Re-run with the format gate off to measure its effect (K6).
 6. **Unfinished rows.** BCP-15 (running) and BCP-17 (queued) need documenting and auditing once they finish. Their
-   configs and documents already exist.
+   configs and documents already exist. *Done 2026-11-22:* both finished (2026-10-30 / 2026-10-31); the 2026-10-31
+   workbook, their trajectories and the audit were migrated (KNOWN_ISSUES K45).
 7. **Licences.** Benchmark redistribution licences are undetermined. No licence was chosen for this repository, and
    `CITATION.cff` was not created because author and publication metadata were not available. Both must be decided
    before any public release.

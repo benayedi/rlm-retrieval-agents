@@ -2,7 +2,8 @@ row      workbook acc/ndcg  recomputed  wb recall rec/results  rec/all  wb srch 
 BCP-9                0.794      0.7940      0.804      0.8040   0.8040     29.5   29.46  830 records 
 BCP-11              0.8578      0.8578      0.824      0.8239   0.8239     22.3   22.33  830 records 
 BCP-13              0.6747      0.6747     0.6815      0.6815   0.6799    60.87   60.87  828 graded 
-BCP-15  0.380 † (276/830 d      0.1265     0.4979      0.4979   0.1320    19.23   19.23  220 graded 
+BCP-15              0.3675      0.3675     0.4806      0.4806   0.3706    18.99   18.99  640 graded 
+BCP-17              0.6012      0.6012      0.647      0.6470   0.5940    15.59   15.59  762 graded 
 BCP-19              0.2494      0.2494     0.3571      0.3571   0.2525    20.15   20.15  587 graded 
 BCP-27              0.4422      0.4422     0.3973      0.3911   0.3911     8.66    8.53  830 graded 
                                                        0.3973                      8.66  <- mean over the 817 records written (killed runs excluded)

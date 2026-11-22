@@ -50,7 +50,6 @@ Not included:
   machine some time between 2026-09-22 and 2026-10-29, before this repository was prepared. The archives hold every
   question's final record, the gpt-4.1 verdicts, and the per-question turn and token counts computed from the
   trajectories while they existed (`repo/scripts/workbook/tokmaps/`).
-- **BCP-15, BCP-17**: still running / queued on 2026-10-30; to be added when they finish.
 
 ## File formats
 

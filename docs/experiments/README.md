@@ -11,8 +11,8 @@ Work after the results table (search policy, GEPA, the FRAMES search cap, the DS
 | BCP-9 | Snippet REPL agent | BrowseComp-Plus | gpt-5 | Qwen3-Embedding-8B | complete | [doc](snippet_repl/BCP-9_browsecomp-plus-gpt-5-qwen3-embedding-8b.md) |
 | BCP-11 | Snippet REPL agent | BrowseComp-Plus | gpt-5 | Reason-ModernColBERT (149M | complete | [doc](snippet_repl/BCP-11_browsecomp-plus-gpt-5-reason-moderncolbert.md) |
 | BCP-13 | Snippet REPL agent | BrowseComp-Plus | gpt-5 | BM25 (bm25s | complete | [doc](snippet_repl/BCP-13_browsecomp-plus-gpt-5-bm25.md) |
-| BCP-15 | Snippet REPL agent | BrowseComp-Plus | Qwen3.6-35B-A3B-FP8 | Qwen3-Embedding-8B | running | [doc](snippet_repl/BCP-15_browsecomp-plus-qwen3-6-35b-a3b-fp8-qwen3-embedding-8b.md) |
-| BCP-17 | Snippet REPL agent | BrowseComp-Plus | Qwen3.6-35B-A3B-FP8 | Reason-ModernColBERT | queued | [doc](snippet_repl/BCP-17_browsecomp-plus-qwen3-6-35b-a3b-fp8-reason-moderncolbert.md) |
+| BCP-15 | Snippet REPL agent | BrowseComp-Plus | Qwen3.6-35B-A3B-FP8 | Qwen3-Embedding-8B | complete | [doc](snippet_repl/BCP-15_browsecomp-plus-qwen3-6-35b-a3b-fp8-qwen3-embedding-8b.md) |
+| BCP-17 | Snippet REPL agent | BrowseComp-Plus | Qwen3.6-35B-A3B-FP8 | Reason-ModernColBERT | complete | [doc](snippet_repl/BCP-17_browsecomp-plus-qwen3-6-35b-a3b-fp8-reason-moderncolbert.md) |
 | BCP-19 | Snippet REPL agent | BrowseComp-Plus | Qwen3.6-35B-A3B-FP8 | BM25 (bm25s | complete | [doc](snippet_repl/BCP-19_browsecomp-plus-qwen3-6-35b-a3b-fp8-bm25.md) |
 | BCP-21 | Document REPL agent | BrowseComp-Plus | gpt-5 | Qwen3-Embedding-8B | complete | [doc](document_repl/BCP-21_browsecomp-plus-gpt-5-qwen3-embedding-8b.md) |
 | BCP-23 | Document REPL agent | BrowseComp-Plus | gpt-5 | Reason-ModernColBERT over an 8,192-token-document index | complete | [doc](document_repl/BCP-23_browsecomp-plus-gpt-5-reason-moderncolbert-over-an-8-192-token-document-index.md) |

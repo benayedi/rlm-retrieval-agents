@@ -2,8 +2,9 @@
 # PUBLICATION COPY of scripts/run5d/night_finisher.sh. OPERATIONAL ONLY: it changes no agent setting and is not needed to
 # reproduce any row. It waited for runs to end, graded them with gpt-4.1, and raised the parallelism of the running Qwen
 # BrowseComp+ snippet queue (GNU xargs -P: SIGUSR1 = one more job). Kept for provenance: on 2026-10-29 it raised the
-# BCP-19 (bm25) xargs to 14 then 20 workers and BCP-15 (dense) to 20 workers (logs/run5d/night_finisher.log), so those
-# rows ran with more than the 8 workers named in their launch line. Worker count changes wall-clock time only.
+# BCP-19 (bm25) xargs to 14 then 20 workers, and on 2026-10-30 BCP-15 (dense, 02:27) and BCP-17 (ColBERT, 20:46) to 20
+# workers (logs/run5d/night_finisher.log), so those rows ran with more than the 8 workers named in their launch line.
+# Worker count changes wall-clock time only.
 # Changes: process patterns name the new launcher/runner files ("^bash .*experiments/qwen_bcp_snip_queue.sh",
 # "^bash .*experiments/frames_snip.sh qwen", run_browsecomp.py; the ^bash anchor keeps grep from matching itself); log paths are under $RUNS_DIR/run5d (were <original repo>/logs/run5d);
 # the grading scripts (bcp_fd_grade.py, frames_judge_gpt41.py; not part of this agent) are looked up in

@@ -50,8 +50,8 @@ It is comparable only within one definition; see [RESULT_INTEGRITY.md §R1](../v
 | Snippet REPL agent | GPT-5 | Qwen3-Embed-8B | 0.794 | 0.804 | 29.5 | 5.6 | 191 s (3.2 min) | ≈ 0.50 |
 | Snippet REPL agent | GPT-5 | ColBERT | 0.8578 | 0.824 | 22.3 | 4.7 | 166 s (2.8 min) | ≈ 0.36 |
 | Snippet REPL agent | GPT-5 | BM25 | 0.6747 | 0.6815 | 60.87 | 8.3 | 452 s (7.5 min) | 1.1999 |
-| Snippet REPL agent | Qwen3.6 | Qwen3-Embed-8B | 0.380 † (276/830 done) | 0.4979 | 19.23 | 14.6 † | 874 s (14.6 min) † | local GPU (no API cost) |
-| Snippet REPL agent | Qwen3.6 | ColBERT | not run (queued) |  |  |  |  |  |
+| Snippet REPL agent | Qwen3.6 | Qwen3-Embed-8B | 0.3675 | 0.4806 | 18.99 | 14.9 | 943 s (15.7 min) | local GPU (no API cost) |
+| Snippet REPL agent | Qwen3.6 | ColBERT | 0.6012 | 0.647 | 15.59 | 13 | 1015 s (16.9 min) | local GPU (no API cost) |
 | Snippet REPL agent | Qwen3.6 | BM25 | 0.2494 | 0.3571 | 20.15 | 15.4 | 1098 s (18.3 min) | local GPU (no API cost) |
 | Document REPL agent | GPT-5 | Qwen3-Embed-8B | 0.8313 | 0.7619 | 7.9 | 11.2 | 300.2 s (5.0 min) | 0.4395 |
 | Document REPL agent | GPT-5 | ColBERT | 0.8747 | 0.7875 | 8.12 | 10.8 | 482.5 s (8.0 min) | 0.5847 |
@@ -163,7 +163,5 @@ Each finding below is measured, and cites the pair that shows it.
     document REPL runs that fix ~45 % of wrong and break ~8 % of right answers on a re-run (VAR-2, not identical
     configurations; [FOLLOW_UP_STUDIES.md](FOLLOW_UP_STUDIES.md)).
   - Between unpaired rows, differences smaller than that should not be read as effects.
-- **The Qwen3.6 snippet REPL rows on BrowseComp-Plus with dense and ColBERT retrieval.** On 2026-10-30 they were still
-  running or queued.
 - **Like-for-like costs and times.** Times depend on how many runs shared a server, and the Qwen3.6 rows ran on local
   GPUs with no API cost.

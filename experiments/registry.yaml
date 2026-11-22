@@ -83,12 +83,14 @@ experiments:
   retriever: Qwen3-Embedding-8B, single-vector dense
   budgets: {turns: 50, searches: 25, results_per_search: "5 (default; the model may request more)", snippet: "min(2,000 chars, 512 tokens)", timeout: "3,600 s per question", max_output_tokens: 8192, compaction: "on"}
   run_name: bcp_snip_qwen_dense
-  dates: "started 2026-10-30 02:27, running at the time of writing"
+  dates: "2026-10-30 02:27 to 2026-10-30 20:45"
   original_outputs: ["logs/run5d/full/bcp_snip_qwen_dense/"]
   launcher: agents/snippet_repl/experiments/bcp_snip2.sh
   config: agents/snippet_repl/configs/BCP-15.env
+  trajectories: trajectories/snippet_repl/BCP-15/
   question: "Snippet REPL agent with an open-weight model: dense retrieval."
-  status: running
+  status: complete
+  notes: ['190 of 830 questions hit the 1 h limit without an answer and count as wrong: the row measures accuracy within that budget.', 'Running when this repository was first prepared (2026-10-30); the final row of the 2026-10-31 workbook was migrated on 2026-11-22 (KNOWN_ISSUES K45).']
 
 - id: BCP-17
   sheet: BrowseComp+
@@ -101,12 +103,14 @@ experiments:
   retriever: Reason-ModernColBERT
   budgets: {turns: 50, searches: 25, results_per_search: "5 (default; the model may request more)", snippet: "min(2,000 chars, 512 tokens)", timeout: "3,600 s per question", max_output_tokens: 8192, compaction: "on"}
   run_name: bcp_snip_qwen_colbert
-  dates: "queued after BCP-15"
-  original_outputs: ["logs/run5d/full/bcp_snip_qwen_colbert/ (not yet created)"]
+  dates: "2026-10-30 20:45 to 2026-10-31 12:08"
+  original_outputs: ["logs/run5d/full/bcp_snip_qwen_colbert/"]
   launcher: agents/snippet_repl/experiments/bcp_snip2.sh
   config: agents/snippet_repl/configs/BCP-17.env
+  trajectories: trajectories/snippet_repl/BCP-17/
   question: "Snippet REPL agent with an open-weight model: ColBERT retrieval."
-  status: queued
+  status: complete
+  notes: ['68 of 830 questions hit the 1 h limit without an answer and count as wrong: the row measures accuracy within that budget.', 'Queued when this repository was first prepared (2026-10-30); the row of the 2026-10-31 workbook was migrated on 2026-11-22 (KNOWN_ISSUES K45).']
 
 - id: BCP-19
   sheet: BrowseComp+

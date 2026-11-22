@@ -1,6 +1,6 @@
 # BCP-17: Snippet REPL agent · BrowseComp-Plus · Qwen3.6-35B-A3B-FP8 · Reason-ModernColBERT
 
-Status: **not run yet** (queued). Row 17 of the `BrowseComp+` sheet of [Experiments.xlsx](../../../results/original_baselines/Experiments.xlsx).
+Status: complete. Row 17 of the `BrowseComp+` sheet of [Experiments.xlsx](../../../results/original_baselines/Experiments.xlsx).
 
 ## 1. Experiment overview
 
@@ -12,7 +12,7 @@ Status: **not run yet** (queued). Row 17 of the `BrowseComp+` sheet of [Experime
 | Model | Qwen3.6-35B-A3B-FP8 (vLLM, local) |
 | Retriever | Reason-ModernColBERT |
 | Research question | Snippet REPL agent with an open-weight model: ColBERT retrieval. |
-| Original execution | queued after BCP-15 |
+| Original execution | 2026-10-30 20:45 to 2026-10-31 12:08 |
 | Run name in the logs | `bcp_snip_qwen_colbert` |
 
 ## 2. Research motivation
@@ -51,8 +51,12 @@ Exact environment and arguments ([agents/snippet_repl/configs/BCP-17.env](../../
 # BCP-17  snippet REPL agent | Qwen3.6-35B-A3B-FP8 (vLLM :8030/:8031, effort medium) | Reason-ModernColBERT on :8024 | BrowseComp+ 830 q
 # Budgets: 50 turns (MAX_ITERS_QWEN default), depth 1, --compaction, search cap 25 (BCP_SEARCH_CAP), QWEN_MAX_TOKENS 8192
 #          per call, 3600 s per question (QTIMEOUT_QWEN default), per-LM-call timeout 1800 s, 8 workers.
-# Status: QUEUED at refactor time (third run of qwen_bcp_snip_queue.sh, after BCP-19 and BCP-15); no output yet.
-#          night_finisher.sh, if still alive, raises it to 20 workers.
+# Launch line (logs/run5d/full/bcp_snip_qwen_colbert.out): 2026-10-30 20:45:30
+#          model=qwen retriever=http://localhost:8024 q=[0,830) workers=8 iters=50 timeout=3600s max_tokens=8192; raised to
+#          20 workers at 2026-10-30 20:46:00 by experiments/ops/night_finisher.sh (logs/run5d/night_finisher.log); done
+#          2026-10-31 12:08:13 with 762 result files (68 questions hit the 1 h limit and count as wrong). Third run of
+#          qwen_bcp_snip_queue.sh, after BCP-19 and BCP-15.
+#          (Queued when this repository was first prepared; final results migrated 2026-11-22, KNOWN_ISSUES K45.)
 # Original outputs: <original repo>/logs/run5d/full/bcp_snip_qwen_colbert/
 # Use: experiments/run_config.sh configs/BCP-17.env   (or the whole queue: experiments/qwen_bcp_snip_queue.sh)
 ROW=BCP-17
@@ -91,8 +95,8 @@ Launcher: [agents/snippet_repl/experiments/bcp_snip2.sh](../../../agents/snippet
 - Data loaders: [agents/shared/rlm_shared/](../../../agents/shared/rlm_shared/__init__.py) (`browsecomp_data.py`, `obliq_data.py`)
 - Grading: [agents/shared/rlm_shared/grading/](../../../agents/shared/rlm_shared/grading) · Metrics: [metrics.py](../../../agents/shared/rlm_shared/metrics.py)
 - Tests: [agents/snippet_repl/tests/](../../../agents/snippet_repl/tests), [tests/](../../../tests)
-- Per-question outputs: **not in this repository** (see [trajectories/README.md](../../../trajectories/README.md) for why)
-- Original locations on the machine that ran the experiments: `logs/run5d/full/bcp_snip_qwen_colbert/ (not yet created)`
+- **Per-question outputs in this repository** (Git LFS): [trajectories/snippet_repl/BCP-17/](../../../trajectories/snippet_repl/BCP-17/MANIFEST.json). 2,425 files, 3.17 GB as written by the run, encrypted with the BrowseComp canary key; extract with `python scripts/provenance/unpack_trajectories.py BCP-17 OUT_DIR` ([format notes](../../../trajectories/README.md))
+- Original locations on the machine that ran the experiments: `logs/run5d/full/bcp_snip_qwen_colbert/`
 
 ## 7. Existing experimental results
 
@@ -100,26 +104,71 @@ Reported in Experiments.xlsx (every non-empty column of the row):
 
 | Metric | Value |
 |---|---|
+| Accuracy | 0.6012 |
+| Recall | 0.647 |
+| NDCG | — |
+| Avg. Search Calls Per Query | 15.59 |
+| Avg. Iterations Per Query | 13 |
+| Time Per Query | 1015 s (16.9 min) |
+| Cached Cost Per Query | local GPU (no API cost) |
+| Uncached Cost Per Query | local GPU (no API cost) |
+| Input Tokens Per Query | not logged |
+| Output Tokens Per Query | not logged |
 
 
 Workbook footnotes that apply to this row:
 
 > Input / Output Tokens Per Query: all model calls of a question (root + sub-LLM), reasoning tokens included in output; these do not depend on how many runs shared a server, unlike Time Per Query. Exact from logged per-call usage, except values marked ≈ (Sept. 2026 snippet runs, whose logs overwrote the root model's usage with the sub-LLM's: rebuilt from the trajectories, about 10% low when the same method is checked on a run with exact usage). Uncached cost = input x list input price + output x list output price. Avg. Iterations Per Query: root-model turns per question, counted from the trajectory logs (snippet RLM) or the run records (document REPL agent); sub-LLM calls are not counted. A run that reaches its turn cap adds one forced final-answer turn.
 
+
+**Failure breakdown** (from [Failure_Analysis.xlsx](../../../results/original_baselines/Failure_Analysis.xlsx), QA Summary; first matching category wins):
+
+| Category | Questions | Share of failures |
+|---|---|---|
+| F1 did not finish | 68 | 20.5% |
+| F2 no / abstained | 18 | 5.4% |
+| F3 retrieval miss | 135 | 40.8% |
+| F4 partial evidence | 59 | 17.8% |
+| F5 all gold, wrong | 51 | 15.4% |
+| **Failed in total** | 331 |  |
+
+
+**Accuracy given the retrieved evidence** (By Recall sheet):
+
+| Evidence retrieved | Questions | Accuracy |
+|---|---|---|
+| no gold retrieved | 167 | 11.4% |
+| some gold | 231 | 74.0% |
+| all gold | 364 | 84.9% |
+
+
+**Turns** (By Turns sheet): limit 50, mean 12.9 (correct 8.1, not correct 20.3); 25 questions used every turn (3.0%), accuracy when answered before the limit 67.4%.
+
 ## 8. Results interpretation
 
-Not interpreted: the run is not complete.
+**Paired comparisons on the same questions** (Pairwise sheet; exact McNemar test on the discordant pairs):
+
+| Comparison | Other row | Only BCP-17 right | Only other right | p | Reading |
+|---|---|---|---|---|---|
+| GPT-5 vs Qwen3.6, snippet, Reason-ModernColBERT | BCP-11 | 24 | 237 | 3.2e-45 | significant at 0.05 |
+| Snippet REPL vs document REPL, Qwen3.6, Reason-ModernColBERT | BCP-29 | 121 | 103 | 0.26 | not significant |
+| ColBERT vs dense, snippet, Qwen3.6 | BCP-15 | 255 | 61 | 2.4e-29 | significant at 0.05 |
+
+
+- **Largest failure mode:** never retrieving a gold document (135 of 331 failures, 40.8%). Retrieval-side failures (F3 + F4) are 58.6% of failures; reading-side (F5) 15.4%. *(Measured.)*
+- **With all gold evidence retrieved** the run is right 84.9% of the time (364 questions); with none, 11.4%. The gap between the two bounds how much better retrieval alone could help. *(Measured; causal reading is a hypothesis.)*
+- Statements about *why* a configuration wins or loses are hypotheses unless the comparison isolates one variable; see the confounds in section 10.
 
 ## 9. Verification status
 
 | Check | Result |
 |---|---|
-| Experiment previously executed | queued |
-| Original outputs found | no (not run) |
+| Experiment previously executed | yes |
+| Original outputs found | yes (on the original machine; paths in section 6) |
 | Configuration identified | yes |
 | Implementation reviewed | yes ([agent review](../../verification/REVIEW_snippet_repl.md)) |
 | Lightweight tests | unit tests with mocks ([TESTING_REPORT.md](../../verification/TESTING_REPORT.md)); the experiment itself was not re-run |
-| Numbers independently recomputed | no (run not complete) |
+| Numbers independently recomputed | **matches the workbook** (accuracy, recall, searches): accuracy 0.6012 from 762 result records ([audit](../../verification/RESULT_INTEGRITY.md)) |
 | Reproduced by re-running | **no**: no experiment was re-run; full experimental equivalence of the refactored code is not established |
 
 

@@ -1,6 +1,6 @@
 # BCP-15: Snippet REPL agent · BrowseComp-Plus · Qwen3.6-35B-A3B-FP8 · Qwen3-Embedding-8B
 
-Status: **running** at the time of writing (2026-10-30); numbers below are partial. Row 15 of the `BrowseComp+` sheet of [Experiments.xlsx](../../../results/original_baselines/Experiments.xlsx).
+Status: complete. Row 15 of the `BrowseComp+` sheet of [Experiments.xlsx](../../../results/original_baselines/Experiments.xlsx).
 
 ## 1. Experiment overview
 
@@ -12,7 +12,7 @@ Status: **running** at the time of writing (2026-10-30); numbers below are parti
 | Model | Qwen3.6-35B-A3B-FP8 (vLLM, local) |
 | Retriever | Qwen3-Embedding-8B, single-vector dense |
 | Research question | Snippet REPL agent with an open-weight model: dense retrieval. |
-| Original execution | started 2026-10-30 02:27, running at the time of writing |
+| Original execution | 2026-10-30 02:27 to 2026-10-30 20:45 |
 | Run name in the logs | `bcp_snip_qwen_dense` |
 
 ## 2. Research motivation
@@ -51,9 +51,11 @@ Exact environment and arguments ([agents/snippet_repl/configs/BCP-15.env](../../
 # BCP-15  snippet REPL agent | Qwen3.6-35B-A3B-FP8 (vLLM :8030/:8031, effort medium) | Qwen3-Embedding-8B (FAISS IVFSQ8) on :8001 | BrowseComp+ 830 q
 # Budgets: 50 turns (MAX_ITERS_QWEN default), depth 1, --compaction, search cap 25 (BCP_SEARCH_CAP), QWEN_MAX_TOKENS 8192
 #          per call, 3600 s per question (QTIMEOUT_QWEN default), per-LM-call timeout 1800 s, 8 workers.
-# Status: RUNNING at refactor time. Launch line (logs/run5d/full/bcp_snip_qwen_dense.out): 2026-10-30 02:27:00
+# Launch line (logs/run5d/full/bcp_snip_qwen_dense.out): 2026-10-30 02:27:00
 #          model=qwen retriever=http://localhost:8001 q=[0,830) workers=8 iters=50 timeout=3600s max_tokens=8192; raised to
-#          20 workers at 02:27:03 by experiments/ops/night_finisher.sh. Second run of qwen_bcp_snip_queue.sh.
+#          20 workers at 02:27:03 by experiments/ops/night_finisher.sh; done 2026-10-30 20:45:30 with 640 result files
+#          (190 questions hit the 1 h limit and count as wrong). Second run of qwen_bcp_snip_queue.sh.
+#          (Running when this repository was first prepared; final results migrated 2026-11-22, KNOWN_ISSUES K45.)
 # Original outputs: <original repo>/logs/run5d/full/bcp_snip_qwen_dense/
 # Use: experiments/run_config.sh configs/BCP-15.env   (or the whole queue: experiments/qwen_bcp_snip_queue.sh)
 ROW=BCP-15
@@ -92,7 +94,7 @@ Launcher: [agents/snippet_repl/experiments/bcp_snip2.sh](../../../agents/snippet
 - Data loaders: [agents/shared/rlm_shared/](../../../agents/shared/rlm_shared/__init__.py) (`browsecomp_data.py`, `obliq_data.py`)
 - Grading: [agents/shared/rlm_shared/grading/](../../../agents/shared/rlm_shared/grading) · Metrics: [metrics.py](../../../agents/shared/rlm_shared/metrics.py)
 - Tests: [agents/snippet_repl/tests/](../../../agents/snippet_repl/tests), [tests/](../../../tests)
-- Per-question outputs: **not in this repository** (see [trajectories/README.md](../../../trajectories/README.md) for why)
+- **Per-question outputs in this repository** (Git LFS): [trajectories/snippet_repl/BCP-15/](../../../trajectories/snippet_repl/BCP-15/MANIFEST.json). 2,303 files, 3.85 GB as written by the run, encrypted with the BrowseComp canary key; extract with `python scripts/provenance/unpack_trajectories.py BCP-15 OUT_DIR` ([format notes](../../../trajectories/README.md))
 - Original locations on the machine that ran the experiments: `logs/run5d/full/bcp_snip_qwen_dense/`
 
 ## 7. Existing experimental results
@@ -101,11 +103,12 @@ Reported in Experiments.xlsx (every non-empty column of the row):
 
 | Metric | Value |
 |---|---|
-| Accuracy | 0.380 † (276/830 done) |
-| Recall | 0.4979 |
-| Avg. Search Calls Per Query | 19.23 |
-| Avg. Iterations Per Query | 14.6 † |
-| Time Per Query | 874 s (14.6 min) † |
+| Accuracy | 0.3675 |
+| Recall | 0.4806 |
+| NDCG | — |
+| Avg. Search Calls Per Query | 18.99 |
+| Avg. Iterations Per Query | 14.9 |
+| Time Per Query | 943 s (15.7 min) |
 | Cached Cost Per Query | local GPU (no API cost) |
 | Uncached Cost Per Query | local GPU (no API cost) |
 | Input Tokens Per Query | not logged |
@@ -116,22 +119,55 @@ Workbook footnotes that apply to this row:
 
 > Input / Output Tokens Per Query: all model calls of a question (root + sub-LLM), reasoning tokens included in output; these do not depend on how many runs shared a server, unlike Time Per Query. Exact from logged per-call usage, except values marked ≈ (Sept. 2026 snippet runs, whose logs overwrote the root model's usage with the sub-LLM's: rebuilt from the trajectories, about 10% low when the same method is checked on a run with exact usage). Uncached cost = input x list input price + output x list output price. Avg. Iterations Per Query: root-model turns per question, counted from the trajectory logs (snippet RLM) or the run records (document REPL agent); sub-LLM calls are not counted. A run that reaches its turn cap adds one forced final-answer turn.
 
-> † Still running (status 2026-10-30 08:40). Accuracy = gpt-4.1-correct answers over the questions finished so far; questions killed at the time limit count as wrong. Time is the mean over questions that returned a result, with 8-16 questions sharing each GPU. Qwen3.6 snippet RLM on BrowseComp+: 25-search cap, 50 turns, 8,192 output tokens per call, 1 h per question; on FRAMES: 25-search cap, 50 turns, 2 h per question. Snippet REPL run tokens are not logged for local runs (the harness keeps only the sub-LLM's count). Qwen3.6 snippet BM25 row finished 2026-10-30 02:27: 243 of 830 questions hit the 1 h limit and count as wrong.
+
+**Failure breakdown** (from [Failure_Analysis.xlsx](../../../results/original_baselines/Failure_Analysis.xlsx), QA Summary; first matching category wins):
+
+| Category | Questions | Share of failures |
+|---|---|---|
+| F1 did not finish | 190 | 36.2% |
+| F2 no / abstained | 36 | 6.9% |
+| F3 retrieval miss | 217 | 41.3% |
+| F4 partial evidence | 48 | 9.1% |
+| F5 all gold, wrong | 34 | 6.5% |
+| **Failed in total** | 525 |  |
+
+
+**Accuracy given the retrieved evidence** (By Recall sheet):
+
+| Evidence retrieved | Questions | Accuracy |
+|---|---|---|
+| no gold retrieved | 260 | 3.8% |
+| some gold | 150 | 66.7% |
+| all gold | 230 | 84.8% |
+
+
+**Turns** (By Turns sheet): limit 50, mean 14.8 (correct 8.0, not correct 18.7); 20 questions used every turn (2.4%), accuracy when answered before the limit 49.0%.
 
 ## 8. Results interpretation
 
-Not interpreted: the run is not complete.
+**Paired comparisons on the same questions** (Pairwise sheet; exact McNemar test on the discordant pairs):
+
+| Comparison | Other row | Only BCP-15 right | Only other right | p | Reading |
+|---|---|---|---|---|---|
+| GPT-5 vs Qwen3.6, snippet, Qwen3-Embed-8B | BCP-9 | 18 | 372 | 3.8e-87 | significant at 0.05 |
+| Snippet REPL vs document REPL, Qwen3.6, Qwen3-Embed-8B | BCP-27 | 75 | 137 | 2.5e-05 | significant at 0.05 |
+| ColBERT vs dense, snippet, Qwen3.6 | BCP-17 | 61 | 255 | 2.4e-29 | significant at 0.05 |
+
+
+- **Largest failure mode:** never retrieving a gold document (217 of 525 failures, 41.3%). Retrieval-side failures (F3 + F4) are 50.5% of failures; reading-side (F5) 6.5%. *(Measured.)*
+- **With all gold evidence retrieved** the run is right 84.8% of the time (230 questions); with none, 3.8%. The gap between the two bounds how much better retrieval alone could help. *(Measured; causal reading is a hypothesis.)*
+- Statements about *why* a configuration wins or loses are hypotheses unless the comparison isolates one variable; see the confounds in section 10.
 
 ## 9. Verification status
 
 | Check | Result |
 |---|---|
-| Experiment previously executed | running |
+| Experiment previously executed | yes |
 | Original outputs found | yes (on the original machine; paths in section 6) |
 | Configuration identified | yes |
 | Implementation reviewed | yes ([agent review](../../verification/REVIEW_snippet_repl.md)) |
 | Lightweight tests | unit tests with mocks ([TESTING_REPORT.md](../../verification/TESTING_REPORT.md)); the experiment itself was not re-run |
-| Numbers independently recomputed | partial / see audit: accuracy 0.1265 from 220 result records ([audit](../../verification/RESULT_INTEGRITY.md)) |
+| Numbers independently recomputed | **matches the workbook** (accuracy, recall, searches): accuracy 0.3675 from 640 result records ([audit](../../verification/RESULT_INTEGRITY.md)) |
 | Reproduced by re-running | **no**: no experiment was re-run; full experimental equivalence of the refactored code is not established |
 
 

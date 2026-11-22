@@ -315,14 +315,13 @@ and FRAMES accuracy is judged by gpt-4.1. The Recall column is not defined the s
 | BCP-9 | GPT 5 (high)* | Qwen3-Embedding-8B | 0.794 | 0.804 | 29.5 | 5.6 |
 | BCP-11 | GPT 5 (high)* | Reason-ModernColBERT | 0.8578 | 0.824 | 22.3 | 4.7 |
 | BCP-13 | GPT 5 (high)* | BM25 (k1 0.9, b 0.4) | 0.6747 | 0.6815 | 60.87 | 8.3 |
-| BCP-15 | Qwen3.6 | Qwen3-Embedding-8B | 0.380 † (276/830 done) | 0.4979 | 19.23 | 14.6 † |
-| BCP-17 | Qwen3.6 | Reason-ModernColBERT | (empty: queued) | | | |
+| BCP-15 | Qwen3.6 | Qwen3-Embedding-8B | 0.3675 | 0.4806 | 18.99 | 14.9 |
+| BCP-17 | Qwen3.6 | Reason-ModernColBERT | 0.6012 | 0.647 | 15.59 | 13 |
 | BCP-19 | Qwen3.6 (medium) | BM25 (k1 0.9, b 0.4) | 0.2494 | 0.3571 | 20.15 | 15.4 |
 
 The workbook's footnotes:
 - \* the sub-LLM runs at medium. For BCP-9 and BCP-11 the effort was not actually sent (K3).
-- † still running at the workbook date, 2026-10-30 08:40.
-- BCP-19: 243 of 830 questions hit the 1 h limit and count as wrong.
+- Qwen3.6 rows: questions that hit the 1 h limit count as wrong: BCP-15 190, BCP-17 68, BCP-19 243 of 830.
 
 **FRAMES (824 questions)**: FR-7 GPT 5 (high)*, BM25: accuracy **0.7633**, recall 0.6716, 6.59 searches, 2.6 turns.
 FR-9 Qwen3.6 (medium), BM25: accuracy **0.6201**, recall 0.5752, 12.85 searches, 10.9 turns.
@@ -356,7 +355,8 @@ root + sub-LLM calls.
 | BCP-9 | 191 s | ≈ 0.50 | not logged | ≈ 267,564 | ≈ 16,474 |
 | BCP-11 | 166 s | ≈ 0.36 | not logged | ≈ 180,623 | ≈ 13,144 |
 | BCP-13 | 452 s | 1.1999 | 0.9737 | 638,846 | 40,138 |
-| BCP-15 | 874 s † | local GPU | local GPU | not logged | not logged |
+| BCP-15 | 943 s | local GPU | local GPU | not logged | not logged |
+| BCP-17 | 1015 s | local GPU | local GPU | not logged | not logged |
 | BCP-19 | 1098 s | local GPU | local GPU | not logged | not logged |
 | FR-7 | 107 s | 0.146 | 0.1424 | 35,135 | 10,206 |
 | FR-9 | 903 s | local GPU | local GPU | not logged | not logged |

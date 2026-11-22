@@ -43,6 +43,8 @@ the web.** FRAMES and OBLIQ archives are compressed only.
 | [BCP-9](snippet_repl/BCP-9/MANIFEST.json) | Snippet REPL agent | 832 | 0.00 GB | 0.000 GB (1 part) | yes |
 | [BCP-11](snippet_repl/BCP-11/MANIFEST.json) | Snippet REPL agent | 832 | 0.00 GB | 0.000 GB (1 part) | yes |
 | [BCP-13](snippet_repl/BCP-13/MANIFEST.json) | Snippet REPL agent | 2,496 | 11.88 GB | 0.204 GB (1 part) | yes |
+| [BCP-15](snippet_repl/BCP-15/MANIFEST.json) | Snippet REPL agent | 2,303 | 3.85 GB | 0.048 GB (1 part) | yes |
+| [BCP-17](snippet_repl/BCP-17/MANIFEST.json) | Snippet REPL agent | 2,425 | 3.17 GB | 0.043 GB (1 part) | yes |
 | [BCP-19](snippet_repl/BCP-19/MANIFEST.json) | Snippet REPL agent | 2,250 | 4.13 GB | 0.055 GB (1 part) | yes |
 | [BCP-25](document_repl/BCP-25/MANIFEST.json) | Document REPL agent | 1,712 | 0.01 GB | 0.001 GB (1 part) | yes |
 | [BCP-27](document_repl/BCP-27/MANIFEST.json) | Document REPL agent | 820 | 25.72 GB | 0.213 GB (1 part) | yes |
@@ -85,7 +87,6 @@ Not included:
   machine some time between 2026-09-22 and 2026-10-29, before this repository was prepared. The archives hold every
   question's final record, the gpt-4.1 verdicts, and the per-question turn and token counts computed from the
   trajectories while they existed (`repo/scripts/workbook/tokmaps/`).
-- **BCP-15, BCP-17**: still running / queued on 2026-10-30; to be added when they finish.
 
 ## File formats
 

@@ -95,4 +95,3 @@ The full, sourced statement is in [AGENT_COMPARISON.md](experiments/AGENT_COMPAR
 - Some effort labels do not match what reached the model (K3).
 - Two document REPL rows ran on an unpreserved library build (K5).
 - DSPy.RLM was not evaluated under the final protocol.
-- Two Qwen3.6 snippet REPL rows were still running or queued when this repository was prepared.

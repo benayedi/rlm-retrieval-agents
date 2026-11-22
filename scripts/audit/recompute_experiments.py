@@ -92,6 +92,7 @@ def graded(d, qids, rec_key="gold_recall"):
 
 R["BCP-13"] = graded(f"{F}/bcp_snip_gpt5_bm25", BQ)
 R["BCP-15"] = graded(f"{F}/bcp_snip_qwen_dense", BQ) if os.path.exists(f"{F}/bcp_snip_qwen_dense/graded_gpt41.json") else None
+R["BCP-17"] = graded(f"{F}/bcp_snip_qwen_colbert", BQ) if os.path.exists(f"{F}/bcp_snip_qwen_colbert/graded_gpt41.json") else None
 R["BCP-19"] = graded(f"{F}/bcp_snip_qwen_bm25", BQ)
 R["BCP-27"] = graded(f"{L}/run5d/bcp_fd_qwen_dense", BQ)
 _G27 = json.load(open(f"{L}/run5d/bcp_fd_qwen_dense/graded_gpt41.json"))

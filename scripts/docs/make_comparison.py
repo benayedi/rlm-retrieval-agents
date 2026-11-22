@@ -120,8 +120,9 @@ for model in ("GPT-5", "Qwen3.6"):
             bars[h] = (None, "running" if partial else "not run") if (a is None or partial) else (a, f"{a:.3f}")
         groups.append((retr, bars))
     panels.append((model, groups))
+_open = any(b[0] is None for _, gs in panels for _, bs in gs for b in bs.values())   # a bar shown as running / not run
 figs["bcp"] = svg_panels("BrowseComp-Plus: accuracy (gpt-4.1 judge, 830 questions)", panels, 1.0, lambda v: f"{v:.2f}", "bcp_accuracy.svg",
-                         "Qwen3.6 Snippet dense and ColBERT rows were still running or queued on 2026-10-30.")
+                         "Qwen3.6 Snippet dense and ColBERT rows were still running or queued on 2026-10-30." if _open else "")
 groups = []
 for model in ("GPT-5", "Qwen3.6"):
     groups.append((model, {h: ((lambda a: (a, f"{a:.3f}"))(val(cell(F, h, model, "BM25")["Accuracy"])) if cell(F, h, model, "BM25") else (None, "not run")) for h in COL}))

@@ -113,7 +113,5 @@ Each finding below is measured, and cites the pair that shows it.
     document REPL runs that fix ~45 % of wrong and break ~8 % of right answers on a re-run (VAR-2, not identical
     configurations; [FOLLOW_UP_STUDIES.md](FOLLOW_UP_STUDIES.md)).
   - Between unpaired rows, differences smaller than that should not be read as effects.
-- **The Qwen3.6 snippet REPL rows on BrowseComp-Plus with dense and ColBERT retrieval.** On 2026-10-30 they were still
-  running or queued.
 - **Like-for-like costs and times.** Times depend on how many runs shared a server, and the Qwen3.6 rows ran on local
   GPUs with no API cost.

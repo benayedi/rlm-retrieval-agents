@@ -85,12 +85,12 @@
    "Harness": "Snippet RLM",
    "Model (Reasoning)": "Qwen3.6",
    "Retrieval Signal": "Qwen3-Embedding-8B",
-   "Accuracy": "0.380 \u2020 (276/830 done)",
-   "Recall": 0.4979,
-   "NDCG": null,
-   "Avg. Search Calls Per Query": 19.23,
-   "Avg. Iterations Per Query": "14.6 \u2020",
-   "Time Per Query": "874 s (14.6 min) \u2020",
+   "Accuracy": 0.3675,
+   "Recall": 0.4806,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 18.99,
+   "Avg. Iterations Per Query": 14.9,
+   "Time Per Query": "943 s (15.7 min)",
    "Cached Cost Per Query": "local GPU (no API cost)",
    "Uncached Cost Per Query": "local GPU (no API cost)",
    "Input Tokens Per Query": "not logged",
@@ -98,13 +98,40 @@
   },
   "recomputed": {
    "n_questions": 830,
-   "n_results": 220,
-   "accuracy": 0.12650602409638553,
-   "recall_over_results": 0.4979383116883117,
-   "recall_over_all": 0.13198364888123926,
-   "searches_over_results": 19.23181818181818,
+   "n_results": 640,
+   "accuracy": 0.3674698795180723,
+   "recall_over_results": 0.48062562003968257,
+   "recall_over_all": 0.37060288774144196,
+   "searches_over_results": 18.9875,
    "non_bool_verdicts": {},
-   "note": "220 graded"
+   "note": "640 graded"
+  }
+ },
+ "BCP-17": {
+  "workbook": {
+   "Harness": "Snippet RLM",
+   "Model (Reasoning)": "Qwen3.6",
+   "Retrieval Signal": "Reason-ModernColBERT",
+   "Accuracy": 0.6012,
+   "Recall": 0.647,
+   "NDCG": "\u2014",
+   "Avg. Search Calls Per Query": 15.59,
+   "Avg. Iterations Per Query": 13,
+   "Time Per Query": "1015 s (16.9 min)",
+   "Cached Cost Per Query": "local GPU (no API cost)",
+   "Uncached Cost Per Query": "local GPU (no API cost)",
+   "Input Tokens Per Query": "not logged",
+   "Output Tokens Per Query": "not logged"
+  },
+  "recomputed": {
+   "n_questions": 830,
+   "n_results": 762,
+   "accuracy": 0.6012048192771084,
+   "recall_over_results": 0.6469738157730284,
+   "recall_over_all": 0.5939687320711416,
+   "searches_over_results": 15.590551181102363,
+   "non_bool_verdicts": {},
+   "note": "762 graded"
   }
  },
  "BCP-19": {

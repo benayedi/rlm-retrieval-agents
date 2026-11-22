@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 754 384" width="754" height="384" font-family="Helvetica, Arial, sans-serif">
-<rect width="754" height="384" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 754 368" width="754" height="368" font-family="Helvetica, Arial, sans-serif">
+<rect width="754" height="368" fill="#ffffff"/>
 <text x="46" y="24" font-size="15" font-weight="600" fill="#1f2328">BrowseComp-Plus: accuracy (gpt-4.1 judge, 830 questions)</text>
 <rect x="46" y="36" width="11" height="11" rx="2" fill="#2a78d6"/><text x="62" y="46" font-size="12" fill="#1f2328">Snippet REPL agent</text>
 <rect x="216" y="36" width="11" height="11" rx="2" fill="#eb6834"/><text x="232" y="46" font-size="12" fill="#1f2328">Document REPL agent</text>
@@ -36,11 +36,13 @@
 <line x1="400" x2="730" y1="188.0" y2="188.0" stroke="#d8dee4" stroke-width="1"/>
 <line x1="400" x2="730" y1="133.0" y2="133.0" stroke="#d8dee4" stroke-width="1"/>
 <line x1="400" x2="730" y1="78.0" y2="78.0" stroke="#d8dee4" stroke-width="1"/>
-<text x="437.0" y="292.0" font-size="10" fill="#59636e" text-anchor="middle" transform="rotate(-90 437.0 292.0)">running</text>
+<path d="M420.0,298.0 V221.2 Q420.0,217.2 424.0,217.2 H450.0 Q454.0,217.2 454.0,221.2 V298.0 Z" fill="#2a78d6"><title>Snippet REPL agent, Qwen3-Embed-8B: 0.367</title></path>
+<text x="437.0" y="213.2" font-size="10" fill="#1f2328" text-anchor="middle">0.367</text>
 <path d="M456.0,298.0 V204.7 Q456.0,200.7 460.0,200.7 H486.0 Q490.0,200.7 490.0,204.7 V298.0 Z" fill="#eb6834"><title>Document REPL agent, Qwen3-Embed-8B: 0.442</title></path>
 <text x="473.0" y="196.7" font-size="10" fill="#1f2328" text-anchor="middle">0.442</text>
 <text x="455.0" y="314.0" font-size="11.5" fill="#1f2328" text-anchor="middle">Qwen3-Embed-8B</text>
-<text x="547.0" y="292.0" font-size="10" fill="#59636e" text-anchor="middle" transform="rotate(-90 547.0 292.0)">not run</text>
+<path d="M530.0,298.0 V169.7 Q530.0,165.7 534.0,165.7 H560.0 Q564.0,165.7 564.0,169.7 V298.0 Z" fill="#2a78d6"><title>Snippet REPL agent, ColBERT: 0.601</title></path>
+<text x="547.0" y="161.7" font-size="10" fill="#1f2328" text-anchor="middle">0.601</text>
 <path d="M566.0,298.0 V174.5 Q566.0,170.5 570.0,170.5 H596.0 Q600.0,170.5 600.0,174.5 V298.0 Z" fill="#eb6834"><title>Document REPL agent, ColBERT: 0.580</title></path>
 <text x="583.0" y="166.5" font-size="10" fill="#1f2328" text-anchor="middle">0.580</text>
 <text x="565.0" y="314.0" font-size="11.5" fill="#1f2328" text-anchor="middle">ColBERT</text>
@@ -50,5 +52,4 @@
 <text x="693.0" y="244.7" font-size="10" fill="#1f2328" text-anchor="middle">0.224</text>
 <text x="675.0" y="314.0" font-size="11.5" fill="#1f2328" text-anchor="middle">BM25</text>
 <line x1="400" x2="730" y1="298" y2="298" stroke="#59636e" stroke-width="1"/>
-<text x="46" y="374" font-size="11" fill="#59636e">Qwen3.6 snippet REPL dense and ColBERT rows were still running or queued on 2026-10-30.</text>
 </svg>

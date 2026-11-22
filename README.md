@@ -8,7 +8,7 @@ an open-weight model, on **BrowseComp-Plus**, **FRAMES** and **OBLIQ-Bench**.
 | Agent | Idea | In the final results |
 |---|---|---|
 | [**DSPy.RLM**](agents/dspy_rlm/README.md) | `dspy.RLM` with typed signatures and task-specific strategy text | no (earlier campaign only) |
-| [**Snippet REPL agent**](agents/snippet_repl/README.md) | the RLM authors' library; search returns short snippets; documents are read through `llm_query` sub-LLM calls | yes, 11 rows (2 still running) |
+| [**Snippet REPL agent**](agents/snippet_repl/README.md) | the RLM authors' library; search returns short snippets; documents are read through `llm_query` sub-LLM calls | yes, 11 rows |
 | [**Document REPL agent**](agents/document_repl/README.md) | the same library; search puts whole documents into a `DOCS` variable that the model reads itself | yes, 11 rows |
 
 **Start here:**
@@ -28,8 +28,8 @@ Accuracy, judged by gpt-4.1 (BrowseComp-Plus 830 questions, FRAMES 824):
 | BrowseComp-Plus | GPT-5 | Qwen3-Embedding-8B | 0.794 | 0.831 |
 | BrowseComp-Plus | GPT-5 | Reason-ModernColBERT | 0.858 | **0.875** |
 | BrowseComp-Plus | GPT-5 | BM25 | 0.675 | 0.600 |
-| BrowseComp-Plus | Qwen3.6-35B-A3B | Qwen3-Embedding-8B | running | 0.442 |
-| BrowseComp-Plus | Qwen3.6-35B-A3B | Reason-ModernColBERT | queued | 0.580 |
+| BrowseComp-Plus | Qwen3.6-35B-A3B | Qwen3-Embedding-8B | 0.3675 | 0.442 |
+| BrowseComp-Plus | Qwen3.6-35B-A3B | Reason-ModernColBERT | 0.6012 | 0.580 |
 | BrowseComp-Plus | Qwen3.6-35B-A3B | BM25 | 0.249 | 0.224 |
 | FRAMES | GPT-5 | BM25 | 0.763 | **0.807** |
 | FRAMES | Qwen3.6-35B-A3B | BM25 | 0.620 | 0.610 |
