@@ -79,16 +79,19 @@ Each finding below is measured, and cites the pair that shows it.
 1. **The retriever matters more than the harness.**
    - Within each harness, Reason-ModernColBERT beats BM25 by a wide margin: GPT-5 document REPL 255 vs 27 questions
      (p ≈ 1e-47); GPT-5 snippet REPL 196 vs 44 (p ≈ 4e-24).
-   - Under the snippet REPL agent, ColBERT also beats the 8B dense retriever: 100 vs 47 (p ≈ 1.5e-5).
-2. **The model matters more than the harness.** GPT-5 beats Qwen3.6-35B-A3B in all six tested pairs, across both
+   - Under the snippet REPL agent, ColBERT also beats the 8B dense retriever: GPT-5 100 vs 47 (p ≈ 1.5e-5);
+     Qwen3.6 255 vs 61 (p ≈ 2e-29).
+2. **The model matters more than the harness.** GPT-5 beats Qwen3.6-35B-A3B in all eight tested pairs, across both
    benchmarks and both harnesses (p < 1e-15 in each).
 3. **On BrowseComp-Plus with GPT-5, the better harness depends on the retriever.**
    - Dense retriever: Document REPL is ahead (88 vs 57, p = 0.012).
    - ColBERT: the two cannot be distinguished (65 vs 51, p = 0.23).
    - BM25: Snippet REPL is ahead (136 vs 74, p ≈ 2e-5).
-4. **On FRAMES with GPT-5, document REPL is ahead** (74 vs 38, p ≈ 0.001). With Qwen3.6 the two cannot be distinguished
+4. **On BrowseComp-Plus with Qwen3.6, document REPL is ahead only with the dense retriever** (137 vs 75,
+   p ≈ 2.5e-5). With ColBERT (103 vs 121, p = 0.26) and BM25 (61 vs 82, p = 0.094) the two cannot be distinguished.
+5. **On FRAMES with GPT-5, document REPL is ahead** (74 vs 38, p ≈ 0.001). With Qwen3.6 the two cannot be distinguished
    (81 vs 89, p = 0.59).
-5. **On OBLIQ the differences are small.**
+6. **On OBLIQ the differences are small.**
    - Math and Twitter: NDCG@10 within 0.01 of each other, in opposite directions.
    - Congress: the snippet REPL agent is higher (0.188 vs 0.133).
    - Against the OBLIQ paper's multi-hop agent: all rows are below it on Math (0.161) and around it on Twitter (0.141)
@@ -96,10 +99,14 @@ Each finding below is measured, and cites the pair that shows it.
 
 ## What it does not establish
 
-- **Why a harness wins.** Each harness win in finding 3 comes with a budget difference:
+- **Why a harness wins.** Each harness win in findings 3 and 4 comes with a budget difference:
   - With BM25, the snippet REPL agent made 60.9 searches per question against document REPL's cap of 10.
   - With the dense retriever, the reasoning efforts differ in a way that is only partly known (BCP-9 ran at the
     default effort; BCP-21's effort is unverified).
+  - With Qwen3.6, the snippet REPL rows ran under a 1 h per-question time limit and the document REPL rows did not,
+    and unfinished questions are scored wrong ([K7](../verification/KNOWN_ISSUES.md)). With the dense retriever 190
+    snippet REPL questions and 121 document REPL questions were unfinished, so the gap in finding 4
+    may partly reflect the difference in unfinished questions.
 
   Isolating the reading strategy needs matched budgets: a document REPL run without the search cap, or a snippet REPL run with it.
 - **An overall ranking of the three agents.** DSPy.RLM was not run under this protocol, and the snippet REPL vs
