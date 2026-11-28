@@ -152,6 +152,7 @@ run(q):
 | `split_runner.py` | GEPA prompt optimiser; its `--seed-split` mode and `run_batch()` ran the Qwen3.6 BrowseComp-Plus rows with a result cache |
 | `bcp_qwen_dense.py`, `bcp_bm25_split.py` | the BCP-27 and BCP-31 drivers built on `split_runner.py` |
 | `retrieval_server.py`, `encoder.py` | dense Qwen3-Embedding-8B server (exact cosine) |
+| `eval_first_stage.py` | evidence recall@k and hit@k of the raw question as one query (dense, BM25, fusion); source of the recall figures in the search description, see [results/first_stage/](../../results/first_stage/README.md) |
 | `retrieval_server_colbert.py`, `hybrid.py` | Reason-ModernColBERT (PLAID) server; `hybrid.rrf` for an optional BM25 arm |
 | `obliq_adapter.py` | translates this harness's wire format onto an OBLIQ search server |
 | `prepare_data.py`, `build_bm25.py` | decrypt BrowseComp-Plus into `FULLDOC_ROOT/data/prepared`; tuned BM25 index (not used by any row) |

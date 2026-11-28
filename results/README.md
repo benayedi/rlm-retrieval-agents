@@ -22,3 +22,8 @@ summarised in its README.
 
 Figures generated from the workbooks by `scripts/docs/make_comparison.py` and used in
 [AGENT_COMPARISON.md](../docs/experiments/AGENT_COMPARISON.md).
+
+## first_stage/
+
+Re-measurement (2026-11-28) of the first-stage recall figures quoted in the document REPL agent's search
+description, on all 830, the 150 development and the 680 held-out questions: [first_stage/README.md](first_stage/README.md).
